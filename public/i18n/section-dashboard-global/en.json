@@ -862,7 +862,7 @@
   },
   "subscriptionPlanCard": {
     "titleFeatured": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
-    "price": "USD$499.99",
+    "price": "USD{'$'}499.99",
     "labelNew": "New Subscription",
     "footerBillingCycle": "Your membership will update in your next billing cycle (xx-xx-xxxx)",
     "footerCheckoutStart": "Your subscription will begin as soon as you complete checkout. Your billing cycle will start (02-26-2025)."
@@ -880,7 +880,7 @@
     "readMore": "...Read more",
     "discount": "-80%",
     "perMonth": "/mo",
-    "currencyPrefix": "USD$",
+    "currencyPrefix": "USD{'$'}",
     "icons": {
       "videos": "Videos",
       "photos": "Photos",
@@ -1630,7 +1630,7 @@
       "chooseModels": "Choose One or More Models to Tip!",
       "selectAll": "Select All",
       "selectedWord": "Selected",
-      "selectedSep": "|",
+      "selectedSep": "{'|'}",
       "selectedSummary": "{count} Selected | {total}",
       "selectTipBelow": "Select a tip below—it'll be added to your checkout.",
       "supportHelpPrefix": "Your extra support helps",

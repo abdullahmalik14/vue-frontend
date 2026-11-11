@@ -603,7 +603,7 @@
       "chooseModels": "Chọn một hoặc nhiều model để tip!",
       "selectAll": "Chọn tất cả",
       "selectedWord": "đã chọn",
-      "selectedSep": "|",
+      "selectedSep": "{'|'}",
       "selectedSummary": "{count} đã chọn | {total}",
       "selectTipBelow": "Chọn tip bên dưới—sẽ được thêm vào thanh toán.",
       "supportHelpPrefix": "Sự ủng hộ thêm của bạn giúp",
@@ -860,7 +860,7 @@
   },
   "subscriptionPlanCard": {
     "titleFeatured": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
-    "price": "USD$499.99",
+    "price": "USD{'$'}499.99",
     "labelNew": "Gói đăng ký mới",
     "footerBillingCycle": "Gói hội viên của bạn sẽ cập nhật trong chu kỳ thanh toán tiếp theo (xx-xx-xxxx)",
     "footerCheckoutStart": "Gói đăng ký bắt đầu ngay khi bạn hoàn tất thanh toán. Chu kỳ thanh toán bắt đầu (02-26-2025)."
@@ -878,7 +878,7 @@
     "readMore": "...Read more",
     "discount": "-80%",
     "perMonth": "/mo",
-    "currencyPrefix": "USD$",
+    "currencyPrefix": "USD{'$'}",
     "icons": {
       "videos": "Videos",
       "photos": "Photos",

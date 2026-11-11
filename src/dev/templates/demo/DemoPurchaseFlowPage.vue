@@ -267,6 +267,7 @@ onUnmounted(() => {
     />
 
     <ProfileSubscriptionPopup
+      v-if="plansOpen"
       v-model="plansOpen"
       :mode="plansMode"
       :session="activeFlow?.kind === 'free-to-paid' || activeFlow?.kind === 'paid-upgrade' || activeFlow?.kind === 'paid-downgrade' ? activeFlow.session : null"
@@ -299,6 +300,7 @@ onUnmounted(() => {
     />
 
     <CheckoutBeforeTipPopup
+      v-if="tipBeforeCheckoutOpen"
       v-model="tipBeforeCheckoutOpen"
       card-last4="3374"
       @confirm="(payload) => { notice = `Tip confirmed: $${payload.amount} for ${payload.modelIds.length} model(s).`; }"
