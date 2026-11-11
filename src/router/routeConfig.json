@@ -598,7 +598,6 @@
   },
   {
     "slug": "/edit-profile",
-    "envAccess": "development",
     "section": "misc",
     "componentPath": "@/dev/templates/edit-profile/EditProfilePage.vue",
     "requiresAuth": false,
