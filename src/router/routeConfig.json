@@ -496,7 +496,7 @@
   },
   {
     "slug": "/demo/purchase-flow",
-    "section": "dev",
+    "section": "dashboard-global",
     "requiresAuth": false,
     "enabled": true,
     "supportedRoles": [
