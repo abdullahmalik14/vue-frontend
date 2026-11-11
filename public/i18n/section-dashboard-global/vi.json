@@ -621,14 +621,14 @@
       "prevModelsAlt": "Model trước",
       "nextModelsAlt": "Model sau",
       "deselectAlt": "Bỏ chọn",
-      "amount1": "$1.00",
-      "amount3": "$3.00",
-      "amount5": "$5.00",
-      "amount10": "$10.00",
+      "amount1": "{'$'}1.00",
+      "amount3": "{'$'}3.00",
+      "amount5": "{'$'}5.00",
+      "amount10": "{'$'}10.00",
       "custom": "TÙY CHỈNH",
       "demoModelName": "Carrot Pop",
-      "demoModelUsername": "@sammisjelly187",
-      "demoSupportHandle": "@Princess Carrot Pop"
+      "demoModelUsername": "{'@'}sammisjelly187",
+      "demoSupportHandle": "{'@'}Princess Carrot Pop"
     }
   },
   "booking": {
@@ -1665,7 +1665,7 @@
     },
     "dashboardTextInput": {
       "generalVariations": "Các biến thể chung",
-      "bookingPatterns": "Mẫu form đặt lịch ($t + assetMap)",
+      "bookingPatterns": "Mẫu form đặt lịch ({'$'}t + assetMap)",
       "username": "Tên người dùng",
       "usernamePlaceholder": "carrot_popxoxo123",
       "usernameDescription": "Tên người dùng không thể thay đổi sau tháng đầu tiên trên trang web của chúng tôi, nhưng có thể có ngoại lệ trong trường hợp đặc biệt.",
@@ -1947,10 +1947,10 @@
       "colorWhite": "Trắng"
     },
     "tierCard": {
-      "sectionDescription": "Thẻ tier hiện đại với danh sách tính năng và bộ chọn giá ($t + assetMap)"
+      "sectionDescription": "Thẻ tier hiện đại với danh sách tính năng và bộ chọn giá ({'$'}t + assetMap)"
     },
     "eventCard": {
-      "sectionDescription": "Thẻ sự kiện với biến thể theme và layout nút/progress ($t + assetMap)"
+      "sectionDescription": "Thẻ sự kiện với biến thể theme và layout nút/progress ({'$'}t + assetMap)"
     },
     "quillEditor": {
       "labels": {

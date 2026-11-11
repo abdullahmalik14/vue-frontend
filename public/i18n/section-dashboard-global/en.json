@@ -1648,14 +1648,14 @@
       "prevModelsAlt": "Previous models",
       "nextModelsAlt": "Next models",
       "deselectAlt": "Deselect",
-      "amount1": "$1.00",
-      "amount3": "$3.00",
-      "amount5": "$5.00",
-      "amount10": "$10.00",
+      "amount1": "{'$'}1.00",
+      "amount3": "{'$'}3.00",
+      "amount5": "{'$'}5.00",
+      "amount10": "{'$'}10.00",
       "custom": "CUSTOM",
       "demoModelName": "Carrot Pop",
-      "demoModelUsername": "@sammisjelly187",
-      "demoSupportHandle": "@Princess Carrot Pop"
+      "demoModelUsername": "{'@'}sammisjelly187",
+      "demoSupportHandle": "{'@'}Princess Carrot Pop"
     }
   },
   "cart": {
@@ -1807,7 +1807,7 @@
     },
     "dashboardTextInput": {
       "generalVariations": "General variations",
-      "bookingPatterns": "Booking form patterns ($t + assetMap)",
+      "bookingPatterns": "Booking form patterns ({'$'}t + assetMap)",
       "username": "Username",
       "usernamePlaceholder": "carrot_popxoxo123",
       "usernameDescription": "Usernames cannot be changed after your first month on our website, but special circumstances may allow for exceptions.",
@@ -2089,10 +2089,10 @@
       "colorWhite": "White"
     },
     "tierCard": {
-      "sectionDescription": "Modern tier cards with integrated feature lists and price toggles ($t + assetMap)"
+      "sectionDescription": "Modern tier cards with integrated feature lists and price toggles ({'$'}t + assetMap)"
     },
     "eventCard": {
-      "sectionDescription": "Event promo cards with theme variants and button/progress layouts ($t + assetMap)"
+      "sectionDescription": "Event promo cards with theme variants and button/progress layouts ({'$'}t + assetMap)"
     },
     "quillEditor": {
       "labels": {
