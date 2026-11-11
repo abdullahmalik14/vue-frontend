@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "creator-complete",
+      "email": "creator@test.com",
+      "password": "Test123!",
+      "role": "creator",
+      "username": "@creator",
+      "onboardingPassed": true,
+      "kycPassed": true,
+      "preferredLocale": "en"
+    },
+    {
+      "id": "creator-no-kyc",
+      "email": "creator-kyc@test.com",
+      "password": "Test123!",
+      "role": "creator",
+      "username": "@newcreator",
+      "onboardingPassed": true,
+      "kycPassed": false,
+      "preferredLocale": "en"
+    },
+    {
+      "id": "fan-complete",
+      "email": "fan@test.com",
+      "password": "Test123!",
+      "role": "fan",
+      "username": "@fanuser",
+      "onboardingPassed": true,
+      "kycPassed": false,
+      "preferredLocale": "en"
+    },
+    {
+      "id": "vendor-complete",
+      "email": "vendor@test.com",
+      "password": "Test123!",
+      "role": "vendor",
+      "username": "@vendor",
+      "onboardingPassed": true,
+      "kycPassed": false,
+      "preferredLocale": "en"
+    },
+    {
+      "id": "fresh-signup",
+      "email": "new@test.com",
+      "password": "Test123!",
+      "role": null,
+      "username": null,
+      "onboardingPassed": false,
+      "kycPassed": false,
+      "preferredLocale": "en"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+---
+description: DemoPage MediaCardV1/V2 must mirror real project usages pixel-perfect
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# MediaCardV1 / MediaCardV2 on DemoPage
+
+## Source of truth
+- Every MediaCard on DemoPage must be a **copy-paste from a real project usage**:
+  - **V1 `default` via MyMediaCard**: `MediaUploaderPage.vue` library grid
+  - **V1 `default` + `title-color="#FFFFFF"`**: `ThankyouPageForSubscription.vue` Watch Now
+  - **V1 `grid` + actionLabel/actionBgColor**: `ProfileMediaDetailsPopup.vue` More-from grid
+  - **V2** (no variant): `ProfileWrapper.vue` media-tab grid with `aspect-class="aspect-[2/1.1522]"` and `tagText: t('profile.labels.subscribeOrBuy')`
+- Do **not** demo V1 `resume` / `latest` / `purchased` — those variants have no real page call sites.
+- Do **not** invent gallery/image/locked V2 showcases — Profile only ships `type: 'video'` + pink subscribe tag.
+
+## Placement
+- Live demos belong on **DemoPage only**. Do not embed MediaCardV1/V2 in `ProfileSectionComponentsDemo` or other page demos (ShowCode can reference ProfileWrapper).
+
+## Layout
+- Keep the same wrapper classes as the real page (grid cols, overflow, CSS hacks that hide status/footer on Thank You, dark bg when titles are white).

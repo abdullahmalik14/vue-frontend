@@ -1,0 +1,27 @@
+---
+description: DemoPage DashboardTextInput must mirror real project usages pixel-perfect
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# DashboardTextInput on DemoPage
+
+## Source of truth
+- Every `DashboardTextInput` on DemoPage (and page demos) must be a **copy-paste from a real project usage** (`SettingsPage`, `EditProfilePage`, media uploader steps, `PlanDetail`, `AddTierPopup`, `ReferralPage`, etc.).
+- **Labels and placeholders must be 100% identical** to the real page: same `t('…')` keys, same empty `placeholder=""`, same `showLabel` / `optionalLabel` / spans / tooltip props. No `demo.*` i18n keys for DTI labels or placeholders.
+- **Show how to pass values**: live inputs start **empty**; each input (or paired row) has its own `ShowCodeToggle` underneath with `const x = ref('…')` + real markup so Linden can see how to pass a value.
+- Where real pages show validation warnings (e.g. AddTier / PlanDetail 1–99 range), wire the same `interactionsEngine` + `show-errors` / `errors` UI on the demo inputs. Seed those fields with an out-of-range value (e.g. `100`) so the warning state is visible on load for Linden/devs.
+- Never demo `onSuccess` / `:success` on `DashboardTextInput` — success copy is an external paragraph via interactions engine, not an input prop. Do not reintroduce those props on DTI.
+
+## Placement
+- All DTI live demos belong in **one** DemoPage → DashboardTextInput section only (no per-page subsections, no `SettingsPage.vue — …` labels).
+- Other page demos (`SettingsComponentsDemo`, `EditProfileComponentsDemo`, `MediaUploaderComponentsDemo`, `PlanPageDemo`, …) must **not** embed `DashboardTextInput`.
+
+## Layout / width
+- One flat column — **no** `DashboardSharedSectionLayout` / colored section backgrounds on the DTI demo.
+- Input widths must match real pages: pair rows with `flex` + `flex-1 min-w-0`; plan/AddTier numbers with `grid-cols-[repeat(auto-fit,minmax(15.25rem,1fr))]`; preorder `sm:w-[380px]`. Do not stretch inputs wider than real.
+
+## Do not demo
+- Fake variants such as “no icon”, “right icon”, “both icons”, required-star samples, or Heroicons-only examples that do not exist on a real page.
+- Keep real icon usages only when the production page has them (e.g. Referral copy `right-icon`).
+- Checkout notes textareas live here too: `CheckoutNotes` with `show-avatars` (creator row) and without. Show Code calls `CheckoutNotes`, not a rebuilt `DashboardTextInput`.

@@ -1,0 +1,453 @@
+import {
+  scanMetricSelector,
+  scanTrendTableCountrySales,
+  openTrendPopupFromHeading,
+} from '../scanners/domScanners.js';
+import { scanChartMetric, validateChartContract } from '../scanners/chartContractScanner.js';
+import { closeTrendPopup, waitForPopupPaint, switchPopupPeriod } from '../scanners/popupControls.js';
+import { waitForChartRenderSettle } from '../refresh/chartSettle.js';
+import {
+  collectRenderedAmChartsData,
+  findChartSnapshot,
+  extractChartRows,
+} from '../charts/collect.js';
+import { buildElementSelectorHint } from '../utils/markScannedElement.js';
+import { normalizeNumber } from '../utils/normalizeNumber.js';
+import { sleep } from '../utils/sleep.js';
+import { getApiPathValue } from '../config/apiPath.js';
+import { pickChartSlotRow } from '../charts/pickChartSlot.js';
+
+function scanApiPath(path, payload) {
+  const value = getApiPathValue(payload, path);
+  if (path.endsWith('.length')) {
+    const arrPath = path.replace(/\.length$/, '');
+    const arr = getApiPathValue(payload, arrPath);
+    return {
+      ok: true,
+      foundValue: Array.isArray(arr) ? arr.length : 0,
+      rawText: String(Array.isArray(arr) ? arr.length : 0),
+      element: null,
+      error: null,
+    };
+  }
+  return {
+    ok: value != null,
+    foundValue: value,
+    rawText: JSON.stringify(value),
+    element: null,
+    error: value == null ? `Missing API path ${path}` : null,
+  };
+}
+
+function scanApiArrayMatch(scan, payload) {
+  const arr = getApiPathValue(payload, scan.path);
+  if (!Array.isArray(arr)) {
+    return {
+      ok: false,
+      foundValue: null,
+      rawText: '',
+      element: null,
+      error: `Expected array at ${scan.path}`,
+    };
+  }
+
+  const match = arr.find((item) => {
+    const keyValue = item?.[scan.matchKey];
+    if (keyValue == null) return false;
+    if (scan.matchValue == null) return true;
+    return String(keyValue) === String(scan.matchValue) || String(keyValue).includes(String(scan.matchValue));
+  });
+
+  const foundValue = match ? match[scan.valueKey] : null;
+  const min = scan.min ?? 1;
+  const ok = match != null && Number(foundValue) >= min;
+
+  return {
+    ok,
+    foundValue,
+    rawText: JSON.stringify(foundValue),
+    element: null,
+    error: ok ? null : `No match for ${scan.matchKey}=${scan.matchValue} with ${scan.valueKey}>=${min}`,
+  };
+}
+
+function scanDatasetField(expected) {
+  const latest = window.__analyticsTestLatestCharts || { charts: [] };
+  const chartRule = expected.chart || {};
+  const snapshot = findChartSnapshot(latest.charts, chartRule);
+  if (!snapshot) {
+    return { ok: false, foundValue: null, rawText: '', element: null, error: 'Chart not visible for dataset field' };
+  }
+
+  const rows = extractChartRows(snapshot);
+  const field = chartRule.field;
+
+  if (chartRule.donutName) {
+    const needles = [chartRule.donutName, field]
+      .filter(Boolean)
+      .map((value) => String(value).trim().toLowerCase());
+    const tierMatch = String(field || chartRule.donutName || '').match(/tier\s*(\d)/i);
+    if (tierMatch) {
+      needles.push(tierMatch[1], `tier ${tierMatch[1]}`);
+    }
+
+    const match = rows.find(({ row }) => {
+      const label = String(row?.name ?? row?.category ?? row?.planId ?? '').trim().toLowerCase();
+      return needles.some((needle) => label === needle || label.includes(needle));
+    });
+
+    const value = normalizeNumber(match?.row?.value ?? match?.row?.[field]);
+    const ok = match != null && value != null && !Number.isNaN(value);
+
+    return {
+      ok,
+      foundValue: value,
+      rawText: String(value),
+      element: null,
+      error: ok ? null : `Dataset field missing: ${chartRule.donutName}`,
+    };
+  }
+
+  const slotRows = rows
+    .map((entry) => entry.row)
+    .filter((row) => row && typeof row === 'object' && ('period' in row || field in row));
+
+  const candidateRows = slotRows.length > 0 ? slotRows : rows.map((entry) => entry.row).filter(Boolean);
+  const targetDate = expected.scanDate ? new Date(expected.scanDate) : new Date();
+  const picked = pickChartSlotRow(candidateRows, targetDate);
+  const lastRow = picked.row;
+  if (!lastRow) {
+    return { ok: false, foundValue: null, rawText: '', element: null, error: 'Chart has no data rows' };
+  }
+
+  if (picked.currentPeriodMissing) {
+    const lastDate = picked.lastSlotDate ? picked.lastSlotDate.toISOString().slice(0, 10) : 'unknown';
+    const targetLabel = Number.isNaN(targetDate.getTime())
+      ? 'current day'
+      : targetDate.toISOString().slice(0, 10);
+    const gap = `Chart has no slot for ${targetLabel}; last slot is ${lastDate}`;
+    return {
+      ok: false,
+      foundValue: null,
+      rawText: lastDate,
+      element: null,
+      knownGap: gap,
+      error: gap,
+    };
+  }
+
+  const value = normalizeNumber(
+    lastRow[field]
+    ?? lastRow[expected.chart?.dataKey]
+    ?? lastRow[String(field || '').replace(/^tier/i, '')],
+  );
+  const ok = value != null && !Number.isNaN(value);
+
+  return {
+    ok,
+    foundValue: value,
+    rawText: String(value),
+    element: null,
+    error: ok ? null : `Dataset field missing: ${field}`,
+  };
+}
+
+export function scanDatasetFromPayload(expected, chartsPayload) {
+  const apiPath = expected.apiPath;
+  if (!apiPath || !chartsPayload) {
+    return { ok: false, foundValue: null, rawText: '', error: 'Missing apiPath or chartsPayload' };
+  }
+
+  const targetDate = expected.scanDate ? new Date(expected.scanDate) : new Date();
+  if (Number.isNaN(targetDate.getTime())) {
+    return { ok: false, foundValue: null, rawText: '', error: 'Invalid scanDate' };
+  }
+
+  const lookup = resolvePayloadLookup(apiPath);
+
+if (!lookup) {
+  return {
+    ok: false,
+    foundValue: null,
+    rawText: '',
+    error: `Cannot map apiPath: ${apiPath}`,
+  };
+}
+
+const domain = chartsPayload[lookup.domain];
+
+if (!domain || !Array.isArray(domain[lookup.period])) {
+  return {
+    ok: false,
+    foundValue: null,
+    rawText: '',
+    error: `Missing payload data for ${lookup.domain}.${lookup.period}`,
+  };
+}
+
+const rows = domain[lookup.period]
+  .filter((item) => item && item.period)
+  .map((item) => ({
+    item,
+    date: new Date(String(item.period).replace(' ', 'T')),
+  }))
+  .filter((entry) => !Number.isNaN(entry.date.getTime()))
+  .sort((a, b) => a.date.getTime() - b.date.getTime());
+
+let selected = null;
+
+for (const entry of rows) {
+  if (entry.date.getTime() <= targetDate.getTime()) {
+    selected = entry;
+  } else {
+    break;
+  }
+}
+
+if (!selected) {
+  return {
+    ok: false,
+    foundValue: null,
+    rawText: '',
+    error: `No chart bucket containing ${targetDate.toISOString().slice(0, 10)} in ${lookup.domain}.${lookup.period}`,
+  };
+}
+
+const foundValue = selected.item[lookup.field];
+
+const ok = foundValue != null && !Number.isNaN(Number(foundValue));
+
+return {
+  ok,
+  foundValue,
+  rawText: String(foundValue),
+  error: ok
+    ? null
+    : `Missing ${lookup.field} in ${lookup.domain}.${lookup.period} bucket ${selected.item.period}`,
+};
+}
+
+function resolvePayloadLookup(apiPath) {
+  const parts = apiPath.split('.');
+  if (parts[0] === 'ui' && parts.length >= 4) {
+    const domainMap = {
+      earningsChart: 'earnings',
+      earningsPopup: 'earnings',
+      subsChart: 'subscriptions',
+      fansChart: 'fanInsights',
+      fans: 'fanInsights',
+      likes: 'likes',
+    };
+    return { domain: domainMap[parts[1]] || parts[1], period: parts[2], field: parts[3] };
+  }
+  if (parts.length >= 3) {
+    return { domain: parts[0], period: parts[1], field: parts[2] };
+  }
+  return null;
+}
+
+/**
+ * @param {object} expected
+ * @param {object} chartsPayload
+ * @param {{ skipPopupSetup?: boolean }} [options]
+ */
+export async function executeExpectedScan(expected, chartsPayload, options = {}) {
+  try {
+    if (expected.source === 'api') {
+      const scan = expected.scan || {};
+      const result =
+        scan.type === 'apiArrayMatch'
+          ? scanApiArrayMatch(scan, chartsPayload)
+          : scanApiPath(scan.path, chartsPayload);
+      return toFoundRow(expected, result);
+    }
+
+    if (expected.popup && !options.skipPopupSetup) {
+      await openTrendPopupFromHeading(expected.popup.openFromHeading);
+      await waitForPopupPaint();
+      if (expected.periodToggle) {
+        await switchPopupPeriod(expected.periodToggle);
+        await waitForPopupPaint();
+        await waitForChartRenderSettle({
+          chartIdIncludes: expected.chart?.chartIdIncludes,
+        });
+      }
+    }
+
+    if (expected.source === 'dataset' || expected.source === 'amcharts') {
+      // scanDatasetField uses expected.scanDate to select the exact chart slot.
+      stashLatestChartsCollection(collectRenderedAmChartsData());
+      const result = scanDatasetField(expected);
+      applyScanGap(expected, result);
+      return toFoundRow(expected, result);
+    }
+    let result;
+    if (expected.scan?.type === 'metricSelector') {
+      result = scanMetricSelector({
+        metric: expected.scan.metric,
+        period: expected.scan.period,
+        surface: expected.scan.surface,
+      });
+    } else if (expected.scan?.type === 'chartContract') {
+      // Validate contract then read the specific metric value
+      const contractResult = validateChartContract(expected.scan.chartId, expected.scan.period);
+      if (!contractResult.pass) {
+        result = {
+          ok: false,
+          foundValue: null,
+          rawText: '',
+          element: contractResult.container,
+          error: `Contract fail for "${expected.scan.chartId}": ${contractResult.errors.join('; ')}`,
+        };
+      } else {
+        result = scanChartMetric({
+          chartId: expected.scan.chartId,
+          period: expected.scan.period,
+          metric: expected.scan.metric,
+          shape: expected.scan.shape || 'last',
+        });
+      }
+    } else if (expected.scan?.type === 'trendTableCountrySales') {
+      result = scanTrendTableCountrySales(expected.scan.tableHeading, expected.scan.countryName);
+    } else {
+      result = { ok: false, foundValue: null, rawText: '', element: null, error: 'Unknown scan type' };
+    }
+
+    applyScanGap(expected, result);
+    return toFoundRow(expected, result);
+  } catch (error) {
+    return {
+      expectedId: expected.id,
+      view: expected.view,
+      metric: expected.metric,
+      period: expected.period,
+      source: expected.source,
+      foundValue: null,
+      rawText: '',
+      elementPath: null,
+      ok: false,
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
+/**
+ * Open each popup once per heading, toggle all periods, scan, then close.
+ * @param {object[]} popupRows
+ * @param {object} chartsPayload
+ * @param {{ onProgress?: (msg: string) => void | Promise<void>, treatMissingAlltimeAsGap?: boolean }} [options]
+ */
+export async function executePopupScanBatch(popupRows, chartsPayload, options = {}) {
+  const foundRows = [];
+  const onProgress = options.onProgress;
+  const treatMissingAlltimeAsGap = options.treatMissingAlltimeAsGap !== false;
+  const byHeading = new Map();
+
+  popupRows.forEach((row) => {
+    const heading = row.popup?.openFromHeading;
+    if (!heading) return;
+    if (!byHeading.has(heading)) byHeading.set(heading, []);
+    byHeading.get(heading).push(row);
+  });
+
+  const orderedHeadings = ['Subscribers', 'Fans', 'Earnings', 'Likes', 'Top Contributors'].filter((heading) =>
+    byHeading.has(heading),
+  );
+  const remaining = [...byHeading.keys()].filter((heading) => !orderedHeadings.includes(heading));
+  const headings = [...orderedHeadings, ...remaining];
+
+  for (const heading of headings) {
+    const rows = byHeading.get(heading);
+    await onProgress?.(`Opening popup: ${heading}`);
+    await openTrendPopupFromHeading(heading);
+    await waitForPopupPaint();
+    await onProgress?.(`Popup open: ${heading} — waiting for paint`);
+
+    const periods = [...new Set(rows.map((row) => row.periodToggle).filter(Boolean))];
+    if (periods.length === 0) periods.push(null);
+
+    for (const period of periods) {
+      if (period) {
+        await onProgress?.(`${heading}: switching period → ${period}`);
+        const optional = treatMissingAlltimeAsGap && period === 'alltime';
+        let switched;
+        try {
+          switched = await switchPopupPeriod(period, { optional });
+        } catch (error) {
+          if (optional) {
+            switched = { ok: false, missing: true, reason: error instanceof Error ? error.message : String(error) };
+          } else {
+            throw error;
+          }
+        }
+        if (switched && switched.missing) {
+          const gapMessage = `Period toggle "${period}" not present in ${heading} popup`;
+          await onProgress?.(`${heading}: ${gapMessage} (known gap)`);
+          const batch = rows.filter((row) => row.periodToggle === period);
+          batch.forEach((expected) => {
+            expected.knownGap = expected.knownGap || gapMessage;
+            foundRows.push({
+              expectedId: expected.id,
+              view: expected.view,
+              metric: expected.metric,
+              period: expected.period,
+              source: expected.source,
+              foundValue: null,
+              rawText: '',
+              elementPath: null,
+              ok: true,
+              error: gapMessage,
+            });
+          });
+          continue;
+        }
+        await waitForPopupPaint();
+        const chartHint = rows.find((row) => row.periodToggle === period && row.chart)?.chart?.chartIdIncludes;
+        await onProgress?.(`${heading} / ${period}: waiting for chart paint`);
+        await waitForChartRenderSettle({ chartIdIncludes: chartHint });
+      }
+
+      const chartCollection = collectRenderedAmChartsData();
+      stashLatestChartsCollection(chartCollection);
+
+      const batch = period ? rows.filter((row) => row.periodToggle === period) : rows;
+      for (const expected of batch) {
+        await onProgress?.(`Scanning ${heading} · ${period || 'default'} · ${expected.metric}`);
+        const found = await executeExpectedScan(expected, chartsPayload, { skipPopupSetup: true });
+        foundRows.push(found);
+      }
+    }
+
+    await onProgress?.(`Closing popup: ${heading}`);
+    await closeTrendPopup();
+    await sleep(300);
+  }
+
+  return foundRows;
+}
+
+function applyScanGap(expected, result) {
+  if (result?.knownGap) {
+    expected.knownGap = expected.knownGap || result.knownGap;
+  }
+}
+
+function toFoundRow(expected, result) {
+  return {
+    expectedId: expected.id,
+    view: expected.view,
+    metric: expected.metric,
+    period: expected.period,
+    source: expected.source,
+    foundValue: result.foundValue,
+    rawText: result.rawText,
+    elementPath: result.element ? buildElementSelectorHint(result.element) : null,
+    ok: result.ok,
+    error: result.error,
+    knownGap: result.knownGap || expected.knownGap || null,
+  };
+}
+
+export function stashLatestChartsCollection(collection) {
+  window.__analyticsTestLatestCharts = collection;
+}

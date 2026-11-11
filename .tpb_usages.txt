@@ -1,0 +1,374 @@
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-109-          <div class="relative z-[1] flex shrink-0 justify-end bg-[#F3F1F6] px-2 pb-1 pt-4 md:px-6 md:pb-6">
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-110-            <div class="relative inline-flex overflow-visible" data-x-repost-add-anchor>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue:111:              <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-112-                variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-113-                tag="button"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-114-                type="button"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-115-                :text="t('dashboard.xRepost.addNew')"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-116-                content-wrapper-class="flex justify-center items-center gap-2.5 px-3 h-10 min-w-[134px] bg-[#07F468] group-hover:bg-black transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-117-                text-class="text-sm font-medium text-black group-hover:text-[#07F468] transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-118-                @click.stop="isMenuOpen = true"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-119-              >
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-120-                <template #icon>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-121-                  <img
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-122-                    src="/images/plus-green-square.png"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-123-                    alt=""
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-124-                    width="20"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-125-                    height="20"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-126-                    class="h-5 w-5 brightness-0 transition-all duration-300 group-hover:[filter:brightness(0)_saturate(100%)_invert(77%)_sepia(61%)_saturate(638%)_hue-rotate(88deg)_brightness(101%)_contrast(92%)]"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-127-                  />
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-128-                </template>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-129-              </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-130-
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-131-              <XRepostAddMenuPopup
+--
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-142-      <div v-else class="mt-auto flex shrink-0 justify-end px-5 pb-5 pt-10 lg:px-10 lg:pb-10">
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-143-        <div class="relative inline-flex" data-x-repost-add-anchor>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue:144:          <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-145-            variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-146-            tag="button"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-147-            type="button"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-148-            :text="t('dashboard.xRepost.addNew')"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-149-            content-wrapper-class="flex justify-center items-center gap-2.5 px-3 h-10 min-w-[134px] bg-[#07F468] group-hover:bg-black transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-150-            text-class="text-sm font-medium text-black group-hover:text-[#07F468] transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-151-            @click.stop="isMenuOpen = true"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-152-          >
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-153-            <template #icon>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-154-              <img
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-155-                src="/images/plus-green-square.png"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-156-                alt=""
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-157-                width="20"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-158-                height="20"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-159-                class="h-5 w-5 brightness-0 transition-all duration-300 group-hover:[filter:brightness(0)_saturate(100%)_invert(77%)_sepia(61%)_saturate(638%)_hue-rotate(88deg)_brightness(101%)_contrast(92%)]"
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-160-              />
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-161-            </template>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-162-          </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-163-
+d:\projects\vue-frontend\src\dev\templates\x-repost\XRepostPage.vue-164-              <XRepostAddMenuPopup
+--
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-298-
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-299-    <div class="fixed bottom-0 right-0 z-30">
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue:300:      <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-301-        variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-302-        tag="button"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-303-        :text="t('thankYouSubscription.dashboardHome')"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-304-        textClass="text-[18px] font-medium uppercase text-[#000000] group-hover:text-[#07F468] transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-305-        rootClass="pb-1 pl-[5px] filter drop-shadow-[-5px_4px_0px_#000] group enabled:hover:drop-shadow-[-5px_4px_0px_#07F468] w-max transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-306-        contentWrapperClass="flex justify-center items-center gap-2.5 pl-6 pr-2 h-10 [clip-path:polygon(1rem_0%,100%_0%,100%_100%,0%_100%)] bg-[#07F468] group-hover:bg-black transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-307-        type="button"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-308-        @click="goDashboard"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-309-      >
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-310-        <template #icon>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-311-          <img
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-312-            v-if="homeIconUrl"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-313-            :src="homeIconUrl"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-314-            alt=""
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-315-            class="h-[18px] w-[18px] brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(83%)_sepia(37%)_saturate(2897%)_hue-rotate(81deg)_brightness(94%)_contrast(103%)]"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-316-          />
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-317-        </template>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-318-      </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-319-    </div>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankyouPageForSubscription.vue-320-  </div>
+--
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-93-          </div>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-94-
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue:95:          <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-96-            variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-97-            tag="button"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-98-            :text="t('thankYou.dashboardHome')"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-99-            textClass="text-[18px] font-medium uppercase text-[#000000] group-hover:text-[#07F468] transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-100-            type="button"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-101-            @click="goDashboard"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-102-          >
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-103-            <template #icon>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-104-              <img
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-105-                v-if="homeIconUrl"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-106-                :src="homeIconUrl"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-107-                alt=""
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-108-                class="w-[18px] h-[18px] brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(83%)_sepia(37%)_saturate(2897%)_hue-rotate(81deg)_brightness(94%)_contrast(103%)]"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-109-              />
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-110-            </template>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-111-          </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-112-        </div>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-113-      </div>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-114-
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-115-      <aside class=" relative flex w-full flex-col gap-6 bg-[#FFFFFF1A] py-4 px-2 md:py-6 md:px-4 lg:p-6 backdrop-blur-[80px] lg:h-full lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:overscroll-contain lg:[scrollbar-width:none] lg:[-ms-overflow-style:none] lg:[&::-webkit-scrollbar]:hidden">
+--
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-178-          <MediaOrderSummaryList />
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-179-
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue:180:          <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-181-      class="absolute bottom-0 right-0 z-20 lg:hidden"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-182-      variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-183-      tag="button"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-184-      :text="t('thankYou.dashboardHome')"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-185-      textClass="text-[18px] font-medium uppercase text-[#000000] group-hover:text-[#07F468] transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-186-      rootClass="pb-1 pr-[5px] filter drop-shadow-[5px_4px_0px_#000] group enabled:hover:drop-shadow-[5px_4px_0px_#07F468] w-max transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-187-      contentWrapperClass="flex justify-center items-center gap-2.5 pl-6 pr-2 h-10 [clip-path:polygon(1rem_0%,100%_0%,100%_100%,0%_100%)] bg-[#07F468] group-hover:bg-black transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-188-      type="button"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-189-      @click="goDashboard"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-190-    >
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-191-      <template #icon>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-192-        <img
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-193-          v-if="homeIconUrl"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-194-          :src="homeIconUrl"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-195-          alt=""
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-196-          class="w-[18px] h-[18px] brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(83%)_sepia(37%)_saturate(2897%)_hue-rotate(81deg)_brightness(94%)_contrast(103%)]"
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-197-        />
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-198-      </template>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-199-    </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\thankyou\ThankYouPageForMediaOrders.vue-200-        </SectionToggleHeader>
+--
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-104-
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-105-                                    <!-- button-container -->
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue:106:                                    <TwoPieceButton 
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-107-                                        variant="link-x" 
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-108-                                        :text="t('settings.page.account.linkXCta')" 
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-109-                                    >
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-110-                                        <template #icon>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-111-                                            <img :src="assets.linkX" :alt="t('settings.page.alt.x')" class="w-6 h-6 brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(83%)_sepia(37%)_saturate(2897%)_hue-rotate(81deg)_brightness(94%)_contrast(103%)]">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-112-                                        </template>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-113-                                    </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-114-                                </DashboardSharedSectionLayout>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-115-
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-116-                                <!-- promote yourself -->
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-117-                                <DashboardSharedSectionLayout>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-118-                                    <!-- title -->
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-119-                                    <div class="flex flex-col gap-2">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-120-                                        <div class="flex justify-between items-start">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-121-                                            <Heading :text="t('settings.page.account.promoteTitle')" tag="h3" theme="custom" no-wrap class="text-lg font-semibold text-[#9F8009] dark:text-[#f6d75f]" />
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-122-                                            <div class="flex justify-center items-center gap-1 py-[0.3125rem] shrink-0">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-123-                                                <img :src="assets.premiumStars" :alt="t('settings.page.alt.stars')"
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-124-                                                    class="w-4 h-4">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-125-                                                <span
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-126-                                                    class="text-xs leading-normal font-medium text-transparent bg-clip-text bg-[linear-gradient(90deg,#D8AF0D_-35.59%,#9F8009_100%)]">{{ t('settings.page.account.promotePremium') }}</span>
+--
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-132-
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-133-                                    <!-- button-container -->
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue:134:                                    <TwoPieceButton 
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-135-                                        variant="premium-upgrade" 
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-136-                                        :text="t('settings.page.account.upgradeCta')" 
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-137-                                        textClass="text-lg font-medium text-white"
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-138-                                    >
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-139-                                        <template #icon>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-140-                                            <img :src="assets.premiumStar" :alt="t('settings.page.alt.star')" class="w-6 h-6">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-141-                                        </template>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-142-                                    </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-143-                                </DashboardSharedSectionLayout>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-144-                            </div>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-145-                        </div>
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-146-
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-147-                        <!-- tab (change-password) -->
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-148-                        <div data-tab="change-password" class="hidden [&.tab-active]:flex flex-col z-[2] md:gap-2">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-149-                            <!-- title-container -->
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-150-                            <div
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-151-                                class="flex justify-between items-center gap-2.5 px-2 py-4 md:px-4 md:pt-3 md:pb-2 lg:py-3">
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-152-                                <Heading :text="t('settings.page.tabs.changePassword')" tag="h2" theme="custom" no-wrap class="text-lg font-semibold text-[#667085] md:text-2xl dark:text-[#9e9589]" />
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-153-
+d:\projects\vue-frontend\src\dev\templates\settings\SettingsPage.vue-154-                                <DashboardPrimaryButton
+--
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-27-        <div class="max-w-[760px] text-[15px] leading-relaxed  text-cosmo-body dark:text-cosmo-darkInk">{{ t('payoutCosmo.page.heroBody') }}</div>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-28-        <div class="mt-[22px] flex flex-wrap gap-2.5">
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue:29:          <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-30-            variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-31-            tag="button"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-32-            type="button"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-33-            :text="t('payoutCosmo.page.withdrawToBank')"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-34-            root-class="pb-1 filter drop-shadow-[5px_4px_0px_white] group enabled:hover:drop-shadow-[5px_4px_0px_theme('colors.cosmo.pink')] w-max md:pb-0 transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-35-            content-wrapper-class="flex justify-center items-center gap-2.5 pl-2 pr-6 h-10 [clip-path:polygon(calc(100%-1rem)_0%,100%_100%,0%_100%,0%_0%)] bg-cosmo-pink text-white group-hover:bg-white group-hover:text-cosmo-pink transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-36-            text-class="text-lg font-medium text-white group-hover:text-cosmo-pink transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-37-            :data-attrs="{ 'data-action': 'open-saved-bank' }"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-38-            @click="openFlow('saved')"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-39-          >
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-40-            <template #icon>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-41-              <PayoutCdnIcon :src="assets.bank" class="h-6 w-6" />
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-42-            </template>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-43-          </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue:44:          <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-45-            variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-46-            tag="button"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-47-            type="button"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-48-            :text="t('payoutCosmo.page.addBankAccount')"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-49-            root-class="pb-1 filter drop-shadow-[5px_4px_0px_black] group enabled:hover:drop-shadow-[5px_4px_0px_theme('colors.cosmo.mint')] w-max md:pb-0 transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-50-            content-wrapper-class="flex justify-center items-center gap-2.5 pl-2 pr-6 h-10 [clip-path:polygon(calc(100%-1rem)_0%,100%_100%,0%_100%,0%_0%)] bg-cosmo-mint text-cosmo-mintInk group-hover:bg-black group-hover:text-cosmo-mint transition-all duration-300"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-51-            text-class="text-lg font-medium text-cosmo-mintInk group-hover:text-cosmo-mint transition-colors duration-300"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-52-            :data-attrs="{ 'data-action': 'open-new-bank' }"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-53-            @click="openFlow('new')"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-54-          >
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-55-            <template #icon>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-56-              <PayoutCdnIcon :src="assets.plus" class="h-6 w-6" />
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-57-            </template>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-58-          </TwoPieceButton>
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-59-          <DashboardPrimaryButton
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-60-            :text="t('payoutCosmo.page.manageCard')"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-61-            variant="none"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-62-            type="button"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-63-            :add-attributes="{ 'data-element': 'manage-card' }"
+d:\projects\vue-frontend\src\dev\templates\payout\PayoutCosmoPage.vue-64-            custom-class="group inline-flex min-h-[46px] w-max cursor-pointer items-center justify-center gap-[9px] rounded-xl border-none bg-black px-[18px] font-extrabold text-cosmo-mint transition-colors duration-300 enabled:hover:bg-cosmo-mint enabled:hover:text-black"
+--
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-441-
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-442-                            <!-- button -->
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue:443:                            <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-444-                                v-if="!isPremiumVideoUnlocked"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-445-                                @click="isPremiumVideoUnlocked = true"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-446-                                tag="button"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-447-                                variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-448-                                rootClass="filter drop-shadow-[4px_3px_0px_#000000] group hover:drop-shadow-[4px_3px_0px_#FF439D] block w-max appearance-button"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-449-                                contentWrapperClass="flex justify-center items-center gap-2.5 pl-2 pr-[20.5px] min-h-[2rem] [clip-path:polygon(calc(100%-12.5px)_0%,100%_100%,0%_100%,0%_0%)] bg-[linear-gradient(135deg,#F093FB_0%,#FF439D_100%)] group-hover:[background:black]"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-450-                                textClass="text-lg font-medium text-black group-hover:text-[#FF439D]"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-451-                                :text="t('editProfile.page.gallery.unlockVideos')"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-452-                            />
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-453-                        </div>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-454-                    </div>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-455-                </div>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-456-
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-457-                <!-- social-media-section -->
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-458-                 <DashboardSharedSectionLayout>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-459-                    <Heading tag="h2" theme="custom" no-wrap add-class="text-2xl font-semibold text-[#667085] dark:text-[#9e9589]" :text="t('editProfile.page.social.title')" />
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-460-
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-461-                    <!-- form-section -->
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-462-                    <div class="flex flex-col gap-4">
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-463-                        <!-- form-container -->
+--
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-508-
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-509-                        <!-- button -->
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue:510:                        <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-511-                            v-if="!isPremiumLinksUnlocked"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-512-                            @click="isPremiumLinksUnlocked = true"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-513-                            tag="button"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-514-                            variant="link-x"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-515-                            rootClass="filter drop-shadow-[4px_3px_0px_#000000] group hover:drop-shadow-[4px_3px_0px_#FF439D] block w-max appearance-button mt-4"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-516-                            contentWrapperClass="flex justify-center items-center gap-2.5 pl-2 pr-[20.5px] min-h-[2rem] [clip-path:polygon(calc(100%-12.5px)_0%,100%_100%,0%_100%,0%_0%)] bg-[linear-gradient(135deg,#F093FB_0%,#FF439D_100%)] group-hover:[background:black]"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-517-                            textClass="text-lg font-medium text-black group-hover:text-[#FF439D]"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-518-                            :text="t('editProfile.page.social.unlockLinks')"
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-519-                        />
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-520-                    </div>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-521-                </DashboardSharedSectionLayout>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-522-
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-523-                <!-- tipping-settings-section -->
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-524-                 <DashboardSharedSectionLayout>
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-525-                    <Heading tag="h2" theme="custom" no-wrap add-class="text-2xl font-semibold text-[#667085] dark:text-[#9e9589]" :text="t('editProfile.page.tipping.title')" />
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-526-
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-527-                    <!-- tip-message -->
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-528-                    <div class="flex flex-col gap-4">
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-529-                        <Heading tag="h3" theme="custom" no-wrap add-class="text-sm font-bold text-[#667085] dark:text-[#9e9589]" :text="t('editProfile.page.tipping.tipMessage')" />
+d:\projects\vue-frontend\src\dev\templates\edit-profile\EditProfilePage.vue-530-                        
+--
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-91-        />
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-92-
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue:93:        <TwoPieceButton
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-94-          variant="two-piece"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-95-          tag="button"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-96-          type="button"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-97-          skew-position="right"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-98-          :text="t('paymentFailed.tryAgain')"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-99-          root-class="group relative isolate inline-flex w-max cursor-pointer no-underline"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-100-          main-class="relative z-10 flex h-10 items-center gap-2 bg-black px-4 text-[#07F468] transition-colors duration-300 group-hover:bg-[#07F468] group-hover:text-black"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-101-          skew-class="pointer-events-none absolute left-1 top-1 z-0 h-full w-full bg-[#07F468] transition-colors duration-300 group-hover:bg-black"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-102-          text-class="text-[18px] font-semibold uppercase tracking-wide text-[#07F468] transition-colors duration-300 group-hover:text-black"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-103-          @click="goBack"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-104-        >
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-105-          <template #icon>
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-106-            <svg class="h-5 w-5 shrink-0" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-107-              <path
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-108-                d="M13 8H3M3 8l4-4M3 8l4 4"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-109-                stroke="currentColor"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-110-                stroke-width="1.6"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-111-                stroke-linecap="round"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-112-                stroke-linejoin="round"
+d:\projects\vue-frontend\src\dev\templates\payment-failed\PaymentFailedPage.vue-113-              />
+--
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-119-                                            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-120-                                        </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue:121:                                        <TwoPieceButton
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-122-                                            tag="div"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-123-                                            variant="two-piece"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-124-                                            skewPosition="left"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-125-                                            rootClass="w-full no-underline"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-126-                                            skewClass="w-10 self-stretch shrink-0 -ml-10 bg-[url('/images/green-union.png')] bg-contain bg-center bg-no-repeat"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-127-                                            mainClass="px-6 py-2 h-[116px] bg-[#07F468] flex justify-center items-center gap-0.5"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-128-                                            text="CALL"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-129-                                            textClass="justify-center text-gray-900 text-xl font-bold font-['Poppins'] leading-8"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-130-                                            :rightIcon="callArrowUrl || ''"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-131-                                            rightIconClass="w-8 h-8"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-132-                                        />
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-133-                                    </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-134-                                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-135-                            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-136-                            <div class="w-full flex-1  relative flex  items-center">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-137-                                <div class="w-28 inline-flex flex-col  items-start gap-2.5">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-138-                                    <img class="w-28 h-28 absolute top-3 left-12 z-[9]" src="/images/mob-img.png" />
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-139-                                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-140-                                <div class="inline-flex flex-col justify-center items-start gap-2">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-141-                                    <div class="pl-10 flex flex-col  items-start gap-2.5">
+--
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-181-                                            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-182-                                        </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue:183:                                        <TwoPieceButton
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-184-                                            tag="div"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-185-                                            variant="two-piece"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-186-                                            skewPosition="left"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-187-                                            rootClass="w-full no-underline"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-188-                                            skewClass="w-10 self-stretch shrink-0 -ml-10 bg-[url('/images/green-union.png')] bg-contain bg-center bg-no-repeat"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-189-                                            mainClass="px-6 py-2 h-[116px] bg-[#07F468] flex justify-center items-center gap-0.5"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-190-                                            text="CALL"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-191-                                            textClass="justify-center text-gray-900 text-xl font-bold font-['Poppins'] leading-8"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-192-                                            :rightIcon="callArrowUrl || ''"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-193-                                            rightIconClass="w-8 h-8"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-194-                                        />
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-195-                                    </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-196-                                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-197-                            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-198-                        </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-199-                    </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-200-                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-201-            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-202-
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-203-            <!-- Bottom buttons section -->
+--
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-209-                        Book a session for later</div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-210-                    <div class="rounded-[50px] relative inline-flex  items-center overflow-hidden">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue:211:                        <TwoPieceButton
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-212-                            tag="div"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-213-                            variant="two-piece"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-214-                            skewPosition="right"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-215-                            rootClass="no-underline"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-216-                            mainClass="w-40 px-4 py-2 bg-[#FF0066] flex flex-col justify-center items-center"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-217-                            text="SEE OPTIONS"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-218-                            textClass="self-stretch justify-center text-white text-base font-bold font-['Poppins'] leading-6"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-219-                            skewClass="w-3.5 self-stretch shrink-0 -ml-3.5 scale-x-[-1] bg-[url('/images/blueUnion.png')] bg-contain bg-center bg-no-repeat" />
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-220-                        <div class="self-stretch flex  items-center overflow-hidden">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-221-                            <div class="w-full pl-2 pr-3 py-2 bg-[#0C111D] flex  items-center gap-0.5">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-222-                                <div class="w-6 h-6 relative overflow-hidden flex justify-center items-center">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-223-                                    <img src="/images/pinkdropdown-img.png" alt="">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-224-                                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-225-                            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-226-                        </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-227-                    </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-228-                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-229-                <div
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-230-                    class="flex-1 px-2 pt-2 pb-6 bg-gradient-to-b from-white/0 to-white/30 inline-flex flex-col justify-center items-center gap-4">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-231-                    <img class="w-28 h-28" src="/images/cal-camera.png" />
+--
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-233-                        scheduled live events</div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-234-                    <div class="rounded-[50px] relative inline-flex  items-center overflow-hidden">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue:235:                        <TwoPieceButton
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-236-                            tag="div"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-237-                            variant="two-piece"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-238-                            skewPosition="right"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-239-                            rootClass="no-underline"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-240-                            mainClass="w-40 px-4 py-2 bg-[#FF0066] flex flex-col justify-center items-center"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-241-                            text="VIEW EVENTS"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-242-                            textClass="self-stretch justify-center text-white text-base font-bold font-['Poppins'] leading-6"
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-243-                            skewClass="w-3.5 self-stretch shrink-0 -ml-3.5 scale-x-[-1] bg-[url('/images/blueUnion.png')] bg-contain bg-center bg-no-repeat" />
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-244-                        <div class="self-stretch flex  items-center overflow-hidden">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-245-                            <div class="self-stretch pl-2 pr-3 py-2 bg-[#0C111D] flex  items-center gap-0.5">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-246-                                <div class="w-6 h-6 relative overflow-hidden flex justify-center items-center">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-247-                                    <img src="/images/pinkdropdown-img.png" alt="">
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-248-                                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-249-                            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-250-                        </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-251-                    </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-252-                </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-253-            </div>
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-254-
+d:\projects\vue-frontend\src\dev\components\ui\popups\profile\ProfileCallPopup.vue-255-

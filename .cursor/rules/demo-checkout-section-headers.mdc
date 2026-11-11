@@ -1,0 +1,14 @@
+---
+description: DemoPage Checkout Panel Components — headers + OrderSummary, headers chrome only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# Checkout Panel Components on DemoPage
+
+## Source of truth
+- File: `demo-audit/CheckoutSectionHeadersDemo.vue` (section title `demo.checkoutPanelComponents.sectionTitle`).
+- `SectionHeader` / `SectionToggleHeader`: showcase **header chrome only** — no nested slot content (no OrderSummary, payment cards, or auth body inside the toggle).
+- One header sample per look: SectionHeader+close; default toggleable; locked no-chevron; tip dark locked; tip dark toggleable.
+- `OrderSummary` and `AddressCard` are **separate** samples in the same section (Guest / Tip / TopUp / PurchaseFlow), not nested under a header.
+- Live column width `max-w-[29.6875rem]`. No dark stage backgrounds. No file-name captions.

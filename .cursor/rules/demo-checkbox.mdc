@@ -1,0 +1,23 @@
+---
+description: DemoPage CheckboxGroup and CheckboxSwitch — distinct real usages, media uploader visibility via interactionsEngine
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# CheckboxGroup / CheckboxSwitch on DemoPage
+
+## Source of truth
+- Every sample is copied from a real call site. Feature `t()` keys — never `demo.` in Show Code.
+- One sample per look: different check color, size, label weight, tag/tier, icon, or tooltip.
+- Do not repeat the same switch or the same green checkbox with a different sentence.
+- Checkbox looks are `theme` names on `CheckboxGroup`. Shared ones: `successTick` / `successTickSm` / `successCustom` (green, black tick), `mintTick` / `mintCustom` / `mintIcon` (neon green, black tick), `filterBlack`, `booking`, `bookingSmall`, `subscriptionFeature` (pink, white tick — SubscriptionCard feature list), and the calendar themes. Do not paste long Tailwind class strings in Show Code.
+- Switch looks are `theme` names on `CheckboxSwitch`: `linkRow` (subscription horizontal), `filter` (media filter, no label), `planFeatured` (semibold), `plan` (medium). Do not paste long `track-class` / `knob-class` strings in Show Code.
+
+## Media uploader show / hide
+- Toggles that open a panel use `useMediaInteractions` (`registerField`, `changeField`, `isVisible`). Same pattern as `MediaUploaderStepPublishAndSharing`, `MediaUploaderStepSubscriptionP2v`, and `VideoThumbnailSelector`.
+- Do not replace that with `v-if="model"` on those media-uploader panels.
+
+## Do not demo
+- Profile `version="v1"` switches — no page passes that.
+- Invented `DropdownTooltipIcon` wrappers that the source file does not use.
+- Duplicate booking rows, duplicate submit terms, duplicate plan-media rows that share one tag style.

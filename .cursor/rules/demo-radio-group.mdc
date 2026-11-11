@@ -1,0 +1,18 @@
+---
+description: DemoPage RadioGroup — real project calls only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# RadioGroup on DemoPage
+
+## Source of truth
+- Every sample is a real `RadioGroup` call. Labels and options come from `t()`.
+- The Show Code is the full `<RadioGroup>` a developer pastes, including `version`, `label`, `labelClass`, `radioLabelClass`, and the real options.
+- Publish immediate and schedule use the same group. Show it once. ShowCode names both `socialMode` and `socialMode2`.
+- PlanSharing / LuckyDraw attach-media share that same dashboard look — do not demo them as extra samples.
+
+## Do not demo
+- Invented options (Choice A / B / C) or a `multiple` prop. `RadioGroup` does not take `multiple`.
+- A “selected” readout that no page renders.
+- Duplicate Attach Media rows (publish + plan + lucky draw).

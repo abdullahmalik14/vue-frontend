@@ -1,0 +1,11 @@
+---
+description: Do only what the user asks — no extra styling or content
+alwaysApply: true
+---
+
+# Only What The User Asks
+
+- Do **only** what the user explicitly asks for.
+- Do **not** invent or add styling, colors, layout, copy, props, or content from your own judgment.
+- Do **not** “improve”, restyle, or expand beyond the request.
+- If something is unclear, ask — do not guess and ship extras.

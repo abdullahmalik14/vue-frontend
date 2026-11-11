@@ -1,0 +1,16 @@
+---
+description: Plan page demos — usage badge, lucky-draw offer tag; invite/copy live under DashboardTextInput
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# Plan page on DemoPage
+
+## PlanPageDemo
+- Show `PlanUsageBadge` (unlimited + counted) and `LuckyDrawOfferTag` with real plan `t()` keys.
+- Do **not** demo EDIT/REMOVE here — those `DashboardPrimaryButton` usages go in the All Buttons section later.
+- Show Code must call the real components with real props; no `demo.` keys in snippets.
+
+## DashboardTextInput section
+- `PlanInviteFansBar` and `PlanCopyInviteLink` live under the DashboardTextInput section (with CheckoutNotes), not inside PlanPageDemo.
+- Show Code uses `plan.sharing.*` feature keys only.

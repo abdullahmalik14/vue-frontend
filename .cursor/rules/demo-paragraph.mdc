@@ -1,0 +1,24 @@
+---
+description: DemoPage Paragraph — distinct real project styles only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# Paragraph on DemoPage
+
+## Source of truth
+- Every demo is a **copy-paste from a real project usage**.
+- **Text**: same `t('…')` keys or hardcoded strings the page uses. No invented `demo.paragraph.*` samples.
+- One `ShowCodeToggle` per **visually distinct** style.
+
+## Distinct only
+- Keep **one sample per look**: different color, weight, size, or theme.
+- Do **not** stack near-duplicates (multiple white home bodies, multiple `#344054` helpers, FAQ vs service panel same gray, etc.).
+
+## Colors & chrome
+- Exact project colors (including `text-white`). No `!text-black`, no demo background boxes.
+
+## Do not demo
+- PaymentFailed reason, PublishDatePicker schedule warnings, HomeFooter email, ThumbnailUploader `Selected: {name}`.
+- Fake `leftIcon` / Heroicons samples. No real page passes `leftIcon` to `Paragraph` or `Heading`.
+- Left/right span **are** real `Paragraph`s inside `DashboardTextInput`. Show that exact paragraph markup with the real span text and classes: AddTier `USD$` semibold, payout `USD$` font-normal `#344054`, AddTier `% off` `text-medium-text`. Do not wrap an input in an external `<span>`.

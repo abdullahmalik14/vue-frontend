@@ -1,0 +1,29 @@
+---
+description: DemoPage Tabs — distinct real tab components only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# Tabs on DemoPage
+
+## Source of truth
+- Section: `demo-audit/TabsDemo.vue`, wired on DemoPage **directly below Cookies**.
+- One sample per distinct look / component:
+  - `DashboardTabs` — Orders received (default + mobile dropdown)
+  - `DashboardTabs` — XRepost (`tabs-only`, counts, white active)
+  - `DashboardTabs` — Analytics Top Media (`compact` + `tabs-only`, black active)
+  - `MediaUploadTypeTabs` — UploadMediaPopup media types (icons)
+  - `MediaUploadTypeTabs` — Preview Settings video substeps
+  - `MediaUploadTypeTabs` — Publish & Sharing when-to-publish
+  - `MyMediaTabs` — Media library status counts
+  - `HomeServiceTabNav` — Home services pills
+- Show Code uses the real component + feature `t()` keys — never `demo.` in snippets.
+- Tab icons via asset map (`useAssetUrl`).
+- Demo-only width/overflow wrappers (`demoDashboardTabsFitClass`, `demoHomeServiceTabsClass`) — never change `DashboardTabs` / `HomeServiceTabNav` defaults for production.
+
+## Do not demo
+- Near-identical DashboardTabs chrome (e.g. Premium Orders same as Orders received).
+- Trailer-source MediaUploadTypeTabs when Publish 2-tab already covers that chrome.
+- File-name captions above samples.
+- Dark section stage backgrounds.
+- Duplicate standalone tab samples inside HomePageDemo — HomeServiceTabNav belongs only here.

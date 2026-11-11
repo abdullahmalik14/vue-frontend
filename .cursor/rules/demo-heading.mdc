@@ -1,0 +1,25 @@
+---
+description: DemoPage Heading — distinct real project styles only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# Heading on DemoPage
+
+## Source of truth
+- Every demo is a **copy-paste from a real project usage**.
+- **Text**: same `t('…')` keys or hardcoded strings the page uses. No invented `demo.heading.*` samples.
+- One `ShowCodeToggle` per **visually distinct** style.
+
+## Distinct only
+- Keep **one sample per look**: different color, weight, size token, or chrome (e.g. border + View All count).
+- Do **not** stack near-duplicates (e.g. multiple `#667085` section titles, multiple white home titles, AuthHeading h2 + h4).
+
+## Colors & chrome
+- Exact project colors (including `text-white`). No `!text-black`, no demo background boxes.
+- If the real usage has adjacent chrome, include that markup: profile tab count / View All, and PlanDetail free-tokens title with `BaseTooltip`. Do not invent a `leftIcon` on `Heading`.
+
+## Do not demo
+- Unused named themes (`formHeading`, `orderHeading`, `dashboardHeading`, etc.).
+- `homeDitchTitleXl` / near-identical white section titles (`homeSafetyTitle`, `homeOverviewTitle` when same look as ditch/hero family already covered).
+- Fake `leftIcon` samples.

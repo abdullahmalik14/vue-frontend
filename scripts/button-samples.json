@@ -1,0 +1,752 @@
+[
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\media\\uploader\\MediaUploaderStepMediaDetails.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        :text=\"t('mediaUploader.shell.next')\"\r\n        variant=\"polygonLeft\"\r\n        :rightIcon=\"nextIconUrl\"\r\n        :rightIconClass=\"`\r\n          w-6 h-6 transition duration-200\r\n          filter brightness-0 invert-0\r\n          group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]\r\n   "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\media\\uploader\\MediaUploaderStepPreviewSettings.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        :text=\"t('mediaUploader.shell.next')\"\r\n        variant=\"polygonLeft\"\r\n        :rightIcon=\"nextIconUrl\"\r\n        rightIconClass=\"w-5 h-5 transition duration-200 brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]\"\r\n        btnBg=\"#07f468\"\r\n        btnHoverBg=\"black\"\r\n "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\media\\uploader\\MediaUploaderStepPublishAndSharing.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              :text=\"t('mediaUploader.publish.connectX')\"\r\n              variant=\"none\"\r\n              text-class=\"text-[12px] text-white\"\r\n              custom-class=\"py-1 px-2 w-max bg-border-notification-info-light text-[12px] text-white\"\r\n              @click=\"connectXAccount\"\r\n            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\media\\uploader\\MediaUploaderStepSubmit.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\n        :text=\"t('mediaUploader.submit.submitButton')\"\n        variant=\"polygonLeft\"\n        :rightIcon=\"nextIconUrl\"\n        :rightIconClass=\"allTermsAccepted\n          ? 'w-5 h-5 transition duration-200 brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]'\n          : 'w-5 h-"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\media\\uploader\\MediaUploaderStepSubscriptionP2v.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('mediaUploader.subscription.addTier')\"\r\n            variant=\"polygonLeft\"\r\n            customClass=\"gap-[2px] text-sm shrink-0\"\r\n            :leftIcon=\"addTierIconUrl\"\r\n            leftIconClass=\"w-4 h-4 [filter:invert(72%)_sepia(94%)_saturate(464%)_hue-rotate(85deg)_brightness(101%)_contrast(105%)] group-hover:filter-none\"\r\n            btnBg=\"#000\"\r\n "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\media\\uploader\\MediaUploaderStepSubscriptionP2v.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            v-if=\"isVisible('linkPanel')\"\r\n            :text=\"t('mediaUploader.subscription.addTier')\"\r\n            variant=\"polygonLeft\"\r\n            customClass=\"gap-[2px] text-sm !h-10 flex items-center\"\r\n            :leftIcon=\"addTierIconUrl\"\r\n            leftIconClass=\"w-4 h-4 [filter:invert(72%)_sepia(94%)_saturate(464%)_hue-rotate(85deg)_brightness(101%)_contrast(10"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\badge\\dashboard\\Cookies.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"t('cookies.accept')\" variant=\"authPink\" size=\"lg\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\card\\dashboard\\DashboardQuote.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n      theme=\"quoteRefresh\"\r\n      @click=\"refreshQuote\"\r\n      :text=\"t('dashboard.quote.newQuote')\"\r\n      :leftIcon=\"quoteRefreshUrl || ''\"\r\n      :leftIconClass=\"`w-[.875rem] h-[.875rem] ${isRefreshing ? 'animate-spin' : ''}`\"\r\n      :wrapperOverrides=\"[{target:'wrapper1', removeClass:true}, {target:'wrapper2', removeClass:true}]\"\r\n    />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\card\\dashboard\\NotificationCard.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                    :text=\"actionLabel\"\r\n                    theme=\"tipLimitAction\"\r\n                    :right-icon=\"resolvedChevronSrc\"\r\n                    :wrapper-overrides=\"[\r\n                      { target: 'wrapper1', addClass: '!contents' },\r\n                      { target: 'wrapper2', addClass: '!contents' },\r\n                    ]\"\r\n                    @click=\"o"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('cart.syncLive')\"\r\n          theme=\"cartSyncLive\"\r\n          @click=\"syncLiveData\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              :text=\"t('cart.save')\"\r\n              theme=\"cartSave\"\r\n              @click=\"renameCart\"\r\n            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              v-if=\"!cartStore.couponCode\"\r\n              :text=\"t('cart.apply')\"\r\n              theme=\"cartApply\"\r\n              @click=\"applyCoupon\"\r\n            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              v-else\r\n              :text=\"t('cart.remove')\"\r\n              theme=\"cartRemove\"\r\n              @click=\"removeCoupon\"\r\n            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('cart.addNbaCard')\"\r\n                theme=\"cartAddPrimary\"\r\n                @click=\"quickBuy('nba123')\"\r\n              />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('cart.addVintageShirt')\"\r\n                theme=\"cartAddSecondary\"\r\n                @click=\"quickBuy('item456')\"\r\n              />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\cart\\Cart.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              :text=\"t('cart.checkout')\"\r\n              theme=\"cartCheckout\"\r\n              :rightIcon=\"checkoutArrowUrl\"\r\n              @click=\"handleCheckout\"\r\n            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\AddTierPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('mediaUploader.addTier.cancel')\"\r\n          variant=\"none\"\r\n          customClass=\"w-20 h-10 bg-white text-black flex items-center justify-center text-lg font-medium font-['Poppins'] leading-7\"\r\n          :disabled=\"isSaving\"\r\n          @click=\"onCancel\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\AddTierPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('mediaUploader.addTier.save')\"\r\n          variant=\"simpleBtn\"\r\n          btnBg=\"#07F468\"\r\n          btnHoverBg=\"black\"\r\n          btnText=\"black\"\r\n          btnHoverText=\"#22c55e\"\r\n          customClass=\"!h-10 !w-20 !text-lg !font-medium !font-['Poppins'] !leading-7 rounded-none\"\r\n          :disabled=\"isSaving\"\r\n          @click=\"onSave\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\MediaFilterPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('mediaUploader.library.filterPopup.selectAll')\"\r\n                variant=\"mediaBtn\"\r\n                type=\"button\"\r\n                :leftIcon=\"selectAllIconUrl\"\r\n                leftIconClass=\"w-4 h-4 object-contain group-hover:brightness-0\"\r\n                customClass=\"!h-8 !px-2 !gap-2 !text-[14px] !font-medium shrink-0\"\r\n                @click="
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\MediaFilterPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('mediaUploader.library.filterPopup.selectAll')\"\r\n                variant=\"mediaBtn\"\r\n                type=\"button\"\r\n                :leftIcon=\"selectAllIconUrl\"\r\n                leftIconClass=\"w-4 h-4 object-contain group-hover:brightness-0\"\r\n                customClass=\"!h-8 !px-3 !gap-2 !text-[14px] !font-medium shrink-0\"\r\n                @click="
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\MediaFilterPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              data-action=\"reset-media-filter\"\r\n              :text=\"t('mediaUploader.library.filterPopup.reset')\"\r\n              variant=\"simpleBtn\"\r\n              type=\"button\"\r\n              btnBg=\"transparent\"\r\n              btnHoverBg=\"#FF4405\"\r\n              btnText=\"#FF4405\"\r\n              btnHoverText=\"#FFFFFF\"\r\n              :leftIcon=\"resetIconUrl\"\r\n             "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\MediaFilterPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              data-action=\"apply-media-filter\"\r\n              :text=\"t('mediaUploader.library.filterPopup.apply')\"\r\n              variant=\"mediaBtn\"\r\n              type=\"button\"\r\n              customClass=\"uppercase w-full !text-[14px] !font-medium\"\r\n              :leftIcon=\"applyIconUrl\"\r\n              leftIconClass=\"w-5 h-5 object-contain group-hover:brightness-0\"\r\n     "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\components\\ui\\popups\\media\\UploadMediaPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"primaryNextLabel\"\r\n          variant=\"polygonLeft\"\r\n          :rightIcon=\"nextIconUrl\"\r\n          :rightIconClass=\"primaryNextIconClass\"\r\n          :btnBg=\"primaryBtnBg\"\r\n          btnHoverBg=\"black\"\r\n          :btnText=\"primaryBtnText\"\r\n          btnHoverText=\"#07f468\"\r\n          :disabled=\"isSubmitDisabled\"\r\n          :customClass=\"isSubmitDisabled ? 'di"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\calendar\\CalendarMobilePopupContent.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton @click=\"$emit('open-new-events')\" text=\"NEW EVENTS\" variant=\"none\"\r\n                customClass=\"group w-full h-12 min-h-10 px-4 py-2 text-base font-semibold bg-black rounded-[48px] inline-flex justify-center items-center gap-2 text-[#07F468] hover:text-black hover:bg-[#07F468]\"\r\n                :leftIcon=\"'https://i.ibb.co.com/RpWmJkcb/plus.webp'\"\r\n                :leftIco"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\checkout\\purchase\\GuestPurchaseFlowPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                      :text=\"t('auth.login.continueWithX')\"\r\n                      variant=\"actionGreen\"\r\n                      leftIcon=\"https://i.ibb.co.com/HTj6TpFh/x.webp\"\r\n                      leftIconClass=\"w-6 h-6 group-hover/xbtn:[filter:brightness(0)_saturate(100%)_invert(3%)_sepia(58%)_saturate(1835%)_hue-rotate(205deg)_brightness(93%)_contrast(94%)]\"\r\n         "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\checkout\\purchase\\GuestPurchaseFlowPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                        :text=\"t('common.cancel')\"\r\n                        theme=\"guestAddressCancel\"\r\n                        @click=\"cancelAddressEdit\"\r\n                      />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\checkout\\purchase\\GuestPurchaseFlowPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                        :text=\"t('common.update')\"\r\n                        theme=\"guestAddressUpdate\"\r\n                        @click=\"updateAddress\"\r\n                      />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\checkout\\purchase\\GuestPurchaseFlowPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                  :key=\"isStepValid\"\r\n                  :text=\"buttonText\"\r\n                  :variant=\"\r\n                    isStepValid ? 'checkoutProceedpayment' : 'disableBtn'\r\n                  \"\r\n                  :disabled=\"!isStepValid\"\r\n                  :customClass=\"isStepValid ? 'drop-shadow-[0_10px_18px_#07F46899]' : ''\"\r\n                  :rightIcon=\"'https:/"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\forms\\booking-form\\GroupBookingStep1.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton @click=\"goToNext\" text=\"Next\" variant=\"polygonLeft\"\r\n          :rightIcon=\"'https://i.ibb.co/hx8ztZFf/svgviewer-png-output-8.webp'\" :rightIconClass=\"`\r\n              w-6 h-6 transition duration-200\r\n              filter brightness-0 invert-0   /* Default: black */\r\n              group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rota"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\forms\\booking-form\\GroupBookingStep2.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton @click=\"publishSchedule\" text=\"PUBLISH SCHEDULE\" variant=\"polygonLeft\"\r\n        :leftIcon=\"'https://i.ibb.co/S74jfvBw/Icon-1.png'\" :leftIconClass=\"`\r\n          w-6 h-6 transition duration-200\r\n          filter brightness-0\r\n          group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]\r\n   "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\forms\\booking-form\\OneOnOneBookingStep2.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"add-on service\" variant=\"none\"\r\n            customClass=\"group bg-gray-900 flex justify-center items-center gap-2 min-w-14 px-2 py-1\r\n        text-center justify-start text-green-500 text-xs font-semibold capitalize tracking-tight hover:text-black hover:bg-[#07F468]\"\r\n            :leftIcon=\"'https://i.ibb.co.com/RpWmJkcb/plus.webp'\" :leftIconClass=\"`\r\n        w-3 h-3 "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\forms\\booking-form\\OneOnOneBookingStep2.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"add-on service\" variant=\"none\"\r\n            customClass=\"group bg-gray-900 flex justify-center items-center gap-2 min-w-14 px-2 py-1\r\n        text-center justify-start text-green-500 text-xs font-semibold capitalize tracking-tight hover:text-black hover:bg-[#07F468]\"\r\n            :leftIcon=\"'https://i.ibb.co/bRYvsTVs/Icon.png'\" :leftIconClass=\"`\r\n        w-3 h-3 trans"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeComponents\\HomeCreatorSignupForm.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        variant=\"none\"\r\n        type=\"button\"\r\n        :text=\"t('home.signupForm.joinAsCreator')\"\r\n        :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n        custom-class=\"flex justify-center items-center w-full px-4 py-2.5 bg-[#07F468] group/button hover:bg-[#1D2334] md:w-max md:h-[3.25rem] md:rounded-r-md "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeComponents\\HomeCreatorSignupForm.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n      variant=\"none\"\r\n      type=\"button\"\r\n      :text=\"t('home.signupForm.signUpAsFan')\"\r\n      :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n      :custom-class=\"fanButtonClassByVariant[variant]\"\r\n      text-class=\"text-xl leading-normal underline text-[#D0D5DD] dark:text-[#cfcac4]\"\r\n    />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeComponents\\HomeNavbar.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                    variant=\"none\"\r\n                    type=\"button\"\r\n                    :text=\"t('home.nav.login')\"\r\n                    :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n                    custom-class=\"flex justify-center items-center px-1.5 bg-transparent outline-none border-none cursor-point"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeComponents\\HomeNavbar.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                    variant=\"none\"\r\n                    type=\"button\"\r\n                    :text=\"t('home.nav.signUp')\"\r\n                    :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n                    custom-class=\"flex justify-center items-center px-[1.375rem] py-1 [clip-path:polygon(0_0,calc(100%-14.6px"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeComponents\\HomeNavbar.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                                variant=\"none\"\r\n                                type=\"button\"\r\n                                :text=\"t('home.nav.login')\"\r\n                                :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n                                custom-class=\"flex w-full justify-center items"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeComponents\\HomeNavbar.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                                variant=\"none\"\r\n                                type=\"button\"\r\n                                :text=\"t('home.nav.signUp')\"\r\n                                :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n                                custom-class=\"flex w-full justify-center item"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeSections\\DitchMiddleman.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                            variant=\"none\"\r\n                            type=\"button\"\r\n                            :text=\"t('home.ditch.cta')\"\r\n                            :wrapper-overrides=\"WRAPPER_OVERRIDES\"\r\n                            custom-class=\"hidden xl:flex justify-center items-center px-4 py-2.5 w-max bg-[#0C111D] group/button hover:bg-[#07F468] dark:bg-[#0a0e1"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeSections\\DitchMiddleman.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                    variant=\"none\"\r\n                    type=\"button\"\r\n                    :text=\"t('home.ditch.cta')\"\r\n                    :wrapper-overrides=\"WRAPPER_OVERRIDES\"\r\n                    custom-class=\"flex justify-center items-center px-4 py-2.5 bg-[#0C111D] group/button hover:bg-[#07F468] xl:hidden dark:bg-[#0a0e17] dark:hover:bg-[#06c454] border-none outline"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\home\\homeSections\\FAQSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                        variant=\"none\"\r\n                        type=\"button\"\r\n                        :text=\"t(`home.faq.items.${item.key}.question`)\"\r\n                        :wrapper-overrides=\"[{ target: 'wrapper1', removeClass: true }, { target: 'wrapper2', removeClass: true }]\"\r\n                        custom-class=\"flex justify-between items-center gap-2 w-full outl"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\parts\\LuckyDrawSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('plan.luckyDraw.edit')\"\r\n                variant=\"none\"\r\n                :leftIcon=\"assets.pen\"\r\n                leftIconClass=\"w-5 h-5\"\r\n                customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]\"\r\n                @click=\"$emit('edi"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\parts\\LuckyDrawSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('plan.luckyDraw.remove')\"\r\n                variant=\"none\"\r\n                :leftIcon=\"assets.trash\"\r\n                leftIconClass=\"w-5 h-5\"\r\n                customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]\"\r\n                @click=\"$emit("
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\parts\\LuckyDrawSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('plan.luckyDraw.createEvent')\"\r\n            variant=\"none\"\r\n            :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n            leftIconClass=\"w-5 h-5\"\r\n            customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]\"\r\n            @cl"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\parts\\PlanInviteFansBar.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n      :text=\"t('plan.sharing.sendInvite')\"\r\n      variant=\"simpleBtn\"\r\n      :leftIcon=\"assets.send\"\r\n      :leftIconClass=\"`w-6 h-6 group-hover/button:[filter:brightness(0)_saturate(100%)_invert(74%)_sepia(36%)_saturate(5644%)_hue-rotate(95deg)_brightness(111%)_contrast(94%)] group-[.disabled]/button:[filter:brightness(0)_saturate(100%)_invert(76%)_sepia(27%)_saturate(176"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\parts\\SubscriptionVariations.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.subscription.edit')\"\r\n          variant=\"none\"\r\n          :leftIcon=\"assets.pen\"\r\n          leftIconClass=\"w-5 h-5\"\r\n          customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]\"\r\n          @click=\"emit('edit', plan)\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\parts\\SubscriptionVariations.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.subscription.remove')\"\r\n          variant=\"none\"\r\n          :leftIcon=\"assets.trash\"\r\n          leftIconClass=\"w-5 h-5\"\r\n          customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]\"\r\n          @click=\"emit('remove', plan)\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\PlanDetail.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                  :text=\"t('plan.detail.edit')\"\r\n                  variant=\"none\"\r\n                  :leftIcon=\"assets.pen\"\r\n                  leftIconClass=\"w-5 h-5\"\r\n                  customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]\"\r\n                  @click=\"o"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\PlanDetail.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                  :text=\"t('plan.detail.remove')\"\r\n                  variant=\"none\"\r\n                  :leftIcon=\"assets.trash\"\r\n                  leftIconClass=\"w-5 h-5\"\r\n                  customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#FF0066] dark:text-[#ff1a76]\"\r\n                  @clic"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\PlanDetail.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            v-else\r\n            :text=\"t('plan.detail.addDiscount')\"\r\n            variant=\"none\"\r\n            :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n            leftIconClass=\"w-5 h-5\"\r\n            customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium uppercase text-[#155EEF] dark:text-"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\plan\\PlanVariation.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          v-if=\"subscriptionPlans.length === 0\"\r\n          :text=\"t('plan.variation.addPlan')\"\r\n          variant=\"none\"\r\n          :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n          leftIconClass=\"w-5 h-5\"\r\n          customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155EEF] da"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\card\\dashboard\\DashboardAnalyticsMetricCard.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton \r\n          variant=\"none\"\r\n          @click=\"$emit('openTrend')\"\r\n          customClass=\"pointer-events-auto group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-transparent [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] rounded-none border-none outline-none hover:bg-light-primary dark:hover:bg-dark-primary/10 transition-colors\"\r\n          :t"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\card\\dashboard\\DashboardAnalyticsMetricCard.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            variant=\"none\"\r\n            @click=\"$emit('openTrend')\"\r\n            customClass=\"group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-transparent [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] rounded-none border-none outline-none hover:bg-light-primary active:bg-light-primary dark:hover:bg-dark-primaryHover dark:active:bg-dark-p"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\card\\dashboard\\PayoutBalanceAside.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('payout.balanceAside.withdrawNow')\"\r\n          variant=\"none\"\r\n          :leftIcon=\"assets.creditCardDownload\"\r\n          leftIconClass=\"w-6 h-6 [filter:brightness(0)_saturate(100%)] group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(24%)_saturate(6026%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]\"\r\n          textClass=\"text-lg font"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\card\\dashboard\\PayoutProcessingStatus.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"singleActionLabel\"\r\n            theme=\"payoutFail\"\r\n            :right-icon=\"assets.arrowUpRight\"\r\n            @click=\"emitAction(normalizedPayouts[0])\"\r\n          />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\card\\dashboard\\PayoutProcessItem.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        :text=\"resolvedActionLabel\"\r\n        variant=\"none\"\r\n        :right-icon=\"assets.arrowUpRight\"\r\n        right-icon-class=\"w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(5%)_saturate(7497%)_hue-rotate(193deg)_brightness(114%)_contrast(105%)]\"\r\n        text-class=\"text-sm font-medium tracking-[0.021875rem] text-white dark:text-[#e8e6e3]\"\r\n        cus"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\cart\\CartTypeToggle.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n      :text=\"t('cart.typeStandard')\"\r\n      :theme=\"modelValue === 'standard' ? 'cartTypeActive' : 'cartTypeInactive'\"\r\n      @click=\"select('standard')\"\r\n    />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\cart\\CartTypeToggle.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n      :text=\"t('cart.typeDefault')\"\r\n      :theme=\"modelValue === 'default' ? 'cartTypeActive' : 'cartTypeInactive'\"\r\n      @click=\"select('default')\"\r\n    />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\nav\\dashboard\\DashProfileSettings.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                  :text=\"t('profileSettings.editProfile')\"\r\n                  variant=\"none\"\r\n                  :rightIcon=\"editIconUrl\"\r\n                  rightIconClass=\"w-4 h-4\"\r\n                  textClass=\"text-xs leading-normal font-medium text-[#155eef] dark:text-[#2b8cf1]\"\r\n                  customClass=\"inline-flex justify-start items-center gap-0.5 cursor-pointer"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\payment\\ProceedPaymentAgreePopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          class=\"w-full\"\r\n          text=\"AGREE & PROCEED\"\r\n          variant=\"none\"\r\n          :disabled=\"disabled\"\r\n          customClass=\"flex h-10 w-full items-center justify-center border-none bg-[#07F468] text-[18px] font-[500] text-[#000000] cursor-pointer\"\r\n          @click=\"emit('agree')\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\payout\\payout-settings-steps\\PayoutSettingsStep2.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton \r\n                    @click=\"saveSettings\"\r\n                    v-if=\"engine.state.currentMode === 'auto-withdraw' || engine.state.currentMode === 'change-card'\"\r\n                    class=\"ml-auto\"\r\n                    variant=\"none\" \r\n                    :text=\"t('payout.settings.step2.save')\" \r\n                    customClass=\"flex items-center gap-2.5 pl-[1.48rem] pr-2"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\payout\\payout-settings-steps\\PayoutSettingsStep3.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton \r\n                @click=\"saveDetails\"\r\n                class=\"ml-auto\"\r\n                variant=\"none\" \r\n                :text=\"t('payout.settings.step3.save')\" \r\n                customClass=\"flex items-center gap-2.5 pl-[1.48rem] pr-2 h-10 shadow-[0px_0px_16px_0px_#FFFFFF80] [clip-path:polygon(100%_0%,100%_100%,0%_100%,0.98rem_0%)] bg-black group/button hover:bg-[#07F468]"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\payout\\PayoutTransferDetailPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                  :text=\"actionLabel\"\r\n                  variant=\"none\"\r\n                  :right-icon=\"assets.arrowUpRight\"\r\n                  right-icon-class=\"w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(100%)_sepia(5%)_saturate(7497%)_hue-rotate(193deg)_brightness(114%)_contrast(105%)]\"\r\n                  text-class=\"text-sm leading-6 font-medium tracking-[0.021"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\payout\\WithdrawEarningsPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n              v-if=\"isSubmitStep || canProceed\"\r\n              :text=\"isSubmitStep ? t('payout.withdraw.submit') : t('payout.withdraw.next')\"\r\n              variant=\"none\"\r\n              :rightIcon=\"assets.arrowRight\"\r\n              :rightIconClass=\"actionIconClass\"\r\n              :customClass=\"actionButtonClass\"\r\n              @click=\"onFooterAction\"\r\n            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\LuckyDrawAddPrizePopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.luckyDraw.addPrizePopup.addPrize')\"\r\n          variant=\"mediaBtn\"\r\n          :leftIcon=\"canAddPrize ? (assets.plusGreenSquare || assets.plusSquare) : (assets.plusGreySquare || assets.plusSquare)\"\r\n          leftIconClass=\"w-5 h-5 group-hover:brightness-0\"\r\n          :disabled=\"!canAddPrize\"\r\n          customClass=\"!min-w-0 uppercase disabled:!bg-[#"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\LuckyDrawEventPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            v-if=\"!showSpendingRequirement\"\r\n            :text=\"t('plan.luckyDraw.popup.addMinimumSpending')\"\r\n            variant=\"none\"\r\n            :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n            leftIconClass=\"w-5 h-5\"\r\n            customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-m"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\LuckyDrawEventPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                :text=\"t('plan.variation.popup.removeSpendingRequirement')\"\r\n                variant=\"none\"\r\n                customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#FF0066] dark:text-[#ff1a76] shrink-0\"\r\n                @click=\"removeSpendingRequirement\"\r\n              >\r\n          "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\LuckyDrawEventPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            v-if=\"prizes.length < 5\"\r\n            :text=\"t('plan.luckyDraw.popup.addPrize')\"\r\n            variant=\"none\"\r\n            :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n            leftIconClass=\"w-5 h-5\"\r\n            customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155E"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\LuckyDrawEventPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('plan.luckyDraw.popup.cancel')\"\r\n            variant=\"none\"\r\n            customClass=\"!min-w-0 h-10 px-2 bg-transparent border-none outline-none text-base font-medium uppercase text-[#667085] dark:text-[#9e9689]\"\r\n            @click=\"emit('update:modelValue', false)\"\r\n          />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\LuckyDrawEventPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('plan.luckyDraw.popup.createEvent')\"\r\n            variant=\"mediaBtn\"\r\n            :leftIcon=\"canCreate ? (assets.plusGreenSquare || assets.plusSquare) : (assets.plusGreySquare || assets.plusSquare)\"\r\n            :leftIconClass=\"canCreate ? 'w-5 h-5 brightness-0 group-hover:brightness-100' : 'w-5 h-5'\"\r\n            :disabled=\"!canCreate\"\r\n            cu"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\SubscriberDiscountPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('plan.detail.discountPopup.addMinimumSpending')\"\r\n            variant=\"none\"\r\n            :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n            leftIconClass=\"w-5 h-5\"\r\n            customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-medium text-[#155EEF] dark:text-[#2c8df1]"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\SubscriberDiscountPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.detail.discountPopup.cancel')\"\r\n          variant=\"none\"\r\n          customClass=\"!min-w-0 h-10 px-2 bg-transparent border-none outline-none text-base font-medium uppercase text-[#667085] dark:text-[#9e9689]\"\r\n          @click=\"emit('update:modelValue', false)\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\SubscriberDiscountPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.detail.discountPopup.addDiscount')\"\r\n          variant=\"mediaBtn\"\r\n          :leftIcon=\"canAddDiscount ? (assets.plusGreenSquare || assets.plusSquare) : (assets.plusGreySquare || assets.plusSquare)\"\r\n          leftIconClass=\"w-5 h-5 group-hover:brightness-0\"\r\n          :disabled=\"!canAddDiscount\"\r\n          customClass=\"!min-w-0 uppercase disabled:"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\SubscriptionPlanVariationsPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            v-if=\"!showSpendingRequirement\"\r\n            :text=\"t('plan.variation.popup.addMinimumSpending')\"\r\n            variant=\"none\"\r\n            :leftIcon=\"assets.plusBlueSquare || assets.plusSquare\"\r\n            leftIconClass=\"w-5 h-5\"\r\n            customClass=\"!min-w-0 h-auto px-0 py-0 bg-transparent border-none outline-none flex items-center gap-0.5 text-sm font-m"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\SubscriptionPlanVariationsPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.variation.popup.cancel')\"\r\n          variant=\"none\"\r\n          customClass=\"!min-w-0 h-10 px-2 bg-transparent border-none outline-none text-base font-medium uppercase text-[#667085] dark:text-[#9e9689]\"\r\n          @click=\"emit('update:modelValue', false)\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\SubscriptionPlanVariationsPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.variation.popup.addDiscount')\"\r\n          variant=\"mediaBtn\"\r\n          :leftIcon=\"canAddDiscount ? (assets.plusGreenSquare || assets.plusSquare) : (assets.plusGreySquare || assets.plusSquare)\"\r\n          leftIconClass=\"w-5 h-5 group-hover:brightness-0\"\r\n          :disabled=\"!canAddDiscount\"\r\n          customClass=\"!min-w-0 uppercase disabled:!bg-["
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\UnsubscribeDiscountPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.detail.unsubscribeDiscountPopup.cancel')\"\r\n          variant=\"none\"\r\n          customClass=\"!min-w-0 h-10 px-2 bg-transparent border-none outline-none text-base font-medium uppercase text-[#667085] dark:text-[#9e9689]\"\r\n          @click=\"emit('update:modelValue', false)\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\plan\\UnsubscribeDiscountPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('plan.detail.unsubscribeDiscountPopup.addDiscount')\"\r\n          variant=\"mediaBtn\"\r\n          :leftIcon=\"canAddDiscount ? (assets.plusGreenSquare || assets.plusSquare) : (assets.plusGreySquare || assets.plusSquare)\"\r\n          leftIconClass=\"w-5 h-5 group-hover:brightness-0\"\r\n          :disabled=\"!canAddDiscount\"\r\n          customClass=\"!min-w-0 uppercas"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\profile\\ProfileCallPopup.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n                                            tag=\"div\"\r\n                                            variant=\"two-piece\"\r\n                                            skewPosition=\"left\"\r\n                                            rootClass=\"w-full no-underline\"\r\n                                            skewClass=\"w-10 self-stretch shrink-0 -ml-10 bg-[url('/images/green-union.png"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\profile\\ProfileCallPopup.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n                            tag=\"div\"\r\n                            variant=\"two-piece\"\r\n                            skewPosition=\"right\"\r\n                            rootClass=\"no-underline\"\r\n                            mainClass=\"w-40 px-4 py-2 bg-[#FF0066] flex flex-col justify-center items-center\"\r\n                            :text=\"t('profile.callPopup.seeOptions')\"\r\n         "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\profile\\ProfileCallPopup.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n                            tag=\"div\"\r\n                            variant=\"two-piece\"\r\n                            skewPosition=\"right\"\r\n                            rootClass=\"no-underline\"\r\n                            mainClass=\"w-40 px-4 py-2 bg-[#FF0066] flex flex-col justify-center items-center\"\r\n                            :text=\"t('profile.callPopup.viewEvents')\"\r\n         "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\profile\\PurchaseFlowSubscriptionOrderPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :key=\"isStepValid\" :text=\"buttonText\" :variant=\"isStepValid ? 'checkoutProceedpayment' : 'disableBtn'\n                    \" :disabled=\"!isStepValid\" :rightIcon=\"'https://i.ibb.co.com/NdmC2BjP/arrow-right.webp'\"\n                    :rightIconClass=\"arrowIconClass\" @click=\"handleNextStep\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\x-repost\\XRepostPostPreviewPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                    type=\"button\"\r\n                    variant=\"none\"\r\n                    :text=\"t('dashboard.xRepost.postPreview.edit')\"\r\n                    :left-icon=\"assets.editDraft\"\r\n                    left-icon-class=\"size-3.5 brightness-0 invert\"\r\n                    custom-class=\"inline-flex h-7 items-center justify-center gap-1 rounded-t-[4px] rounded-b-none b"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\x-repost\\XRepostPostPreviewPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                      type=\"button\"\r\n                      variant=\"none\"\r\n                      :text=\"t('dashboard.xRepost.postPreview.discardEdit')\"\r\n                      :left-icon=\"assets.close\"\r\n                      left-icon-class=\"size-3.5 brightness-0 invert\"\r\n                      custom-class=\"inline-flex h-7 shrink-0 items-center justify-center gap-1 rounded-"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\x-repost\\XRepostPostPreviewPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                      type=\"button\"\r\n                      variant=\"none\"\r\n                      :text=\"t('dashboard.xRepost.postPreview.saveEdit')\"\r\n                      :left-icon=\"assets.savePost\"\r\n                      left-icon-class=\"size-3.5 brightness-0\"\r\n                      custom-class=\"inline-flex h-7 shrink-0 items-center justify-center gap-1 rounded-none bg"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\x-repost\\XRepostPostPreviewPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          type=\"button\"\r\n          variant=\"none\"\r\n          :text=\"t('dashboard.xRepost.postPreview.saveDraft')\"\r\n          :left-icon=\"assets.uploadDraft\"\r\n          left-icon-class=\"w-6 h-6 brightness-0 invert transition duration-200 group-hover:brightness-0 group-hover:invert-0\"\r\n          custom-class=\"group w-max flex items-center justify-center gap-1 py-1 pr-[1.4rem"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\popups\\x-repost\\XRepostPostPreviewPopup.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          type=\"button\"\r\n          variant=\"none\"\r\n          :text=\"t('dashboard.xRepost.postPreview.savePost')\"\r\n          :left-icon=\"assets.savePost\"\r\n          left-icon-class=\"w-6 h-6 brightness-0 transition duration-200 group-hover:[filter:brightness(0)_saturate(100%)_invert(77%)_sepia(61%)_saturate(638%)_hue-rotate(88deg)_brightness(101%)_contrast(92%)]\"\r\n          "
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\section\\dashboard\\DashboardAnalyticsOverviewSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            variant=\"none\"\r\n            @click=\"$emit('refresh')\"\r\n            data-testid=\"dashboard-analytics-refresh-button\"\r\n            :disabled=\"isAnalyticsRefreshing\"\r\n            customClass=\"group flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-white border border-gray-200 shadow-sm dark:bg-dark-bg-container dark:border-gray-700 [clip-path:poly"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\section\\dashboard\\DashboardAnalyticsOverviewSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                    variant=\"none\"\r\n                    @click=\"$emit('openContributorsTrendPopup')\"\r\n                    customClass=\"pointer-events-auto group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-transparent [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] rounded-none border-none outline-none hover:bg-light-primary dark:hover:bg-da"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\section\\dashboard\\DashboardAnalyticsOverviewSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                      variant=\"none\"\r\n                      @click=\"$emit('openContributorsTrendPopup')\"\r\n                      customClass=\"group/button flex items-center justify-center gap-1 pl-[0.9375rem] pr-2 py-1 bg-transparent [clip-path:polygon(0_0,100%_0,105%_105%,16%_105%)] rounded-none border-none outline-none hover:bg-light-primary active:bg-light-primary dark:h"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\components\\ui\\section\\dashboard\\DashboardAnalyticsTrendsSection.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton variant=\"none\" text=\"Refresh\" / :wrapperOverrides=\"[{target:'wrapper1', removeClass:true}, {target:'wrapper2', removeClass:true}]\">\r\n            </div> -->\r\n\r\n              <!-- tabs -->\r\n              <DashboardTabs\r\n                class=\"shrink-0\"\r\n                compact\r\n                v-model=\"selectedAnalyticsTrendPeriod\"\r\n                :tabs=\"dashboardAnalyticsTr"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Cancel\" variant=\"hoverBgWhite\" size=\"lg\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Save\" variant=\"greyBg\" size=\"lg\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Save\" variant=\"polygonRight\"\r\n      :leftIcon=\"'https://i.ibb.co/Sw3WhF1p/svgviewer-png-output-9.webp'\" :leftIconClass=\"`\r\n  w-6 h-6 transition duration-200\r\n  filter brightness-0 invert\r\n  group-hover:[filter:brightness(0)_saturate(100%)_invert(0%)_sepia(96%)_saturate(7494%)_hue-rotate(96deg)_brightness(112%)_contrast(97%)]\r\n`\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Next\" variant=\"polygonLeft\"\r\n      :rightIcon=\"'https://i.ibb.co/hx8ztZFf/svgviewer-png-output-8.webp'\" :rightIconClass=\"`\r\n  w-6 h-6 transition duration-200\r\n  filter brightness-0 invert-0   \r\n  group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]\r\n`\" btnBg=\"#07f468\" btnHoverBg=\"blac"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"View All Popup\" variant=\"mediaBtn\" @click=\"isViewAllPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Profle media details popup\" variant=\"mediaBtn\"\r\n      @click=\"profileMediaDetailsPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Avatar upload popup\" variant=\"mediaBtn\" @click=\"avatarPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Image Crop Popup\" variant=\"mediaBtn\" @click=\"imageCropPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Buy Now Login Popup\" variant=\"mediaBtn\" @click=\"buyNowLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Buy Now Not Login Popup\" variant=\"mediaBtn\" @click=\"buyNowNotLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Cart Checkout Login Popup\" variant=\"mediaBtn\" @click=\"cartCheckoutLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Cart Checkout Not Login Popup\" variant=\"mediaBtn\"\r\n      @click=\"cartCheckoutNotLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Subscribe Login Popup\" variant=\"mediaBtn\" @click=\"subscribeLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Subscribe Not Login Popup\" variant=\"mediaBtn\" @click=\"subscribeNotLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Subscribe update Login Popup\" variant=\"mediaBtn\"\r\n      @click=\"subscribeUpdateLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Purchase Tip Popup\" variant=\"mediaBtn\" @click=\"purchaseTipPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Purchase Flow Subscription Popup\" variant=\"mediaBtn\"\r\n      @click=\"purchaseFlowSubscriptionPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Guest Purchase Flow Popup\" variant=\"mediaBtn\" @click=\"guestPurchaseFlowPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Upgrade Tier Popup\" variant=\"mediaBtn\" @click=\"upgradeTierPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"1on1 Booking FlowPopup open\" variant=\"mediaBtn\"\r\n      @click=\"oneOnOneBookingFlowPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Ticket Event Popup Open\" variant=\"mediaBtn\" @click=\"ticketEventPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Crowd Funding Event Popup\" variant=\"mediaBtn\" @click=\"crowdFundingEventPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Tip Popup\" variant=\"mediaBtn\" @click=\"tipPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Profile Login Popup\" variant=\"mediaBtn\" @click=\"profileLoginPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton text=\"Profile Merch Popup\" variant=\"mediaBtn\" @click=\"profileMerchPopupOpen = true\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        text=\"Profile Subscription Popup\"\r\n        variant=\"mediaBtn\"\r\n        type=\"button\"\r\n        @click=\"profileSubscriptionPopupOpen = true\"\r\n      />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        text=\"Payout Settings Popup\"\r\n        variant=\"mediaBtn\"\r\n        type=\"button\"\r\n        @click=\"payoutSettingsPopupOpen = true\"\r\n      />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        text=\"Withdraw Earnings Popup\"\r\n        variant=\"mediaBtn\"\r\n        type=\"button\"\r\n        @click=\"withdrawEarningsPopupOpen = true\"\r\n      />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardDevPlaygroundPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n        text=\"Tip Popup\"\r\n        variant=\"mediaBtn\"\r\n        type=\"button\"\r\n        @click=\"tipPopupOpen = true\"\r\n      />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\dashboard\\role\\DashboardResetPasswordPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"buttonText\" variant=\"authPink\" size=\"lg\" :disabled=\"isLoading || !isFormValid\"\r\n          type=\"submit\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\edit-profile\\EditProfilePage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n                                v-if=\"!isPremiumVideoUnlocked\"\r\n                                @click=\"isPremiumVideoUnlocked = true\"\r\n                                tag=\"button\"\r\n                                theme=\"editProfileUnlock\"\r\n                                :text=\"t('editProfile.page.gallery.unlockVideos')\"\r\n                            />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\edit-profile\\EditProfilePage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n                            v-if=\"!isPremiumLinksUnlocked\"\r\n                            @click=\"isPremiumLinksUnlocked = true\"\r\n                            tag=\"button\"\r\n                            theme=\"editProfileUnlock\"\r\n                            rootClass=\"filter drop-shadow-[4px_3px_0px_#000000] group hover:drop-shadow-[4px_3px_0px_#FF439D] block w-max appearance-button mt"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\payment-failed\\PaymentFailedPage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n          variant=\"two-piece\"\r\n          tag=\"button\"\r\n          type=\"button\"\r\n          skew-position=\"right\"\r\n          :text=\"t('paymentFailed.tryAgain')\"\r\n          root-class=\"group relative isolate inline-flex w-max cursor-pointer no-underline\"\r\n          main-class=\"relative z-10 flex h-10 items-center gap-2 bg-black px-4 text-[#07F468] transition-colors duration-300 group"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\payout\\PayoutCosmoPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('payoutCosmo.page.manageCard')\"\r\n            theme=\"cosmoManageCard\"\r\n            type=\"button\"\r\n            :add-attributes=\"{ 'data-element': 'manage-card' }\"\r\n          >\r\n            <template #leftIcon>\r\n              <PayoutCdnIcon :src=\"assets.addCard\" class=\"h-[18px] w-[18px]\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\payout\\PayoutCosmoPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n            :text=\"t('payoutCosmo.page.verification')\"\r\n            theme=\"cosmoVerification\"\r\n            type=\"button\"\r\n            :add-attributes=\"{ 'data-action': 'open-onboarding' }\"\r\n            @click=\"openFlow('onboarding')\"\r\n          >\r\n            <template #leftIcon>\r\n              <PayoutCdnIcon :src=\"assets.checkCircle\" class=\"h-[18px] w-[18px]\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\payout\\PayoutCosmoPage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n            theme=\"payoutCosmoWithdrawBank\"\r\n            tag=\"button\"\r\n            type=\"button\"\r\n            :text=\"t('payoutCosmo.page.withdrawToBank')\"\r\n            :data-attrs=\"{ 'data-action': 'open-saved-bank' }\"\r\n            @click=\"openFlow('saved')\"\r\n          >\r\n            <template #icon>\r\n              <PayoutCdnIcon :src=\"assets.bank\" class=\"h-6 w-6\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\payout\\PayoutCosmoPage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n            theme=\"payoutCosmoAddBank\"\r\n            tag=\"button\"\r\n            type=\"button\"\r\n            :text=\"t('payoutCosmo.page.addBankAccount')\"\r\n            :data-attrs=\"{ 'data-action': 'open-new-bank' }\"\r\n            @click=\"openFlow('new')\"\r\n          >\r\n            <template #icon>\r\n              <PayoutCdnIcon :src=\"assets.plus\" class=\"h-6 w-6\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\plan\\PlanPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          v-if=\"!isLargeScreen\"\r\n          :text=\"t('plan.page.preview')\"\r\n          variant=\"none\"\r\n          :wrapperOverrides=\"[\r\n            { target: 'wrapper1', removeClass: true },\r\n            { target: 'wrapper2', removeClass: true },\r\n          ]\"\r\n          :customClass=\"\r\n            isPreviewPopupOpen\r\n              ? 'fixed top-1/2 translate-y-[-50%] -rotate-"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\settings\\SettingsPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                                    :text=\"t('settings.page.actions.back')\"\r\n                                    theme=\"settingsBack\"\r\n                                    :leftIcon=\"assets.arrowBack\"\r\n                                    :addAttributes=\"{ 'data-back-button': true }\"\r\n                                />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\settings\\SettingsPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                                        :text=\"t('settings.page.actions.cancel')\"\r\n                                        theme=\"settingsCancel\"\r\n                                        :addAttributes=\"{ 'data-cancel-button': true }\"\r\n                                    />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\settings\\SettingsPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n                                        :text=\"t('settings.page.actions.save')\"\r\n                                        theme=\"settingsSave\"\r\n                                        :addAttributes=\"{ 'data-save-button': true }\"\r\n                                    />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\settings\\SettingsPage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton \r\n                                        variant=\"link-x\" \r\n                                        :text=\"t('settings.page.account.linkXCta')\" \r\n                                    >\r\n                                        <template #icon>\r\n                                            <img :src=\"assets.linkX\" :alt=\"t('settings.page.alt.x')\" class=\"w-6 h-6 brightness-0 group-hover"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\settings\\SettingsPage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton \r\n                                        variant=\"premium-upgrade\" \r\n                                        :text=\"t('settings.page.account.upgradeCta')\" \r\n                                        textClass=\"text-lg font-medium text-white\"\r\n                                    >\r\n                                        <template #icon>\r\n                                            <"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\thankyou\\ThankYouPageForMediaOrders.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n            variant=\"link-x\"\r\n            tag=\"button\"\r\n            :text=\"t('thankYou.dashboardHome')\"\r\n            textClass=\"text-[18px] font-medium uppercase text-[#000000] group-hover:text-[#07F468] transition-colors duration-300\"\r\n            type=\"button\"\r\n            @click=\"goDashboard\"\r\n          >\r\n            <template #icon>\r\n              <img\r\n                v-if=\""
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\thankyou\\ThankYouPageForMediaOrders.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n      class=\"absolute bottom-0 right-0 z-20 lg:hidden\"\r\n      variant=\"link-x\"\r\n      tag=\"button\"\r\n      :text=\"t('thankYou.dashboardHome')\"\r\n      textClass=\"text-[18px] font-medium uppercase text-[#000000] group-hover:text-[#07F468] transition-colors duration-300\"\r\n      rootClass=\"pb-1 pr-[5px] filter drop-shadow-[5px_4px_0px_#000] group enabled:hover:drop-shadow-[5px_4px_0px_"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\thankyou\\ThankyouPageForSubscription.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n        variant=\"link-x\"\r\n        tag=\"button\"\r\n        :text=\"t('thankYouSubscription.dashboardHome')\"\r\n        textClass=\"text-[18px] font-medium uppercase text-[#000000] group-hover:text-[#07F468] transition-colors duration-300\"\r\n        rootClass=\"pb-1 pl-[5px] filter drop-shadow-[-5px_4px_0px_#000] group enabled:hover:drop-shadow-[-5px_4px_0px_#07F468] w-max transition-all du"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\dev\\templates\\x-repost\\XRepostPage.vue",
+    "type": "two",
+    "preview": "<TwoPieceButton\r\n                variant=\"link-x\"\r\n                tag=\"button\"\r\n                type=\"button\"\r\n                :text=\"t('dashboard.xRepost.addNew')\"\r\n                content-wrapper-class=\"flex justify-center items-center gap-2.5 px-3 h-10 min-w-[134px] bg-[#07F468] group-hover:bg-black transition-all duration-300\"\r\n                text-class=\"text-sm font-medium text-black group-"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthConfirmEmail.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('auth.confirmEmail.backToLogin')\"\r\n          variant=\"authPink\"\r\n          size=\"lg\"\r\n          @click=\"goToLogin\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthConfirmEmail.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"buttonText\" variant=\"authPink\" size=\"lg\"\r\n          :disabled=\"isLoading || isSubmitting || !isAuthFormReady || !isCodeValid\" type=\"submit\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthLogin.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"buttonText\" variant=\"authPink\" size=\"lg\" :disabled=\"isLoading || !isAuthFormReady\"\r\n          type=\"submit\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthLogin.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"t('auth.login.continueWithX')\" variant=\"authTransparent\" size=\"lg\" :leftIcon=\"twitterIconUrl\"\r\n          leftIconClass=\"w-8 h-8\" :disabled=\"isLoading\" @click=\"handleTwitterLogin\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthLogin.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"t('auth.login.continueWithTelegram')\" variant=\"authTransparent\" size=\"lg\"\r\n          :leftIcon=\"telegramIcon\" leftIconClass=\"w-8 h-8\" :disabled=\"isLoading\" @click=\"handleTelegramLogin\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthResetPassword.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\r\n          :text=\"t('auth.login.button')\"\r\n          variant=\"authPink\"\r\n          size=\"lg\"\r\n          @click=\"popupNavHandler ? popupNavHandler('/log-in') : router.push('/log-in')\"\r\n        />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthResetPassword.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"buttonText\" variant=\"authPink\" size=\"lg\" :disabled=\"!isAuthFormReady\"\r\n          type=\"submit\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthSignUpOnboarding.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"buttonText\" variant=\"authPink\" size=\"lg\" type=\"submit\"\r\n          :disabled=\"isLoading || !isAuthFormReady || isCheckingUsername\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthSignUpOnboardingKyc.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"isLoading ? t('auth.common.loading') : t('auth.register.kyc.button')\" variant=\"authPink\"\r\n          size=\"lg\" :disabled=\"isLoading\" @click=\"completeKyc\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\auth\\views\\AuthSignUpOnboardingKyc.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton :text=\"t('auth.register.kyc.logout')\" variant=\"authTransparent\" size=\"lg\" type=\"button\"\r\n          @click=\"handleLogout\" />"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\media\\MediaUploaderPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\n          v-if=\"hasLibrary\"\n          data-action=\"open-new-upload\"\n          :text=\"t('mediaUploader.empty.uploadCta')\"\n          variant=\"mediaBtn\"\n          type=\"button\"\n          customClass=\"uppercase\"\n          :leftIcon=\"plusIconUrl\"\n          leftIconClass=\"w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightn"
+  },
+  {
+    "file": "D:\\projects\\vue-frontend\\src\\templates\\media\\MediaUploaderPage.vue",
+    "type": "dpb",
+    "preview": "<DashboardPrimaryButton\n          :text=\"t('mediaUploader.empty.uploadCta')\"\n          variant=\"mediaBtn\"\n          type=\"button\"\n          customClass=\"uppercase\"\n          :leftIcon=\"plusIconUrl\"\n          leftIconClass=\"w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)]\"\n       "
+  }
+]

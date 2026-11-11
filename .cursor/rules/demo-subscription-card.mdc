@@ -1,0 +1,19 @@
+---
+description: DemoPage SubscriptionCard — ProfileSubscriptionCards real looks only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# SubscriptionCard on DemoPage
+
+## Source of truth
+- Only real call site: `ProfileSubscriptionCards.vue` inside `ProfileSubscriptionPopup` (modes: `switch`, `subscribe`, `free-paid`, `paid-upgrade`, `paid-to-free`, `paid-downgrade`).
+- Demo shows: the real `v-for` loop Show Code, plus one isolated card per look — featured+Upgrade, current, Downgrade, subscribe CTA, free plan.
+- Show Code uses feature `t()` keys under `subscriptionCard.*` — never `demo.` for card copy.
+- Images via `useAssetUrl('subscriptionCard.demo.bg…')`. Prefer `static` for isolated demos (carousel `order` is for the popup).
+- Feature-list rows use `CheckboxGroup` with `theme="subscriptionFeature"` (always checked, decorative, centered white SVG tick).
+
+## Do not demo
+- Five near-identical standard cards.
+- File-name captions (“Card 2 — Featured”) above samples.
+- Dark section stage backgrounds.

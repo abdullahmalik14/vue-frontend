@@ -1,0 +1,19 @@
+---
+description: DemoPage ThumbnailUploader — distinct real call-site looks only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# ThumbnailUploader on DemoPage
+
+## Source of truth
+- Section: `demo-audit/ThumbnailUploaderDemo.vue`, wired on DemoPage **above** Media Uploader Helper Components.
+- One sample per distinct look from real call sites: Preview Settings upload thumbnail, preview video trailer, Publish custom image/video, UploadMediaPopup tall dropzone, AddTierPopup plain icon, PlanDetail underlined plain + custom wrapper, EditProfile gallery green badge, PayoutCosmo compact + `PayoutCdnIcon`, OrderDetails compact default badge.
+- Show Code uses the real component + feature `t()` keys (`mediaUploader.*`, `editProfile.*`, `payoutCosmo.*`, `dashboard.orders.*`) — never `demo.` in snippets.
+- Images/icons via asset map (`useAssetUrl` / `usePlanAssets` / `useEditProfileAssets`).
+
+## Do not demo
+- Near-identical chrome (e.g. three trailer CheckboxSwitch stateKeys, audio trailer that only changes accept/copy).
+- File-name captions above samples.
+- Dark section stage backgrounds.
+- Duplicate ThumbnailUploader samples inside Media Uploader / Plan / Edit Profile demos — those belong only here.

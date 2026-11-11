@@ -1,0 +1,61 @@
+
+{
+  "flowId": "checkoutFlow",
+  "description": "Checkout popup state-engine schema for iframe-ready purchase flows. Backend later owns cart, payment widget, and payment status.",
+  "initialStep": 1,
+  "steps": {
+    "1": {
+      "id": "billing",
+      "label": "Billing / shipping",
+      "usedWhen": "Guest merch/PPV checkout or free-to-paid new card"
+    },
+    "2": {
+      "id": "payment",
+      "label": "Payment",
+      "usedWhen": "Logged-in checkout, upgrades, downgrades that need a card, and payment-failed retries"
+    },
+    "3": {
+      "id": "agree",
+      "label": "Agree and proceed",
+      "usedWhen": "Opens after Proceed Payment, before the payment request is sent"
+    },
+    "4": {
+      "id": "success",
+      "label": "Payment successful",
+      "usedWhen": "Opens after Agree and Proceed when payment succeeds"
+    }
+  },
+  "fields": {
+    "email": { "type": "string", "step": 1, "required": true },
+    "password": { "type": "string", "step": 1, "required": false },
+    "username": { "type": "string", "step": 1, "required": false },
+    "authMode": { "type": "string", "enum": ["guest", "login", "forgot"], "default": "guest" },
+    "isLoggedIn": { "type": "boolean", "default": false },
+    "firstName": { "type": "string", "step": 1, "requiredWhen": "requiresShipping" },
+    "lastName": { "type": "string", "step": 1, "requiredWhen": "requiresShipping" },
+    "addressLine1": { "type": "string", "step": 1, "requiredWhen": "requiresShipping" },
+    "addressLine2": { "type": "string", "step": 1, "required": false },
+    "postalCode": { "type": "string", "step": 1, "requiredWhen": "requiresShipping" },
+    "city": { "type": "string", "step": 1, "requiredWhen": "requiresShipping" },
+    "selectedCountry": { "type": "string", "step": 1, "requiredWhen": "requiresShipping" },
+    "selectedState": { "type": "string", "step": 1, "required": false },
+    "saveAddress": { "type": "boolean", "default": false },
+    "sameAddress": { "type": "boolean", "default": false },
+    "termsAgreed": { "type": "boolean", "required": true },
+    "paymentCardNumber": { "type": "string", "step": 2, "requiredWhen": "newCard" },
+    "paymentExpiry": { "type": "string", "step": 2, "requiredWhen": "newCard" },
+    "paymentCardHolder": { "type": "string", "step": 2, "requiredWhen": "newCard" },
+    "paymentCvv": { "type": "string", "step": 2, "requiredWhen": "newCard" },
+    "paymentSaveCard": { "type": "boolean", "default": false },
+    "orderNotes": { "type": "string", "max": 300 },
+    "productId": { "type": "string" },
+    "productTitle": { "type": "string" },
+    "productPrice": { "type": "string" },
+    "orderSubmitted": { "type": "boolean", "default": false }
+  },
+  "mockApis": {
+    "POST /checkout/cart": { "scenarios": ["success", "failure", "ask"] },
+    "POST /checkout/pay": { "scenarios": ["success", "failure", "ask"] },
+    "GET /checkout/status": { "scenarios": ["success", "failure", "ask"] }
+  }
+}

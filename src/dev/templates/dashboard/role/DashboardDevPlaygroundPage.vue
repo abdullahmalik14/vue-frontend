@@ -1,0 +1,302 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import DashboardSharedTwoColLayout from '@/templates/dashboard/shared/DashboardSharedTwoColLayout.vue';
+import DashboardPrimaryButton from '@/components/ui/buttons/DashboardPrimaryButton.vue';
+import ProfileSubscriptionPopup from '@/dev/components/ui/popups/profile/ProfileSubscriptionPopup.vue';
+import PayoutSettingsPopup from '@/dev/components/ui/popups/payout/PayoutSettingsPopup.vue';
+import WithdrawEarningsPopup from '@/dev/components/ui/popups/payout/WithdrawEarningsPopup.vue';
+import TipPopup from '@/dev/components/ui/popups/profile/TipPopup.vue';
+import GuestPurchaseFlowPopup from "@/dev/components/checkout/purchase/GuestPurchaseFlowPopup.vue";
+
+const profileSubscriptionPopupOpen = ref(false);
+const payoutSettingsPopupOpen = ref(false);
+const withdrawEarningsPopupOpen = ref(false);
+const tipPopupOpen = ref(false);
+const guestPurchaseFlowPopupOpen = ref(false);
+
+</script>
+
+<template>
+<!-- <DashboardSharedTwoColLayout>
+
+    <Cookies />
+
+    <DashboardPrimaryButton text="Cancel" variant="hoverBgWhite" size="lg" />
+
+    <DashboardPrimaryButton text="Save" variant="greyBg" size="lg" />
+
+    <DashboardPrimaryButton text="Save" variant="polygonRight"
+      :leftIcon="'https://i.ibb.co/Sw3WhF1p/svgviewer-png-output-9.webp'" :leftIconClass="`
+  w-6 h-6 transition duration-200
+  filter brightness-0 invert
+  group-hover:[filter:brightness(0)_saturate(100%)_invert(0%)_sepia(96%)_saturate(7494%)_hue-rotate(96deg)_brightness(112%)_contrast(97%)]
+`" />
+
+    <DashboardPrimaryButton text="Next" variant="polygonLeft"
+      :rightIcon="'https://i.ibb.co/hx8ztZFf/svgviewer-png-output-8.webp'" :rightIconClass="`
+  w-6 h-6 transition duration-200
+  filter brightness-0 invert-0   
+  group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]
+`" btnBg="#07f468" btnHoverBg="black" btnText="black" btnHoverText="#07f468" />
+
+
+    <LoadingTest />
+    <PageDataTest />
+    <br />
+    <br />
+    <Cart />
+    <br />
+    <br />
+
+    <br />
+    <br />
+    <DashProfileSettings />
+
+    <br />
+    <br />
+
+    <DashboardPrimaryButton text="View All Popup" variant="mediaBtn" @click="isViewAllPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Profle media details popup" variant="mediaBtn"
+      @click="profileMediaDetailsPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Avatar upload popup" variant="mediaBtn" @click="avatarPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Image Crop Popup" variant="mediaBtn" @click="imageCropPopupOpen = true" />
+
+    <br />
+
+    <br />
+
+    <DashboardPrimaryButton text="Buy Now Login Popup" variant="mediaBtn" @click="buyNowLoginPopupOpen = true" />
+    <br />
+
+    <DashboardPrimaryButton text="Buy Now Not Login Popup" variant="mediaBtn" @click="buyNowNotLoginPopupOpen = true" />
+    <br />
+
+    <DashboardPrimaryButton text="Cart Checkout Login Popup" variant="mediaBtn" @click="cartCheckoutLoginPopupOpen = true" />
+    <br />
+
+    <DashboardPrimaryButton text="Cart Checkout Not Login Popup" variant="mediaBtn"
+      @click="cartCheckoutNotLoginPopupOpen = true" />
+    <br />
+
+    <DashboardPrimaryButton text="Subscribe Login Popup" variant="mediaBtn" @click="subscribeLoginPopupOpen = true" />
+    <br />
+
+    <DashboardPrimaryButton text="Subscribe Not Login Popup" variant="mediaBtn" @click="subscribeNotLoginPopupOpen = true" />
+    <br />
+
+    <DashboardPrimaryButton text="Subscribe update Login Popup" variant="mediaBtn"
+      @click="subscribeUpdateLoginPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Purchase Tip Popup" variant="mediaBtn" @click="purchaseTipPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Purchase Flow Subscription Popup" variant="mediaBtn"
+      @click="purchaseFlowSubscriptionPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Guest Purchase Flow Popup" variant="mediaBtn" @click="guestPurchaseFlowPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Upgrade Tier Popup" variant="mediaBtn" @click="upgradeTierPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="1on1 Booking FlowPopup open" variant="mediaBtn"
+      @click="oneOnOneBookingFlowPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Ticket Event Popup Open" variant="mediaBtn" @click="ticketEventPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Crowd Funding Event Popup" variant="mediaBtn" @click="crowdFundingEventPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Tip Popup" variant="mediaBtn" @click="tipPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Profile Login Popup" variant="mediaBtn" @click="profileLoginPopupOpen = true" />
+
+    <br />
+
+    <DashboardPrimaryButton text="Profile Merch Popup" variant="mediaBtn" @click="profileMerchPopupOpen = true" />
+
+    <br />
+
+
+    <br />
+
+    <br />
+    <div class="flex flex-col items-center gap-6 md:gap-8">
+      <TierCard v-for="tier in tierData" :key="tier.id" :tier="tier" />
+    </div>
+    <br />
+
+    <br />
+
+    
+
+    <br>
+
+
+    <ProfileMerchPopup />
+
+
+    <ProfileViewAllPopup v-model="isViewAllPopupOpen" />
+
+    <ProfileMediaDetailsPopup v-model="profileMediaDetailsPopupOpen" />
+
+    <AvatarUploadPopup v-model="avatarPopupOpen" />
+
+    <ImageCropperModal v-model="imageCropPopupOpen" @save="handleImageSave" />
+    
+    <BuyNowLoginPopup v-model="buyNowLoginPopupOpen" />
+    <BuyNowNotLoginPopup v-model="buyNowNotLoginPopupOpen" />
+    <CartCheckoutLoginPopup v-model="cartCheckoutLoginPopupOpen" />
+    <CartCheckoutNotLoginPopup v-model="cartCheckoutNotLoginPopupOpen" />
+    <SubscribeLoginPopup v-model="subscribeLoginPopupOpen" />
+    <SubscribeNotLoginPopup v-model="subscribeNotLoginPopupOpen" />
+    <SubscribeUpdateLoginPopup v-model="subscribeUpdateLoginPopupOpen" />
+    <PurchaseTipFlowPopup v-model="purchaseTipPopupOpen" />
+    <PurchaseFlowSubscriptionOrderPopup v-model="purchaseFlowSubscriptionPopupOpen" />
+    <GuestPurchaseFlowPopup v-model="guestPurchaseFlowPopupOpen" />
+    <UpgradeTierPopup v-model="upgradeTierPopupOpen" />
+    <OneOnOneBookingFlowPopup v-model="oneOnOneBookingFlowPopupOpen" />
+    <TicketEventPopup v-model="ticketEventPopupOpen" />
+    <CrowdFundingEventPopup v-model="crowdFundingEventPopupOpen" />
+    <TipPopup v-model="tipPopupOpen" />
+    <ProfileLoginPopup v-model="profileLoginPopupOpen" />
+    <ProfileMerchPopup v-model="profileMerchPopupOpen" />
+   
+  </DashboardSharedTwoColLayout> -->
+
+  <DashboardSharedTwoColLayout>
+    <div class="flex flex-wrap items-center gap-3">
+    <DashboardPrimaryButton text="Guest Purchase Flow Popup" variant="mediaBtn" @click="guestPurchaseFlowPopupOpen = true" />
+
+      <DashboardPrimaryButton
+        text="Profile Subscription Popup"
+        variant="mediaBtn"
+        type="button"
+        @click="profileSubscriptionPopupOpen = true"
+      />
+      <DashboardPrimaryButton
+        text="Payout Settings Popup"
+        variant="mediaBtn"
+        type="button"
+        @click="payoutSettingsPopupOpen = true"
+      />
+      <DashboardPrimaryButton
+        text="Withdraw Earnings Popup"
+        variant="mediaBtn"
+        type="button"
+        @click="withdrawEarningsPopupOpen = true"
+      />
+      <DashboardPrimaryButton
+        text="Tip Popup"
+        variant="mediaBtn"
+        type="button"
+        @click="tipPopupOpen = true"
+      />
+    </div>
+
+    <ProfileSubscriptionPopup v-model="profileSubscriptionPopupOpen" />
+    <PayoutSettingsPopup v-model="payoutSettingsPopupOpen" />
+    <WithdrawEarningsPopup v-model="withdrawEarningsPopupOpen" />
+    <TipPopup v-model="tipPopupOpen" />
+    <GuestPurchaseFlowPopup v-model="guestPurchaseFlowPopupOpen" />
+
+  </DashboardSharedTwoColLayout>
+</template>
+
+
+<!-- <script setup>
+import DashboardSharedTwoColLayout from "@/templates/dashboard/shared/DashboardSharedTwoColLayout.vue";
+import DashboardPrimaryButton from "@/components/ui/buttons/DashboardPrimaryButton.vue";
+import Cookies from "@/components/ui/badge/dashboard/Cookies.vue";
+import Cart from "@/components/ui/cart/Cart.vue";
+import OrderReceived from "@/dev/components/ui/table/dashboard/OrderReceived.vue";
+import ProfileViewAllPopup from "@/components/ui/popups/ProfileViewAllPopup.vue";
+import ProfileMediaDetailsPopup from "@/components/ui/popups/ProfileMediaDetailsPopup.vue";
+import AvatarUploadPopup from "@/components/ui/popups/AvatarUploadPopup.vue";
+import { onMounted, ref } from "vue";
+import ImageCropperModal from "@/components/ui/popups/ImageCropperModal.vue";
+import BuyNowLoginPopup from "@/components/ui/popups/buy-now/BuyNowLoginPopup.vue";
+import BuyNowNotLoginPopup from "@/components/ui/popups/buy-now/BuyNowNotLoginPopup.vue";
+import CartCheckoutLoginPopup from "@/components/ui/popups/cart-checkout/CartCheckoutLoginPopup.vue";
+import CartCheckoutNotLoginPopup from "@/components/ui/popups/cart-checkout/CartCheckoutNotLoginPopup.vue";
+import SubscribeLoginPopup from "@/components/ui/popups/subscribe/SubscribeLoginPopup.vue";
+import SubscribeNotLoginPopup from "@/components/ui/popups/subscribe/SubscribeNotLoginPopup.vue";
+import SubscribeUpdateLoginPopup from "@/components/ui/popups/subscribe/SubscribeUpdateLoginPopup.vue";
+import DashProfileSettings from '@/dev/components/ui/nav/dashboard/DashProfileSettings.vue';
+import PurchaseTipFlowPopup from "@/components/ui/popups/purchase/PurchaseTipFlowPopup.vue";
+import PurchaseFlowSubscriptionOrderPopup from "@/components/ui/popups/purchase/PurchaseFlowSubscriptionOrderPopup.vue";
+import GuestPurchaseFlowPopup from "@/components/ui/popups/purchase/GuestPurchaseFlowPopup.vue";
+import UpgradeTierPopup from "@/components/ui/popups/purchase/UpgradeTierPopup.vue";
+import TierCard from "@/components/ui/card/dashboard/TierCard.vue";
+import { tierData } from "/public/data/TierData.js";
+import OneOnOneBookingFlowPopup from "@/components/FanBookingFlow/OneOnOneBookingFlow/OneOnOneBookingFlowPopup.vue";
+import TicketEventPopup from "@/components/FanBookingFlow/GroupEventFlow/TicketEventPopup/TicketEventPopup.vue";
+import CrowdFundingEventPopup from "@/components/FanBookingFlow/GroupEventFlow/CrowdFundingEventPopup/CrowdFundingEventPopup.vue";
+import TipPopup from "@/templates/profile/popups/TipPopup.vue";
+import ProfileLoginPopup from "@/templates/profile/popups/ProfileLoginPopup.vue";
+import ProfileMerchPopup from "@/templates/profile/popups/ProfileMerchPopup.vue";
+
+
+const isViewAllPopupOpen = ref(false);
+const profileMediaDetailsPopupOpen = ref(false);
+const avatarPopupOpen = ref(false);
+const imageCropPopupOpen = ref(false);
+const buyNowLoginPopupOpen = ref(false);
+const buyNowNotLoginPopupOpen = ref(false);
+const cartCheckoutLoginPopupOpen = ref(false);
+const cartCheckoutNotLoginPopupOpen = ref(false);
+const subscribeLoginPopupOpen = ref(false);
+const subscribeNotLoginPopupOpen = ref(false);
+const subscribeUpdateLoginPopupOpen = ref(false);
+const purchaseTipPopupOpen = ref(false);
+const purchaseFlowSubscriptionPopupOpen = ref(false);
+const guestPurchaseFlowPopupOpen = ref(false);
+const upgradeTierPopupOpen = ref(false);
+const oneOnOneBookingFlowPopupOpen = ref(false);
+const ticketEventPopupOpen = ref(false);
+const crowdFundingEventPopupOpen = ref(false);
+const tipPopupOpen = ref(false);
+const profileLoginPopupOpen = ref(false);
+const profileMerchPopupOpen = ref(false);
+
+const handleImageSave = (data) => {
+  console.log("Cropped Data Received:", data);
+};
+const uploadPercentage = ref(0);
+
+// This function is only for demo purposes to show the progress bar in action.
+// Once the actual API is integrated, this will no longer be needed,
+// as the value will come directly from the API.
+onMounted(() => {
+  const interval = setInterval(() => {
+    if (uploadPercentage.value < 100) {
+      uploadPercentage.value += 1;
+    } else {
+      clearInterval(interval);
+    }
+  }, 50); // Speed control
+});
+</script> -->

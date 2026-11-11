@@ -1,0 +1,103 @@
+english_text,i18n_key,kind,source_file,location,note
+# of Clicks,dashboard.analytics.tables.media.clicks,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMediaTable.vue,script,Inline English fallback
+# of Sales,dashboard.analytics.tables.media.sales,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMediaTable.vue,script,Inline English fallback
+# of views,dashboard.analytics.tables.merch.views,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMerchTable.vue,script,Inline English fallback
+# of views,dashboard.analytics.tables.tags.views,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopTagsTable.vue,script,Inline English fallback
+All Time,dashboard.analytics.periods.allTime,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsTrendPopup.vue,script,Inline English fallback
+Call Tokens,dashboard.analytics.legends.callTokens,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Cart,,attr_alt,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,template,Hardcoded alt
+Chat Tokens,dashboard.analytics.legends.chatTokens,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Contributors Insight,dashboard.analytics.trends.titleContributors,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsContributorsTrendPopup.vue,template,Inline English fallback
+Countries,,script_literal,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,UI string in script (label/title/text)
+Custom Request,,script_object_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,English object key used as chart/category label
+Custom Request,dashboard.analytics.legends.customrequest,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Date,dashboard.analytics.tables.orders.date,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,Inline English fallback
+Direct,,script_name,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,name literal (chart series / donut slice)
+Earnings Insight,dashboard.analytics.trends.titleEarnings,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,template,Inline English fallback
+fan,dashboard.analytics.tables.fan,i18n_key_unresolved,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsContributorsPreviewTable.vue,script,Key only — English not found in locale JSON
+Fan,dashboard.analytics.tables.contributors.fan,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsContributorsPreviewTable.vue,script,Inline English fallback
+Fans Insight,dashboard.analytics.trends.titleFans,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,template,Inline English fallback
+Feed Likes,dashboard.analytics.likes.feed,i18n_key,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,script,Resolved from section-dashboard-global/en.json
+Fetching Analytics Data...,,hardcoded_text,src/templates/dashboard/global/DashboardAnalyticsPage.vue,template,Hardcoded template text
+Followers,,hardcoded_text,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,template,Hardcoded template text
+Free,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Free,dashboard.analytics.legends.free,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+From,dashboard.analytics.tables.orders.from,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,Inline English fallback
+Instagram,,script_name,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,name literal (chart series / donut slice)
+js,@/config/dashboardAnalyticsFlows.js,i18n_key_unresolved,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,script,Key only — English not found in locale JSON
+js,@/services/flow-system/FlowHandler.js,i18n_key_unresolved,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,script,Key only — English not found in locale JSON
+Last updated at,dashboard.analytics.page.lastUpdated,i18n_key,src/dev/components/ui/section/dashboard/DashboardAnalyticsOverviewSection.vue,template,Resolved from section-dashboard-global/en.json
+Learn ways to earn,dashboard.analytics.trends.learnToEarn,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,template,Inline English fallback
+Likes Insight,,hardcoded_text,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,template,Hardcoded template text
+Likes Insight,dashboard.analytics.trends.titleLikes,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,template,Inline English fallback
+Live Stream Tokens,dashboard.analytics.legends.liveStreamTokens,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Loading Chart...,,hardcoded_text,src/components/ui/popups/DashboardAnalyticsContributorsTrendPopup.vue,template,Hardcoded template text
+Media,,script_literal,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,UI string in script (label/title/text)
+Media,dashboard.analytics.tables.media.media,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMediaTable.vue,script,Inline English fallback
+Media Likes,dashboard.analytics.likes.media,i18n_key,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,script,Resolved from section-dashboard-global/en.json
+Merch,,script_object_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,English object key used as chart/category label
+Merch,dashboard.analytics.legends.merch,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Merch,dashboard.analytics.tables.merch.merch,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMerchTable.vue,script,Inline English fallback
+Merch Likes,dashboard.analytics.likes.merch,i18n_key,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,script,Resolved from section-dashboard-global/en.json
+New,,hardcoded_text,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,template,Hardcoded template text
+New Followers,dashboard.analytics.legends.newFollowers,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,Inline English fallback
+New Subscriber,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+New Subscriber,dashboard.analytics.legends.newSubscriber,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+No trend to show at the moment,dashboard.analytics.trends.noTrend,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,template,Inline English fallback
+Order#,dashboard.analytics.tables.orders.orderLabel,i18n_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,Resolved from section-dashboard-global/en.json
+Orders Received,dashboard.menu.ordersReceived,i18n_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,template,Resolved from section-dashboard-global/en.json
+Other,,script_name,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,name literal (chart series / donut slice)
+overview/insight,,attr_alt,src/dev/components/ui/section/dashboard/DashboardAnalyticsOverviewSection.vue,template,Hardcoded alt
+Overview/Insight,dashboard.analytics.page.overviewTitle,i18n_key,src/dev/components/ui/section/dashboard/DashboardAnalyticsOverviewSection.vue,template,Resolved from section-dashboard-global/en.json
+Pay to View,,script_object_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,English object key used as chart/category label
+Pay to View,dashboard.analytics.legends.paytoview,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Profile Likes,dashboard.analytics.likes.profile,i18n_key,src/components/ui/popups/DashboardAnalyticsLikesTrendPopup.vue,script,Resolved from section-dashboard-global/en.json
+Profile Visit,dashboard.analytics.legends.profileVisit,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,Inline English fallback
+Profile Visits,,script_literal,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,UI string in script (label/title/text)
+Recurring Subscriber,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Recurring Subscriber,dashboard.analytics.legends.recurringSubscriber,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+Reddit,,script_name,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,name literal (chart series / donut slice)
+Refresh,dashboard.analytics.page.refresh,i18n_key,src/dev/components/ui/section/dashboard/DashboardAnalyticsOverviewSection.vue,template,Resolved from section-dashboard-global/en.json
+Refreshing...,dashboard.analytics.page.refreshing,i18n_key,src/dev/components/ui/section/dashboard/DashboardAnalyticsOverviewSection.vue,template,Resolved from section-dashboard-global/en.json
+Sales (USD),,script_literal,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,UI string in script (label/title/text)
+Sales (USD),dashboard.analytics.tables.media.salesUsd,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMediaTable.vue,script,Inline English fallback
+Sales (USD),dashboard.analytics.tables.salesUsd,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMerchTable.vue,script,Inline English fallback
+select-dropdown,.select-dropdown,i18n_key_unresolved,src/components/ui/popups/DashboardAnalyticsTrendPopup.vue,script,Key only — English not found in locale JSON
+Status,dashboard.analytics.tables.orders.status,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,Inline English fallback
+Subscription,dashboard.analytics.legends.subscription,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Subscriptions Insight,dashboard.analytics.trends.subscriptionsInsight,i18n_key,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,template,Resolved from section-dashboard-global/en.json
+Tags,dashboard.analytics.tables.tags.tags,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopTagsTable.vue,script,Inline English fallback
+Tier 1,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Tier 1,dashboard.analytics.legends.tier1,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+Tier 2,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Tier 2,dashboard.analytics.legends.tier2,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+Tier 3,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Tier 3,dashboard.analytics.legends.tier3,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+Tier 4,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Tier 4,dashboard.analytics.legends.tier4,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+Tier 5,,script_name,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,name literal (chart series / donut slice)
+Tier 5,dashboard.analytics.legends.tier5,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,script,Inline English fallback
+Tiers Breakdown,dashboard.analytics.trends.tiersBreakdown,i18n_key,src/components/ui/popups/DashboardAnalyticsSubscribersTrendPopup.vue,template,Resolved from section-dashboard-global/en.json
+TikTok,,script_name,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,name literal (chart series / donut slice)
+Tip Tokens,dashboard.analytics.legends.tipTokens,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Top Contributors,dashboard.analytics.trends.topContributors,i18n_key,src/components/ui/popups/DashboardAnalyticsContributorsTrendPopup.vue,template,Resolved from section-dashboard-global/en.json
+Top Countries,dashboard.analytics.trends.topCountries,i18n_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopCountriesTable.vue,template,Resolved from section-dashboard-global/en.json
+Top Fans,dashboard.analytics.trends.topFans,i18n_key,src/components/ui/popups/DashboardAnalyticsContributorsTrendPopup.vue,template,Resolved from section-dashboard-global/en.json
+Top Media,dashboard.analytics.trends.topMedia,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMediaTable.vue,template,Inline English fallback
+Top Merch,dashboard.analytics.trends.topMerch,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMerchTable.vue,template,Inline English fallback
+Top Order Spenders,dashboard.analytics.trends.topOrderSpenders,i18n_key,src/components/ui/popups/DashboardAnalyticsContributorsTrendPopup.vue,template,Resolved from section-dashboard-global/en.json
+Top Tags,dashboard.analytics.trends.topTags,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopTagsTable.vue,template,Inline English fallback
+Total,dashboard.analytics.tables.orders.total,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,Inline English fallback
+Total (USD),dashboard.analytics.tables.totalUsd,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsContributorsPreviewTable.vue,script,Inline English fallback
+Total Earnings,dashboard.analytics.trends.totalEarnings,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,template,Inline English fallback
+Trend,dashboard.analytics.page.trend,i18n_key,src/dev/components/ui/card/dashboard/DashboardAnalyticsMetricCard.vue,template,Resolved from section-dashboard-global/en.json
+Trends,dashboard.analytics.page.trends,i18n_key,src/dev/components/ui/section/dashboard/DashboardAnalyticsTrendsSection.vue,template,Resolved from section-dashboard-global/en.json
+Twitter,,script_name,src/components/ui/popups/DashboardAnalyticsFansTrendPopup.vue,script,name literal (chart series / donut slice)
+vs last 24 hour,dashboard.analytics.trends.vsLastDaily,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+vs last 30 days,dashboard.analytics.trends.vsLastMonthly,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+vs last week,dashboard.analytics.trends.vsLastWeekly,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+vs last year,dashboard.analytics.trends.vsLastYearly,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback
+Watch Duration,dashboard.analytics.tables.media.watchDuration,i18n_with_fallback,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsTopMediaTable.vue,script,Inline English fallback
+welcomeBack,dashboard.analytics.overview.welcomeBack,i18n_key_unresolved,src/dev/components/ui/section/dashboard/DashboardAnalyticsWelcomeBanner.vue,template,Key only — English not found in locale JSON
+Wishtender,,script_object_key,src/dev/components/ui/table/dashboard/analytics-tables/DashboardAnalyticsOrdersReceivedTable.vue,script,English object key used as chart/category label
+Wishtender,dashboard.analytics.legends.wishtender,i18n_with_fallback,src/components/ui/popups/DashboardAnalyticsEarningsTrendPopup.vue,script,Inline English fallback

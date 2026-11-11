@@ -1,0 +1,20 @@
+---
+description: DemoPage PaymentMethodLoggedIn / PaymentMethodNotLoggedIn — real checkout looks only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# Payment methods on DemoPage
+
+## Source of truth
+- Real call sites: `TipStep3`, `TopUpStep2`, `PurchaseFlowSubscriptionOrderPopup`, `GuestPurchaseFlowPopup`.
+- One sample per look: compact saved card, `variant="large"` saved card, `PaymentMethodNotLoggedIn` with `wrapper-class="max-w-[29.6875rem]"`.
+- Live widths match real Tip/TopUp/PurchaseFlow column: wrap compact + large in `w-full max-w-[29.6875rem]`; NotLoggedIn keeps `wrapper-class="max-w-[29.6875rem]"`.
+- Show Code uses the component + `ref` props — never invent alternate card chrome. Labels inside the components stay on their existing `useCheckoutCopy` keys.
+- Section lives under `demo-audit/PaymentMethodsDemo.vue`, wired on DemoPage directly below Subscription Cards.
+
+## Do not demo
+- Five near-identical compact cards.
+- File-name captions above samples.
+- Dark section stage backgrounds.
+- Duplicate payment samples inside `CheckoutReusableComponentsDemo` — payment methods belong only in `PaymentMethodsDemo`.

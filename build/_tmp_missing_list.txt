@@ -1,0 +1,18 @@
+﻿node : [eval]:10
+At C:\Users\user\AppData\Local\Temp\ps-script-2d64f6da-49ce-4e12-af02-f6d32876e2c8.ps1:114 char:42
++ Set-Location "d:\projects\vue-frontend"; node -e "
++                                          ~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([eval]:10:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  if (p.theme && demo.includes('theme=" +p.theme+ \'))
+                               ^^^^^^^^^^^^^^^^^^^^^^^
+Expected ',', got '<eof>'
+
+SyntaxError: Invalid or unexpected token
+    at makeContextifyScript (node:internal/vm:194:14)
+    at compileScript (node:internal/process/execution:388:10)
+    at evalTypeScript (node:internal/process/execution:260:22)
+    at node:internal/main/eval_string:71:3
+
+Node.js v24.11.1

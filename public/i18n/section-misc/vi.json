@@ -1,0 +1,1284 @@
+{
+  "profileSettings": {
+    "editProfile": "Chỉnh sửa hồ sơ",
+    "badges": {
+      "comingSoon": "(Sắp ra mắt)"
+    },
+    "icons": {
+      "avatar": "Ảnh đại diện",
+      "edit": "Chỉnh sửa hồ sơ",
+      "menuItem": "Biểu tượng mục menu"
+    },
+    "creator": {
+      "categories": {
+        "general": "CHUNG",
+        "callLive": "CÀI ĐẶT CUỘC GỌI & LIVE STREAM",
+        "transaction": "GIAO DỊCH",
+        "social": "MẠNG XÃ HỘI VÀ CHIA SẺ"
+      },
+      "items": {
+        "accountInformation": "Thông tin tài khoản",
+        "changePassword": "Đổi mật khẩu",
+        "privacySecurity": "Quyền riêng tư & Bảo mật",
+        "liveStreamSettings": "Cài đặt Live Stream",
+        "callSettings": "Cài đặt cuộc gọi",
+        "shippingAddress": "Địa chỉ giao hàng",
+        "payoutDetails": "Chi tiết thanh toán",
+        "newsletterEmailSettings": "Cài đặt bản tin & Email",
+        "xRepostAutomation": "Tự động đăng lại X"
+      }
+    },
+    "vendor": {
+      "categories": {
+        "storeSettings": "CÀI ĐẶT CỬA HÀNG",
+        "ordersFinance": "ĐƠN HÀNG & TÀI CHÍNH"
+      },
+      "items": {
+        "shopProfile": "Hồ sơ cửa hàng",
+        "inventoryManagement": "Quản lý kho",
+        "orderHistory": "Lịch sử đơn hàng",
+        "payoutSettings": "Cài đặt thanh toán"
+      }
+    },
+    "fan": {
+      "categories": {
+        "myAccount": "TÀI KHOẢN CỦA TÔI",
+        "billing": "THANH TOÁN"
+      },
+      "items": {
+        "profileSettings": "Cài đặt hồ sơ",
+        "mySubscriptions": "Đăng ký của tôi",
+        "paymentMethods": "Phương thức thanh toán",
+        "purchaseHistory": "Lịch sử mua hàng"
+      }
+    },
+    "agent": {
+      "categories": {
+        "agencyControls": "ĐIỀU KHIỂN AGENCY",
+        "finance": "TÀI CHÍNH"
+      },
+      "items": {
+        "agencyDashboard": "Bảng điều khiển Agency",
+        "manageCreators": "Quản lý Creator",
+        "commissionReports": "Báo cáo hoa hồng"
+      }
+    }
+  },
+  "notFound": {
+    "title": "Không Tìm Thấy Trang",
+    "message": "Trang bạn đang tìm kiếm không tồn tại.",
+    "backToHome": "Quay Lại Trang Chủ"
+  },
+  "error": {
+    "title": "Lỗi",
+    "message": "Đã xảy ra sự cố.",
+    "tryAgain": "Thử Lại"
+  },
+  "home": {
+    "nav": {
+      "model": "Người mẫu",
+      "discover": "Khám phá",
+      "live": "Trực tiếp",
+      "login": "ĐĂNG NHẬP",
+      "signUp": "ĐĂNG KÝ",
+      "logoAlt": "logo trang web",
+      "menuAlt": "menu",
+      "menuCloseAlt": "đóng"
+    },
+    "hero": {
+      "title": "Kiếm tiền",
+      "tagline": "với nền tảng mạng xã hội tất cả trong một tốt nhất.",
+      "description": "Trang web của chúng tôi gom mọi thứ bạn bán—Video, thư viện ảnh, clip âm thanh, merch, sản phẩm, thậm chí cả cuộc gọi trả phí—vào một nền tảng để fan mua trong vài giây và bạn nhận tiền nhanh."
+    },
+    "signupForm": {
+      "prefix": "ourwebsite.app/{'@'}",
+      "usernamePlaceholder": "tên người dùng",
+      "joinAsCreator": "THAM GIA NHƯ CREATOR",
+      "signUpAsFan": "Đăng ký làm Fan"
+    },
+    "about": {
+      "title": "Ngừng nhảy giữa các nền tảng.",
+      "subtitle": "Bắt đầu phát triển trong một hệ sinh thái năng động.",
+      "features": {
+        "communities": {
+          "title": "Tất cả cộng đồng của bạn được liên kết",
+          "description": "Quảng bá mạng xã hội tự động giúp nội dung của bạn lan tỏa trong khi bạn tập trung sáng tạo. Giữ liên kết với fan qua tích hợp Telegram và nhận cuộc gọi mọi lúc mọi nơi.",
+          "alt": "cộng đồng được liên kết"
+        },
+        "reach": {
+          "title": "Tối đa hóa phạm vi tiếp cận",
+          "description": "Trang web của chúng tôi cung cấp cài đặt linh hoạt về kiểm soát truy cập và quản lý nội dung để bạn không bị giới hạn cách bán. Tạo nội dung miễn phí và các gói đăng ký để thu hút người theo dõi mới, hoặc dành nội dung và sự kiện cao cấp cho người ủng hộ hàng đầu với cài đặt nâng cao.",
+          "alt": "thông minh"
+        },
+        "paid": {
+          "title": "Mở rộng thông minh hơn. Nhận tiền nhanh hơn.",
+          "description": "Bạn kiếm được, bạn nhận được. Hệ thống của chúng tôi xử lý tiền trong chưa đầy 10 phút. Thật vậy. Thêm nữa, bỏ đoán mò: phân tích thời gian thực như mã gian lận, cho bạn thấy chính xác nội dung nào kiếm nhiều tiền nhất để bạn nhân bản thành công.",
+          "alt": "nhận tiền"
+        }
+      }
+    },
+    "featured": {
+      "title": "Creator nổi bật",
+      "subtitle": "Hơn 100 creator nội dung đã tham gia cùng chúng tôi",
+      "profile": "Hồ sơ",
+      "arrowAlt": "mũi tên phải",
+      "creators": {
+        "yanice": {
+          "name": "Yanice*",
+          "username": "{'@'}yanice"
+        },
+        "yana": {
+          "name": "Yana Zein",
+          "username": "{'@'}yana"
+        }
+      }
+    },
+    "ditch": {
+      "title": "Bỏ qua trung gian đại lý",
+      "subtitle": "Nền tảng của bạn giờ là đội ngũ dịch vụ toàn diện.",
+      "body": "Tại sao phải trả cho đại lý bên ngoài khi đã có đội ngũ chuyên gia cấp đại lý trên Trang web của chúng tôi? Creator được chọn nhận hỗ trợ 1-1 hoàn toàn miễn phí hoa hồng hoặc phí bên thứ ba. Để đội hỗ trợ nội bộ lo tiếp cận và tăng trưởng trong khi bạn tập trung sáng tạo.",
+      "cta": "ĐĂNG KÝ & ĐƯỢC KHÁM PHÁ",
+      "items": {
+        "management": {
+          "title": "Quản lý tài khoản 1-1",
+          "content": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        },
+        "production": {
+          "title": "Sản xuất & Quảng bá",
+          "content": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        },
+        "visibility": {
+          "title": "Hiển thị cao cấp",
+          "content": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        }
+      },
+      "plusAlt": "cộng",
+      "minusAlt": "trừ"
+    },
+    "sliders": {
+      "mostViewed": "Xem nhiều nhất",
+      "recentlyUploaded": "Mới tải lên",
+      "gallery": "Thư viện",
+      "demoName": "Princess Carrot Pop",
+      "demoHandle": "{'@'}sammisjelly187"
+    },
+    "services": {
+      "title": "Ngừng nhảy giữa các nền tảng.",
+      "subtitle": "Bắt đầu phát triển trong một hệ sinh thái năng động.",
+      "tabs": {
+        "mediaMerch": "Media & Merch",
+        "membership": "Gói thành viên",
+        "callsEvents": "Cuộc gọi & Sự kiện",
+        "comingSoon": "sắp ra mắt"
+      },
+      "panels": {
+        "mediaMerch": {
+          "ecosystem": {
+            "title": "Xây dựng hệ sinh thái tạo doanh thu tối ưu",
+            "body": "Tải lên merch vật lý, tải xuống kỹ thuật số, video độc quyền hoặc bộ ảnh — tất cả một chỗ. Khả năng bán gần như vô hạn: bán theo lượt xem, hoặc làm nội dung độc quyền bằng cách kiểm soát quyền truy cập media và sản phẩm chỉ cho người đăng ký. Hệ sinh thái mượt mà còn cho phép upsell sang các luồng doanh thu khác như cuộc gọi trực tiếp và sự kiện nhóm!",
+            "alt": "tùy chỉnh"
+          },
+          "strategy": {
+            "title": "Tối ưu chiến lược thời gian thực",
+            "body": "Theo dõi hiệu suất bán hàng ngay khi diễn ra và điều chỉnh giá, cài đặt truy cập hoặc mô hình đăng ký để tối đa chuyển đổi dựa trên dữ liệu trực tiếp.",
+            "alt": "ưu đãi"
+          },
+          "reach": {
+            "title": "Phạm vi toàn cầu trên tổng quan",
+            "body": "Creator mới và đang thịnh hành cùng media của họ sẽ được giới thiệu trên bảng điều khiển của fan, giúp bạn kết nối hồ sơ với cộng đồng cùng sở thích.",
+            "alt": "tự động"
+          }
+        },
+        "membership": {
+          "flexible": {
+            "title": "Thanh toán linh hoạt cho mọi Fan",
+            "body": "Một mức giá không phù hợp với tất cả. Tạo thang hỗ trợ tùy chỉnh với tùy chọn hàng tháng cho người xem thông thường và gói năm giảm giá cho cộng đồng cốt lõi, tối đa hóa doanh thu định kỳ.",
+            "alt": "ước nguyện"
+          },
+          "retention": {
+            "title": "Giữ chân người đăng ký tự động",
+            "body": "Đừng để việc hủy là điểm kết thúc. Kích hoạt công cụ giữ chân thông minh để tự động đề xuất giảm giá hoặc ưu đãi đặc biệt khi người đăng ký định rời đi, giữ họ lại trước khi họ đi.",
+            "alt": "tùy chỉnh"
+          },
+          "perks": {
+            "title": "Ưu đãi xây dựng lòng trung thành",
+            "body": "Đền đáp những fan ủng hộ bạn nhiều nhất. Cấu hình lợi ích tự động như token miễn phí hàng tháng, giảm giá merch toàn cửa hàng, hoặc truy cập media VIP để giữ tỷ lệ rời thấp.",
+            "alt": "thông minh"
+          },
+          "loop": {
+            "title": "Giữ mọi fan luôn cập nhật",
+            "body": "Kết nối tài khoản Trang web của chúng tôi với mạng xã hội hiện có như X và Telegram, để mọi người biết bạn đang làm gì chỉ với một bài đăng!",
+            "alt": "linh hoạt"
+          }
+        },
+        "callsEvents": {
+          "instant": {
+            "title": "Cuộc gọi tức thì",
+            "body": "Luôn kết nối với fan dù bạn ở đâu! Với tích hợp Telegram, bạn nhận thông báo tức thì cho cuộc gọi đến, không bỏ lỡ cơ hội trò chuyện. Thêm nữa, dễ dàng upsell các mục đã đăng trên Trang web của chúng tôi trong lúc đó!",
+            "alt": "ưu đãi"
+          },
+          "booking": {
+            "title": "Lịch đặt chỗ",
+            "body": "Sẵn sàng để fan đặt thời gian chất lượng với bạn! Đặt lịch trống và nhận yêu cầu cuộc gọi độc quyền, đồng thời đừng quên giới thiệu media và merch trong những cuộc trò chuyện đó. Cách hoàn hảo để kết nối và bán cùng lúc!",
+            "alt": "tự động"
+          },
+          "group": {
+            "title": "Sự kiện nhóm",
+            "body": "Hợp tác với các creator khác trên Trang web của chúng tôi và mở rộng fan base! Tổ chức sự kiện nhóm hấp dẫn với livestream tương tác, rút thăm may mắn và đấu giá trực tiếp. Bạn kiểm soát ai được tham gia, và thậm chí nhận tip cùng quà từ fan trung thành!",
+            "alt": "ước nguyện"
+          }
+        },
+        "comingSoon": {
+          "pricing": {
+            "title": "Truy cập thông minh & Giá động",
+            "body": "Bạn kiểm soát tính độc quyền. Công khai sản phẩm để tiếp cận tối đa, khóa cho người đăng ký, hoặc giảm giá tự động cho fan trung thành nhất. Bạn thậm chí có thể flash-sell trong sự kiện trực tiếp.",
+            "alt": "tùy chỉnh"
+          },
+          "custom": {
+            "title": "Yêu cầu tùy chỉnh",
+            "body": "Mở luồng doanh thu giá trị cao bằng cách nhận đơn tùy chỉnh trả phí qua hồ sơ. Dù là shoutout cá nhân hóa hay hàng làm theo yêu cầu, hãy để fan đặt hàng trực tiếp.",
+            "alt": "thông minh"
+          },
+          "broadcast": {
+            "title": "Phát sóng thời gian thực tới khán giả toàn cầu",
+            "body": "Xây cộng đồng trung thành qua livestream theo lịch — trò chuyện trong sự kiện, đặt và đạt mục tiêu tip cùng nhau, và đưa ưu đãi hoặc rút thăm may mắn cho người xem, tạo không gian cộng đồng theo cách của bạn!",
+            "alt": "linh hoạt"
+          },
+          "wish": {
+            "title": "Danh sách ước nguyện",
+            "body": "Tạo danh sách ước nguyện trực tiếp trên Trang web của chúng tôi và để fan gửi quà qua các nền tảng mua sắm yêu thích một cách an toàn, đồng thời giữ thông tin nhạy cảm của bạn riêng tư. ",
+            "alt": "ưu đãi"
+          }
+        }
+      }
+    },
+    "safety": {
+      "title": "An toàn của bạn là việc của chúng tôi.",
+      "body": "Chúng tôi dùng mã hóa và giao thức bảo mật tiên tiến nhất để bảo vệ thông tin cá nhân của bạn. KYC giúp tạo môi trường an toàn bằng cách xác minh danh tính, bảo vệ bạn khỏi giả mạo và tài khoản gian lận."
+    },
+    "reviews": {
+      "title": "Creator thật. Thành công thật.",
+      "quoteAlt": "trích dẫn xanh",
+      "avatarAlt": "ảnh đại diện",
+      "items": {
+        "1": {
+          "handle": "{'@'}lylaaaboo",
+          "text": "Có quản lý tài khoản riêng tại Trang web của chúng tôi nghĩa là tôi luôn có người bên cạnh. Họ lập kế hoạch dài hạn và ăn mừng chiến thắng cùng tôi. Đây không chỉ là dịch vụ; đây là quan hệ đối tác thật sự."
+        },
+        "2": {
+          "handle": "{'@'}pictureuna",
+          "text": "Lời hứa ‘dịch vụ toàn diện’ là thật. Tôi có quản lý tài khoản, chiến lược nội dung và đội quảng bá. Trang web của chúng tôi lo phân tích để tôi lo nghệ thuật. Nội dung của tôi chân thực vì tôi không kiệt sức vì phía kinh doanh."
+        },
+        "3": {
+          "handle": "{'@'}pictureuna",
+          "text": "Có chiến lược gia, quản lý và chuyên gia quảng bá dành riêng cho thành công của tôi tạo nên khác biệt. Tôi không chỉ dùng nền tảng; tôi là một phần hệ sinh thái muốn tôi thắng. 🏆"
+        }
+      }
+    },
+    "join": {
+      "title": "Sẵn sàng kiếm tiền? Tham gia miễn phí."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "items": {
+        "1": {
+          "question": "Ai có thể tham gia trang web của chúng tôi?",
+          "answer": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        },
+        "2": {
+          "question": "Trang web bảo vệ dữ liệu cá nhân và sở hữu trí tuệ của tôi như thế nào?",
+          "answer": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        },
+        "3": {
+          "question": "Tôi có thể tùy chỉnh bố cục FAQ không?",
+          "answer": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        },
+        "4": {
+          "question": "Có ứng dụng di động không?",
+          "answer": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        },
+        "5": {
+          "question": "Làm sao liên hệ hỗ trợ?",
+          "answer": "Đại diện chuyên trách để tương tác cộng đồng fan thay bạn."
+        }
+      }
+    },
+    "overview": {
+      "title": "Trang web của chúng tôi là ngôi nhà của nền tảng giải trí do creator dẫn dắt.",
+      "body": "Tham gia miễn phí để tìm cộng đồng influencer và bạn bè cùng chí hướng, thưởng thức video và thư viện ảnh chất lượng cao, tham gia livestream và sự kiện độc quyền. Kết nối online thân mật hơn bao giờ hết.",
+      "previewAlt": "xem trước toàn màn hình"
+    },
+    "footer": {
+      "supportEmail": "support{'@'}ourwebsite.app",
+      "help": "Trợ giúp",
+      "dmca": "DMCA",
+      "antiExploitation": "Chính sách chống bóc lột tình dục (USC 2257, Chống nô lệ và chống buôn người, CSAM)",
+      "terms": "Điều khoản & Điều kiện",
+      "privacy": "Chính sách quyền riêng tư",
+      "report": "Báo cáo",
+      "copyright": "© 2024 Our Website",
+      "mailAlt": "thư",
+      "helpAlt": "hỏi đáp",
+      "discordAlt": "discord",
+      "xAlt": "x",
+      "instagramAlt": "instagram",
+      "visaAlt": "visa",
+      "mastercardAlt": "Mastercard"
+    }
+  },
+  "mediaUploader": {
+    "publish": {
+      "useOriginal": "Dùng ảnh thu nhỏ và xem trước gốc",
+      "useCustom": "Tải lên ảnh thu nhỏ và xem trước khác",
+      "none": "Không đính kèm ảnh thu nhỏ và xem trước",
+      "postMessageLabel": "Tin nhắn đăng (Để trống để dùng tin nhắn mặc định của hệ thống.)",
+      "postMessagePlaceholder": "Tin nhắn tùy chỉnh...",
+      "attachMedia": "Đính kèm media",
+      "charactersCount": "{used}/{max} ký tự"
+    },
+    "addTier": {
+      "title": "Thêm gói mới",
+      "draftNotice": "Bạn đã dùng hết số gói đã xuất bản; gói mới sẽ được lưu dưới dạng bản nháp.",
+      "cancel": "HỦY",
+      "save": "LƯU",
+      "closeAlt": "Đóng",
+      "tierNamePlaceholder": "Tên gói...",
+      "tierDescriptionPlaceholder": "Mô tả gói...",
+      "description": "Mô tả",
+      "backgroundImage": "Ảnh nền",
+      "backgroundImageLabel": "Ảnh nền",
+      "backgroundPreviewAlt": "xem trước ảnh nền",
+      "deleteAlt": "xóa",
+      "uploadTitle": "Nhấn vào đây",
+      "uploadSubtitle": "để chọn ảnh hoặc kéo và thả ảnh vào đây",
+      "uploadFileInfo": "(Định dạng cho phép: JPEG, PNG. Tối đa: 10MB)",
+      "subscriptionFee": "PHÍ ĐĂNG KÝ",
+      "freeTier": "Gói miễn phí",
+      "paidTier": "Gói trả phí",
+      "originalPrice": "Giá gốc",
+      "discountedPrice": "Giá giảm (tùy chọn)",
+      "originalPriceHint": "Giá phải từ USD$ 1.95 đến 500.",
+      "discountPriceHint": "Để trống để tắt hiển thị giảm giá.",
+      "discountPriceError": "Giá giảm phải thấp hơn giá gốc.",
+      "usd": "USD$",
+      "subscriberBenefits": "Quyền lợi người đăng ký",
+      "optional": "Tùy chọn",
+      "freeTokens": "Token miễn phí",
+      "freeTokensTooltip": "Đặt số token miễn phí cấp cho thành viên gói này mỗi chu kỳ thanh toán. Tần suất dựa trên cài đặt gói đăng ký cơ bản của bạn.",
+      "merchDiscount": "Giảm giá merch",
+      "merchDiscountBullet1": "Đặt phần trăm giảm giá cho toàn bộ merch trong cửa hàng (ví dụ nhập '10' nếu muốn giảm 10%)",
+      "merchDiscountBullet2": "Để trống để tắt tính năng.",
+      "payToViewDiscount": "Giảm giá Pay to View",
+      "payToViewDiscountBullet": "Đặt phần trăm giảm giá cho mọi sản phẩm pay to view trong cửa hàng (ví dụ nhập '10' nếu muốn giảm 10%)",
+      "customRequestDiscount": "Giảm giá yêu cầu tùy chỉnh",
+      "customRequestBullet1": "Đặt phần trăm giảm giá cho yêu cầu sản phẩm tùy chỉnh (ví dụ nhập '10' nếu muốn giảm 10%)",
+      "customRequestBullet2": "Để trống để tắt tính năng.",
+      "unsubscribeDiscount": "Giảm giá khi hủy đăng ký",
+      "unsubscribeTooltip": "Đặt số token miễn phí cấp cho thành viên gói này mỗi chu kỳ thanh toán. Tần suất dựa trên cài đặt gói đăng ký cơ bản của bạn.",
+      "applyOnSale": "Áp dụng cho sản phẩm đang giảm giá",
+      "percentOff": "% giảm",
+      "rangeError": "Giá trị phải từ 1–99"
+    }
+  },
+  "plan": {
+    "page": {
+      "titleNewTier": "Gói mới",
+      "settingsTitle": "Cài đặt đăng ký",
+      "settingsDescription": "Thiết lập bậc đăng ký của bạn tại đây. Bạn có thể xuất bản tối đa 1 bậc miễn phí và 3 bậc trả phí. LOREM IPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+      "emptyMessage": "Bạn chưa thiết lập bậc đăng ký nào vào lúc này.",
+      "addTier": "Thêm bậc",
+      "newTier": "BẬC MỚI",
+      "faq": "Câu hỏi thường gặp về đăng ký",
+      "emptyAvatarInitial": "J",
+      "back": "Quay lại",
+      "saveAsDraft": "Lưu bản nháp",
+      "saveAndPublish": "LƯU & XUẤT BẢN",
+      "schedulePublish": "LÊN LỊCH XUẤT BẢN",
+      "publishNow": "XUẤT BẢN NGAY",
+      "upload": "Tải lên",
+      "time": "Thời gian",
+      "preview": "Xem trước",
+      "upgradeToAddMore": "Nâng cấp để thêm bậc",
+      "upgradeBannerTitle": "Nâng cấp lên premium để thêm gói",
+      "upgradeBannerDescription": "Bạn đã dùng hết 3 slot bậc trả phí trên gói miễn phí. Nâng cấp để thêm tối đa 6 bậc trả phí",
+      "learnMore": "Tìm hiểu thêm",
+      "upgradeNow": "Nâng cấp ngay",
+      "tabs": {
+        "detail": "Chi tiết gói",
+        "variation": "Biến thể & Khuyến mãi",
+        "sharing": "Chia sẻ",
+        "publish": "Cài đặt xuất bản"
+      },
+      "alt": {
+        "back": "Quay lại",
+        "settings": "Cài đặt",
+        "upload": "Tải lên",
+        "time": "Thời gian",
+        "close": "Đóng",
+        "emptyKeyhole": "Bậc đăng ký",
+        "emptyAvatar": "Ảnh đại diện fan",
+        "scrollTiersLeft": "Cuộn bậc sang trái",
+        "scrollTiersRight": "Cuộn bậc sang phải"
+      }
+    },
+    "confirm": {
+      "leaveMessage": "Bạn có chắc muốn rời đi? Thay đổi của bạn sẽ không được lưu.",
+      "cancel": "Hủy",
+      "leave": "Rời đi",
+      "draftSavedTitle": "Gói đăng ký mới ‘{name}’ của bạn đã được lưu.",
+      "draftSavedHint": "Bạn phải thêm media vào gói này trước khi có thể xuất bản.",
+      "backToSettings": "Quay lại Cài đặt đăng ký",
+      "addMedia": "Thêm Media",
+      "untitledTier": "Gói chưa đặt tên"
+    },
+    "publish": {
+      "title": "Cài đặt xuất bản",
+      "description": "Bạn có thể làm gói đăng ký này độc quyền hơn bằng cách giới hạn khả năng hiển thị trên hồ sơ. Đặt lịch bên dưới và chúng tôi sẽ đăng gói lên hồ sơ của bạn tương ứng.",
+      "immediately": "Xuất bản ngay",
+      "schedule": "Lên lịch thời gian xuất bản",
+      "immediateHelp": "Gói này sẽ có trên hồ sơ của bạn ngay sau khi xuất bản.",
+      "scheduleHelp": "Vui lòng chỉ định khoảng thời gian xuất bản tại đây:",
+      "publishDate": "Ngày xuất bản",
+      "endDate": "Ngày kết thúc",
+      "optional": "tùy chọn",
+      "datePlaceholder": "Chọn ngày và giờ",
+      "alt": {
+        "chevron": "Mũi tên xuống",
+        "calendar": "Lịch"
+      }
+    },
+    "variation": {
+      "title": "Biến thể đăng ký",
+      "loyaltyCopy": "Thưởng cho những người trung thành với bạn! Ưu đãi giảm theo phần trăm hoặc số tiền cố định khi họ đăng ký lâu hơn! Bạn có thể thêm tối đa 3 tùy chọn giảm giá.",
+      "addPlan": "THÊM GÓI",
+      "alt": {
+        "plus": "Thêm"
+      },
+      "mock": {
+        "plan2mTitle": "ĐĂNG KÝ 2 THÁNG",
+        "plan6mTitle": "ĐĂNG KÝ 6 THÁNG",
+        "plan1yTitle": "ĐĂNG KÝ 1 NĂM",
+        "audienceEveryone": "Mọi người",
+        "audienceSubscribersOnly": "Chỉ người đăng ký",
+        "noEndDate": "Không có ngày kết thúc",
+        "noMinSpending": "Không có chi tiêu tối thiểu",
+        "minSpending100": "Chi tiêu tối thiểu USD$100",
+        "dateRangeApr": "23 THG 4 2025-24 THG 4 2026",
+        "dateRangeMay": "01 THG 5 2025-01 THG 6 2025",
+        "pending": "Đang chờ",
+        "none": "Không có",
+        "currency": "USD$",
+        "price2m": "24.86",
+        "price6m": "55.86",
+        "price1y": "240.34",
+        "discount20": "-20%",
+        "discount40": "-40%",
+        "discount60": "-60%",
+        "item90Off1y": "Giảm 90% 1 NĂM",
+        "item90Off6m": "Giảm 90% 6 tháng",
+        "itemFree1m": "MIỄN PHÍ 1 tháng!",
+        "itemLifetime50": "Trọn đời giảm 50%~",
+        "itemFree6m": "MIỄN PHÍ 6 tháng!",
+        "tokens1of1": "Còn 1/1",
+        "tokens5of5": "Còn 5/5",
+        "tokens50of50": "Còn 50/50",
+        "tokens10of10": "Còn 10/10"
+      }
+    },
+    "sharing": {
+      "title": "Tùy chọn chia sẻ",
+      "postToX": "Đăng cập nhật gói này lên X",
+      "inviteFans": "Mời fan",
+      "sendInvite": "Gửi lời mời",
+      "copyLink": "Sao chép liên kết",
+      "copied": "Đã sao chép!",
+      "copyFailed": "Sao chép thất bại",
+      "postPreview": "XEM TRƯỚC BÀI ĐĂNG",
+      "inviteListSubtitle": "Danh sách mời",
+      "searchFanPlaceholder": "Tìm fan theo tên người dùng...",
+      "inviteHelp": "Gửi lời mời đến fan cụ thể, hoặc chia sẻ trên mạng xã hội:",
+      "inviteLinkPlaceholder": "Nhập số lượng",
+      "verifiedFanOnly": "Chỉ fan đã xác minh",
+      "mock": {
+        "userOneName": "Người dùng Một",
+        "userOneUsername": "user1",
+        "userTwoName": "Người dùng Hai",
+        "userTwoUsername": "user2",
+        "inviteLink": "ourwebsite.com/invitelinkwww",
+        "displayName": "Jelly FISH",
+        "handle": "{'@'}jellyf1sh",
+        "date": "31 Thg 7",
+        "body": "Xem tôi ăn 10 xô gà rán bánh gia đình...đừng bỏ lỡ:",
+        "mediaLink": "our-website.app/model/jellyskitchen/media/198386476"
+      },
+      "alt": {
+        "tooltip": "Chú thích",
+        "verified": "Đã xác minh",
+        "play": "Phát",
+        "send": "Gửi",
+        "copy": "Sao chép"
+      }
+    },
+    "detail": {
+      "tierInformation": "Thông tin gói",
+      "featuredTier": "Đây là gói nổi bật",
+      "featuredHelp": "Gói nổi bật sẽ được hiển thị đầu tiên theo mặc định trên trang gói đăng ký của bạn.",
+      "featuredAlertTitle": "Gói ‘VIP Lounge’ của bạn sẽ không còn là gói nổi bật.",
+      "featuredAlertDescription": "Gói này sẽ được cập nhật thành gói nổi bật trên hồ sơ của bạn sau khi lưu.",
+      "priceSetting": "Cài đặt giá",
+      "freeTier": "Gói miễn phí",
+      "paidTiers": "Gói trả phí",
+      "subscriptionBasePrice": "Giá cơ bản đăng ký",
+      "subscriberDiscount": "Giảm giá người đăng ký",
+      "subscriberDiscountHelp": "Ưu đãi giảm giá cho người đăng ký lần đầu khi họ tham gia gói này.",
+      "perMonth": "/tháng",
+      "discountBillingCycles": "Giảm giá trong 6 chu kỳ thanh toán",
+      "subscriberSetting": "Cài đặt người đăng ký",
+      "whoCanSubscribe": "Ai có thể đăng ký gói này?",
+      "maximumSubscribers": "Số người đăng ký tối đa",
+      "maximumSubscribersHelp": "Giới hạn số fan có thể tham gia gói này cùng lúc. Để trống để tắt tính năng.",
+      "enterAmount": "Nhập số lượng",
+      "unsubscribeDiscount": "Giảm giá khi hủy đăng ký",
+      "unsubscribeDiscountHelp": "Ưu đãi giảm giá cho người đăng ký khi họ hủy gói này. Lưu ý rằng tất cả người đăng ký với các chu kỳ thanh toán khác nhau từ mọi gói sẽ được nhận cùng một mức giảm giá.",
+      "mediaOptions": "Tùy chọn media",
+      "mediaOptionsHelp": "Bạn có thể đưa media từ các gói đăng ký khác vào gói này. Người đăng ký sẽ có quyền truy cập mọi nội dung đăng trên gói đã chọn bên dưới.",
+      "perDay": "Theo ngày",
+      "perMonthDuration": "Theo tháng",
+      "perYear": "Theo năm",
+      "audienceEveryone": "Mọi người",
+      "audienceInvited": "Chỉ người được mời",
+      "edit": "SỬA",
+      "remove": "XÓA",
+      "tagPublished": "Gói đã xuất bản",
+      "tagDraft": "Bản nháp",
+      "mockDiscountPrice": "11.69",
+      "mockDiscountPercent": "-40%",
+      "mockDiscountDateRange": "23 THG 4 2025-24 THG 4 2026",
+      "mediaFeatures": {
+        "someContent": {
+          "label": "Truy cập một số nội dung",
+          "meta": "16 Media"
+        },
+        "moreContent": {
+          "label": "Truy cập nhiều nội dung hơn",
+          "meta": "24 Media"
+        },
+        "someMoreContent": {
+          "label": "Truy cập thêm một số nội dung",
+          "meta": "100 Media"
+        },
+        "evenMoreContent": {
+          "label": "Truy cập còn nhiều nội dung hơn",
+          "meta": "5 Media"
+        },
+        "evenSomeMoreContent": {
+          "label": "Truy cập thêm nữa một số nội dung",
+          "meta": "3 Media"
+        },
+        "evenMostContent": {
+          "label": "Truy cập hầu hết nội dung",
+          "meta": "0 Media"
+        },
+        "evenMoreMostContent": {
+          "label": "Truy cập nhiều nhất nội dung"
+        }
+      },
+      "alt": {
+        "weather": "Thời tiết",
+        "calendar": "Lịch",
+        "pen": "Sửa",
+        "trash": "Xóa"
+      }
+    },
+    "luckyDraw": {
+      "title": "Rút thăm may mắn",
+      "createEvent": " TẠO SỰ KIỆN",
+      "descriptionPlaceholder": "Mô tả rút thăm may mắn…",
+      "descriptionFilled": "Tùy chỉnh giảm giá cho những người đặc biệt đã chọn. Tạo rút thăm may mắn cho người theo dõi, mời fan cụ thể và hơn thế nữa.",
+      "descriptionEmpty": "Cải thiện tương tác với fan! Thêm sự kiện giảm giá để tăng độ hiển thị cho các gói đăng ký của bạn",
+      "activeTitle": "Rút thăm đang hoạt động",
+      "edit": "SỬA",
+      "remove": "XÓA"
+    },
+    "subscription": {
+      "unlimitedUsage": "không giới hạn sử dụng",
+      "usage": "lượt dùng",
+      "edit": "SỬA",
+      "remove": "XÓA"
+    },
+    "dropdown": {
+      "selectOption": "Chọn tùy chọn"
+    },
+    "preview": {
+      "mock": {
+        "title": "My VVIP Lounge ❤️️️",
+        "description": "Chào mừng đến VIP Lounge của Jenny!...",
+        "claimOffer": "NHẬN<br>ƯU ĐÃI",
+        "leftText": "Còn 5!",
+        "rightText": "95/100 Ưu đãi",
+        "endsIn": "02:13:07",
+        "originalPrice": "$111.72",
+        "discount5": "-5%",
+        "discount50": "-50%",
+        "price": "55.86",
+        "plans": {
+          "1d": "1 ngày",
+          "1m": "1 tháng",
+          "6m": "6 tháng",
+          "1y": "1 năm"
+        }
+      }
+    },
+    "defaults": {
+      "tierName": "Basic Lounge ❤️️️",
+      "description": "Chào mừng đến lounge cơ bản của Jenny. Bạn sẽ nhận những quyền lợi cơ bản nhất trong gói này."
+    }
+  },
+  "settings": {
+    "page": {
+      "title": "Cài Đặt",
+      "actions": {
+        "back": "QUAY LẠI",
+        "cancel": "HỦY",
+        "save": "LƯU"
+      },
+      "alt": {
+        "notification": "Thông báo",
+        "language": "Ngôn ngữ",
+        "avatar": "Ảnh đại diện",
+        "hamburger": "Menu",
+        "back": "Quay lại",
+        "x": "X",
+        "stars": "Sao",
+        "star": "Sao",
+        "power": "Nguồn",
+        "phone": "Điện thoại"
+      },
+      "tabs": {
+        "accountInformation": "Thông Tin Tài Khoản",
+        "changePassword": "Đổi Mật Khẩu",
+        "privacySecurity": "Quyền Riêng Tư & Bảo Mật",
+        "shippingAddress": "Địa Chỉ Giao Hàng",
+        "payoutDetails": "Chi Tiết Thanh Toán"
+      },
+      "account": {
+        "username": "Tên người dùng",
+        "usernamePlaceholder": "carrot_popxoxo123",
+        "usernameHelp": "Tên người dùng không thể thay đổi sau tháng đầu tiên trên trang web của chúng tôi, nhưng các trường hợp đặc biệt có thể được ngoại lệ. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ thay đổi tên người dùng.",
+        "email": "Email",
+        "emailPlaceholder": "mscarrot_pops{'@'}gmail.com",
+        "firstName": "Tên",
+        "lastName": "Họ",
+        "linkXTitle": "Liên Kết Tài Khoản X",
+        "linkXBody": "Liên kết tài khoản của bạn với Twitter(X) để tự động đăng cập nhật sản phẩm và feed.",
+        "linkXCta": "Liên kết tài khoản X của bạn",
+        "promoteTitle": "Quảng Bá Bản Thân trên Tài Khoản X của trang web",
+        "promotePremium": "PREMIUM",
+        "promoteBody": "Chúng tôi sẽ tự động đăng Cập Nhật Tài Khoản của bạn lên tài khoản twitter chính thức của trang web.",
+        "upgradeCta": "Nâng Cấp Lên Premium"
+      },
+      "password": {
+        "password": "Mật khẩu",
+        "oldPlaceholder": "Mật khẩu cũ",
+        "newPlaceholder": "Mật khẩu mới",
+        "confirmLabel": "Nhập lại mật khẩu mới",
+        "confirmPlaceholder": "Nhập lại mật khẩu mới"
+      },
+      "privacy": {
+        "activeDevice": "Thiết Bị Đang Hoạt Động",
+        "logoutAll": "Đăng xuất tất cả thiết bị",
+        "logout": "Đăng xuất",
+        "deviceName": "iPhone 16",
+        "browserName": "Chrome",
+        "loggedInOn": "Đăng nhập vào xx-xx-xxxx xx:xx"
+      },
+      "shipping": {
+        "personalInformation": "Thông Tin Cá Nhân",
+        "shippingAddress": "Địa Chỉ Giao Hàng",
+        "phoneNumber": "Số điện thoại",
+        "company": "Công ty",
+        "optional": "Tùy chọn",
+        "addressLine1": "Địa chỉ dòng 1",
+        "addressLine2": "Địa chỉ dòng 2",
+        "postalCode": "Mã bưu điện",
+        "city": "Thành phố",
+        "state": "Bang/Tỉnh",
+        "country": "Quốc gia"
+      },
+      "payout": {
+        "beneficiaryTitle": "Thông Tin Người Thụ Hưởng",
+        "beneficiaryBody": "Người thụ hưởng là chủ tài khoản sẽ nhận khoản thanh toán.",
+        "beneficiaryName": "Tên người thụ hưởng",
+        "beneficiaryStreet": "Đường người thụ hưởng",
+        "beneficiaryCity": "Thành phố người thụ hưởng",
+        "beneficiaryCityPlaceholder": "Thị trấn/thành phố địa chỉ người thụ hưởng",
+        "beneficiaryPostalCode": "Mã bưu điện người thụ hưởng",
+        "beneficiaryPostalPlaceholder": "Mã bưu điện/zip địa chỉ người thụ hưởng",
+        "bankTitle": "Thông Tin Ngân Hàng",
+        "bankBody": "Tất cả giao dịch sẽ được thanh toán bằng USD.",
+        "beneficiaryAccount": "Tài khoản người thụ hưởng",
+        "beneficiaryAccountPlaceholder": "Số tài khoản địa phương hoặc định dạng IBAN",
+        "beneficiaryAccountTooltip": "Nếu tùy chọn này bị tắt, người hâm mộ sẽ được phép hủy đăng ký và tận hưởng giảm giá lại khi đăng ký lại.",
+        "country": "Quốc gia",
+        "swiftCode": "Mã BIC/SWIFT",
+        "swiftPlaceholder": "Nhập mã BIC/SWIFT",
+        "intermediarySwift": "Mã BIC/SWIFT ngân hàng trung gian",
+        "intermediaryHelp": "Nếu bạn không chắc mình cần ngân hàng trung gian cho chuyển khoản quốc tế, vui lòng liên hệ ngân hàng để biết thêm thông tin."
+      },
+      "options": {
+        "countryUnitedStates": "Hoa Kỳ (US)",
+        "countryHongKong": "Hồng Kông",
+        "countryAustralia": "Úc",
+        "countryBangladesh": "Bangladesh",
+        "stateGeorgia": "Georgia",
+        "stateFlorida": "Florida",
+        "stateHawaii": "Hawaii",
+        "stateDhaka": "Dhaka"
+      }
+    }
+  },
+  "demo": {
+    "dashProfileSettings": {
+      "sectionTitle": "DashProfileSettings",
+      "cards": {
+        "creator": "Creator",
+        "vendor": "Vendor",
+        "fan": "Fan",
+        "agent": "Agent"
+      },
+      "sample": {
+        "displayName": "lindenMay",
+        "handle": "{'@'}linden",
+        "email": "developer{'@'}contactlinden.com"
+      }
+    }
+  },
+  "editProfile": {
+    "page": {
+      "title": "Chỉnh sửa hồ sơ",
+      "actions": {
+        "cancel": "HỦY",
+        "save": "LƯU",
+        "upload": "Tải lên",
+        "cancelShort": "Hủy",
+        "no": "Không",
+        "confirm": "Xác nhận"
+      },
+      "alt": {
+        "notification": "Thông báo",
+        "language": "Ngôn ngữ",
+        "avatar": "Ảnh đại diện",
+        "hamburger": "Menu",
+        "edit": "Chỉnh sửa",
+        "chevronDown": "Mũi tên xuống",
+        "images": "Hình ảnh",
+        "video": "Video",
+        "close": "Đóng",
+        "remove": "Xóa",
+        "upload": "Tải lên",
+        "tooltip": "Thông tin",
+        "fullscreen": "Toàn màn hình",
+        "verified": "Đã xác minh",
+        "previewBg": "Nền xem trước",
+        "lightbox": "Media",
+        "play": "Phát",
+        "imageTag": "Hình ảnh",
+        "videoTag": "Video",
+        "selectedAvatar": "Ảnh đại diện đã chọn",
+        "reflectHorizontal": "Lật ngang",
+        "reflectVertical": "Lật dọc",
+        "zoomOut": "Thu nhỏ",
+        "zoomIn": "Phóng to",
+        "rotate": "Xoay"
+      },
+      "notice": {
+        "unsavedTitle": "Bạn có thay đổi chưa lưu",
+        "unsavedDescription": "Bạn đã chỉnh sửa hồ sơ kể từ lần lưu trước. Nhớ nhấn ‘LƯU’ để xuất bản thay đổi."
+      },
+      "fields": {
+        "profileVisibility": "Hiển thị hồ sơ",
+        "selectVisibility": "Chọn hiển thị",
+        "displayName": "Tên hiển thị",
+        "age": "Tuổi",
+        "gender": "Giới tính",
+        "country": "Quốc gia",
+        "bodyType": "Kiểu dáng",
+        "hair": "Tóc",
+        "bio": "Tiểu sử",
+        "select": "Chọn"
+      },
+      "options": {
+        "genderMale": "Nam",
+        "genderFemale": "Nữ",
+        "genderOthers": "Khác",
+        "visibilityEveryone": "Mọi người",
+        "visibilityEveryoneDesc": "Liên kết hồ sơ của bạn sẽ hiển thị với mọi người.",
+        "visibilityModelsOnly": "Chỉ người mẫu",
+        "visibilityModelsOnlyDesc": "Liên kết hồ sơ chỉ dành cho người dùng Fansocial có tài khoản model và không hiển thị với người khác.",
+        "visibilityFansOnly": "Chỉ fan",
+        "visibilityFansOnlyDesc": "Liên kết hồ sơ chỉ dành cho người dùng Fansocial có tài khoản fan và không hiển thị với người khác.",
+        "visibilityRegisteredOnly": "Chỉ người dùng đã đăng ký",
+        "visibilityRegisteredOnlyDesc": "Liên kết hồ sơ chỉ dành cho người dùng Fansocial đã đăng nhập và không hiển thị với người khác.",
+        "visibilityNobody": "Không ai",
+        "visibilityNobodyDesc": "Liên kết hồ sơ sẽ hoàn toàn riêng tư và không ai truy cập được.",
+        "countryAustralia": "Úc",
+        "countryUsa": "Mỹ",
+        "countrySingapore": "Singapore",
+        "countryThailand": "Thái Lan",
+        "bodySkinny": "Gầy",
+        "bodySlim": "Mảnh",
+        "bodyAthletic": "Thể thao",
+        "bodyMedium": "Trung bình",
+        "bodyCurvy": "Đầy đặn",
+        "bodyBbw": "BBW",
+        "hairBlonde": "Vàng",
+        "hairBlack": "Đen",
+        "hairBrunette": "Nâu sẫm",
+        "hairBrown": "Nâu",
+        "hairRedhead": "Đỏ",
+        "hairColorful": "Nhiều màu"
+      },
+      "gallery": {
+        "title": "Thư viện hồ sơ",
+        "help1": "Media đã tải lên sẽ xuất hiện làm nền trang hồ sơ. Kéo thả để sắp xếp thứ tự.",
+        "help2": "Bạn có thể tải tối đa 6 tệp media (tối đa 2 video)",
+        "empty": "Tải lên nội dung đầu tiên và tỏa sáng!",
+        "clickUpload": "Nhấn để tải lên",
+        "dragDrop": "hoặc kéo thả ảnh hoặc video vào đây",
+        "formats": "MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG hoặc JPG (tối đa 15MB)",
+        "remove": "xóa",
+        "uploading": "Đang tải lên...",
+        "unlockVideos": "Nâng cấp premium để tải video",
+        "videoLabel": "Video",
+        "successTitle": "Đã tải {count} tệp lên thư viện miễn phí thành công.",
+        "successDescription": "Nhấn ‘Lưu’ trên thanh tiêu đề để cập nhật thay đổi.",
+        "failOneTitle": "1 tệp tải lên thất bại.",
+        "failVideoDesc": "Không tải được ‘{name}’. Tối đa 2 tệp video được phép.",
+        "failAddTitle": "Không thêm được media.",
+        "failAddDesc": "Không thêm được ‘{name}’. Bạn chỉ có thể tải tối đa 6 tệp media."
+      },
+      "social": {
+        "title": "Mạng xã hội",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "wishlist": "Wishlist",
+        "additionalUrl1": "URL bổ sung 1",
+        "additionalUrl2": "URL bổ sung 2",
+        "additionalUrl3": "URL bổ sung 3",
+        "additionalUrl4": "URL bổ sung 4",
+        "unlockLinks": "Nâng cấp premium để thêm liên kết"
+      },
+      "tipping": {
+        "title": "Cài đặt tip",
+        "tipMessage": "Tin nhắn tip",
+        "tipHelp": "Fan sẽ thấy tin nhắn này khi tip cho bạn.",
+        "tipEmptyHint": "Để trống để dùng tin nhắn mặc định",
+        "tipPlaceholder": "Cảm ơn tip của bạn!",
+        "shareSettings": "Cài đặt chia sẻ",
+        "postToX": "Đăng lên X khi nhận tip",
+        "postMessageLabel": "Tin nhắn đăng (Để trống để dùng tin mặc định của hệ thống.)",
+        "postMessagePlaceholder": "Tôi vừa nhận tip dễ thương từ {'@'}username...",
+        "showUsername": "Hiện tên người dùng fan trên bài đăng",
+        "usernameTooltip": "Fan tip ẩn danh sẽ được hiển thị là '{'@'}anonymous'.",
+        "attachMedia": "Đính kèm media",
+        "uploadMedia": "Tải media lên",
+        "noMedia": "Không đính kèm media",
+        "thumbnail": "Thumbnail",
+        "postPreview": "XEM TRƯỚC BÀI ĐĂNG",
+        "previewName": "Jelly FISH",
+        "previewHandle": "{'@'}jellyf1sh",
+        "previewDate": "31 Th7",
+        "previewFallback": "Tôi vừa nhận tip dễ thương từ fan...",
+        "previewTipLine": "{'@'}manogoes4eva tip 400 token"
+      },
+      "menu": {
+        "edit": "chỉnh sửa",
+        "upload": "tải lên",
+        "uploadNew": "tải mới",
+        "chooseFromAvatars": "chọn từ avatar"
+      },
+      "crop": {
+        "title": "Cắt ảnh",
+        "zoom": "Thu phóng",
+        "rotate": "Xoay",
+        "cancel": "HỦY",
+        "save": "LƯU",
+        "upload": "TẢI LÊN"
+      },
+      "avatarPopup": {
+        "title": "Chọn avatar",
+        "avatar": "Avatar",
+        "background": "Nền",
+        "cancel": "HỦY",
+        "save": "LƯU"
+      },
+      "cancelDialog": {
+        "message": "Bạn có chắc muốn hủy? Thay đổi sẽ bị mất.",
+        "no": "Không",
+        "confirm": "Xác nhận"
+      },
+      "initialsFallback": "CP"
+    }
+  },
+  "maintenance": {
+    "logoAlt": "Fansocial",
+    "heading": {
+      "line1": "Địa điểm yêu thích",
+      "line2": "của bạn đang nóng lên"
+    },
+    "schedule": {
+      "line1": "Bảo trì được lên lịch vào",
+      "line2": "1 tháng 4, 2025, từ 12:00 AM đến 2:00 AM."
+    },
+    "body": "Chúng tôi đang tinh chỉnh để những khao khát táo bạo nhất của bạn thành hiện thực. Hãy ở lại—chúng tôi sẽ sớm trở lại để tăng nhiệt!"
+  },
+  "thankYou": {
+    "logoAlt": "Fansocial",
+    "heading": "Cảm ơn bạn đã ủng hộ các nhà sáng tạo! 😍",
+    "orderReceived": "Đơn hàng của bạn vừa được xác nhận — cảm ơn bạn một lần nữa! 💛",
+    "dashboardHint": "Bạn có thể xem bảng điều khiển bất cứ lúc nào để cập nhật hoặc các lần mua trước.",
+    "help": "Cần trợ giúp hoặc có yêu cầu? Gửi tin nhắn hoặc email cho chúng tôi tại support{'@'}fansocial.app — chúng tôi luôn ở đây!",
+    "dashboardHome": "Trang chủ bảng điều khiển",
+    "orderDetail": "Chi tiết đơn hàng",
+    "orderNumberLabel": "Số đơn hàng",
+    "orderId": "1234-5678-9012",
+    "dateLabel": "Ngày",
+    "date": "01-03-2024",
+    "emailLabel": "Email",
+    "email": "email{'@'}email.com",
+    "shippingLabel": "Địa chỉ giao hàng",
+    "billingLabel": "Địa chỉ thanh toán",
+    "address": "Chan Tai Man,10/F Block5, Fook Yip Bldg,12345,Kwai Chung, Hong Kong",
+    "paymentLabel": "Phương thức thanh toán",
+    "card": "****3746",
+    "cardBrand": "VISA",
+    "amountLabel": "Số tiền",
+    "amount": "USD$ 169.99",
+    "orderSummary": "TÓM TẮT ĐƠN HÀNG",
+    "itemTitle": "1990 NBA Hoops Mark Jackson Knicks Menendez Brothers Courtside",
+    "seller": "Princess Carrot Pop",
+    "price": "USD$12.23",
+    "shipping": "+$12.23 phí vận chuyển"
+  },
+  "paymentFailed": {
+    "logoAlt": "Fansocial",
+    "heading": "Rất tiếc! Đã xảy ra lỗi với khoản thanh toán của bạn.",
+    "reasonLabel": "Chúng tôi không thể xử lý thanh toán của bạn vì lý do sau:",
+    "reason": "Thanh toán không thành công do kết nối mạng kém. Vui lòng thử lại sau",
+    "help": "Đừng lo, đơn hàng của bạn vẫn an toàn. Hãy kiểm tra thông tin thanh toán và thử lại. Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ hỗ trợ khách hàng - support{'@'}fansocial.app",
+    "tryAgain": "Thử lại",
+    "back": "Quay lại",
+    "support": "Hỗ trợ khách hàng"
+  },
+  "thankYouSubscription": {
+    "logoAlt": "Fansocial",
+    "heading": "Cảm ơn bạn đã ủng hộ displayname! 😍",
+    "memberOf": "Bạn hiện là thành viên của",
+    "lounge": "My VVIP Lounge ❤️",
+    "creator": "Princess Carrot Pop",
+    "offers": "Tận hưởng hơn 100 media, và nhận các ưu đãi hấp dẫn bên dưới:",
+    "freeTokens": "Token miễn phí",
+    "freeTokensValue": "100 token mỗi tháng",
+    "merchDiscount": "Giảm giá merch",
+    "ppvDiscount": "Giảm giá PPV",
+    "customRequest": "Yêu cầu tùy chỉnh",
+    "off10": "Giảm 10%",
+    "off5": "Giảm 5%",
+    "watchNow": "Xem ngay",
+    "viewAll": "Xem tất cả",
+    "cardTitle": "Record breaking fried chicken eating! Watch me break world's record! Watch now!",
+    "timeAgo": "1 ngày trước",
+    "dashboardHome": "Trang chủ bảng điều khiển",
+    "merch": "Merch",
+    "merchTitle": "My top (washed) Get Jenny's favourite Mangoes!",
+    "merchDescription": "Lấy xoài yêu thích của Jenny! Mua khi còn hàng!",
+    "merchCurrency": "USD",
+    "merchPrice": "$25",
+    "merchOff": "GIẢM 10%"
+  },
+  "payoutCosmo": {
+    "page": {
+      "title": "Thanh toán",
+      "subtitle": "Ví creator, khoản chi trả và rút tiền",
+      "currencyUsd": "USD",
+      "verified": "Tài khoản chi trả đã xác minh",
+      "heroTitle": "Tiền creator của bạn, ở một nơi.",
+      "heroBody": "Thu nhập được trả tự động vào ví mỗi thứ Sáu. Dùng thẻ trực tiếp, rút tiền mặt tại ATM được hỗ trợ, hoặc chuyển tiền ví sang tài khoản ngân hàng đã lưu.",
+      "withdrawToBank": "Rút về ngân hàng",
+      "addBankAccount": "Thêm tài khoản ngân hàng",
+      "manageCard": "Quản lý thẻ",
+      "verification": "Xác minh",
+      "fansocial": "Fansocial",
+      "creatorWallet": "Ví creator",
+      "cardholder": "Chủ thẻ",
+      "cardholderName": "LINDEN CREATOR",
+      "maskedPan": "••••  ••••  ••••  4821",
+      "walletBalance": "Số dư ví",
+      "walletBalanceValue": "$1,420.50",
+      "activeVirtualCard": "Thẻ ảo đang hoạt động",
+      "platformEarnings": "Thu nhập nền tảng",
+      "platformEarningsValue": "$2,840.00",
+      "platformEarningsNote": "Khoản chi trả tự động tiếp theo thứ Sáu, 25 tháng 9",
+      "walletAvailable": "Số dư ví khả dụng",
+      "walletAvailableValue": "$1,420.50",
+      "walletAvailableNote": "Thẻ, ATM hoặc chuyển khoản ngân hàng",
+      "bankWithdrawals": "Rút về ngân hàng",
+      "bankWithdrawalsValue": "$3,880.00",
+      "bankWithdrawalsNote": "30 ngày qua",
+      "lifetimePayouts": "Tổng chi trả",
+      "lifetimePayoutsValue": "$34,880.40",
+      "lifetimePayoutsNote": "Nền tảng → ví",
+      "quickActions": "Thao tác nhanh",
+      "quickActionsNote": "Mọi việc bạn có thể làm với khoản chi trả và ví.",
+      "withdrawSavedBank": "Rút về ngân hàng đã lưu",
+      "withdrawSavedBankNote": "Dùng một tài khoản ngân hàng đã lưu.",
+      "addNewBank": "Thêm ngân hàng mới",
+      "addNewBankNote": "Thêm ngân hàng mới và rút tiền về đó.",
+      "manageCardNote": "Xem thẻ ảo hoặc đặt thẻ vật lý.",
+      "verificationNote": "Xem trạng thái xác minh chi trả.",
+      "weeklyPayout": "Chi trả hằng tuần",
+      "weeklyPayoutNote": "Xem trước luồng chi trả nền tảng → ví.",
+      "payoutSupport": "Hỗ trợ chi trả",
+      "payoutSupportNote": "Trợ giúp về chi trả, ngân hàng hoặc sự cố thẻ.",
+      "savedBanks": "Tài khoản ngân hàng đã lưu",
+      "savedBanksNote": "Chỉ dùng để chuyển tiền từ ví sang ngân hàng.",
+      "add": "Thêm",
+      "commonwealthBank": "Commonwealth Bank",
+      "commonwealthNote": "•••• 4821 · AUD · Mặc định",
+      "anz": "ANZ",
+      "anzNote": "•••• 9918 · AUD",
+      "verifiedBadge": "Đã xác minh",
+      "withdrawToBankLabel": "Rút về ngân hàng",
+      "withdrawToBankBody": "chuyển tiền ví sang tài khoản ngân hàng bên ngoài. Chi tiêu bằng thẻ và rút ATM dùng trực tiếp số dư ví.",
+      "activity": "Hoạt động",
+      "activityNote": "Khoản chi trả vào ví, rút về ngân hàng và hoạt động thẻ.",
+      "tabPayouts": "Chi trả",
+      "tabWithdrawals": "Rút về ngân hàng",
+      "tabCardActivity": "Hoạt động thẻ",
+      "mobileAmount": "Số tiền",
+      "flowsTitle": "Bốn luồng mô phỏng đầy đủ",
+      "flowsNote": "Đây là bốn hành trình sản phẩm chính, theo đúng trình tự Cosmo.",
+      "registerKyc": "Đăng ký + KYC",
+      "registerKycNote": "Tạo chủ thẻ, nhận SAN, nộp giấy tờ, kiểm tra xác minh.",
+      "weeklyToWallet": "Chi trả hằng tuần → ví",
+      "weeklyToWalletNote": "Sổ của chúng tôi → bản ghi chi trả → nạp ví → hoàn tất.",
+      "withdrawSaved": "Rút → ngân hàng đã lưu",
+      "withdrawSavedNote": "Người thụ hưởng đã lưu → chuẩn bị số dư → xem trước → chi trả.",
+      "withdrawNew": "Rút → ngân hàng mới",
+      "withdrawNewNote": "Quốc gia → trường động → người thụ hưởng → xem trước → chi trả.",
+      "ariaCurrency": "Tiền tệ",
+      "ariaNotifications": "Thông báo",
+      "ariaProfile": "Hồ sơ"
+    },
+    "alt": {
+      "avatar": "Ảnh đại diện",
+      "close": "Đóng",
+      "back": "Quay lại",
+      "upload": "Tải lên"
+    },
+    "columns": {
+      "date": "Ngày",
+      "period": "Kỳ chi trả",
+      "reference": "Mã tham chiếu",
+      "amount": "Số tiền",
+      "status": "Trạng thái",
+      "bank": "Ngân hàng",
+      "account": "Tài khoản",
+      "fee": "Phí",
+      "type": "Loại",
+      "merchant": "Điểm bán / ATM"
+    },
+    "status": {
+      "completed": "Hoàn tất",
+      "processing": "Đang xử lý"
+    },
+    "table": {
+      "payout1Date": "18 thg 9 2026",
+      "payout1Period": "11–17 thg 9",
+      "payout1Reference": "PAY-260918-9201",
+      "payout1Amount": "$1,120.00",
+      "payout2Date": "11 thg 9 2026",
+      "payout2Period": "04–10 thg 9",
+      "payout2Reference": "PAY-260911-7842",
+      "payout2Amount": "$720.50",
+      "withdrawal1Date": "20 thg 9 2026",
+      "withdrawal1Bank": "Commonwealth Bank",
+      "withdrawal1Account": "•••• 4821",
+      "withdrawal1Amount": "$1,000.00",
+      "withdrawal1Fee": "$5.00",
+      "withdrawal2Date": "06 thg 9 2026",
+      "withdrawal2Bank": "ANZ",
+      "withdrawal2Account": "•••• 9918",
+      "withdrawal2Amount": "$2,880.00",
+      "withdrawal2Fee": "$5.00",
+      "card1Date": "22 thg 9 2026",
+      "card1Type": "Mua bằng thẻ",
+      "card1Merchant": "Điểm bán trực tuyến",
+      "card1Amount": "-$82.40",
+      "card2Date": "19 thg 9 2026",
+      "card2Type": "Rút ATM",
+      "card2Merchant": "Mạng lưới ATM",
+      "card2Amount": "-$300.00"
+    },
+    "flow": {
+      "onboardingWelcome": "Chào mừng",
+      "onboardingDetails": "Thông tin chủ thẻ",
+      "onboardingCreated": "Tạo tài khoản/thẻ Cosmo",
+      "onboardingDocuments": "Giấy tờ danh tính",
+      "onboardingSubmitted": "Nộp KYC",
+      "onboardingStatus": "Kiểm tra trạng thái KYC",
+      "onboardingApproved": "Đã duyệt",
+      "weeklyCalculate": "Tính khoản chi trả",
+      "weeklyRecord": "Tạo chi trả nội bộ",
+      "weeklyLoaded": "Nạp ví",
+      "weeklyComplete": "Hoàn tất chi trả nội bộ",
+      "weeklyRefresh": "Làm mới số dư ví",
+      "savedLoaded": "Tải ngân hàng đã lưu",
+      "savedChoose": "Chọn ngân hàng",
+      "savedAmount": "Nhập số tiền",
+      "savedPrepare": "Chuẩn bị tiền ngân hàng",
+      "savedPreview": "Xem trước chi trả",
+      "savedConfirm": "Xác nhận",
+      "savedSubmit": "Gửi chi trả",
+      "savedStatus": "Trạng thái",
+      "newStart": "Bắt đầu",
+      "newCountries": "Tải danh sách quốc gia",
+      "newCountry": "Chọn quốc gia",
+      "newFields": "Tải trường bắt buộc",
+      "newDetails": "Nhập thông tin ngân hàng",
+      "newBeneficiary": "Tạo người thụ hưởng",
+      "newAmount": "Nhập số tiền",
+      "newPrepare": "Chuẩn bị tiền ngân hàng",
+      "newPreview": "Xem trước chi trả",
+      "newConfirm": "Xác nhận",
+      "newSubmit": "Gửi chi trả",
+      "newStatus": "Trạng thái"
+    },
+    "popup": {
+      "eyebrow": "Luồng creator mô phỏng",
+      "back": "Quay lại",
+      "close": "Đóng",
+      "step": "Bước {current} / {total}",
+      "loading": "Đang tải dữ liệu nhà cung cấp…",
+      "loadingNote": "Yêu cầu API mô phỏng 2 giây",
+      "next": "Tiếp",
+      "done": "Xong",
+      "setupTitle": "Thiết lập chi trả creator",
+      "setupBody": "Chúng tôi sẽ tạo tài khoản chi trả, xác minh danh tính và bật ví creator của bạn.",
+      "youllNeed": "Bạn cần",
+      "youllNeedBody": "Thông tin pháp lý, địa chỉ cư trú, giấy tờ tùy thân và bằng chứng địa chỉ.",
+      "legalTitle": "Thông tin pháp lý của bạn",
+      "legalBody": "Các thông tin này được dùng để tạo chủ thẻ/tài khoản Cosmo.",
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "dateOfBirth": "Ngày sinh",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "address": "Địa chỉ cư trú",
+      "accountCreated": "Đã tạo tài khoản Cosmo",
+      "accountCreatedBefore": "Nhà cung cấp đã trả về SAN ",
+      "accountCreatedAfter": ". Chúng tôi liên kết SAN đó với creator trong cơ sở dữ liệu.",
+      "failureBranch": "Nhánh lỗi:",
+      "failureBranchBody": "nếu tạo tài khoản/thẻ thất bại, không có tài khoản chi trả hoạt động nào được tạo ở hệ thống.",
+      "verifyTitle": "Xác minh danh tính",
+      "verifyBody": "KYC dựa trên SAN, nên giấy tờ được nộp sau khi tài khoản Cosmo đã tồn tại.",
+      "idType": "Loại giấy tờ",
+      "idNumber": "Số giấy tờ",
+      "clickToUpload": "Nhấp để tải lên",
+      "orDrag": "hoặc kéo và thả",
+      "fileInfo": "PNG, JPG hoặc PDF",
+      "documentsSubmitted": "Đã nộp giấy tờ",
+      "documentsSubmittedBody": "Giấy tờ danh tính và địa chỉ đã được nộp theo SAN của creator.",
+      "verificationPending": "Đang chờ xác minh",
+      "verificationPendingBody": "Khi xác minh chưa hoàn tất, chúng tôi làm mới trạng thái mới nhất mỗi khi creator quay lại mục Thanh toán.",
+      "rejected": "Từ chối:",
+      "rejectedBody": "hiện lý do nhà cung cấp từ chối và cho phép nộp lại.",
+      "approvedLabel": "Đã duyệt:",
+      "approvedBody": "bật giao diện ví/thẻ.",
+      "accountActive": "Tài khoản chi trả đang hoạt động",
+      "accountActiveBody": "Creator đã được xác minh và có thể nhận chi trả ví hằng tuần.",
+      "kyc": "KYC",
+      "card": "Thẻ",
+      "automaticPayout": "Chi trả tự động",
+      "weeklyTitle": "Chi trả creator hằng tuần",
+      "weeklyBody": "Sổ cái của chúng tôi vẫn là nguồn sự thật cho thu nhập.",
+      "availableEarnings": "Thu nhập khả dụng",
+      "pendingEarnings": "Thu nhập đang chờ",
+      "destination": "Đích đến",
+      "cosmoSan": "Cosmo SAN {san}",
+      "recordFirst": "Tạo bản ghi chi trả trước",
+      "recordFirstBody": "Giữ số tiền, đặt trạng thái Đang xử lý và tạo mã tham chiếu duy nhất trước khi gọi Cosmo.",
+      "walletLoadAccepted": "Đã chấp nhận nạp ví",
+      "walletLoadAcceptedBody": "Cosmo đã nạp ví creator và trả về mã giao dịch của nhà cung cấp.",
+      "failure": "Lỗi:",
+      "walletLoadFailureBody": "ABL doanh nghiệp không đủ hoặc nhà cung cấp từ chối thì khoản chi trả không hoàn tất và tiền đã giữ được hoàn/giải phóng an toàn.",
+      "status": "Trạng thái",
+      "amount": "Số tiền",
+      "providerTransaction": "Giao dịch nhà cung cấp",
+      "walletRefreshed": "Đã làm mới số dư ví",
+      "walletRefreshedBody": "Số dư ví tách biệt với thu nhập nền tảng chưa chi trả.",
+      "platformEarnings": "Thu nhập nền tảng",
+      "walletBalance": "Số dư ví",
+      "savedBanksLoaded": "Đã tải ngân hàng đã lưu",
+      "savedBanksLoadedBody": "Chúng tôi đã lấy người thụ hưởng Cosmo của creator và đối soát với ID người thụ hưởng đã lưu.",
+      "defaultSuffix": " · Mặc định",
+      "amountToBank": "Số tiền về ngân hàng",
+      "balancePrepared": "Đã chuẩn bị số dư chi trả ngân hàng",
+      "balancePreparedSavedBody": "Kiểm tra số dư phụ và chuyển tiền từ thẻ sang tài khoản phụ khi cần.",
+      "balancePreparedNewBody": "Kiểm tra số dư phụ và chuyển tiền thẻ nếu cần.",
+      "bank": "Ngân hàng",
+      "requested": "Số yêu cầu",
+      "providerFee": "Phí nhà cung cấp / quy đổi",
+      "previewFailureBody": "lỗi xem trước sẽ chặn bước xác nhận.",
+      "confirmWithdrawal": "Xác nhận rút về ngân hàng",
+      "to": "Đến",
+      "payoutSubmitted": "Đã gửi chi trả ngân hàng",
+      "payoutSubmittedBody": "Đã lưu mã chi trả của nhà cung cấp. Lệnh rút nội bộ đang ở trạng thái Đang xử lý.",
+      "completed": "Hoàn tất",
+      "savedCompletedBody": "Trạng thái chi trả của nhà cung cấp đã chuyển thành Hoàn tất.",
+      "failed": "Thất bại:",
+      "failedBody": "lưu lý do an toàn từ nhà cung cấp và kiểm tra số dư nhà cung cấp trước khi thử lại.",
+      "newBankTitle": "Rút về ngân hàng mới",
+      "newBankBody": "Thêm người thụ hưởng mới và dùng ngay cho lần rút này.",
+      "countriesLoaded": "Đã tải quốc gia được hỗ trợ",
+      "countriesLoadedBody": "Điền danh sách quốc gia đích từ Cosmo.",
+      "unsupported": "Không hỗ trợ:",
+      "unsupportedBody": "không hiển thị các trường ngân hàng được đoán.",
+      "bankCountry": "Quốc gia ngân hàng",
+      "fieldsLoaded": "Đã tải trường ngân hàng theo quốc gia",
+      "fieldsLoadedBody": "Biểu mẫu tiếp theo dùng phản hồi trường được chấp nhận của Cosmo cho quốc gia đã chọn.",
+      "bankSaved": "Đã lưu tài khoản ngân hàng",
+      "bankSavedBody": "Cosmo đã trả về mã người thụ hưởng; chúng tôi lưu ID đó cùng siêu dữ liệu đã che an toàn.",
+      "validationFailure": "Lỗi xác thực:",
+      "validationFailureBody": "ở lại bước thông tin ngân hàng và hiện lỗi trường từ nhà cung cấp.",
+      "feesFx": "Phí / FX",
+      "confirmNew": "Xác nhận rút về ngân hàng mới",
+      "beneficiary": "Người thụ hưởng",
+      "newCompletedBody": "Khoản chi trả đã hoàn tất và ngân hàng mới vẫn được lưu cho các lần rút sau."
+    },
+    "payload": {
+      "passport": "Hộ chiếu",
+      "driverLicence": "Bằng lái xe",
+      "proofOfIdentity": "Bằng chứng danh tính",
+      "proofOfAddress": "Bằng chứng địa chỉ",
+      "countryAu": "Úc",
+      "countryGb": "Vương quốc Anh",
+      "countryUs": "Hoa Kỳ",
+      "accountHolder": "Chủ tài khoản",
+      "bsb": "BSB",
+      "accountNumber": "Số tài khoản",
+      "commonwealthBank": "Commonwealth Bank",
+      "anz": "ANZ",
+      "previewCommonwealth": "Commonwealth •••• 4821",
+      "previewAnz": "ANZ •••• 9918",
+      "newAuBank": "Ngân hàng AU mới",
+      "previewNewAu": "Ngân hàng AU mới •••• 5678",
+      "saved": "Đã lưu",
+      "approved": "Đã duyệt",
+      "completed": "Hoàn tất",
+      "friday": "Thứ Sáu",
+      "previewResponse": "Phản hồi xem trước",
+      "providerPreview": "Xem trước từ nhà cung cấp"
+    }
+  }
+}

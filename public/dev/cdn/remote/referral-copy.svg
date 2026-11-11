@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <g filter="url(#copyGlow)">
+    <rect x="8.25" y="8.25" width="11.5" height="11.5" rx="2.2" stroke="#07F468" stroke-width="1.6"/>
+    <path d="M8 16.75H6.4A1.65 1.65 0 0 1 4.75 15.1V6.4A1.65 1.65 0 0 1 6.4 4.75H15.1A1.65 1.65 0 0 1 16.75 6.4V8" stroke="#07F468" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <filter id="copyGlow" x="-4" y="-4" width="32" height="32" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="1.15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>

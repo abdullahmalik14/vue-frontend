@@ -1,0 +1,17 @@
+---
+description: DemoPage SubscriptionPlanCard — real PurchaseFlow / subscribe looks only
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# SubscriptionPlanCard on DemoPage
+
+## Source of truth
+- Samples come from `PurchaseFlowSubscriptionOrderPopup` (upgrade current/new, subscribe) and the default gold subscribe-login card.
+- Show Code is a full pasteable `<SubscriptionPlanCard>` with feature `t()` keys — never `demo.` for title / price / footer.
+- Images use `useCheckoutDemoAssets()` (`assets.profileSlideinBg`, `assets.planLogo`, `assets.featuredMediaBg`) — not ibb URLs.
+- Looks are `theme` names: `defaultGold`, `upgradeCurrent`, `upgradeNew`, `subscribe`. Do not paste long `left-section-gradient` / accent strings in Show Code.
+
+## Do not demo
+- Invented tiers or accent colors that no checkout popup renders.
+- Duplicate the same card under Checkout Reusable — this section owns `SubscriptionPlanCard`.

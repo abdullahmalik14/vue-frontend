@@ -1,0 +1,278 @@
+<template>
+  <!-- Single root so parent classes (block md:hidden / lg:hidden) still apply -->
+  <div>
+  <!--
+    Match DashboardSharedSidebar: chrome only inside the mobile header.
+    Popups must stay OUTSIDE the v-show wrapper so open/close is not tied to header visibility.
+  -->
+  <header v-show="forceVisible || $breakpoints.mobile">
+    <div
+      aria-hidden="true"
+      class="pointer-events-none"
+      :style="{ height: `${headerOffsetPx}px` }"
+    ></div>
+    <div
+      ref="headerBarEl"
+      class="flex flex-col gap-4 px-2 py-2 flex-1 z-[100] backdrop-blur-lg fixed inset-x-0 top-0 bg-gradient-to-t from-white/90 to-white/0 bg-slate-100/90 pointer-events-auto">
+      <div class="flex justify-between items-center">
+        <!-- logo -->
+        <div class="flex items-center gap-1.5 relative">
+          <button type="button" @click="$router.push('/dashboard')" class="w-6 h-6 cursor-pointer bg-transparent border-0 p-0">
+            <img v-show="logoLoaded" :src="assets.logo" @load="logoLoaded = true" @error="logoLoaded = false" alt="logo"
+              class="w-6 h-6 pointer-events-none opacity-80" />
+            <div v-show="!logoLoaded" class="w-6 h-6 rounded bg-gray-200 animate-pulse"></div>
+          </button>
+        </div>
+
+        <!-- nav right-item -->
+        <div class="flex items-center gap-2">
+          <div class="flex items-center justify-end gap-2">
+            <!-- choose-language (visual parity; locale is changed from SettingsLanguageField / switcher) -->
+            <div
+              class="flex items-center justify-center p-1.5 gap-3 rounded hover:bg-slate-900/10 cursor-pointer">
+              <div class="pointer-events-none h-5 w-5">
+                <img v-show="languageLoaded" :src="assets.language" @load="languageLoaded = true"
+                  @error="languageLoaded = false" alt="language" class="brightness-0 pointer-events-none h-5 w-5" />
+                <div v-show="!languageLoaded" class="h-5 w-5 rounded bg-gray-200 animate-pulse"></div>
+              </div>
+            </div>
+
+            <!-- notification-item -->
+            <div class="relative">
+              <span
+                class="absolute top-[.125rem] right-[.188rem] h-[.438rem] w-[.438rem] bg-pink-500 rounded-full block"></span>
+
+              <button type="button" @click="isNotificationOpen = true"
+                class="notifications-panel-trigger group cursor-pointer rounded flex items-center justify-center p-1.5 gap-3 hover:bg-notification-hover bg-transparent border-0">
+                <div class="w-5 h-5 pointer-events-none">
+                  <img v-show="notificationLoaded" :src="assets.notification" @load="notificationLoaded = true"
+                    @error="notificationLoaded = false" alt="notification"
+                    class="h-5 w-5 brightness-0 saturate-100 group-hover:[filter:brightness(0)_saturate(100%)_invert(29%)_sepia(98%)_saturate(5809%)_hue-rotate(325deg)_brightness(92%)_contrast(121%)]" />
+                  <div v-show="!notificationLoaded" class="h-5 w-5 rounded bg-gray-200 animate-pulse"></div>
+                </div>
+              </button>
+            </div>
+
+            <!-- user-profile-item -->
+            <div class="flex justify-end items-center relative cursor-pointer">
+              <button type="button" @click="isProfileOpen = true" class="flex flex-col items-center justify-center gap-0.5 rounded bg-transparent border-0 p-0">
+                <div class="pointer-events-none h-8 w-8 flex justify-center items-center">
+                  <div class="relative w-6 h-6">
+                    <div class="rounded-full w-6 h-6">
+                      <img v-show="avatarLoaded" :src="assets.avatar" @load="avatarLoaded = true"
+                        @error="avatarLoaded = false" alt="user avatar"
+                        class="bg-avatar object-cover w-full h-full rounded-full" />
+                      <div v-show="!avatarLoaded" class="w-full h-full rounded-full bg-gray-200 animate-pulse"></div>
+                    </div>
+                    <div class="bg-amber-400 w-1.5 h-1.5 absolute block bottom-0 right-0 rounded-full"></div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hamburger-menu -->
+          <button type="button" class="py-1 rounded gap-0.5 px-2 flex flex-col justify-center items-center cursor-pointer bg-transparent border-0"
+            @click="isNavOpen = true">
+            <div class="w-6 h-6 pointer-events-none">
+              <img v-show="hamburgerLoaded" :src="assets.hamburger" @load="hamburgerLoaded = true"
+                @error="hamburgerLoaded = false" alt="menu" class="w-6 h-6 pointer-events-none brightness-0" />
+              <div v-show="!hamburgerLoaded" class="w-6 h-6 rounded bg-gray-200 animate-pulse"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Same mount pattern as DashboardSharedSidebar (v-if + shared slide-in config) -->
+  <NavDropdown v-if="isNavOpen" v-model="isNavOpen" title="Menu" logo="your-logo-url" />
+
+  <DashboardProfilePopup
+    v-if="isProfileOpen"
+    :popup-config="avatarPopupConfig"
+    v-model="isProfileOpen"
+    @update:modelValue="handleProfilePopupVisibilityChange"
+  />
+
+  <DashboardNotificationPopup
+    v-if="isNotificationOpen"
+    :popup-config="notificationPopupConfig"
+    v-model="isNotificationOpen"
+    @update:modelValue="handleNotificationPopupVisibilityChange"
+  />
+  </div>
+</template>
+
+<script setup>
+import NavDropdown from '@/components/ui/nav/dashboard/NavDropdown.vue';
+import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
+import DashboardNotificationPopup from "@/components/ui/popups/DashboardNotificationPopup.vue";
+import DashboardProfilePopup from "@/components/ui/popups/DashboardProfilePopup.vue";
+import { getAssetUrl } from "@/systems/assets/assetLibrary.js";
+import { createDashboardSidebarSlideInConfig } from "@/systems/dashboard/createDashboardSidebarSlideInConfig.js";
+import {
+  getSharedComponentAssetMapping,
+  groupComponentSlotsByPreloadTier,
+} from "@/systems/assets/resolveSharedComponentAssets.js";
+
+defineProps({
+  /** When true, bypass internal mobile-only v-show (parent controls visibility via CSS). */
+  forceVisible: { type: Boolean, default: false },
+});
+
+const headerBarEl = ref(null);
+const headerOffsetPx = ref(0);
+let headerOffsetObserver = null;
+
+function syncHeaderOffset() {
+  headerOffsetPx.value = headerBarEl.value?.offsetHeight ?? 0;
+}
+
+const isNavOpen = ref(false);
+const isNotificationOpen = ref(false);
+const isProfileOpen = ref(false);
+
+const closeAllHeaderPanels = () => {
+  isNavOpen.value = false;
+  isProfileOpen.value = false;
+  isNotificationOpen.value = false;
+};
+
+const handleProfilePopupVisibilityChange = (isOpen) => {
+  closeAllHeaderPanels();
+  isProfileOpen.value = isOpen;
+};
+
+const handleNotificationPopupVisibilityChange = (isOpen) => {
+  closeAllHeaderPanels();
+  isNotificationOpen.value = isOpen;
+};
+
+// Same factory as desktop sidebar / OrderDetailsPopup — mobile full-bleed from the right
+const notificationPopupConfig = createDashboardSidebarSlideInConfig({
+  from: "right",
+  offset: "0px",
+  width: { default: "100%", "<640": "100%" },
+});
+
+const avatarPopupConfig = createDashboardSidebarSlideInConfig({
+  from: "right",
+  offset: "0px",
+  width: { default: "100%", "<640": "100%" },
+});
+
+const headerAssetSlots = getSharedComponentAssetMapping('dashboardHeaderChrome');
+const headerAssetSlotNames = Object.keys(headerAssetSlots);
+
+// Asset URLs loaded from sharedAssetPreloads.json via assetLibrary
+const assets = ref(
+  Object.fromEntries(headerAssetSlotNames.map((slot) => [slot, null])),
+);
+
+// Loading states for images
+const logoLoaded = ref(false);
+const languageLoaded = ref(false);
+const notificationLoaded = ref(false);
+const avatarLoaded = ref(false);
+const hamburgerLoaded = ref(false);
+
+// Loading state
+const isAssetsLoading = ref(true);
+const assetsLoadError = ref(null);
+
+/**
+ * Retry logic for asset loading with exponential backoff
+ */
+async function loadAssetWithRetry(flag, maxRetries = 2) {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    try {
+      const url = await getAssetUrl(flag);
+      if (url) return url;
+
+      if (attempt < maxRetries) {
+        const backoff = Math.pow(2, attempt) * 100; // 100ms, 200ms, 400ms
+        await new Promise(resolve => setTimeout(resolve, backoff));
+      }
+    } catch (error) {
+      if (attempt === maxRetries) {
+        console.warn(`[DashboardSharedHeader] Failed to load asset after ${maxRetries + 1} attempts:`, flag, error);
+        throw error;
+      }
+      const backoff = Math.pow(2, attempt) * 100;
+      await new Promise(resolve => setTimeout(resolve, backoff));
+    }
+  }
+  return null;
+}
+
+/**
+ * Load critical assets first, then non-critical
+ */
+async function loadAssetsWithPriority() {
+  try {
+    const tierGroups = groupComponentSlotsByPreloadTier(
+      'dashboardHeaderChrome',
+      'dashboardMenuIcons',
+    );
+
+    const logoEntry = tierGroups.high.find(({ slot }) => slot === 'logo')
+      || tierGroups.critical[0];
+
+    if (logoEntry) {
+      assets.value.logo = await loadAssetWithRetry(logoEntry.flag, 2).catch((err) => {
+        console.error(`[DashboardSharedHeader] Critical asset failed: ${logoEntry.flag}`, err);
+        return null;
+      });
+    }
+
+    const otherHighPriority = tierGroups.high.filter(({ slot }) => slot !== 'logo');
+    const highPriorityResults = await Promise.all(
+      otherHighPriority.map(({ slot, flag }) =>
+        loadAssetWithRetry(flag, 2)
+          .then((url) => [slot, url])
+          .catch(() => [slot, null]),
+      ),
+    );
+    highPriorityResults.forEach(([slot, url]) => {
+      assets.value[slot] = url;
+    });
+
+    const normalPriorityResults = await Promise.all(
+      tierGroups.normal.map(({ slot, flag }) =>
+        loadAssetWithRetry(flag, 1)
+          .then((url) => [slot, url])
+          .catch(() => [slot, null]),
+      ),
+    );
+    normalPriorityResults.forEach(([slot, url]) => {
+      assets.value[slot] = url;
+    });
+
+    isAssetsLoading.value = false;
+  } catch (error) {
+    assetsLoadError.value = error;
+    isAssetsLoading.value = false;
+    console.error('[DashboardSharedHeader] Failed to load assets from assetLibrary', error);
+  }
+}
+
+// Load all assets from assetLibrary with priority and retry logic
+onMounted(async () => {
+  await nextTick();
+  syncHeaderOffset();
+  if (typeof ResizeObserver !== 'undefined' && headerBarEl.value) {
+    headerOffsetObserver = new ResizeObserver(syncHeaderOffset);
+    headerOffsetObserver.observe(headerBarEl.value);
+  }
+
+  await loadAssetsWithPriority();
+  await nextTick();
+  syncHeaderOffset();
+});
+
+onBeforeUnmount(() => {
+  headerOffsetObserver?.disconnect();
+  headerOffsetObserver = null;
+});
+</script>

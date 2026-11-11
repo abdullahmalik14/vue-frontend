@@ -1,0 +1,13 @@
+---
+description: EventCard DemoPage — variant presets inside EventCard; short pasteable Show Code
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# EventCard on DemoPage
+
+- Demo lives in `EventCardsDemo.vue` only.
+- Prefer `<EventCard variant="orangeButton" />` (presets inside `EventCard.vue` with assetMap + `eventCard.*` i18n).
+- Also valid: `theme` + `hasButton` when not using `variant`.
+- Show Code must stay short and pasteable.
+- No hardcoded user-facing copy; no `demo.` keys inside Show Code.

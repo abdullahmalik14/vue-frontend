@@ -1,0 +1,17 @@
+---
+description: Demo Show Code is copy-paste ready and all visible text uses t()
+globs: src/dev/templates/demo/**/*
+alwaysApply: true
+---
+
+# Demo Show Code
+
+A developer copies Show Code and uses it. That is the only job of the snippet.
+
+- Every Show Code calls the component it documents, with the real props. Do not stop at a comment, a `triggerNotification({...})` payload, or a class string cut off with `...`.
+- Visible text goes through `t()`. Do not hardcode titles, labels, descriptions, button copy, or alt text in the demo template or in Show Code.
+- Use the feature `t()` key when one exists. If the source file still has a raw English string, add a feature key and call `t()` in the demo anyway.
+- A Show Code `t()` path never starts with `demo.`. That namespace is only for the demo page's own chrome (section titles, captions). A developer pastes the snippet into a real page.
+- File-name captions above a sample are not part of the component. Do not print them as hardcoded text.
+- Do not wrap DemoPage component sections in dark/demo stage backgrounds (`bg-[#272727]`, fake panels, etc.). Show the component on the page as-is.
+- Do not add DemoPage samples into feature/product sections — demos live only under `demo-audit` / DemoPage.

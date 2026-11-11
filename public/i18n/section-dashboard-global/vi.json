@@ -1,0 +1,3933 @@
+{
+  "dashboard": {
+    "title": "Bảng Điều Khiển",
+    "welcome": "Chào mừng trở lại!",
+    "overview": "Tổng Quan",
+    "settings": "Cài Đặt",
+    "profile": "Hồ Sơ",
+    "logout": "Đăng Xuất",
+    "more": "Thêm",
+    "menu": {
+      "home": "Trang chủ",
+      "analytics": "Phân Tích",
+      "payout": "Thanh Toán",
+      "orders": "Đơn Hàng",
+      "media": "Phương Tiện",
+      "chats": "Trò Chuyện",
+      "subscriptions": "Đăng Ký",
+      "shops": "Cửa Hàng",
+      "yourMerch": "Merch của bạn",
+      "customProductSetting": "Cài đặt sản phẩm tùy chỉnh",
+      "coupons": "Phiếu giảm giá",
+      "xrepost": "X Repost",
+      "blog": "Blog",
+      "ordersReceived": "Đơn Hàng Đã Nhận",
+      "customProductRequest": "Yêu Cầu Sản Phẩm Tùy Chỉnh",
+      "itemPurchased": "Mục Đã Mua",
+      "editProfile": "Chỉnh Sửa Hồ Sơ",
+      "subscribersFollowers": "Người Đăng Ký & Người Theo Dõi",
+      "yourPosts": "Bài Đăng Của Bạn",
+      "referrals": "Giới Thiệu",
+      "settings": "Cài Đặt"
+    },
+    "quote": {
+      "newQuote": "Câu Nói Mới"
+    },
+    "xRepost": {
+      "title": "Tự động đăng lại X",
+      "subtitle": "Cho fan biết bạn đang làm gì—thêm lệnh tự động để đăng trên X (Twitter)",
+      "addNew": "Thêm mới",
+      "savedToast": "Đã lưu tự động đăng lại mới.",
+      "deleteConfirm": {
+        "message": "Bạn có chắc muốn xóa không?",
+        "cancel": "Hủy",
+        "confirm": "Xóa"
+      },
+      "popupTitle": "Tôi muốn đăng về..",
+      "newRepostMenu": "Menu đăng lại mới",
+      "newAutomation": "Tự động hóa mới",
+      "add": "Thêm",
+      "deleteRule": "Xóa quy tắc",
+      "delete": "Xóa",
+      "previewAndSave": "Xem trước và lưu",
+      "previewPost": "Xem trước bài đăng",
+      "editDraft": "Sửa bản nháp",
+      "leaveConfirm": {
+        "title": "Bạn có chắc muốn rời đi?",
+        "message": "Các thay đổi của bạn sẽ không được lưu.",
+        "back": "Quay lại",
+        "discard": "Hủy thay đổi"
+      },
+      "postPreview": {
+        "title": "Xem trước bài đăng",
+        "displayName": "Jenny P",
+        "handle": "{'@'}jennyp",
+        "body": "Tôi đang hướng tới mục tiêu bán '{salesGoal}' món—cùng nhau thực hiện nào! Tôi đã đạt '{percentage}'% mục tiêu, và sự ủng hộ của bạn rất ý nghĩa với tôi!",
+        "bodyTemplate": "Giúp tôi đạt mục tiêu bán (Custom Goal) món! đến nay tôi đã đạt (Percentage) mục tiêu!",
+        "edit": "sửa...",
+        "discardEdit": "Hủy",
+        "saveEdit": "Lưu",
+        "charactersCount": "{used}/{max} ký tự",
+        "stages": {
+          "beforeGoal": "Trước khi đạt mục tiêu",
+          "beforeGoalHelp": "Tin nhắn này sẽ đăng theo lịch đã đặt cho đến khi bạn đạt mục tiêu tùy chỉnh.",
+          "whenGoal": "Khi đạt mục tiêu",
+          "whenGoalHelp": "Tin nhắn này chỉ được đăng khi bạn đạt mục tiêu tùy chỉnh. Bạn có thể tùy chỉnh bài đăng này sau"
+        },
+        "stats": {
+          "count": "22.4k"
+        },
+        "legend": {
+          "title": "Chú thích",
+          "salesGoal": "Mục tiêu tùy chỉnh của bạn",
+          "percentage": "% mục tiêu tùy chỉnh đã đạt",
+          "yourTarget": "Mục tiêu của bạn",
+          "targetValue": "{current}/{goal} {suffix}",
+          "nextPost": "Bài đăng tiếp theo",
+          "nextPostValue": "4-12-2024 xx:xx"
+        },
+        "saveDraft": "Lưu bản nháp",
+        "savePost": "LƯU & ĐĂNG",
+        "media": {
+          "modes": {
+            "topSelling": "Dùng ảnh bán chạy nhất",
+            "uploadOwn": "Tải lên của bạn",
+            "none": "Không dùng media"
+          },
+          "uploadTitle": "Nhấn để tải lên",
+          "uploadSubtitle": "hoặc kéo và thả",
+          "uploadFileInfo": "MP4, MOV, PNG, JPG hoặc GIF (tối đa 4 media, 8GB)",
+          "imageLabel": "Ảnh"
+        }
+      },
+      "labels": {
+        "total": "Tổng",
+        "every": "Mỗi",
+        "itemsSold": "Đã bán",
+        "tokens": "Token",
+        "cashGifts": "Quà tiền mặt",
+        "newSubscribers": "Người đăng ký mới",
+        "recurringSubscribers": "Người đăng ký định kỳ"
+      },
+      "columns": {
+        "type": "loại",
+        "metric": "chỉ số",
+        "conditions": "điều kiện"
+      },
+      "filters": {
+        "allType": "Tất cả loại",
+        "viewAll": "Xem tất cả",
+        "tabs": {
+          "all": "Tất cả",
+          "published": "Đã xuất bản",
+          "draft": "Bản nháp"
+        }
+      },
+      "types": {
+        "profile": "Hồ sơ",
+        "subscription": "Đăng ký",
+        "media": "Media",
+        "merch": "Merch",
+        "customRequest": "Yêu cầu tùy chỉnh",
+        "livestream": "Livestream",
+        "privateChat": "Chat riêng",
+        "videoCall": "Gọi video",
+        "audioCall": "Gọi thoại"
+      },
+      "metrics": {
+        "profileLikes": "Lượt thích hồ sơ",
+        "feedLikes": "Lượt thích feed",
+        "profileVisits": "Lượt xem hồ sơ",
+        "followers": "Người theo dõi",
+        "salesUsd": "Doanh số (USD)",
+        "subscribers": "Người đăng ký",
+        "subscriptionPlan": "Gói đăng ký",
+        "salesQty": "Doanh số (SL)",
+        "mediaLikes": "Lượt thích media",
+        "views": "Lượt xem",
+        "watchDuration": "Tổng thời lượng xem",
+        "merchLikes": "Lượt thích merch",
+        "goingLive": "Bắt đầu live",
+        "tip": "Tip",
+        "cashGift": "Quà tiền mặt",
+        "sales": "Doanh số",
+        "likes": "Lượt thích",
+        "newSubs": "Người đăng ký mới",
+        "requests": "Yêu cầu",
+        "viewers": "Người xem",
+        "messages": "Tin nhắn",
+        "calls": "Cuộc gọi",
+        "earnings": "Thu nhập"
+      },
+      "metricHelp": {
+        "profile": {
+          "profileLikes": "Phát lượt thích hồ sơ theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "feedLikes": "Phát lượt thích feed theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "profileVisits": "Phát số lượt xem hồ sơ theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "followers": "Phát số người theo dõi theo tần suất bạn chọn hoặc khi đạt mục tiêu."
+        },
+        "subscription": {
+          "salesUsd": "Phát doanh thu đăng ký theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "subscribers": "Phát số người đăng ký theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "subscriptionPlan": "Phát thông tin gói đăng ký theo tần suất bạn chọn hoặc khi đạt mục tiêu."
+        },
+        "media": {
+          "salesUsd": "Phát doanh thu media theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "salesQty": "Phát tổng số món đã bán theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "mediaLikes": "Phát lượt thích media theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "views": "Phát tổng lượt xem theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "watchDuration": "Phát tổng thời lượng xem theo tần suất bạn chọn hoặc khi đạt mục tiêu."
+        },
+        "merch": {
+          "salesUsd": "Phát doanh thu merch theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "salesQty": "Phát tổng số món đã bán theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "merchLikes": "Phát lượt thích merch theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "views": "Phát tổng lượt xem theo tần suất bạn chọn hoặc khi đạt mục tiêu."
+        },
+        "customRequest": {
+          "salesUsd": "Phát doanh thu yêu cầu tùy chỉnh theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "salesQty": "Phát tổng số món đã bán theo tần suất bạn chọn hoặc khi đạt mục tiêu.",
+          "views": "Phát tổng lượt xem theo tần suất bạn chọn hoặc khi đạt mục tiêu."
+        },
+        "livestream": {
+          "goingLive": "Báo fan khi bạn bắt đầu buổi livestream.",
+          "tip": "Đăng X khi bạn nhận tip trong livestream.",
+          "cashGift": "Đăng X khi bạn nhận quà tiền mặt trong livestream.",
+          "sales": "Đăng X khi bạn bán hàng trong livestream."
+        },
+        "privateChat": {
+          "tip": "Đăng X khi bạn nhận tip trong chat.",
+          "cashGift": "Đăng X khi bạn nhận quà tiền mặt trong chat.",
+          "sales": "Đăng X khi bạn bán hàng trong chat."
+        },
+        "videoCall": {
+          "tip": "Đăng X khi bạn nhận tip trong cuộc gọi video.",
+          "cashGift": "Đăng X khi bạn nhận quà tiền mặt trong cuộc gọi video.",
+          "sales": "Đăng X khi bạn bán hàng trong cuộc gọi video."
+        },
+        "audioCall": {
+          "tip": "Đăng X khi bạn nhận tip trong cuộc gọi thoại.",
+          "cashGift": "Đăng X khi bạn nhận quà tiền mặt trong cuộc gọi thoại.",
+          "sales": "Đăng X khi bạn bán hàng trong cuộc gọi thoại."
+        }
+      },
+      "conditions": {
+        "placeholder": "Chọn điều kiện",
+        "everyNew": {
+          "label": "Mỗi lần bán mới",
+          "help": "Đăng mỗi khi có một giao dịch bán mới để giữ chân người xem."
+        },
+        "customCount": {
+          "label": "Số lượng bán tùy chỉnh",
+          "help": "Đăng khi đạt số lượng bán đã đặt. Tùy chỉnh số lượng theo mục tiêu của bạn."
+        },
+        "growth": {
+          "label": "So sánh tăng trưởng",
+          "help": "Chỉ đăng nếu doanh số tăng so với kỳ trước để làm nổi bật xu hướng tích cực."
+        },
+        "total": {
+          "label": "Tổng số lượng bán",
+          "help": "Đăng tổng số lượng bán trong khung thời gian đã chọn."
+        },
+        "customGoal": {
+          "label": "Mục tiêu tùy chỉnh",
+          "help": "Đặt mục tiêu bán và đăng cập nhật tiến độ hàng ngày cho đến khi đạt mục tiêu."
+        }
+      },
+      "frequency": {
+        "label": "Tần suất đăng",
+        "placeholder": "Tần suất đăng",
+        "daily": "Hàng ngày",
+        "weekly": "Hàng tuần",
+        "monthly": "Hàng tháng",
+        "customRange": "Khoảng tùy chỉnh..."
+      },
+      "units": {
+        "days": "Ngày"
+      },
+      "placeholders": {
+        "count": "Nhập số lượng",
+        "amount": "Enter Amount",
+        "days": "7",
+        "postMessage": "Nhập nội dung bài đăng"
+      },
+      "seePreview": "Xem trước",
+      "merch": {
+        "addMerchCollection": "Thêm Merch/Bộ sưu tập",
+        "search": "Tìm kiếm",
+        "noResults": "Không tìm thấy kết quả."
+      },
+      "tiers": {
+        "placeholder": "Chọn gói",
+        "allTier": "Tất cả gói",
+        "allTierHelp": "Đăng lại mỗi khi bạn có người đăng ký mới trên bất kỳ gói nào.",
+        "freeTier123": "Gói miễn phí 123",
+        "freeTier123Help": "Đăng lại mỗi khi bạn có người đăng ký mới trên gói miễn phí 123.",
+        "paidTier1": "Gói trả phí 1",
+        "paidTier1Help": "Đăng lại mỗi khi bạn có người đăng ký mới trên gói trả phí 1.",
+        "paidTier2": "Gói trả phí 2",
+        "paidTier2Help": "Đăng lại mỗi khi bạn có người đăng ký mới trên gói trả phí 2.",
+        "paidTier3": "Gói trả phí 3",
+        "paidTier3Help": "Đăng lại mỗi khi bạn có người đăng ký mới trên gói trả phí 3.",
+        "paidTier4": "Gói trả phí 4",
+        "paidTier4Help": "Đăng lại mỗi khi bạn có người đăng ký mới trên gói trả phí 4.",
+        "paidTier5": "Gói trả phí 5",
+        "paidTier5Help": "Đăng lại mỗi khi bạn có người đăng ký mới trên gói trả phí 5."
+      }
+    },
+    "referrals": {
+      "promo": {
+        "heading": "Tối đa hóa thu nhập và xem thu nhập của bạn tăng lên!",
+        "body": "Chào {username}! 👋 Chia sẻ liên kết giới thiệu của bạn và nhận {bonus} từ thu nhập hàng tháng của bạn bè. Nhiều creator hơn, nhiều tiền hơn—bắt đầu ngay và xem thu nhập tăng lên!",
+        "username": "{'@'}username",
+        "bonus": "thưởng giới thiệu 2%"
+      },
+      "copyLink": "Sao chép liên kết giới thiệu",
+      "copied": "Đã sao chép",
+      "totalEarning": "Tổng thu nhập giới thiệu",
+      "monthlyEarning": "Thu nhập giới thiệu tháng này",
+      "details": "Chi tiết",
+      "amountUsd": "{amount} USD",
+      "table": {
+        "title": "Giới thiệu của bạn",
+        "searchPlaceholder": "Tìm theo tên người dùng",
+        "profile": "Hồ sơ",
+        "empty": "Không tìm thấy giới thiệu",
+        "deactivatedOn": "Đã vô hiệu hóa vào {date}",
+        "columns": {
+          "from": "Từ",
+          "status": "Trạng thái",
+          "joinDate": "Ngày tham gia"
+        },
+        "status": {
+          "approved": "Đã duyệt",
+          "inviteSent": "Đã gửi lời mời",
+          "deactivated": "Đã vô hiệu hóa"
+        }
+      },
+      "earningHistory": {
+        "title": "Lịch sử thu nhập giới thiệu",
+        "close": "Đóng",
+        "allTime": "Tất cả thời gian",
+        "empty": "Không tìm thấy lịch sử thu nhập",
+        "amountUsd": "USD$ {amount}",
+        "columns": {
+          "referee": "Người được giới thiệu",
+          "amount": "Số tiền"
+        },
+        "months": {
+          "jan": "Th1",
+          "feb": "Th2",
+          "mar": "Th3",
+          "apr": "Th4",
+          "may": "Th5",
+          "jun": "Th6",
+          "jul": "Th7",
+          "aug": "Th8",
+          "sep": "Th9",
+          "oct": "Th10",
+          "nov": "Th11",
+          "dec": "Th12"
+        }
+      }
+    },
+    "analytics": {
+      "page": {
+        "overviewTitle": "Tổng quan/Chi tiết",
+        "lastUpdated": "Cập nhật lần cuối lúc",
+        "refresh": "Làm mới",
+        "refreshing": "Đang làm mới...",
+        "learnHowToEarn": "Tìm hiểu cách kiếm tiền",
+        "trends": "Xu hướng",
+        "trend": "Xu hướng"
+      },
+      "periods": {
+        "yearly": "Hàng năm",
+        "monthly": "Hàng tháng",
+        "weekly": "Hàng tuần",
+        "daily": "Hàng ngày",
+        "allTime": "Tất cả"
+      },
+      "overview": {
+        "new": "MỚI",
+        "recurring": "ĐỊNH KỲ",
+        "newFollowers": "NGƯỜI THEO DÕI MỚI",
+        "profileVisit": "LƯỢT XEM HỒ SƠ",
+        "media": "MEDIA",
+        "merch": "HÀNG HÓA",
+        "profile": "HỒ SƠ",
+        "feed": "BẢNG TIN"
+      },
+      "trends": {
+        "salesInsights": "Thông tin doanh số",
+        "tokenInsights": "Thông tin token",
+        "topCountries": "Quốc gia hàng đầu",
+        "topMedia": "Media hàng đầu",
+        "topTags": "Thẻ hàng đầu",
+        "topMerch": "Hàng hóa hàng đầu",
+        "noTrend": "Hiện chưa có xu hướng để hiển thị",
+        "learnToEarn": "Tìm hiểu cách kiếm tiền",
+        "newSubscribers": "Người đăng ký mới",
+        "recurringSubscribers": "Người đăng ký định kỳ",
+        "subscriptionsInsight": "Chi tiết đăng ký",
+        "tiersBreakdown": "Phân tích hạng",
+        "followersAndVisits": "Xu hướng người theo dõi & lượt xem",
+        "trafficSource": "Nguồn truy cập",
+        "likesInsight": "Chi tiết lượt thích",
+        "topContributors": "Người đóng góp hàng đầu",
+        "topFans": "Fan hàng đầu",
+        "topOrderSpenders": "Người chi tiêu đơn hàng hàng đầu",
+        "subscribers": "Người đăng ký",
+        "earnings": "Thu nhập",
+        "fans": "Fan",
+        "likes": "Lượt thích",
+        "vsYesterday": "so với hôm qua",
+        "titleEarnings": "Chi tiết thu nhập",
+        "titleFans": "Chi tiết fan",
+        "titleLikes": "Chi tiết lượt thích",
+        "titleContributors": "Chi tiết người đóng góp",
+        "totalEarnings": "Tổng thu nhập",
+        "tokensReceived": "Token đã nhận",
+        "newFollowers": "Người theo dõi mới",
+        "totalProfileVisit": "Tổng lượt xem hồ sơ",
+        "vsLastDaily": "so với 24 giờ trước",
+        "vsLastWeekly": "so với tuần trước",
+        "vsLastMonthly": "so với 30 ngày trước",
+        "vsLastYearly": "so với năm trước",
+        "vsLastAllTime": "so với kỳ trước"
+      },
+      "likes": {
+        "media": "Thích media",
+        "merch": "Thích hàng hóa",
+        "profile": "Thích hồ sơ",
+        "feed": "Thích bảng tin"
+      },
+      "contributors": {
+        "contributor": "Người đóng góp",
+        "fan": "Fan",
+        "spender": "Người chi tiêu"
+      },
+      "tables": {
+        "fan": "Fan",
+        "totalUsd": "Tổng (USD)",
+        "salesUsd": "Doanh số (USD)",
+        "noTopContributors": "Chưa có người đóng góp hàng đầu",
+        "orders": {
+          "details": "Chi tiết",
+          "noOrders": "Bạn chưa có đơn hàng nào",
+          "allOrders": "Tất cả đơn hàng",
+          "orderLabel": "Mã đơn#",
+          "from": "Từ",
+          "date": "Ngày",
+          "total": "Tổng",
+          "status": "Trạng thái"
+        },
+        "tabs": {
+          "subscriptions": "Đăng ký",
+          "payToView": "Trả để xem",
+          "merch": "Hàng hóa",
+          "customRequest": "Yêu cầu tùy chỉnh",
+          "wishtender": "Wishtender"
+        },
+        "media": {
+          "media": "Media",
+          "clicks": "Số lượt nhấp",
+          "watchDuration": "Thời lượng xem",
+          "sales": "Số đơn bán",
+          "salesUsd": "Doanh số (USD)",
+          "viewsTab": "Lượt xem",
+          "p2vSalesTab": "Doanh số P2V"
+        },
+        "tags": {
+          "tags": "Thẻ",
+          "views": "Số lượt xem"
+        },
+        "merch": {
+          "merch": "Hàng hóa",
+          "views": "Số lượt xem"
+        }
+      },
+      "legends": {
+        "customrequest": "Yêu cầu tùy chỉnh",
+        "tipTokens": "Token tip",
+        "p2v": "Trả để xem",
+        "merch": "Hàng hóa",
+        "sub": "Đăng ký",
+        "wishtender": "Wishtender",
+        "callTokens": "Token cuộc gọi",
+        "chatTokens": "Token trò chuyện",
+        "liveStreamTokens": "Token livestream",
+        "free": "Miễn phí",
+        "tier1": "Hạng 1",
+        "tier2": "Hạng 2",
+        "tier3": "Hạng 3",
+        "tier4": "Hạng 4",
+        "tier5": "Hạng 5",
+        "paytoview": "Trả để xem",
+        "subscription": "Đăng ký",
+        "profileVisit": "Lượt xem hồ sơ",
+        "newFollowers": "Người theo dõi mới",
+        "newSubscriber": "Người đăng ký mới",
+        "recurringSubscriber": "Người đăng ký định kỳ"
+      }
+    },
+    "orders": {
+      "title": "Đơn Hàng Đã Nhận",
+      "searchPlaceholder": "Tìm kiếm...",
+      "searchAlt": "Tìm kiếm",
+      "dropdownAlt": "Menu thả xuống",
+      "orderTypeLabel": "Loại Đơn Hàng",
+      "tabs": {
+        "inProgress": "Đang Xử Lý",
+        "completed": "Hoàn Tất",
+        "canceled": "Đã Hủy",
+        "all": "Tất Cả"
+      },
+      "orderTypes": {
+        "all": "Tất Cả Loại",
+        "p2v": "P2V",
+        "subscription": "Đăng Ký",
+        "merch": "Hàng Hóa",
+        "mix": "Hỗn Hợp"
+      },
+      "columns": {
+        "orderNum": "Mã Đơn#",
+        "from": "Từ",
+        "status": "Trạng Thái",
+        "date": "Ngày",
+        "total": "Tổng"
+      },
+      "guestUser": "Khách",
+      "status": {
+        "new": "Mới"
+      },
+      "empty": {
+        "prefix": "Bạn chưa nhận được đơn hàng",
+        "suffix": "nào",
+        "matching": "khớp với"
+      },
+      "popup": {
+        "orderTitle": "Đơn hàng{orderNum}",
+        "receivedOn": "Nhận vào {date}",
+        "closeAlt": "Đóng",
+        "merchAlt": "Hàng hóa",
+        "locationAlt": "Vị trí",
+        "uploadAlt": "Tải lên",
+        "enterInputAlt": "Nhập chi tiết thủ công",
+        "trashAlt": "Xóa",
+        "usersAlt": "Người dùng",
+        "locationPinAlt": "Giao đến",
+        "filesAlt": "Tệp",
+        "editPenAlt": "Chỉnh sửa",
+        "logoGreenAlt": "Logo giảm giá",
+        "tagGreenAlt": "Thẻ khuyến mãi",
+        "uploadedImageAlt": "Ảnh chụp màn hình đã tải lên",
+        "pendingShipping": {
+          "title": "Chờ Giao Hàng",
+          "description": "Vui lòng thêm chi tiết theo dõi khi mặt hàng đã được gửi.",
+          "addTracking": "Thêm Chi Tiết Theo Dõi"
+        },
+        "tracking": {
+          "title": "Thêm Chi Tiết Theo Dõi",
+          "uploadScreenshot": "Tải Ảnh Chụp Màn Hình",
+          "enterManually": "Nhập Chi Tiết Thủ Công",
+          "courierLabel": "Đơn Vị Vận Chuyển",
+          "courierPlaceholder": "Chọn Đơn Vị Vận Chuyển",
+          "trackingNumberLabel": "Mã Theo Dõi/ID",
+          "updateDetail": "Cập nhật chi tiết",
+          "shareInfo": "Chúng tôi sẽ chia sẻ thông tin này với {'@'}{fanHandle}",
+          "uploadTitle": "Nhấn để tải lên",
+          "uploadSubtitle": "hoặc kéo và thả",
+          "uploadFileInfo": "SVG, PNG, JPG hoặc GIF (tối đa 800x400px)"
+        },
+        "details": {
+          "from": "Từ",
+          "shipTo": "Giao đến",
+          "notesFromBuyer": "Ghi chú từ người mua",
+          "shippingInformation": "Thông Tin Giao Hàng",
+          "courier": "Đơn Vị Vận Chuyển",
+          "trackingNumber": "Mã theo dõi/ID",
+          "edit": "CHỈNH SỬA"
+        },
+        "pricing": {
+          "merchDiscount": "Giảm {percent}% hàng hóa",
+          "p2vDiscount": "Giảm {percent}% P2V",
+          "subtotal": "Tạm tính",
+          "totalDiscount": "Tổng Giảm Giá",
+          "total": "Tổng"
+        },
+        "couriers": {
+          "dhl": "DHL",
+          "fedex": "FedEx",
+          "ups": "UPS"
+        },
+        "cancelUpload": {
+          "deleteScreenshot": "Bạn có chắc muốn xóa ảnh chụp màn hình?",
+          "leaveWithoutSaving": "Bạn có chắc muốn rời đi? Thay đổi sẽ không được lưu."
+        },
+        "notification": {
+          "title": "Đã thêm chi tiết theo dõi cho Đơn hàng {orderNum}",
+          "fanNotified": "{'@'}{fanHandle} sẽ được thông báo về cập nhật này."
+        },
+        "mock": {
+          "fanHandle": "mangoes",
+          "fanEmail": "email{'@'}email.com",
+          "shipToAddress": "101 S Chicago Ave. Portales, New York, 88130",
+          "buyerNotes": "Đây là ghi chú đơn hàng Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "promoCode": "JENNY2024",
+          "itemMerchTaiwan": "Xoài (Đài Loan)",
+          "itemMerchPhilippines": "Xoài (Philippines)",
+          "itemP2v": "Xem tôi ăn 10 xô gà size gia đình!! Bạn sẽ không tin"
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "update": "Cập nhật",
+    "edit": "Chỉnh Sửa",
+    "delete": "Xóa",
+    "optional": "Tùy chọn",
+    "tokens": "Token",
+    "descriptionOptional": "Mô tả (Tùy chọn)",
+    "searchByUsernameEmail": "Tìm theo tên người dùng & email",
+    "requiredField": "Trường này là bắt buộc."
+  },
+  "checkout": {
+    "proceedPayment": "Tiếp tục thanh toán",
+    "agreeAndProceed": "ĐỒNG Ý & TIẾP TỤC",
+    "tip": {
+      "title": "Trước khi thanh toán\nHãy làm ngày của họ thêm rực rỡ! ✨",
+      "chooseModels": "Chọn một hoặc nhiều model để tip!",
+      "selectAll": "Chọn tất cả",
+      "selectedWord": "đã chọn",
+      "selectedSep": "|",
+      "selectedSummary": "{count} đã chọn | {total}",
+      "selectTipBelow": "Chọn tip bên dưới—sẽ được thêm vào thanh toán.",
+      "supportHelpPrefix": "Sự ủng hộ thêm của bạn giúp",
+      "supportHelpSuffix": "tiếp tục tạo nên điều kỳ diệu. 92% fan tip tại đây!",
+      "notesPlaceholder": "Nhập ghi chú....",
+      "charactersLeft": "Còn {count} ký tự",
+      "customAmountPlaceholder": "Nhập số tiền tùy chỉnh",
+      "firstTipTooltip": "Chưa ai tip cô ấy. Hãy là người đầu tiên!",
+      "fansTipTooltip": "92% fan tip tại đây!",
+      "chargePrefix": "Khi hoàn tất tip này,",
+      "chargeMiddle": "sẽ được trừ vào thẻ kết thúc bằng",
+      "chargeSuffix": "và cộng vào tổng thanh toán.",
+      "confirmTip": "Xác nhận Tip",
+      "closeAlt": "Đóng",
+      "prevModelsAlt": "Model trước",
+      "nextModelsAlt": "Model sau",
+      "deselectAlt": "Bỏ chọn",
+      "amount1": "$1.00",
+      "amount3": "$3.00",
+      "amount5": "$5.00",
+      "amount10": "$10.00",
+      "custom": "TÙY CHỈNH",
+      "demoModelName": "Carrot Pop",
+      "demoModelUsername": "@sammisjelly187",
+      "demoSupportHandle": "@Princess Carrot Pop"
+    }
+  },
+  "booking": {
+    "eventTitlePlaceholder": "Tiêu đề sự kiện",
+    "eventDescriptionPlaceholder": "Mô tả sự kiện...",
+    "basePrice": "Giá cơ bản",
+    "sessionDuration": "Thời lượng phiên",
+    "minutes": "Phút",
+    "perSession": "/phiên",
+    "coPerformerOptional": "Người đồng diễn (Tùy chọn)",
+    "blockedUser": "Người dùng bị chặn",
+    "bookingFee": "Bật phí đặt lịch",
+    "bookingFeeTooltip": "Số tiền này sẽ được giữ trong số dư token của fan.",
+    "offHourSurcharge": "Phụ phí ngoài giờ",
+    "percentFromBasePrice": "% so với giá cơ bản",
+    "remindMe": "Nhắc tôi",
+    "minutesBeforeCall": "phút trước",
+    "scheduledCall": "cuộc gọi đã lên lịch.",
+    "originalPrice": "Giá gốc",
+    "discountedPriceOptional": "Giá giảm (tùy chọn)",
+    "priceRangeDescription": "Giá phải từ USD$ 1.95 đến 500.",
+    "validationEventTitleRequired": "Tiêu đề sự kiện là bắt buộc.",
+    "activeSubscribersTitle": "Bạn có 3 người đăng ký đang hoạt động trong hạng này",
+    "activeSubscribersDescription": "Thay đổi chi tiết gói này có thể ảnh hưởng đến phí và quyền lợi của người đăng ký hiện tại.",
+    "validationTitle": "Lỗi xác thực",
+    "eventTitleRequired": "Tiêu đề sự kiện là bắt buộc.",
+    "paymentFailedTitle": "Thanh toán không thành công",
+    "paymentFailedDescription": "Thanh toán không thành công do kết nối mạng kém. Vui lòng thử lại sau",
+    "tipSentTokens": "Bạn đã gửi {amount} token cho Jenny.",
+    "tipSentCash": "Bạn đã gửi USD$ {amount} cho Jenny.",
+    "tipLimitExceeded": "Giá trị nhập vượt quá mức cho phép tối đa (14.000 token)",
+    "tipSetToMax": "Đặt về mức tối đa",
+    "tipTokenAlt": "Token tip",
+    "tipAlertAlt": "Cảnh báo",
+    "tipChevronAlt": "Tiếp",
+    "validationBasePriceMin": "Giá cơ bản phải từ 0 trở lên.",
+    "maximumSessionAllowed": "Thời lượng phiên tối đa",
+    "sessions": "phiên",
+    "moreOptions": {
+      "title": "Menu tùy chọn",
+      "moreTime": "Yêu cầu thêm thời gian",
+      "reschedule": "Yêu cầu đổi lịch",
+      "cancelCall": "Hủy cuộc gọi",
+      "icons": {
+        "clock": "Đồng hồ cộng",
+        "calendar": "Lịch",
+        "cancel": "Hủy cuộc gọi"
+      }
+    },
+    "adjustment": {
+      "titles": {
+        "moreTime": "Yêu cầu thêm thời gian",
+        "reschedule": "Yêu cầu đổi lịch",
+        "cancel": "Hủy cuộc gọi"
+      },
+      "eventDate": "Ngày sự kiện",
+      "newEventDate": "Ngày sự kiện mới",
+      "originalEventDate": "Ngày sự kiện gốc: {date}",
+      "newStartTime": "Giờ bắt đầu mới",
+      "originalStartTime": "Giờ bắt đầu gốc: {time}",
+      "sendRequest": "Gửi yêu cầu tới",
+      "cancel": {
+        "description": "Bạn có chắc muốn hủy sự kiện này? Phí đặt lịch vẫn sẽ bị trừ khỏi ví của bạn.",
+        "back": "Quay lại",
+        "confirm": "Hủy cuộc gọi"
+      },
+      "icons": {
+        "header": "Biểu tượng hành động",
+        "close": "Đóng",
+        "calendar": "Lịch",
+        "chevron": "Mở rộng",
+        "send": "Gửi"
+      },
+      "samples": {
+        "eventDate": "April 24, 2025",
+        "eventDateReschedule": "Tue, August 24, 2025",
+        "originalDate": "April 24, 2025",
+        "newTime": "9:30pm",
+        "endTime": "10:30pm",
+        "originalTime": "9:15pm",
+        "userName": "jennyhunny"
+      }
+    }
+  },
+  "avatarMenu": {
+    "edit": "chỉnh sửa",
+    "uploadNew": "tải lên mới",
+    "chooseFromAvatars": "chọn từ avatar",
+    "icons": {
+      "edit": "chỉnh sửa",
+      "upload": "tải lên",
+      "avatars": "avatar"
+    }
+  },
+  "uploadProgress": {
+    "uploading": "Đang tải lên...",
+    "complete": "Hoàn tất"
+  },
+  "profileSettings": {
+    "editProfile": "Chỉnh sửa hồ sơ",
+    "badges": {
+      "comingSoon": "(Sắp ra mắt)"
+    },
+    "icons": {
+      "avatar": "Ảnh đại diện",
+      "edit": "Chỉnh sửa hồ sơ",
+      "menuItem": "Biểu tượng mục menu"
+    },
+    "creator": {
+      "categories": {
+        "general": "CHUNG",
+        "callLive": "CÀI ĐẶT CUỘC GỌI & LIVE STREAM",
+        "transaction": "GIAO DỊCH",
+        "social": "MẠNG XÃ HỘI VÀ CHIA SẺ"
+      },
+      "items": {
+        "accountInformation": "Thông tin tài khoản",
+        "changePassword": "Đổi mật khẩu",
+        "privacySecurity": "Quyền riêng tư & Bảo mật",
+        "liveStreamSettings": "Cài đặt Live Stream",
+        "callSettings": "Cài đặt cuộc gọi",
+        "shippingAddress": "Địa chỉ giao hàng",
+        "payoutDetails": "Chi tiết thanh toán",
+        "newsletterEmailSettings": "Cài đặt bản tin & Email",
+        "xRepostAutomation": "Tự động đăng lại X"
+      }
+    },
+    "vendor": {
+      "categories": {
+        "storeSettings": "CÀI ĐẶT CỬA HÀNG",
+        "ordersFinance": "ĐƠN HÀNG & TÀI CHÍNH"
+      },
+      "items": {
+        "shopProfile": "Hồ sơ cửa hàng",
+        "inventoryManagement": "Quản lý kho",
+        "orderHistory": "Lịch sử đơn hàng",
+        "payoutSettings": "Cài đặt thanh toán"
+      }
+    },
+    "fan": {
+      "categories": {
+        "myAccount": "TÀI KHOẢN CỦA TÔI",
+        "billing": "THANH TOÁN"
+      },
+      "items": {
+        "profileSettings": "Cài đặt hồ sơ",
+        "mySubscriptions": "Đăng ký của tôi",
+        "paymentMethods": "Phương thức thanh toán",
+        "purchaseHistory": "Lịch sử mua hàng"
+      }
+    },
+    "agent": {
+      "categories": {
+        "agencyControls": "ĐIỀU KHIỂN AGENCY",
+        "finance": "TÀI CHÍNH"
+      },
+      "items": {
+        "agencyDashboard": "Bảng điều khiển Agency",
+        "manageCreators": "Quản lý Creator",
+        "commissionReports": "Báo cáo hoa hồng"
+      }
+    }
+  },
+  "calendar": {
+    "newMessage": {
+      "badge": "{count} TIN NHẮN MỚI",
+      "icons": {
+        "message": "Tin nhắn mới",
+        "close": "Đóng"
+      }
+    },
+    "chat": {
+      "title": "Chat",
+      "icons": {
+        "edit": "Chỉnh sửa",
+        "dropdown": "Menu",
+        "avatar": "Ảnh đại diện liên hệ"
+      },
+      "contacts": {
+        "oliviaRhye": "Olivia Rhye",
+        "portiaRhye": "Portia Rhye",
+        "samanthaRhye": "Samantha Rhye"
+      },
+      "messages": {
+        "jennyBackTonight": "Jenny: Jenny is back! Tonight I will eat mostly fruits.-> 8pm EST time👅!",
+        "jamBackInStock": "Jenny: My Jam is back in stock!",
+        "checkOutNewContent": "Jenny: Check out my new content",
+        "jennyBack": "Jenny: Jenny is back!"
+      }
+    },
+    "adjustCost": {
+      "title": "Call me and i will sing with you",
+      "date": "24 tháng 4, 2025",
+      "timeRange": "2:15pm-9:30pm",
+      "originalPrice": "500",
+      "adjustedPrice": "1337 Token",
+      "remarksLabel": "Ghi chú của bạn",
+      "remarks": "I charge a flat rate of 500 tokens for each personal request. for you I need to charge USD 40 worth of tokens more for the special costume you requested on top of that.",
+      "waitingForResponse": "đang chờ phản hồi",
+      "viewDetails": "Xem chi tiết",
+      "icons": {
+        "dots": "Thêm tùy chọn",
+        "hourglass": "Đang chờ",
+        "arrowRight": "Xem chi tiết"
+      }
+    },
+    "callSoon": {
+      "title": "Call me and i will sing with you",
+      "date": "24 tháng 4, 2025",
+      "timeRange": "2:15pm-9:30pm",
+      "startsIn": "còn 5 phút",
+      "joinCall": "Tham gia cuộc gọi",
+      "otherOptions": "Tùy chọn khác",
+      "icons": {
+        "dots": "Thêm tùy chọn",
+        "phoneIncoming": "Tham gia cuộc gọi",
+        "dotsHorizontal": "Tùy chọn khác"
+      }
+    },
+    "eventDropdown": {
+      "videoCall": "Cuộc gọi video",
+      "audioCall": "Cuộc gọi audio",
+      "groupCall": "Cuộc gọi nhóm",
+      "showSchedule": "Hiện lịch đặt chỗ"
+    },
+    "main": {
+      "showExistingEvents": "Hiện sự kiện/lịch đặt hiện có"
+    }
+  },
+  "subscriptionPlanCard": {
+    "titleFeatured": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+    "price": "USD$499.99",
+    "labelNew": "Gói đăng ký mới",
+    "footerBillingCycle": "Gói hội viên của bạn sẽ cập nhật trong chu kỳ thanh toán tiếp theo (xx-xx-xxxx)",
+    "footerCheckoutStart": "Gói đăng ký bắt đầu ngay khi bạn hoàn tất thanh toán. Chu kỳ thanh toán bắt đầu (02-26-2025)."
+  },
+  "subscriptionCard": {
+    "badges": {
+      "featured": "FEATURED",
+      "currentSubscription": "Current Subscription"
+    },
+    "actions": {
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "subscribe": "Subscribe"
+    },
+    "readMore": "...Read more",
+    "discount": "-80%",
+    "perMonth": "/mo",
+    "currencyPrefix": "USD$",
+    "icons": {
+      "videos": "Videos",
+      "photos": "Photos",
+      "media": "Media"
+    },
+    "titles": {
+      "featuredLibrary": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+      "library": "Library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+    },
+    "plans": {
+      "tease": "Tease – Starter Access",
+      "desiree": "Desiree – Deeper Access",
+      "crave": "Crave – All Access",
+      "obey": "Obey – Ultimate VIP",
+      "free": "FREE SUBSCRIPTION"
+    },
+    "description": "Watch all of my mango eating content! content update weekly!<br><br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing",
+    "subscribeDescription": "Success in any field requires constant learning, innovation, and adaptability. In a world driven by technology, those who embrace change gain the advantage.",
+    "features": {
+      "freeTokens": "<span class=\"font-semibold text-[#FF0066]\">10 free tokens</span> each month",
+      "merchandise": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Merchandise",
+      "customRequest": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Custom Request",
+      "payToView": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Pay to View videos",
+      "subscribeFreeTokens": "<span class=\"font-semibold text-[#FF0066]\">15 free tokens</span> per month",
+      "subscribeMerchandise": "<span class=\"font-semibold text-[#FF0066]\">4% off</span> on all Merchandise",
+      "subscribePayToView": "<span class=\"font-semibold text-[#FF0066]\">4% off</span> on all Pay to View videos",
+      "subscribeCustomRequest": "<span class=\"font-semibold text-[#FF0066]\">4% off</span> on all Custom Request"
+    }
+  },
+  "profile": {
+    "feed": {
+      "monthMarch": "THÁNG 3",
+      "monthFebruary": "THÁNG 2",
+      "year2024": "2024",
+      "pollTitle": "Tối nay livestream nên ăn gì?",
+      "pollOptionOrange": "Cam",
+      "pollOptionApple": "Táo",
+      "pollOptionChicken": "Gà",
+      "pollTimeLeft": "Còn 24 giờ để bình chọn",
+      "mediaDescription": "Jenny trở lại! Tối nay mình chủ yếu ăn trái cây. -> 8pm EST 👅!"
+    },
+    "mediaTabs": {
+      "payToView": "Trả để xem",
+      "subscription": "Đăng ký",
+      "title": "Xây dựng đội ngũ thành công qua hợp tác",
+      "timeAgo": "2 giờ trước"
+    },
+    "merch": {
+      "title": "Áo của tôi (đã giặt) — xoài yêu thích của Jenny!",
+      "description": "Mua xoài yêu thích của Jenny khi còn hàng!",
+      "discount": "GIẢM 10%",
+      "titleOutOfStock": "Hết hàng",
+      "descriptionOutOfStock": "Sản phẩm này đã hết hàng.",
+      "currency": "USD",
+      "price": "$25",
+      "finalPrice": "$25"
+    }
+  },
+  "mediaCard": {
+    "published": "Đã xuất bản",
+    "resume": "Tiếp tục",
+    "galleryImages": "hình ảnh",
+    "subscribeOrBuy": "Đăng ký hoặc Mua",
+    "alt": {
+      "poster": "Xem trước media",
+      "heart": "Lượt thích",
+      "views": "Lượt xem",
+      "locked": "Nội dung bị khóa",
+      "type": "Loại media"
+    },
+    "tags": {
+      "subscriberExclusive": "Dành riêng người đăng ký",
+      "subscribeOrBuy": "Đăng ký hoặc mua",
+      "free": "Miễn phí",
+      "subOnly": "Chỉ đăng ký"
+    },
+    "titles": {
+      "walkInPark": "Đi dạo trong công viên.",
+      "walkInParkToday": "Hôm nay đi dạo trong công viên.",
+      "walkInParkMorning": "Sáng nay đi dạo trong công viên",
+      "mySecondComingSoon": "Phần 2 sắp ra mắt",
+      "morningWorkout": "Buổi tập buổi sáng",
+      "teamsCollaboration": "Xây dựng đội ngũ thành công qua hợp tác"
+    },
+    "timeAgo": {
+      "fiveMonths": "5 tháng",
+      "twoDays": "2 ngày",
+      "twoHours": "2 giờ trước"
+    },
+    "creators": {
+      "creatorAllen": "Creator Allen",
+      "mistressJessica": "Mistress Jessica"
+    },
+    "menu": {
+      "editDetails": "Chỉnh sửa chi tiết",
+      "addToSubscriptionTier": "Thêm vào gói đăng ký",
+      "unpublish": "Hủy xuất bản",
+      "publish": "Xuất bản",
+      "deleteMedia": "Xóa media",
+      "goToProfile": "Đến hồ sơ creator",
+      "share": "Chia sẻ",
+      "report": "Báo cáo",
+      "back": "Quay lại",
+      "publishedTier": "Gói đã xuất bản",
+      "draft": "Bản nháp",
+      "noTiersYet": "Bạn chưa thiết lập bậc nào."
+    },
+    "demo": {
+      "creators": {
+        "creatorAllen": "Creator Allen",
+        "mistressJessica": "Mistress Jessica"
+      },
+      "titles": {
+        "walkInPark": "Đi dạo trong công viên.",
+        "walkInParkToday": "Hôm nay đi dạo trong công viên.",
+        "walkInParkMorning": "Sáng nay đi dạo trong công viên",
+        "mySecondComingSoon": "Phần 2 sắp ra mắt",
+        "morningWorkout": "Buổi tập buổi sáng"
+      },
+      "tags": {
+        "subscriberExclusive": "Dành riêng người đăng ký",
+        "subscribeOrBuy": "Đăng ký hoặc mua",
+        "free": "Miễn phí",
+        "subOnly": "Chỉ đăng ký"
+      },
+      "timeAgo": {
+        "fiveMonths": "5 tháng",
+        "twoDays": "2 ngày"
+      }
+    }
+  },
+  "tierCard": {
+    "demo": {
+      "labels": {
+        "tier1StandardClaim": "Chủ đề hồng — footer claim tiêu chuẩn (còn 5)",
+        "tier2SpendToClaim": "Chủ đề vàng — footer spend to claim",
+        "tier3Standard95Left": "Chủ đề hồng — claim tiêu chuẩn (còn 95)",
+        "tier4HiddenProgress": "Chủ đề hồng — footer ẩn progress",
+        "tier5SubscribeGreen": "Chủ đề xanh — footer subscribe"
+      },
+      "title": "My VVIP Lounge ❤️",
+      "description": "Welcome to Jenny's VIP Lounge! Gói này bao gồm mọi thứ trong Basic/VIP Lounge, cộng thêm: Hậu trường mỗi shoot, đồ tôi mặc trong shoot để bán, và trò chuyện 24/7.",
+      "price": "55.86",
+      "discount5": "-5%",
+      "discount50": "-50%",
+      "plans": {
+        "oneDay": "1 ngày",
+        "oneMonth": "1 tháng",
+        "sixMonth": "6 tháng",
+        "oneYear": "1 năm"
+      },
+      "flashSale": {
+        "endsIn": "02:13:07",
+        "originalPrice": "$111.72"
+      },
+      "footer": {
+        "claimOffer": "NHẬN<br>ƯU ĐÃI",
+        "subscribe": "ĐĂNG KÝ",
+        "fiveLeft": "Còn 5!",
+        "ninetyFiveLeft": "Còn 95!",
+        "offerProgressLow": "Ưu đãi 95/100",
+        "offerProgressHigh": "Ưu đãi 5/100",
+        "spendMore": "Chi thêm $200 để nhận",
+        "spendProgress": "200/ USD400"
+      }
+    },
+    "ui": {
+      "morePlans": "Thêm gói",
+      "usdPrefix": "USD$",
+      "free": "MIỄN PHÍ",
+      "readMore": "ĐỌC THÊM",
+      "saleEndsIn": "Sale kết thúc sau",
+      "featured": "NỔI BẬT",
+      "mostValue": "Đáng giá nhất",
+      "planForPrice": "{label} với USD${price}",
+      "renewsAt": "Gia hạn USD${price} mỗi {label}",
+      "usdPrice": "USD${price}",
+      "spendingTooltip": "Chi tiêu bao gồm: Pay to view, Đăng ký, Tip",
+      "empty": {
+        "tierName": "Tên gói",
+        "description": "Mô tả gói...",
+        "subscribeForFree": "ĐĂNG KÝ MIỄN PHÍ"
+      },
+      "features": {
+        "freeTokens": "Token miễn phí",
+        "freeTokensValue": "100 token mỗi ngày",
+        "tokensEveryMonth": "{count} token mỗi tháng",
+        "merchDiscount": "Giảm giá Merch",
+        "ppvDiscount": "Giảm giá PPV",
+        "customRequest": "Yêu cầu tùy chỉnh",
+        "unsubscribeDiscount": "Giảm giá khi hủy",
+        "amountOff": "Giảm USD$ {amount}",
+        "percentOffAmount": "Giảm {amount}%",
+        "percentOff10": "Giảm 10%",
+        "percentOff5": "Giảm 5%"
+      }
+    },
+    "alt": {
+      "video": "Video",
+      "images": "Ảnh",
+      "audio": "Audio",
+      "flash": "Flash",
+      "doubleArrows": "Mũi tên",
+      "tooltip": "Chú thích",
+      "hot": "Hot"
+    }
+  },
+  "eventCard": {
+    "demo": {
+      "labels": {
+        "orangeButton": "Chủ đề cam — có nút CTA",
+        "orangeProgress": "Chủ đề cam — dual progress (không nút)",
+        "pinkButton": "Chủ đề hồng — có nút CTA",
+        "pinkProgress": "Chủ đề hồng — dual progress (không nút)"
+      },
+      "titles": {
+        "subscriberDiscount": "Giảm giá người đăng ký",
+        "luckyDraw": "Quay số may mắn!"
+      },
+      "creatorName": "Princess Carrot Pop",
+      "spendMoreClaim": "Chi thêm $200 để nhận",
+      "spendMoreEnter": "Chi thêm $200 để tham gia",
+      "offersLeft": "Còn 10 ưu đãi!",
+      "chancesLeft": "Còn 5 cơ hội!",
+      "progressCount": "95/100",
+      "progressOffer": "Ưu đãi 95/100",
+      "progressRatio": "200/ USD400",
+      "endsIn": "Kết thúc trong",
+      "timer": {
+        "hours": "02",
+        "minutes": "13",
+        "seconds": "07"
+      },
+      "buttons": {
+        "claimDiscount": "NHẬN GIẢM GIÁ",
+        "enterLuckyDraw": "THAM GIA QUAY SỐ"
+      }
+    },
+    "alt": {
+      "close": "Đóng",
+      "mascot": "Linh vật sự kiện",
+      "verified": "Đã xác minh",
+      "tooltip": "Chú thích"
+    }
+  },
+  "notificationCard": {
+    "demo": {
+      "labels": {
+        "warningMediaRequired": "Biến thể cảnh báo (yêu cầu media)",
+        "successApproved": "Biến thể thành công (đã duyệt)",
+        "infoBankDetails": "Biến thể thông tin (ngân hàng)",
+        "errorDestructive": "Biến thể lỗi (destructive)",
+        "noticeCyan": "Biến thể notice (cyan)",
+        "alertAmber": "Biến thể alert (amber)",
+        "successTeal": "Biến thể success-teal",
+        "limitExceededDark": "Biến thể limit-exceeded (tối)",
+        "withIcon": "Có icon (mặc định)",
+        "withoutIcon": "Không icon",
+        "withDescription": "Có mô tả",
+        "withoutDescription": "Không mô tả (chỉ tiêu đề)",
+        "withoutTitle": "Không tiêu đề (chỉ mô tả)",
+        "withClose": "Có nút đóng",
+        "withoutClose": "Không nút đóng",
+        "customIcon": "Icon tùy chỉnh (assetMap URL)",
+        "withLink": "Có liên kết",
+        "withoutLink": "Không liên kết"
+      },
+      "titles": {
+        "mediaRequired": "Yêu cầu nội dung media",
+        "congratulations": "Chúc mừng",
+        "bankDetails": "Yêu cầu thông tin ngân hàng",
+        "actionRequired": "Cần hành động",
+        "unsavedChanges": "Bạn có thay đổi chưa lưu",
+        "activeSubscribers": "Bạn có 3 subscriber đang hoạt động trong gói này",
+        "profileUpdated": "Cập nhật hồ sơ thành công",
+        "uploadLimit": "Đã vượt giới hạn tải lên",
+        "connectX": "Kết nối tài khoản X của bạn",
+        "titleOnly": "Nhắc nhở: hoàn thiện hồ sơ"
+      },
+      "descriptions": {
+        "mediaRequired": "Hồ sơ của bạn hiện không có media. Thêm ít nhất 5 mục media để tăng khả năng hiển thị.",
+        "mediaApproved": "Media 'Audio with placeholder and no preview' của bạn đã được duyệt.",
+        "bankDetails": "Để đảm bảo giao dịch suôn sẻ, vui lòng hoàn thiện thông tin ngân hàng.",
+        "securityUpdate": "Cần cập nhật quan trọng cho cài đặt bảo mật tài khoản.",
+        "unsavedChanges": "Bạn đã thay đổi kể từ lần lưu cuối. Nhớ nhấn SAVE để xuất bản thay đổi.",
+        "activeSubscribers": "Thay đổi chi tiết gói này có thể ảnh hưởng phí và quyền lợi của subscriber hiện tại.",
+        "profileUpdated": "Thay đổi hồ sơ đã được lưu và hiển thị với subscriber.",
+        "uploadLimit": "Bạn đã đạt số lượng tải lên tối đa của gói hiện tại.",
+        "connectX": "Bạn phải kết nối tài khoản X trước khi dùng tính năng tự đăng lại.",
+        "completeProfile": "Thêm tiểu sử và ảnh đại diện để subscriber dễ tìm thấy bạn."
+      },
+      "links": {
+        "learnMore": "Tìm hiểu thêm",
+        "connectNow": "Kết nối ngay",
+        "viewDetails": "Xem chi tiết"
+      }
+    }
+  },
+  "mediaUploader": {
+    "search": {
+      "defaultPlaceholder": "Tìm kiếm...",
+      "add": "Thêm",
+      "remove": "Xóa",
+      "maxItemsAlert": "Tối đa {max} mục được phép",
+      "languageLabel": "繁體中文",
+      "languageTraditional": "繁體中文",
+      "languageSimplified": "簡體中文",
+      "languageEnglish": "English",
+      "iconAlt": "tìm kiếm"
+    },
+    "tagTabs": {
+      "az": "A-Z",
+      "hobby": "癖好",
+      "clothing": "服裝",
+      "scene": "場景",
+      "identity": "身分",
+      "body": "身型"
+    },
+    "thumbnail": {
+      "label": "Ảnh thu nhỏ",
+      "blurToggle": "Làm mờ thumbnail"
+    },
+    "postPreview": {
+      "heading": "XEM TRƯỚC BÀI ĐĂNG",
+      "displayName": "Jelly FISH",
+      "handle": "{'@'}jellyf1sh",
+      "defaultMessage": "Đừng bỏ lỡ—xem nội dung độc quyền này và trải nghiệm đầu tiên!",
+      "linkPreview": "fansocial.app/model/jellyskitchen/...",
+      "avatarAlt": "avatar",
+      "verifiedAlt": "verified"
+    },
+    "a11y": {
+      "selectedThumbnail": "selected",
+      "video": "video",
+      "delete": "delete",
+      "play": "play",
+      "expand": "expand",
+      "deleteIcon": "delete-icon",
+      "expandIcon": "expand-icon"
+    },
+    "publishDatePicker": {
+      "defaultLabel": "Đặt ngày và giờ xuất bản:",
+      "placeholder": "--/--/----   --:-- --",
+      "calendarAlt": "calendar-icon"
+    },
+    "fileUploadPlaceholder": {
+      "alt": "file-upload-placeholder"
+    },
+    "trailerSetting": {
+      "label": "Hiện trailer xem trước",
+      "paragraph": "Cho phép người chưa đăng ký xem trước video trên trang chi tiết media.",
+      "paragraphAudio": "Cho phép người chưa đăng ký xem trước đoạn audio trên trang chi tiết media."
+    },
+    "thumbnailUploader": {
+      "title": "Nhấp để tải lên",
+      "subtitle": "hoặc kéo và thả tệp ảnh vào đây",
+      "fileInfo": "PNG hoặc JPG (tối đa 10MB)",
+      "selected": "Đã chọn"
+    },
+    "mediaThumbnailUploader": {
+      "cancel": "Hủy",
+      "processing": "Đang xử lý điều tuyệt vời...",
+      "maxGallery": "(tối đa: 10 tệp {size})",
+      "maxSingle": "(tối đa: {size})",
+      "closeAlt": "đóng",
+      "clickToUpload": "Nhấp để tải lên",
+      "dropText": " hoặc kéo và thả"
+    },
+    "blurEffect": {
+      "blurAlt": "làm mờ",
+      "dropdownAlt": "mũi tên menu"
+    },
+    "shell": {
+      "uploadMedia": "Tải media",
+      "closeAlt": "đóng",
+      "back": "Quay lại",
+      "next": "Tiếp",
+      "steps": {
+        "previewSettings": "Cài đặt xem trước",
+        "subscriptionP2v": "Đăng ký và P2V",
+        "mediaDetails": "Chi tiết media",
+        "publishSharing": "Cài đặt xuất bản & chia sẻ",
+        "submit": "Gửi"
+      }
+    },
+    "empty": {
+      "title": "Media",
+      "description": "Bạn chưa thêm media nào.",
+      "uploadCta": "Tải media",
+      "faq": "Media FAQ",
+      "iconAlt": "Chưa có media"
+    },
+    "library": {
+      "searchPlaceholder": "Tìm kiếm...",
+      "searchAlt": "Tìm media",
+      "filter": "Bộ lọc",
+      "emptyCell": "--",
+      "gridView": "Xem lưới",
+      "listView": "Xem danh sách",
+      "tabs": {
+        "all": "Tất cả",
+        "published": "Đã xuất bản",
+        "notPublished": "Chưa xuất bản",
+        "draft": "Bản nháp",
+        "reviewing": "Đang duyệt"
+      },
+      "status": {
+        "reviewing": "Đang duyệt",
+        "draft": "Bản nháp",
+        "published": "Đã xuất bản"
+      },
+      "table": {
+        "media": "Media",
+        "status": "Trạng thái",
+        "p2v": "P2V",
+        "tiers": "Tiers",
+        "appearOn": "Hiển thị trên",
+        "uploadDate": "Ngày tải lên"
+      },
+      "appearOn": {
+        "profile": "Trang hồ sơ",
+        "discovery": "Trang khám phá"
+      },
+      "trailer": "Trailer",
+      "lastTierPopup": {
+        "message": "Không thể gỡ media này—đây là media cuối cùng liên kết với gói '{tier}'.",
+        "back": "Quay lại"
+      },
+      "filterTypes": {
+        "all": "Mọi loại",
+        "video": "Video",
+        "image": "Ảnh",
+        "gallery": "Thư viện",
+        "audio": "Âm thanh"
+      },
+      "filterPopup": {
+        "title": "Bộ lọc",
+        "closeAlt": "Đóng",
+        "sortBy": "Sort by:",
+        "uploadDate": "Ngày tải lên",
+        "payToViewAvailable": "Pay to View Available",
+        "mediaType": "Media type",
+        "subscriptionTier": "Subscription tier",
+        "selectAll": "Chọn tất cả",
+        "types": {
+          "video": "Video",
+          "singleImage": "Ảnh đơn",
+          "imageGallery": "Thư viện ảnh",
+          "audio": "Âm thanh"
+        },
+        "reset": "Đặt lại bộ lọc",
+        "apply": "Apply"
+      },
+      "submittedToast": "{kind} ‘{title}’ của bạn đã được gửi để duyệt.",
+      "kind": {
+        "video": "video",
+        "singleImage": "ảnh",
+        "imageGallery": "thư viện",
+        "audio": "âm thanh"
+      }
+    },
+    "uploadPopup": {
+      "title": "Tải media",
+      "editTitle": "Chỉnh sửa chi tiết",
+      "closeAlt": "Đóng",
+      "tabsAria": "Loại media",
+      "tabs": {
+        "video": "Video",
+        "singleImage": "Ảnh đơn",
+        "imageGallery": "Thư viện ảnh",
+        "audio": "Audio"
+      },
+      "drop": {
+        "video": "hoặc kéo và thả tệp video vào đây",
+        "singleImage": "hoặc kéo và thả",
+        "imageGallery": "hoặc kéo và thả nhiều tệp vào đây",
+        "audio": "hoặc kéo và thả tệp audio vào đây"
+      },
+      "formats": {
+        "video": "MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG. (Tối đa 2000MB)",
+        "singleImage": "PNG hoặc JPG (tối đa 10MB)",
+        "imageGallery": "PNG hoặc JPG (tối đa 2000MB)",
+        "audio": "MP3, WAV, OGG hoặc WEBM. (Tối đa 200MB)"
+      },
+      "galleryEmpty": {
+        "iconAlt": "Thư viện trống",
+        "message": "Bạn chưa có gì trong thư viện ảnh lúc này."
+      },
+      "progress": {
+        "uploading": "Đang tải lên...",
+        "processing": "Đang xử lý...",
+        "cancel": "Hủy"
+      },
+      "preview": {
+        "deleteAlt": "Xóa video",
+        "deleteImageAlt": "Xóa ảnh",
+        "deleteAudioAlt": "Xóa audio",
+        "imageAlt": "Xem trước ảnh đã tải lên",
+        "audioAlt": "Audio đã tải lên"
+      },
+      "gallery": {
+        "remove": "xóa",
+        "removeImageAlt": "Xóa ảnh",
+        "defaultImageName": "image",
+        "selectMore": "Chọn thêm tệp..",
+        "upload": "Tải lên",
+        "uploadSuccess": "Đã tải lên thành công {count} ảnh",
+        "uploadSuccessOne": "Đã tải lên thành công {count} ảnh"
+      },
+      "leaveConfirm": {
+        "title": "Bạn có chắc muốn rời đi?",
+        "description": "Bạn có thể lưu tiến trình hiện tại dưới dạng bản nháp hoặc hủy tiến trình và rời đi.",
+        "saveDraft": "Lưu bản nháp",
+        "leave": "Rời đi mà không lưu"
+      },
+      "tabChangeConfirm": {
+        "message": "Nếu bạn đổi loại media bây giờ, bạn sẽ mất toàn bộ tiến trình, bạn có muốn tiếp tục?",
+        "back": "Quay lại",
+        "continue": "Tiếp tục"
+      }
+    },
+    "subscription": {
+      "settingsTitle": "Cài đặt đăng ký",
+      "linkToggle": "Liên kết media này với gói đăng ký",
+      "addTier": "Thêm bậc",
+      "payToViewTitle": "Cài đặt trả để xem",
+      "payToViewToggle": "Cho phép media này trả để xem",
+      "originalPrice": "Giá gốc",
+      "discountedPrice": "Giá giảm (tùy chọn)",
+      "originalPriceHint": "Giá phải từ USD$ 1.95 đến 500.",
+      "discountPriceHint": "Để trống để tắt hiển thị giảm giá.",
+      "originalPriceError": "Giá phải từ USD$ 1.95 đến 500.",
+      "discountPriceError": "Giá giảm phải thấp hơn giá gốc.",
+      "tierAddedToast": "Đã thêm bậc đăng ký mới.",
+      "noTiersYet": "Bạn chưa thiết lập bậc nào.",
+      "displayTitle": "Hiển thị media này trên:",
+      "discoveryPage": "Trang khám phá",
+      "profilePage": "Trang hồ sơ của tôi",
+      "usd": "USD$",
+      "plans": {
+        "free": "FREE library of LOREM LPSUM ATIER dolor sit amet.",
+        "amazing": "Amazing library of LOREM LPSUM ATIER dolor sit amet.",
+        "complete": "Complete library of LOREM LPSUM ATIER dolor sit amet.",
+        "featured": "Featured library of LOREM LPSUM ATIER dolor sit amet.",
+        "basic": "Basic library of LOREM LPSUM ATIER dolor sit amet.",
+        "premium": "Premium library of LOREM LPSUM ATIER dolor sit amet.",
+        "nsfw": "NSFW library of LOREM LPSUM ATIER dolor sit amet."
+      }
+    },
+    "publish": {
+      "useOriginal": "Dùng ảnh thu nhỏ và xem trước gốc",
+      "useCustom": "Tải ảnh thu nhỏ và xem trước khác",
+      "none": "Không đính kèm ảnh thu nhỏ và xem trước",
+      "postMessageLabel": "Tin nhắn bài đăng (Để trống để dùng tin mặc định hệ thống.)",
+      "postMessagePlaceholder": "Đừng bỏ lỡ—xem nội dung độc quyền này và là người đầu tiên trải nghiệm!",
+      "attachMedia": "Đính kèm media",
+      "charactersCount": "{used}/{max} ký tự",
+      "whenTitle": "Bạn muốn xuất bản media này khi nào?",
+      "publishImmediately": "Xuất bản ngay sau khi duyệt",
+      "schedulePublish": "Lên lịch thời gian xuất bản",
+      "selectOption": "Chọn một tùy chọn",
+      "immediateHelp": "Chúng tôi sẽ xuất bản theo tùy chọn đăng ký và trả để xem của bạn. Thường mất khoảng 2 ngày làm việc.",
+      "shareSettings": "Cài đặt chia sẻ",
+      "postToX": "Đăng lên X khi media được xuất bản",
+      "thumbnail": "Ảnh thu nhỏ",
+      "trailer": "Trailer",
+      "imageDropSubtitle": "hoặc kéo và thả ảnh thu nhỏ",
+      "imageFileInfo": "SVG, PNG, JPG hoặc GIF (tối đa 800x400px)",
+      "videoDropSubtitle": "hoặc kéo và thả tệp trailer",
+      "videoFileInfo": "MP3, MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG. (Tối đa 2000MB)",
+      "connectXNotice": "Bạn phải kết nối tài khoản X trước khi dùng tính năng tự đăng lại.",
+      "connectX": "Kết nối tài khoản X",
+      "scheduleLabel": "Đặt ngày và giờ xuất bản:",
+      "scheduleMessage": "Ngày phải trước tối thiểu 2 ngày.",
+      "featureComingSoon": "Nổi bật media này ở mục 'sắp ra mắt'",
+      "featureComingSoonTip": "Media này sẽ được thêm vào mục 'sắp ra mắt' trên trang media hồ sơ.",
+      "preorderPrice": "Giá đặt trước (Tùy chọn)",
+      "preorderUsd": "USD",
+      "preorderBullet1": "Ưu đãi đặc biệt cho fan đặt trước media này.",
+      "preorderBullet2": "Để trống để tắt tính năng."
+    },
+    "addTier": {
+      "title": "Thêm bậc mới",
+      "draftNotice": "Bạn đã dùng hết chỗ bậc đã xuất bản; bậc mới sẽ được lưu dưới dạng bản nháp.",
+      "cancel": "HỦY",
+      "save": "LƯU",
+      "closeAlt": "Đóng",
+      "tierNamePlaceholder": "Tên bậc...",
+      "tierDescriptionPlaceholder": "Mô tả bậc...",
+      "description": "Mô tả",
+      "backgroundImage": "Ảnh nền",
+      "backgroundImageLabel": "Ảnh nền",
+      "backgroundPreviewAlt": "xem trước nền",
+      "deleteAlt": "xóa",
+      "uploadTitle": "Nhấp vào đây",
+      "uploadSubtitle": "để chọn ảnh hoặc kéo và thả ảnh vào đây",
+      "uploadFileInfo": "(Định dạng: JPEG, PNG. Tối đa: 10MB)",
+      "subscriptionFee": "PHÍ ĐĂNG KÝ",
+      "freeTier": "Bậc miễn phí",
+      "paidTier": "Bậc trả phí",
+      "originalPrice": "Giá gốc",
+      "discountedPrice": "Giá giảm (tùy chọn)",
+      "originalPriceHint": "Giá phải từ USD$ 1.95 đến 500.",
+      "discountPriceHint": "Để trống để tắt hiển thị giảm giá.",
+      "discountPriceError": "Giá giảm phải thấp hơn giá gốc.",
+      "usd": "USD$",
+      "subscriberBenefits": "Quyền lợi thành viên",
+      "optional": "Tùy chọn",
+      "freeTokens": "Token miễn phí",
+      "freeTokensTooltip": "Số token miễn phí cấp cho thành viên bậc này mỗi chu kỳ thanh toán. Tần suất theo cài đặt gói đăng ký cơ bản.",
+      "merchDiscount": "Giảm giá hàng hóa",
+      "merchDiscountBullet1": "Đặt phần trăm giảm cho mọi hàng trong shop (ví dụ nhập '10' nếu muốn giảm 10%)",
+      "merchDiscountBullet2": "Để trống để tắt tính năng.",
+      "payToViewDiscount": "Giảm giá trả để xem",
+      "payToViewDiscountBullet": "Đặt phần trăm giảm cho mọi sản phẩm trả để xem (ví dụ nhập '10' nếu muốn giảm 10%)",
+      "customRequestDiscount": "Giảm giá yêu cầu tùy chỉnh",
+      "customRequestBullet1": "Đặt phần trăm giảm cho yêu cầu sản phẩm tùy chỉnh (ví dụ nhập '10' nếu muốn giảm 10%)",
+      "customRequestBullet2": "Để trống để tắt tính năng.",
+      "unsubscribeDiscount": "Giảm giá khi hủy đăng ký",
+      "unsubscribeTooltip": "Số token miễn phí cấp cho thành viên bậc này mỗi chu kỳ thanh toán. Tần suất theo cài đặt gói đăng ký cơ bản.",
+      "applyOnSale": "Áp dụng cho mặt hàng đang giảm giá",
+      "percentOff": "% giảm",
+      "tokensPerMonth": "Tokens/tháng",
+      "rangeError": "Giá trị phải từ 1-99"
+    },
+    "preview": {
+      "thumbnailSettings": "Cài đặt ảnh thu nhỏ",
+      "trailerSettings": "Cài đặt trailer",
+      "chooseScreenshot": "Chọn ảnh chụp",
+      "useImageAsThumbnail": "Dùng ảnh làm thumbnail",
+      "usePlaceholder": "Dùng placeholder",
+      "uploadThumbnail": "Tải ảnh thu nhỏ riêng",
+      "siteGeneratedTrailer": "Dùng trailer do hệ thống tạo",
+      "uploadOwnTrailer": "Tải trailer riêng",
+      "videoDropSubtitle": "hoặc kéo và thả tệp video vào đây",
+      "videoFileInfo": "MP3, MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG. (Tối đa 2000MB)",
+      "audioTrailerDropSubtitle": "hoặc kéo và thả tệp video/audio vào đây",
+      "audioTrailerFileInfo": "MP3 hoặc MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, JPEG, PNG. (Tối đa 2000MB)",
+      "uploadSuccess": "Đã tải lên video mới thành công.",
+      "uploadSuccessImage": "Đã tải lên ảnh mới thành công.",
+      "uploadSuccessAudio": "Đã tải lên tệp audio mới thành công.",
+      "audioFallbackName": "tệp audio"
+    },
+    "mediaDetails": {
+      "titlePlaceholder": "Tiêu đề video (Tùy chọn)",
+      "descriptionPlaceholder": "Mô tả (Tùy chọn)",
+      "tagsTitle": "Thẻ",
+      "tagsSubtitle": "Thêm tối đa 10 thẻ cho media của bạn.",
+      "tagsPlaceholder": "Tìm thẻ...",
+      "coPerformerTitle": "Đồng diễn",
+      "coPerformerSubtitle": "Nếu media có người khác, hãy gắn thẻ họ bên dưới.",
+      "coPerformerPlaceholder": "Jelly"
+    },
+    "createTag": {
+      "title": "Tạo thẻ mới",
+      "closeAlt": "Đóng",
+      "notFound": "Không tìm thấy thẻ.",
+      "notFoundHint": "Bạn có thể thêm thẻ này chỉ cho riêng bạn hoặc gửi để dùng toàn site.",
+      "create": "Tạo",
+      "createButton": "Tạo thẻ",
+      "nextButton": "Tiếp",
+      "personalLabel": "Tạo thẻ dùng cá nhân",
+      "personalHint": "Chỉ bạn dùng được thẻ '{tag}', không cần duyệt",
+      "globalLabel": "Tạo thẻ dùng toàn site",
+      "globalHint": "Sau khi thẻ '{tag}' được đội ngũ Fansocial duyệt, mọi model đều dùng được thẻ này",
+      "pendingTooltip": "Thẻ toàn site này đang chờ duyệt."
+    },
+    "submit": {
+      "certifyTitle": "Bằng cách chọn các ô bên dưới, tôi xác nhận rằng:",
+      "term1": "Tất cả cá nhân xuất hiện trong nội dung tôi đang tải lên Fansocial (Nội dung):",
+      "term1Bullet1": "đồng ý xuất hiện trong Nội dung.",
+      "term1Bullet2": "đồng ý để Nội dung này được tải lên.",
+      "term1Bullet3": "đã đủ ít nhất 18 tuổi tại thời điểm sản xuất Nội dung, hoặc tuổi trưởng thành theo khu vực pháp lý nơi Nội dung được sản xuất.",
+      "term2": "Tôi đã xác minh, lưu giữ và hiện đang nắm giữ mọi giấy tờ tùy thân theo Yêu cầu lưu hồ sơ, 18 U.S.C. 2257 và 28 C.F.R. 75, hoặc luật áp dụng ở các khu vực pháp lý khác (tài liệu 2257), cho mọi cá nhân xuất hiện trong Nội dung.",
+      "term3": "Tôi đã xác minh, lưu giữ và hiện đang nắm giữ mọi giấy tờ tùy thân theo Yêu cầu lưu hồ sơ, 18 U.S.C. 2257 và 28 C.F.R. 75, hoặc luật áp dụng ở các khu vực pháp lý khác (tài liệu 2257), cho mọi cá nhân xuất hiện trong Nội dung.",
+      "term4": "Nội dung không vi phạm Điều khoản dịch vụ của Fansocial và các chính sách liên quan, bao gồm nhưng không giới hạn Chính sách chống CSAM hoặc Chính sách chống bóc lột tình dục — tôi đã đọc và đồng ý rõ ràng.",
+      "term5": "Nội dung không vi phạm Điều khoản dịch vụ của Fansocial và các chính sách liên quan, bao gồm nhưng không giới hạn Chính sách chống CSAM hoặc Chính sách chống bóc lột tình dục — tôi đã đọc và đồng ý rõ ràng.",
+      "warning": "CẢNH BÁO: Tải lên (hoặc cố tải lên) nội dung vi phạm pháp luật (ví dụ: nội dung trẻ em hoặc không đồng thuận), Chính sách CSAM hoặc Chính sách chống bóc lột tình dục sẽ khiến tài khoản liên quan bị chấm dứt ngay và báo cáo cho cơ quan thực thi pháp luật.",
+      "submitButton": "GỬI MEDIA ĐỂ DUYỆT",
+      "acceptAllAlert": "Vui lòng chấp nhận tất cả điều khoản trước khi gửi.",
+      "successAlert": "Đã gửi media thành công!",
+      "failAlert": "Gửi thất bại. Vui lòng thử lại.",
+      "errorAlert": "Đã xảy ra lỗi khi gửi."
+    }
+  },
+  "demo": {
+    "page": {
+      "title": "Trưng bày Component Dashboard",
+      "sections": {
+        "dashboardTextInput": "DashboardTextInput",
+        "heading": "Tiêu đề",
+        "paragraph": "Đoạn văn",
+        "validationIconMessage": "IconMessageList",
+        "cloudflareSuccess": "CloudflareSuccess",
+        "subscriptionPlanCard": "SubscriptionPlanCard",
+        "cookies": "Cookie",
+        "tierCards": "Thẻ Tier",
+        "eventCards": "Thẻ Sự kiện",
+        "shoppingCart": "Giỏ hàng",
+        "spinner": "Spinner",
+        "allButtons": "Tất cả nút — Danh mục đầy đủ",
+        "shoppingCartDescription": "Thành phần giỏ hàng tương tác, điều khiển bằng sự kiện tùy chỉnh. Mở console để xem lệnh tương tác.",
+        "otherComponents": "Các thành phần khác"
+      },
+      "mediaCards": {
+        "mediaCardV1Title": "Biến thể Thẻ Media (V1)",
+        "mediaCardV1Description": "Nhiều logic hiển thị và biến thể bố cục cho thẻ media chính của chúng ta.",
+        "creatorMyMedia": "1. Creator: Media của tôi",
+        "continueWatching": "2. Fan: Tiếp tục xem",
+        "latestMedia": "3. Fan: Media mới nhất",
+        "purchasedMedia": "4. Fan: Media đã mua",
+        "gridView": "5. Fan: Lưới (Hiệu ứng Zoom)",
+        "mediaCardV2Title": "Biến thể Thẻ Media (V2)",
+        "mediaCardV2Description": "Ngôn ngữ thiết kế thay thế cho thẻ với hiệu ứng mở rộng khi hover.",
+        "gallery": "Thư viện",
+        "image": "Ảnh",
+        "video": "Video"
+      }
+    },
+    "validationIconMessage": {
+      "captions": {
+        "authSignUpPasswordErrors": "AuthSignUp — password errors (InformationCircle)",
+        "authSignUpPasswordSuccess": "AuthSignUp — password success checklist (CheckCircle)",
+        "authSignUpConfirmError": "AuthSignUp — confirm password mismatch",
+        "authLoginEmailErrors": "AuthLogin — email errors",
+        "authLoginPasswordError": "AuthLogin — password required",
+        "authOnboardingUsername": "AuthSignUpOnboarding — username errors",
+        "authCodeErrors": "AuthCodeInput — code errors (ConfirmEmail / ResetPassword)",
+        "authForgotPasswordEmail": "AuthForgotPassword — email errors",
+        "dashboardResetPasswordSuccess": "DashboardResetPasswordPage — new password success",
+        "planDetailRangeError": "PlanDetail / AddTierPopup — free tokens range (Hexagon)",
+        "addTierMerchError": "PlanDetail / AddTierPopup — merch discount range (Hexagon)",
+        "planVariationFansClaim": "SubscriptionPlanVariationsPopup — fans claim max (BaseInput Hexagon)",
+        "authSignUpFormBanner": "AuthSignUp — form-level error banner"
+      }
+    },
+    "heading": {
+      "h1Primary": "H1 Chính",
+      "h2Secondary": "H2 Phụ",
+      "h3Section": "H3 Phần",
+      "h2Dashboard": "Tiêu đề Dashboard",
+      "h2Auth": "Đăng nhập",
+      "h4Form": "Cài đặt hồ sơ",
+      "h1Demo": "Demo H1 Đậm",
+      "h3Demo": "Demo H3 Vừa",
+      "withIcon": "Có Icon",
+      "order": "Đơn hàng #1234",
+      "labels": {
+        "h1Primary": "h1 — defaultPrimaryHeading",
+        "h2Secondary": "h2 — defaultSecondaryHeading",
+        "h3Section": "h3 — sectionHeading",
+        "h2Dashboard": "h2 — dashboardHeading",
+        "h2Auth": "h2 — AuthHeading",
+        "h4Form": "h4 — formHeading",
+        "h1Demo": "h1 — demoHeadings",
+        "h3Demo": "h3 — demoHeadings",
+        "withLeftIcon": "Có Icon Trái",
+        "orderHeading": "h1 — orderHeading"
+      }
+    },
+    "paragraph": {
+      "default": "Đây là đoạn văn mặc định với kiểu chuẩn.",
+      "small": "Đoạn văn chữ nhỏ cho chú thích.",
+      "large": "Đoạn văn chữ lớn.",
+      "bold": "Đoạn văn in đậm.",
+      "blue": "Đoạn văn màu xanh.",
+      "error": "Trường này là bắt buộc.",
+      "success": "Thao tác thành công!",
+      "italic": "Đoạn văn in nghiêng cho ghi chú.",
+      "withIcon": "Thông báo thông tin tại đây",
+      "xs": "Văn bản trợ giúp hiển thị bên dưới trường nhập.",
+      "labels": {
+        "default": "Mặc định",
+        "small": "Nhỏ (text-sm)",
+        "large": "Lớn (text-xl)",
+        "bold": "In đậm",
+        "customColor": "Màu tùy chỉnh (Xanh)",
+        "errorRed": "Đỏ lỗi",
+        "successGreen": "Xanh thành công",
+        "italic": "In nghiêng",
+        "withLeftIcon": "Có Icon Trái",
+        "extraSmall": "Cực nhỏ (text-xs)"
+      }
+    },
+    "dashboardTextInput": {
+      "generalVariations": "Các biến thể chung",
+      "bookingPatterns": "Mẫu form đặt lịch ($t + assetMap)",
+      "username": "Tên người dùng",
+      "usernamePlaceholder": "carrot_popxoxo123",
+      "usernameDescription": "Tên người dùng không thể thay đổi sau tháng đầu tiên trên trang web của chúng tôi, nhưng có thể có ngoại lệ trong trường hợp đặc biệt.",
+      "email": "Email",
+      "emailPlaceholder": "mscarrot_pops{'@'}gmail.com",
+      "firstName": "Tên",
+      "noLabelPlaceholder": "Nhập không có nhãn...",
+      "title": "Tiêu đề",
+      "displayName": "Tên hiển thị",
+      "plainNoIconsPlaceholder": "Ô nhập thuần, không icon",
+      "emailSupport": "Email hỗ trợ",
+      "enterEmailPlaceholder": "Nhập email...",
+      "fullName": "Họ và tên",
+      "requiredPlaceholder": "Trường bắt buộc",
+      "emailAddress": "Địa chỉ email",
+      "advancedSearch": "Tìm kiếm nâng cao",
+      "searchFiltersPlaceholder": "Tìm kiếm với bộ lọc...",
+      "bio": "Tiểu sử",
+      "tipMessage": "Tin nhắn tip",
+      "tipMessagePlaceholder": "Cảm ơn bạn đã tip!",
+      "tipMessageDescription": "Fan của bạn sẽ thấy tin nhắn này khi họ tip bạn.",
+      "quantity": "Số lượng",
+      "age": "Tuổi",
+      "usernameAvailable": "Tên người dùng có sẵn.",
+      "usdPrefix": "USD$",
+      "variations": {
+        "labelDescPlaceholder": "Nhãn + Mô tả + Placeholder",
+        "labelPlaceholder": "Nhãn + Placeholder (Không mô tả)",
+        "labelNoPlaceholder": "Nhãn, Không placeholder",
+        "noLabelWithPlaceholder": "Không nhãn, Có placeholder",
+        "plain": "Không nhãn / Không placeholder / Không mô tả",
+        "title": "Nhãn + Placeholder (Tiêu đề)",
+        "leftIconSearch": "Icon trái — Tìm kiếm (assetMap: icon.search)",
+        "noIcon": "Không icon",
+        "rightIcon": "Icon phải — EnvelopeIcon",
+        "autofill": "Autofill (email đã lưu trình duyệt)",
+        "requiredStar": "Bắt buộc — Dấu sao (*)",
+        "requiredItalic": "Bắt buộc — Chữ nghiêng \"Required\"",
+        "bothIcons": "Cả hai icon (Trái + Phải)",
+        "textareaCounter": "Textarea — Bộ đếm maxLength",
+        "textareaDescCounter": "Textarea — Mô tả + Bộ đếm",
+        "noLabelEventTitle": "Không nhãn — Placeholder tiêu đề sự kiện",
+        "coPerformerSearch": "Tìm người đồng diễn (i18n + icon.search)",
+        "numberMinutes": "Số + Phút (hậu tố ngoài input)",
+        "basePriceTokens": "Giá cơ bản + Token (hậu tố ngoài input)",
+        "leftSpanUsd": "Span trái — Tiền tố USD$",
+        "numberStepper": "Số — Stepper",
+        "numberNoStepper": "Số — Không stepper (:showControls=\"false\")",
+        "tooltipOnly": "Chỉ tooltip — DropdownMenu",
+        "offHourSurcharge": "Phụ phí ngoài giờ % (hậu tố ngoài input)",
+        "disabled": "Trạng thái vô hiệu",
+        "validationErrors": "Lỗi xác thực",
+        "requiredTextError": "Lỗi văn bản bắt buộc",
+        "success": "Trạng thái thành công",
+        "remindMe": "Nhắc tôi — Văn bản inline (ngoài input)"
+      }
+    },
+    "baseInput": {
+      "variations": {
+        "defaultText": "Văn bản mặc định",
+        "withLabel": "Có nhãn",
+        "disabled": "Vô hiệu hóa",
+        "numberWithControls": "Số có nút điều khiển",
+        "withCharacterCounter": "Có bộ đếm ký tự",
+        "textareaMode": "Chế độ textarea",
+        "textareaCounter": "Textarea + bộ đếm",
+        "arrayValidations": "Xác thực mảng",
+        "numberNoControls": "Số (không nút điều khiển)"
+      },
+      "fields": {
+        "enterTextPlaceholder": "Nhập văn bản...",
+        "disabled": "Vô hiệu hóa",
+        "disabledPlaceholder": "Ô nhập bị vô hiệu",
+        "maxCharsPlaceholder": "Tối đa 50 ký tự...",
+        "description": "Mô tả",
+        "enterDescriptionPlaceholder": "Nhập mô tả...",
+        "bioPlaceholder": "Tiểu sử của bạn...",
+        "validEmailPlaceholder": "Nhập email hợp lệ...",
+        "readonlyText": "Văn bản chỉ đọc",
+        "mustContainAt": "Phải chứa ký hiệu {'@'}",
+        "mustContainDomain": "Phải chứa phần tên miền",
+        "containsAt": "Có chứa ký hiệu {'@'}",
+        "containsDomain": "Có chứa phần tên miền"
+      },
+      "sectionTitle": "BaseInput"
+    },
+    "baseTextInput": {
+      "variations": {
+        "default": "Mặc định",
+        "withLeftIcon": "Có icon bên trái",
+        "withRightIcon": "Có icon bên phải",
+        "arrayValidations": "Xác thực mảng",
+        "required": "Bắt buộc (*)",
+        "optionalLabel": "Nhãn tùy chọn",
+        "textarea": "Vùng văn bản",
+        "numberType": "Kiểu số",
+        "leftSpanPrefix": "Tiền tố span trái",
+        "withDescription": "Có mô tả"
+      },
+      "fields": {
+        "enterTextPlaceholder": "Nhập văn bản...",
+        "search": "Tìm kiếm",
+        "searchPlaceholder": "Tìm kiếm...",
+        "emailPlaceholder": "Email...",
+        "validEmailPlaceholder": "Nhập email hợp lệ",
+        "requiredPlaceholder": "Bắt buộc",
+        "requiredField": "Trường bắt buộc",
+        "optionalPlaceholder": "Tùy chọn...",
+        "nickname": "Biệt danh",
+        "description": "Mô tả",
+        "amount": "Số tiền",
+        "amountPlaceholder": "0",
+        "price": "Giá",
+        "pricePlaceholder": "0.00",
+        "usernameRules": "Chỉ cho phép chữ cái và số.",
+        "mustContainAt": "Phải chứa ký hiệu {'@'}",
+        "mustContainDomain": "Phải chứa phần tên miền",
+        "containsAt": "Có chứa ký hiệu {'@'}",
+        "containsDomain": "Có chứa phần tên miền"
+      },
+      "sectionTitle": "BaseTextInput"
+    },
+    "validationShowcase": {
+      "sectionTitle": "rules.js thống nhất — xác thực trực tiếp",
+      "introBefore": "Các trường này dùng cùng bộ rule chuẩn như form production (",
+      "introVia": " qua ",
+      "introAfter": "). Hãy thử các giá trị mẫu trong gợi ý, rồi nhấn Xác thực tất cả.",
+      "titles": {
+        "emailFormats": "Định dạng email",
+        "url": "URL",
+        "numbers": "Số",
+        "numericRange": "Khoảng số",
+        "password": "Mật khẩu (isSecurePassword)"
+      },
+      "hints": {
+        "emailValid": "Hợp lệ:",
+        "emailInvalid": "Không hợp lệ:",
+        "urlValid": "Hợp lệ:",
+        "urlInvalid": "Không hợp lệ:",
+        "urlProtocolRequired": "(bắt buộc có giao thức)",
+        "numbersValid": "Hợp lệ:",
+        "numbersInvalid": "Không hợp lệ:",
+        "numbersBareMinus": "(chỉ dấu trừ)",
+        "ageRuleBefore": "Quy tắc: tuổi từ",
+        "ageRuleAnd": "đến",
+        "ageRuleAfter": "(minNum / maxNum)",
+        "passwordRule": "Một rule: chữ hoa + chữ thường + số + ký tự đặc biệt + ít nhất 8 ký tự.",
+        "passwordTry": "Thử",
+        "passwordFails": "(thất bại) so với",
+        "passwordPasses": "(thành công)."
+      },
+      "labels": {
+        "email": "Email (isEmail)",
+        "website": "Trang web (isUrl)",
+        "amount": "Số tiền (isNumeric)"
+      },
+      "errors": {
+        "url": "Nhập URL đầy đủ http:// hoặc https:// với host hợp lệ.",
+        "numeric": "Nhập số hợp lệ (dấu trừ tùy chọn, chữ số, phần thập phân tùy chọn).",
+        "ageMin": "Tuổi tối thiểu là 18.",
+        "ageMax": "Tuổi tối đa là 120.",
+        "ageNan": "Tuổi phải là số hợp lệ.",
+        "securePassword": "Dùng ít nhất 8 ký tự gồm chữ hoa, chữ thường, số và ký tự đặc biệt."
+      },
+      "validateAll": "Xác thực tất cả các trường",
+      "allPassed": "Tất cả các trường showcase đã vượt xác thực.",
+      "stillInvalid": "Còn {count} trường chưa hợp lệ — hãy sửa các lỗi được đánh dấu ở trên."
+    },
+    "buttons": {
+      "showLoadingState": "Hiển thị trạng thái loading trên tất cả nút catalog (văn bản thay bằng spinner)",
+      "loadingSection": "Trạng thái loading — prop loading (văn bản thay bằng spinner)",
+      "clickToLoadHint": "Nhấn bất kỳ nút nào để xem loading — văn bản và icon được thay bằng spinner (không có chữ Loading).",
+      "catalogIntro": "Cùng các nút thật dùng trong app (cùng text, variant, size, width và icon) để dev khác copy đúng component.",
+      "sections": {
+        "auth": "Trang auth — login / sign up / onboarding",
+        "checkout": "Thanh toán / mua hàng / popup giỏ hàng",
+        "profileMedia": "Hồ sơ / media",
+        "payoutSettings": "Cài đặt thanh toán",
+        "planSharing": "Chia sẻ gói",
+        "mediaUploader": "Trình tải media",
+        "dashboardAnalytics": "Phân tích bảng điều khiển",
+        "eventsAddons": "Sự kiện / tiện ích / lịch",
+        "twoPieceButton": "TwoPieceButton — biến thể"
+      },
+      "labels": {
+        "authSignIn": "authPink — size lg — đăng nhập/đăng ký",
+        "authTransparentSocial": "authTransparent — size lg — mạng xã hội",
+        "checkoutProceed": "checkoutProceedpayment — thanh toán/mua ngay",
+        "actionGreenX": "actionGreen — mua với tư cách khách",
+        "profileBack": "profileMediaBtn — popup ProfileViewAll",
+        "payoutSave": "none + custom — PayoutSettings bước 2/3",
+        "sendInvite": "simpleBtn — PlanSharing",
+        "addTier": "polygonLeft — Thêm bậc",
+        "polygonNext": "polygonLeft — Tiếp (bật + tắt)",
+        "submitMedia": "polygonLeft — Gửi",
+        "allOrders": "none + custom — bảng đơn hàng",
+        "trend": "none + custom — thẻ chỉ số",
+        "newEvents": "none + custom — SỰ KIỆN MỚI",
+        "publishSchedule": "polygonLeft — XUẤT BẢN LỊCH",
+        "addonService": "none + custom — dịch vụ bổ sung",
+        "addonServiceV2": "none + custom — dịch vụ bổ sung v2",
+        "twoPieceLinkX": "link-x — Cài đặt",
+        "twoPiecePremium": "premium-upgrade — Cài đặt",
+        "twoPiecePink": "link-x (pink) — Chỉnh sửa hồ sơ"
+      },
+      "authSignIn": "Đăng nhập",
+      "continueWithX": "Tiếp tục với X (Twitter)",
+      "continueWithTelegram": "Tiếp tục với Telegram",
+      "proceedPayment": "Tiến hành thanh toán",
+      "back": "Quay lại",
+      "save": "LƯU",
+      "sendInvite": "Gửi lời mời",
+      "addTier": "Thêm bậc",
+      "next": "Tiếp",
+      "submitMediaForApproval": "GỬI MEDIA ĐỂ DUYỆT",
+      "allOrders": "Tất cả đơn hàng",
+      "trend": "Xu hướng",
+      "newEvents": "SỰ KIỆN MỚI",
+      "publishSchedule": "XUẤT BẢN LỊCH",
+      "addonService": "dịch vụ bổ sung",
+      "linkYourXAccount": "Liên kết tài khoản X",
+      "upgradeToPremium": "Nâng cấp Premium",
+      "unlockPremiumVideos": "Nâng cấp Premium để tải video"
+    },
+    "showCodeToggle": {
+      "showCode": "Hiện mã",
+      "hideCode": "Ẩn mã",
+      "copy": "Sao chép",
+      "copied": "✓ Đã sao chép",
+      "vueLabel": "Vue"
+    },
+    "lazySizes": {
+      "pageTitle": "LazySizes — Kiểm tra ảnh & nền",
+      "intro": "Trang này dùng lazysizes với URL từ assetMap. Mở DevTools → Network, lọc Img, tải lại trang và xác nhận tài nguyên demo bên dưới chỉ được tải khi cuộn vào vùng nhìn thấy.",
+      "networkHint": "Mẹo: tắt cache trong tab Network, tải lại ở đầu trang, rồi cuộn chậm xuống.",
+      "scrollHint": "Cuộn xuống ↓ — tài nguyên lazy ở dưới các khoảng trống này",
+      "spacer": "Tiếp tục cuộn ↓",
+      "lazyImageTitle": "Lazy <img> (data-src)",
+      "lazyImageDescription": "Dùng LazyImage với class=\"lazyload\" và data-src từ useAssetUrl('media.demo.poster').",
+      "lazyImageAlt": "Ảnh poster demo",
+      "contentImageLabel": "Content <img> — chính ảnh là UI",
+      "lazyBackgroundTitle": "Lazy CSS background (lớp cover + overlay)",
+      "lazyBackgroundDescription": "Ảnh nền lazy-load phía sau nội dung. Text và nút nằm trên — ảnh chỉ trang trí (không phải <img> nội dung).",
+      "backgroundBadge": "Lớp nền",
+      "backgroundOverlayTitle": "Thẻ hero tier premium",
+      "backgroundOverlaySubtitle": "Đây là UI foreground. Ảnh phía sau là background lazy-load.",
+      "backgroundCta": "Đăng ký ngay",
+      "footer": "Hết trang kiểm tra lazysizes."
+    },
+    "spinner": {
+      "groups": {
+        "inUse": "Đang dùng",
+        "variations": "Biến thể",
+        "sizes": "Kích thước",
+        "themeColors": "Màu theme",
+        "trackThicknessSpeed": "Track, độ dày & tốc độ"
+      },
+      "usage": {
+        "analyticsTrend": "Popup xu hướng analytics dashboard",
+        "addTier": "Popup thêm tier",
+        "orderDetails": "Popup chi tiết đơn hàng",
+        "flexChatInitial": "Flex chat — tải ban đầu",
+        "flexChatLoadMore": "Flex chat — tải thêm",
+        "proceedPayment": "Popup tiếp tục thanh toán",
+        "upgradeTier": "Popup nâng cấp tier",
+        "tipStep": "Tip step — slot tùy chỉnh",
+        "buttonLoading": "Loading nút dashboard / two-piece"
+      },
+      "svgThin": "Track mỏng",
+      "thick": "Track dày",
+      "noTrack": "Không track",
+      "speedSlow": "Tốc độ — chậm",
+      "speedFast": "Tốc độ — nhanh",
+      "withText": "Kèm chữ loading",
+      "colorSuccess": "Success (xanh brand)",
+      "colorBrandPink": "Hồng thương hiệu",
+      "colorPrimary": "Xanh chính",
+      "colorInk": "Mực / chữ sáng chính",
+      "colorWhite": "Trắng"
+    },
+    "tierCard": {
+      "sectionDescription": "Thẻ tier hiện đại với danh sách tính năng và bộ chọn giá ($t + assetMap)"
+    },
+    "eventCard": {
+      "sectionDescription": "Thẻ sự kiện với biến thể theme và layout nút/progress ($t + assetMap)"
+    },
+    "quillEditor": {
+      "labels": {
+        "default": "Mặc định (trống)",
+        "customPlaceholder": "Placeholder tùy chỉnh",
+        "initialContent": "Có nội dung ban đầu",
+        "richInitialContent": "Nội dung ban đầu phong phú (HTML)",
+        "withLabelWrapper": "Có nhãn bọc ngoài (mẫu production)"
+      },
+      "fieldLabels": {
+        "description": "Mô tả",
+        "tierDescription": "Mô tả gói",
+        "eventDescription": "Mô tả sự kiện"
+      },
+      "placeholders": {
+        "default": "Mô tả...",
+        "tierDescription": "Mô tả bậc...",
+        "eventDescription": "Mô tả sự kiện...",
+        "bio": "Viết tiểu sử của bạn..."
+      },
+      "initialContent": {
+        "simple": "<p><strong>Xin chào!</strong> Đây là nội dung đã tải sẵn.</p>",
+        "rich": "<p><strong>Chào mừng!</strong> Chỉnh sửa <em>mô tả bậc</em> này bằng thanh công cụ.</p><ul><li>Đậm, nghiêng và liên kết</li><li>Danh sách có thứ tự và dấu đầu dòng</li></ul><p><a href=\"#\">Liên kết mẫu</a></p>"
+      }
+    },
+    "checkboxGroup": {
+      "sectionTitle": "CheckboxGroup",
+      "sections": {
+        "checkout": "Thanh toán",
+        "auth": "Auth — Đăng nhập",
+        "checkoutDark": "Thanh toán — Phần tối",
+        "dashboard": "Bảng điều khiển",
+        "mediaSubmit": "Media Uploader — Bước gửi",
+        "mediaPublish": "Media Uploader — Xuất bản & Chia sẻ",
+        "mediaSubscription": "Trình tải media — Đăng ký P2V",
+        "booking": "Đặt lịch",
+        "calendar": "Lịch",
+        "calendarEventDropdown": "Lịch — Menu sự kiện",
+        "adjustEvent": "Điều chỉnh chi tiết sự kiện",
+        "bookingStep2": "Đặt lịch — Yêu cầu bổ sung",
+        "topUp": "Form nạp tiền",
+        "trailer": "Trình tải media — Trailer"
+      },
+      "links": {
+        "terms": "Điều khoản và Điều kiện",
+        "privacy": "Chính sách bảo mật"
+      },
+      "checkout": {
+        "websiteTermsPrefix": "Tôi đồng ý với",
+        "fansocialTermsPrefix": "Tôi đồng ý với Fansocial",
+        "and": "và",
+        "saveAddress": "Lưu địa chỉ này cho lần sau.",
+        "sameShipping": "Giống địa chỉ giao hàng",
+        "saveCard": "Lưu thẻ này để thanh toán nhanh hơn.",
+        "cardBrandAlt": "Visa"
+      },
+      "checkoutDark": {
+        "saveAddress": "Lưu địa chỉ này cho lần sau.",
+        "saveCard": "Lưu thẻ này để thanh toán nhanh hơn."
+      },
+      "auth": {
+        "rememberMe": "Ghi nhớ đăng nhập"
+      },
+      "planSharing": {
+        "verifiedFan": "Chỉ fan đã xác minh"
+      },
+      "dashboard": {
+        "applySale": "Áp dụng cho các mục đang giảm giá",
+        "verifiedFan": "Chỉ fan đã xác minh"
+      },
+      "planMedia": {
+        "someContent": "Truy cập một số nội dung",
+        "moreContent": "Truy cập thêm nội dung",
+        "draftContent": "Truy cập thêm nội dung nữa",
+        "noMeta": "Truy cập nhiều nội dung nhất",
+        "meta16": "16 Media",
+        "meta24": "24 Media",
+        "meta3": "3 Media"
+      },
+      "mediaSubmit": {
+        "item0": "Tất cả cá nhân xuất hiện trong nội dung tôi đang tải lên Fansocial (Nội dung):",
+        "item1": "Tôi đã xác minh, lưu giữ và hiện đang nắm giữ mọi giấy tờ tùy thân theo Yêu cầu lưu hồ sơ, 18 U.S.C. 2257 và 28 C.F.R. 75, hoặc luật áp dụng ở các khu vực pháp lý khác (tài liệu 2257), cho mọi cá nhân xuất hiện trong Nội dung.",
+        "item2": "Nội dung không vi phạm Điều khoản dịch vụ của Fansocial và các chính sách liên quan, bao gồm nhưng không giới hạn Chính sách chống CSAM hoặc Chính sách chống bóc lột tình dục — tôi đã đọc và đồng ý rõ ràng."
+      },
+      "mediaPublish": {
+        "comingSoon": "Đưa media này lên mục sắp ra mắt"
+      },
+      "mediaSubscription": {
+        "freePlan": "Gói miễn phí",
+        "premiumTier": "Gói Premium",
+        "discovery": "Trang Discovery",
+        "profile": "Trang hồ sơ của tôi"
+      },
+      "booking": {
+        "longerSessions": "Cho phép phiên dài hơn",
+        "longerDiscount": "Bật giảm giá phiên dài hơn",
+        "recurringDiscount": "Bật giảm giá sự kiện định kỳ",
+        "instantBooking": "Cho phép đặt lịch tức thì",
+        "disableChat": "Tắt chat trước cuộc gọi",
+        "emojiReply": "Cho phép trả lời bằng emoji",
+        "allowRecording": "Cho phép ghi âm",
+        "cancellationFee": "Bật phí hủy",
+        "bufferTime": "Đặt thời gian đệm giữa các lịch hẹn",
+        "bufferTooltip": "Thời gian đệm giữa các lịch hẹn",
+        "waitlist": "Cho phép fan vào danh sách chờ khi sự kiện đầy"
+      },
+      "calendar": {
+        "videoCall": "Cuộc gọi video",
+        "audioCall": "Cuộc gọi thoại",
+        "groupEvent": "Sự kiện nhóm",
+        "showSchedule": "Hiển thị lịch trình đặt chỗ",
+        "showExisting": "Hiển thị lịch trình hiện có"
+      },
+      "calendarEventDropdown": {
+        "videoCall": "Cuộc gọi video",
+        "audioCall": "Cuộc gọi thoại",
+        "groupCall": "Cuộc gọi nhóm"
+      },
+      "calendarMain": {
+        "showExistingEvents": "Hiện sự kiện/lịch đặt hiện có"
+      },
+      "bookingStep2": {
+        "allowFanRecord": "Cho phép fan ghi lại phiên",
+        "allowPersonalRequest": "Cho phép yêu cầu cá nhân",
+        "allowFanRecordTooltip": "Nếu bật, fan có thể mua bản ghi phiên làm tiện ích. Bản ghi gồm toàn bộ video của creator và có sau khi đặt lịch kết thúc.",
+        "allowPersonalRequestTooltip": "Nếu bật, fan có thể thêm yêu cầu cá nhân trong biểu mẫu. Bạn có thể xem và điều chỉnh giá trước khi xác nhận."
+      },
+      "adjustEvent": {
+        "recordSession": "Ghi lại phiên của chúng ta",
+        "exclusiveVideo": "Video độc quyền",
+        "cosplay": "Cosplay",
+        "topless": "Topless"
+      },
+      "trailer": {
+        "uploadOwn": "Tải trailer của bạn"
+      },
+      "tags": {
+        "publishedTier": "Bậc đã xuất bản",
+        "draft": "Bản nháp"
+      }
+    },
+    "checkboxSwitch": {
+      "sectionTitle": "CheckboxSwitch",
+      "sections": {
+        "mediaPublish": "Trình tải media — Xuất bản & chia sẻ",
+        "mediaSubscription": "Trình tải media — Đăng ký P2V",
+        "trailerSettings": "Trình tải media — Cài đặt trailer",
+        "videoThumbnail": "Trình tải media — Chọn ảnh thu nhỏ video",
+        "planDetail": "Gói — Chi tiết gói",
+        "planSharing": "Gói — Chia sẻ gói",
+        "profileViewAll": "Hồ sơ — Popup xem tất cả",
+        "editProfile": "Chỉnh sửa hồ sơ — Cài đặt chia sẻ",
+        "bookingXRepost": "Đặt lịch — Cài đặt đăng lại X",
+        "twitterRepostPopup": "Popup cài đặt đăng lại Twitter",
+        "devDemo": "Trang Demo Dev"
+      },
+      "wrapperLabels": {
+        "darkMode": "Chế độ tối"
+      },
+      "mediaPublish": {
+        "postToX": "Đăng lên X khi media được xuất bản"
+      },
+      "mediaSubscription": {
+        "linkPlan": "Liên kết media với gói đăng ký",
+        "payToView": "Cho phép media trả phí để xem"
+      },
+      "trailer": {
+        "showPreview": "Hiển thị trailer xem trước"
+      },
+      "thumbnail": {
+        "blur": "Làm mờ thumbnail"
+      },
+      "planDetail": {
+        "featuredTier": "Đây là gói nổi bật"
+      },
+      "planSharing": {
+        "postToX": "Đăng cập nhật gói này lên X"
+      },
+      "profile": {
+        "payPerView": "Trả phí để xem",
+        "watchNow": "Xem ngay"
+      },
+      "editProfile": {
+        "postToXTips": "Đăng lên X khi nhận tip"
+      },
+      "booking": {
+        "xPostLive": "Đăng lên X khi lịch đặt chỗ được mở",
+        "xPostBooked": "Đăng lên X khi nhận được đặt chỗ",
+        "xPostInSession": "Đăng lên X khi đang trong phiên",
+        "xPostTipped": "Đăng lên X khi được tip trong phiên",
+        "xPostPurchase": "Đăng lên X khi có người mua hàng trong phiên"
+      },
+      "devDemo": {
+        "toggleDarkMode": "Bật/tắt chế độ tối"
+      }
+    },
+    "chatsPage": {
+      "labels": {
+        "modelChat": "Chat MODEL",
+        "fanChat": "Chat FAN",
+        "groupChatCreator": "Chat GROUP (CREATOR)",
+        "groupChatFan1": "Chat GROUP (FAN 1)",
+        "groupChatFan2": "Chat GROUP (FAN 2)"
+      },
+      "vvipTier": "HẠNG VVIP",
+      "pendingRequests": "{n} yêu cầu đang chờ | {n} yêu cầu đang chờ",
+      "replyPlaceholder": "Viết phản hồi..."
+    },
+    "notificationCard": {
+      "sectionTitle": "NotificationCard",
+      "sections": {
+        "devDemo": "Trang Demo Dev",
+        "mediaPublish": "Media Uploader — Xuất bản & Chia sẻ",
+        "mediaSubmit": "Media Uploader — Bước gửi",
+        "mediaPreviewToast": "Trình tải media — Cài đặt xem trước (Toast)",
+        "bookingCalendar": "Đặt lịch — Biểu mẫu đặt lịch thống nhất",
+        "planDetail": "Plan — Chi tiết gói",
+        "tipStep2": "Tip — Bước tip 2",
+        "editProfileUnsaved": "Edit Profile — Thay đổi chưa lưu",
+        "editProfileGallery": "Edit Profile — Toast tải gallery",
+        "mediaPreviewSettings": "Media Uploader — Cài đặt xem trước",
+        "bookingUnified": "Đặt lịch — Biểu mẫu thống nhất (Người đăng ký đang hoạt động)",
+        "bookingStep1": "Booking — One-on-One Bước 1",
+        "withdrawEarnings": "Rút tiền — Bước 5"
+      },
+      "alt": {
+        "alert": "Cảnh báo",
+        "chevronLeft": "Tiếp"
+      },
+      "devDemo": {
+        "activeSubscribersTitle": "Bạn có 3 người đăng ký đang hoạt động ở bậc này",
+        "activeSubscribersDescription": "Thay đổi chi tiết gói có thể ảnh hưởng phí và quyền lợi của người đăng ký hiện tại.",
+        "learnMore": "Tìm hiểu thêm",
+        "successTitle": "Thao tác hoàn tất thành công",
+        "successDescription": "Tất cả hệ thống đang hoạt động bình thường.",
+        "errorTitle": "Thanh toán thất bại",
+        "errorDescription": "Vui lòng cập nhật thông tin thanh toán để tiếp tục.",
+        "infoTitle": "Lưu ý",
+        "infoDescription": "Chúng tôi đã cập nhật điều khoản dịch vụ."
+      },
+      "mediaPreviewSettings": {
+        "trailerReviewTitle": "Media của bạn sẽ được xét duyệt vì bạn đã tải lên trailer mới."
+      },
+      "bookingCalendar": {
+        "title": "Bạn đang xem cài đặt đặt lịch ở chế độ lịch sự kiện cá nhân.",
+        "description": "Để xem trước lịch đặt trên hồ sơ, hãy mở xem trước lịch đặt."
+      },
+      "tipStep2": {
+        "limitExceededTitle": "Giá trị nhập vượt mức tối đa (14.000 token)",
+        "setToMax": "Đặt mức tối đa"
+      },
+      "bookingUnified": {
+        "activeSubscribersTitle": "Bạn có 3 người đăng ký đang hoạt động ở bậc này",
+        "activeSubscribersDescription": "Thay đổi chi tiết gói có thể ảnh hưởng phí và quyền lợi của người đăng ký hiện tại."
+      },
+      "bookingStep1": {
+        "validationTitle": "Lỗi xác thực",
+        "validationDescription": "Tiêu đề là bắt buộc."
+      },
+      "planDetail": {
+        "featuredTierTitle": "Bậc ‘VIP Lounge’ của bạn sẽ không còn là bậc nổi bật.",
+        "featuredTierDescription": "Bậc này sẽ được cập nhật thành bậc nổi bật trên hồ sơ sau khi lưu."
+      },
+      "withdrawEarnings": {
+        "payoutAcceptedTitle": "Yêu cầu thanh toán của bạn đã được chấp nhận."
+      }
+    },
+    "checkoutReusable": {
+      "sectionTitle": "Thành phần tái sử dụng thanh toán",
+      "sections": {
+        "mediaPreview": "CheckoutMediaPreview — Popup đăng ký đăng nhập",
+        "sectionHeader": "SectionHeader — Đăng ký / thanh toán giỏ hàng",
+        "orderSummaryToggle": "SectionToggleHeader — Thanh toán giỏ hàng (TÓM TẮT ĐƠN)",
+        "paymentToggle": "SectionToggleHeader không thu gọn — Quy trình mua (PHƯƠNG THỨC THANH TOÁN)",
+        "addressCard": "AddressCard — Thanh toán giỏ hàng đăng nhập",
+        "planDropdown": "BasePlanDropdown — Mua / thanh toán giỏ (Tối)",
+        "orderSummary": "OrderSummary — Giỏ / mua khách",
+        "paymentCompact": "PaymentMethodLoggedIn — Quy trình mua (Gọn)",
+        "paymentLarge": "PaymentMethodLoggedIn — Quy trình mua / đặt lịch fan (Lớn)",
+        "paymentNotLoggedIn": "PaymentMethodNotLoggedIn — Quy trình mua (max-width)",
+        "notesWithAvatars": "CheckoutNotes — Thanh toán giỏ (showAvatars true)",
+        "notesWithoutAvatars": "CheckoutNotes — Đăng ký đăng nhập (showAvatars false)",
+        "notesGuest": "CheckoutNotes — Mua khách / đơn đăng ký",
+        "totalAmount": "TotalAmountRow — Tất cả popup thanh toán",
+        "accountEmail": "SectionToggleHeader — Tip bước 3 (EMAIL TÀI KHOẢN)",
+        "topUpPayment": "SectionToggleHeader thu gọn — Nạp bước 2 (PHƯƠNG THỨC THANH TOÁN)",
+        "addressTopUp": "AddressCard — Nạp / Tip (Thanh toán đã lưu)"
+      },
+      "mediaPreview": {
+        "creatorName": "Princess Carrot Pop",
+        "creatorHandle": "{'@'}sammisjelly187",
+        "description": "Đăng ký ngay để mở khóa ngay hơn 300 tài nguyên media cao cấp."
+      },
+      "sectionHeader": {
+        "title": "EMAIL TÀI KHOẢN"
+      },
+      "orderSummary": {
+        "title": "TÓM TẮT ĐƠN HÀNG",
+        "product": "Sản phẩm",
+        "subtotal": "Tạm tính",
+        "alt": {
+          "avatar": "Ảnh đại diện người sáng tạo",
+          "verified": "Đã xác minh"
+        }
+      },
+      "payment": {
+        "title": "PHƯƠNG THỨC THANH TOÁN",
+        "holderName": "John Carter"
+      },
+      "address": {
+        "cart": "Chan Tai Man,10/F Block5,Fook Yip Bldg,12345,Kwai Chung,Hong Kong",
+        "topUp": "John Carter, 123 Main Street, Los Angeles, CA, 90001, United States"
+      },
+      "addressCard": {
+        "alt": {
+          "edit": "Chỉnh sửa địa chỉ"
+        }
+      },
+      "planDropdown": {
+        "country": "Quốc gia",
+        "state": "Bang / tỉnh"
+      },
+      "cart": {
+        "itemName": "Orange (Philippines)",
+        "creatorName": "Princess Carrot Pop",
+        "price": "$5.99/mo",
+        "oldPrice": "$123.45"
+      },
+      "subscription": {
+        "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+        "priceMonthly": "USD$499.99/mo",
+        "price": "USD$499.99",
+        "footerBillingCycle": "Tư cách thành viên sẽ cập nhật trong chu kỳ thanh toán tiếp theo (xx-xx-xxxx)",
+        "footerCheckoutStart": "Đăng ký bắt đầu ngay khi bạn hoàn tất thanh toán. Chu kỳ thanh toán bắt đầu (02-26-2025)."
+      },
+      "total": {
+        "amount": "USD$6.99"
+      },
+      "paymentLoggedIn": {
+        "deleteCard": "Xóa thẻ",
+        "cardHolderName": "Tên chủ thẻ",
+        "expiryDate": "Ngày hết hạn",
+        "noName": "Chưa có tên",
+        "expiryPlaceholder": "MM/YY",
+        "expPrefix": "HSD"
+      },
+      "paymentNotLoggedIn": {
+        "saveCard": "Lưu thẻ này để thanh toán nhanh hơn.",
+        "cardNumber": "Số thẻ",
+        "expirationDate": "Ngày hết hạn",
+        "cardholderName": "Tên chủ thẻ",
+        "cvv": "CVV"
+      },
+      "notes": {
+        "title": "Ghi chú",
+        "optional": "Tùy chọn",
+        "creatorName": "Princess Carrot Pop",
+        "placeholder": "Nhập ghi chú tới {'@'}jenny1234....",
+        "charactersLeft": "Còn {count} ký tự"
+      },
+      "totalAmount": {
+        "label": "Tổng"
+      },
+      "options": {
+        "hongKong": "Hồng Kông",
+        "australia": "Úc",
+        "usa": "Hoa Kỳ",
+        "florida": "Florida",
+        "hawaii": "Hawaii",
+        "newYork": "New York",
+        "unitedStates": "Hoa Kỳ",
+        "canada": "Canada",
+        "unitedKingdom": "Vương quốc Anh",
+        "california": "California",
+        "texas": "Texas"
+      }
+    },
+    "mediaUploaderComponents": {
+      "sectionTitle": "Thành phần hỗ trợ trình tải media",
+      "tags": {
+        "history": {
+          "bluebettle": "Bluebettle",
+          "dhdt": "dhdt",
+          "hello": "Hello"
+        },
+        "list": {
+          "apple": "Táo",
+          "april": "Tháng Tư",
+          "apricote": "Apricote",
+          "bigSmile": "Nụ cười lớn",
+          "bigEnergy": "Năng lượng lớn",
+          "bluebettle": "Bluebettle",
+          "cantonese": "Quảng Đông",
+          "chinese": "Trung Quốc",
+          "dumplings": "Há cảo",
+          "eeeee": "EEEEE",
+          "hello": "Xin chào"
+        }
+      },
+      "performers": {
+        "jellyJam": {
+          "name": "Jelly's Jam",
+          "username": "sammisjelly187"
+        },
+        "sammiJelly": {
+          "name": "Jelly's Jam",
+          "username": "sammisjelly187"
+        },
+        "jellyJamTwo": {
+          "name": "Jelly's Jam",
+          "username": "sammisjelly187"
+        }
+      },
+      "planSharing": {
+        "userOne": "Người dùng Một",
+        "userTwo": "Người dùng Hai"
+      }
+    },
+    "actionMenuDropdown": {
+      "sectionTitle": "ActionMenuDropdown",
+      "cards": {
+        "actionMenu": "ActionMenuDropdown",
+        "avatarMenu": "AvatarMenu"
+      }
+    },
+    "bookingAdjustment": {
+      "sectionTitle": "BookingAdjustmentPopup",
+      "cards": {
+        "moreTime": "Yêu cầu thêm thời gian",
+        "reschedule": "Yêu cầu đổi lịch",
+        "cancel": "Hủy cuộc gọi"
+      },
+      "sample": {
+        "eventDate": "24 tháng 4, 2025",
+        "eventDateReschedule": "Thứ Ba, 24 tháng 8, 2025",
+        "originalDate": "24 tháng 4, 2025",
+        "newTime": "9:30pm",
+        "endTime": "10:30pm",
+        "originalTime": "9:15pm",
+        "userName": "jennyhunny"
+      }
+    },
+    "premiumOrders": {
+      "sectionTitle": "PremiumOrdersTable",
+      "title": "Đơn hàng",
+      "searchPlaceholder": "Tìm kiếm...",
+      "searchAlt": "Tìm kiếm",
+      "dropdownAlt": "Menu thả xuống",
+      "orderTypeLabel": "Loại đơn hàng",
+      "empty": "Không tìm thấy đơn hàng",
+      "tabs": {
+        "inProgress": "Đang xử lý",
+        "completed": "Hoàn thành",
+        "canceled": "Đã hủy",
+        "all": "Tất cả"
+      },
+      "orderTypes": {
+        "all": "Tất cả loại",
+        "p2v": "P2V",
+        "subscription": "Đăng ký",
+        "merch": "Merch",
+        "mix": "Mix"
+      },
+      "columns": {
+        "orderNum": "Mã đơn",
+        "from": "Từ",
+        "status": "Trạng thái",
+        "date": "Ngày",
+        "total": "Tổng"
+      },
+      "links": {
+        "eventDetail": "Chi tiết sự kiện",
+        "bookingDetail": "Chi tiết đặt lịch"
+      }
+    },
+    "ordersReceived": {
+      "sectionTitle": "Trang Đơn hàng nhận",
+      "sectionDescription": "Các component production từ DashboardOrdersReceivedPage.vue — tabs, search, dropdown, table và popup — hiển thị với cách dùng thực (assetMap + i18n + mockOrdersBackend). Show Code chỉ có trong demo này.",
+      "badges": {
+        "ordersReceived": "Đơn đã nhận"
+      },
+      "groups": {
+        "controls": "Điều khiển trang",
+        "page": "Trang ghép",
+        "popup": "Popup chi tiết đơn hàng"
+      },
+      "items": {
+        "tabs": "DashboardTabs",
+        "search": "OrdersTableSearchInput",
+        "dropdown": "CustomDropdown (bộ lọc loại đơn)",
+        "fullPage": "DashboardOrdersReceivedPage (ghép)",
+        "popup": "OrderDetailsPopup"
+      },
+      "notes": {
+        "tableNoPopup": "Bảng dùng disable-row-popup trên trang demo — click hàng không mở popup.",
+        "popupTrigger": "Popup được mở bằng nút bên dưới chỉ để showcase."
+      },
+      "openPopup": "Mở popup chi tiết đơn hàng"
+    },
+    "plan": {
+      "sectionTitle": "Trang xuất bản Plan",
+      "sectionDescription": "Các component production từ PlanPage.vue — Detail, Variation, Sharing, Publish Setting — hiển thị với cách dùng thực (assetMap qua usePlanAssets, i18n plan.* section-dashboard-global). Show Code chỉ có trong demo này.",
+      "badges": {
+        "plan": "Plan"
+      },
+      "groups": {
+        "steps": "Component từng bước",
+        "page": "Trang đầy đủ"
+      },
+      "items": {
+        "detail": "PlanDetail",
+        "variation": "PlanVariation",
+        "sharing": "PlanSharing",
+        "publish": "PlanPublishSetting",
+        "fullPage": "PlanPage (route /subscription/plan)"
+      },
+      "notes": {
+        "fullPage": "Mở /subscription/plan để xem trang ghép đầy đủ (tabs, CTA, preview TierCard). Demo nhúng từng bước với cùng wiring step-engine."
+      }
+    },
+    "uploadingProgressBar": {
+      "sectionTitle": "UploadingProgressBar",
+      "cards": {
+        "start": "0%",
+        "quarter": "25%",
+        "half": "50%",
+        "threeQuarter": "75%",
+        "complete": "100%",
+        "animated": "Hoạt ảnh"
+      }
+    },
+    "dashProfileSettings": {
+      "sectionTitle": "DashProfileSettings",
+      "cards": {
+        "creator": "Creator",
+        "vendor": "Vendor",
+        "fan": "Fan",
+        "agent": "Agent"
+      },
+      "sample": {
+        "displayName": "lindenMay",
+        "handle": "{'@'}linden",
+        "email": "developer{'@'}contactlinden.com"
+      }
+    },
+    "subscriptionPlanCard": {
+      "sectionTitle": "SubscriptionPlanCard"
+    },
+    "radioGroup": {
+      "sectionTitle": "RadioGroup",
+      "selected": "Đã chọn",
+      "labels": {
+        "pickOne": "Chọn một tùy chọn",
+        "pickMultiple": "Chọn nhiều tùy chọn",
+        "attachMedia": "Đính kèm Media"
+      },
+      "options": {
+        "optionA": "Tùy chọn A",
+        "optionB": "Tùy chọn B",
+        "optionC": "Tùy chọn C",
+        "useOriginal": "Dùng thumbnail và preview gốc",
+        "useCustom": "Tải lên thumbnail và preview khác",
+        "none": "Không đính kèm thumbnail và preview"
+      },
+      "cards": {
+        "default": "Mặc định",
+        "withLabel": "Có nhãn",
+        "mediaUploaderStyle": "Kiểu Media Uploader",
+        "preselected": "Chọn sẵn"
+      }
+    },
+    "calendarChat": {
+      "sectionTitle": "CalendarChat",
+      "cards": {
+        "newMessage": "Tin nhắn mới",
+        "chatSection": "Phần trò chuyện",
+        "adjustCostBooking": "Điều chỉnh chi phí đặt lịch",
+        "callSoonChat": "Trò chuyện sắp gọi"
+      }
+    },
+    "paymentMethods": {
+      "sectionTitle": "Phương thức thanh toán"
+    },
+    "checkoutPanelComponents": {
+      "sectionTitle": "Thành phần bảng thanh toán"
+    },
+    "planPage": {
+      "sectionTitle": "Plan"
+    },
+    "thumbnailUploader": {
+      "sectionTitle": "ThumbnailUploader"
+    },
+    "tabs": {
+      "sectionTitle": "Tabs"
+    },
+    "subscriptionCards": {
+      "sectionTitle": "Thẻ đăng ký",
+      "labels": {
+        "card1": "Thẻ 1 — Tiêu chuẩn",
+        "card2Featured": "Thẻ 2 — Nổi bật",
+        "card3Current": "Thẻ 3 — Đăng ký hiện tại",
+        "card4": "Thẻ 4 — Tiêu chuẩn",
+        "card5": "Thẻ 5 — Tiêu chuẩn"
+      },
+      "cards": {
+        "1": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "2": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "3": {
+          "title": "Library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "4": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "5": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "description": "Xem toàn bộ nội dung ăn xoài của tôi! Cập nhật hàng tuần!<br><br>• Nội dung 100% thật<br>• không chỉnh sửa<br>• Nội dung 100% thật<br>• không chỉnh sửa<br>• Nội dung 100% thật<br>• không chỉnh sửa<br>• Nội dung 100% thật<br>• không chỉnh sửa"
+      },
+      "features": {
+        "freeTokens": "<span class=\"font-semibold text-[#FF0066]\">10 token miễn phí</span> mỗi tháng",
+        "merchandise": "<span class=\"font-semibold text-[#FF0066]\">Giảm 10%</span> mọi hàng hóa",
+        "customRequest": "<span class=\"font-semibold text-[#FF0066]\">Giảm 10%</span> mọi yêu cầu tùy chỉnh",
+        "payToView": "<span class=\"font-semibold text-[#FF0066]\">Giảm 10%</span> mọi video Pay to View"
+      }
+    },
+    "settingsComponents": {
+      "sectionTitle": "Thành phần trang Cài đặt",
+      "sectionDescription": "Tất cả cách dùng component trên SettingsPage.vue — mọi input, heading, đoạn văn, select và nút, kèm Show Code.",
+      "items": {
+        "dashProfileSettings": "DashProfileSettings",
+        "settingsProfileAvatar": "SettingsProfileAvatar",
+        "baseHeadingAll": "Heading — tất cả tiêu đề tab & section",
+        "baseParagraphAll": "Paragraph — tất cả đoạn văn",
+        "buttonsAll": "DashboardPrimaryButton — QUAY LẠI / HỦY / LƯU",
+        "dashboardTextInputAll": "DashboardTextInput — tất cả trường",
+        "settingsLanguageField": "SettingsLanguageField",
+        "unifiedSelectAll": "UnifiedSelect — tất cả select",
+        "twoPieceAll": "TwoPieceButton — tất cả biến thể"
+      }
+    },
+    "editProfileComponents": {
+      "sectionTitle": "Thành phần trang Chỉnh sửa hồ sơ",
+      "sectionDescription": "Tất cả cách dùng component trên EditProfilePage.vue — mọi input, dropdown, heading và popup, kèm Show Code.",
+      "items": {
+        "editProfileMenu": "EditProfileMenu",
+        "headingsAll": "Headings — tất cả tiêu đề trang",
+        "customDropdownAll": "CustomDropdown — tất cả select",
+        "dashboardTextInputAll": "DashboardTextInput — tất cả trường",
+        "twoPieceAll": "TwoPieceButton — CTA mở khóa",
+        "checkboxSwitch": "CheckboxSwitch",
+        "radioGroup": "RadioGroup",
+        "notificationCardAll": "NotificationCard — tất cả biến thể",
+        "uploadingProgressBar": "UploadingProgressBar",
+        "imageCropperModal": "ImageCropperModal",
+        "avatarUploadPopup": "AvatarUploadPopup",
+        "cancelUploadPopup": "CancelUploadPopup"
+      }
+    },
+    "authCodeInput": {
+      "sectionTitle": "AuthCodeInput",
+      "variations": {
+        "default": "Mặc định",
+        "withLabel": "Có nhãn",
+        "requiredAsterisk": "Bắt buộc (*)",
+        "disabled": "Vô hiệu hóa",
+        "dynamicErrors": "Lỗi động",
+        "toggleSubmitting": "Bật/tắt trạng thái đang gửi"
+      },
+      "dynamicErrorsHint": "Gõ \"123456\" để lỗi biến mất. Nếu không sẽ hiện lỗi.",
+      "triggerSubmitting": "Bắt đầu đang gửi",
+      "stopSubmitting": "Dừng đang gửi",
+      "messages": {
+        "codeEntered": "Đã nhập đủ mã.",
+        "codeValid": "Mã hợp lệ.",
+        "codeInvalid": "Mã không hợp lệ."
+      }
+    },
+    "profileComponents": {
+      "sectionTitle": "Thành phần phần Hồ sơ",
+      "sectionDescription": "Tất cả 18 thành phần hồ sơ đã kiểm tra, hiển thị đúng cách dùng thực từ ProfileWrapper.vue trên nền tối kiểu hero (assetMap + i18n).",
+      "badges": {
+        "desktop": "Máy tính",
+        "mobileOnly": "Chỉ mobile (<768px)",
+        "always": "Luôn hiện"
+      },
+      "groups": {
+        "header": "Nhóm tiêu đề",
+        "hero": "Nhóm Hero / Meta",
+        "sharing": "Mô tả & chia sẻ",
+        "cta": "Đăng ký & hành động bên phải",
+        "cards": "Tab media & thẻ",
+        "subscription": "Băng chuyền đăng ký"
+      },
+      "items": {
+        "profileHeader": "ProfileHeader",
+        "profileHeaderActions": "ProfileHeaderActions",
+        "profileHeaderOptionButtons": "ProfileHeaderOptionButtons",
+        "profileHeaderUserDesktop": "ProfileHeaderUserDesktop",
+        "profileHeaderUserResponsive": "ProfileHeaderUserResponsive",
+        "profileMeta": "ProfileMeta",
+        "profileMetaResponsive": "ProfileMetaResponsive",
+        "profileRightButtons": "ProfileRightButtons",
+        "profileDescription": "ProfileDescription",
+        "profileSharing": "ProfileSharing",
+        "profileSharingResponsive": "ProfileSharingResponsive",
+        "profileSubscribeCta": "ProfileSubscribeCta",
+        "profileMediaTabHeading": "ProfileMediaTabHeading",
+        "feedPollCard": "FeedPollCard",
+        "feedMediaCard": "FeedMediaCard",
+        "profileMediaGrid": "MediaCardV2 (Media Grid)",
+        "merchCard": "MerchCard",
+        "profileSubscriptionCards": "ProfileSubscriptionCards"
+      },
+      "notes": {
+        "mobileOnly": "Thành phần này chỉ hiện ở chiều rộng mobile (<768px). Thu nhỏ cửa sổ để xem trước.",
+        "wide": "Dùng bố cục rộng cố định (min-width 45rem) — cuộn ngang để thấy đủ nút.",
+        "tall": "Băng chuyền chiều cao đầy đủ, đúng như trên trang hồ sơ thật."
+      },
+      "data": {
+        "pollTitle": "Tôi nên ăn gì cho livestream tối nay?",
+        "pollOptionOrange": "Cam",
+        "pollOptionApple": "Táo",
+        "pollOptionChicken": "Gà",
+        "pollTimeLeft": "Còn 24 giờ để bình chọn",
+        "feedDescription": "Jenny đã trở lại! Tối nay tôi sẽ ăn chủ yếu trái cây. -> 8pm EST 👅!",
+        "mediaTitle": "Xây dựng đội ngũ thành công nhờ hợp tác",
+        "mediaAlt": "Video {n}",
+        "mediaTimeAgo": "2 giờ trước",
+        "mediaTabPayToView": "Trả để xem",
+        "merchTitle": "Áo top (đã giặt) — Xoài yêu thích của Jenny!",
+        "merchDescription": "Mua xoài yêu thích của Jenny! Nhanh tay khi còn hàng! Mua xoài yêu thích của Jenny! Nhanh tay khi còn hàng! Mua xoài yêu thích của Jenny! Nhanh tay khi còn hàng!",
+        "merchDiscount": "GIẢM 10%",
+        "merchTitleOutOfStock": "Hết hàng",
+        "merchDescriptionOutOfStock": "Sản phẩm này đã hết hàng."
+      }
+    },
+    "homeComponents": {
+      "sectionTitle": "Thành phần trang Chủ",
+      "sectionDescription": "Tất cả 9 thành phần home đã kiểm tra, hiển thị đúng cách dùng từ HomePage.vue và homeSections (assetMap + i18n). Show Code chỉ có trên demo này.",
+      "badges": {
+        "homePage": "HomePage",
+        "heroSection": "HeroSection",
+        "joinSection": "JoinSection",
+        "aboutFaq": "Giới thiệu / FAQ / v.v.",
+        "aboutSection": "AboutSection",
+        "serviceTabs": "ServiceTabsSection",
+        "sliders": "Gallery / Xem nhiều / Gần đây"
+      },
+      "groups": {
+        "shell": "Khung trang",
+        "hero": "Nhóm Hero",
+        "blocks": "Khối xây dựng phần",
+        "media": "Thanh trượt media"
+      },
+      "items": {
+        "homeNavbar": "HomeNavbar",
+        "homeBackgroundVideo": "HomeBackgroundVideo",
+        "homeFooter": "HomeFooter",
+        "homeHeroIntro": "HomeHeroIntro",
+        "homeCreatorSignupFormHero": "HomeCreatorSignupForm (variant=\"hero\")",
+        "homeCreatorSignupFormSection": "HomeCreatorSignupForm (variant=\"section\")",
+        "heroCluster": "Hero cluster (intro + signup)",
+        "homeSectionHeader": "HomeSectionHeader",
+        "homeFeatureTextBlock": "HomeFeatureTextBlock",
+        "homeServiceTabNav": "HomeServiceTabNav",
+        "homeMediaSlider": "HomeMediaSlider"
+      },
+      "notes": {
+        "backgroundVideo": "Lớp full-bleed tuyệt đối trên HomePage. Demo bọc trong khung cao cố định để thấy được ở đây.",
+        "heroCluster": "Cặp giống HeroSection.vue — lời giới thiệu + form đăng ký creator.",
+        "mediaSlider": "Cùng dạng dữ liệu như GallerySlider.vue (getAssetUrls + t('home.sliders.*'))."
+      }
+    },
+    "socialLinking": {
+      "title": "Liên kết tài khoản mạng xã hội",
+      "description": "Liên kết tài khoản mạng xã hội để đăng nhập một chạm sau này.",
+      "loading": "Đang tải dữ liệu hồ sơ...",
+      "notLinked": "Chưa liên kết",
+      "linkedId": "Đã liên kết (ID: {id})",
+      "unlink": "Hủy liên kết",
+      "linkAccount": "Liên kết tài khoản",
+      "twitter": "X (Twitter)",
+      "telegram": "Telegram"
+    },
+    "authComponent": {
+      "sectionTitle": "AuthTextInput — Demo trực tiếp",
+      "verificationTitle": "Xác minh (OTP)",
+      "onboardingTitle": "Onboarding — Vai trò & tên người dùng"
+    },
+    "countryState": {
+      "show": "Hiện thành phần",
+      "hide": "Ẩn thành phần",
+      "country": "Quốc gia:",
+      "state": "Bang / tỉnh:"
+    },
+    "lazySection": {
+      "pageTitle": "Tải phần Lazy — demo trực tiếp",
+      "intro": "Mở DevTools → Elements (và tùy chọn Network), rồi cuộn chậm xuống. Mỗi phần bên dưới được bọc trong <LazySection>. Khi ngoài màn hình chỉ có placeholder trống; khi bạn tới gần, HTML thật được tạo trong inspector và chunk JS được tải trong Network.",
+      "hint": "Mẹo: trong panel Elements, theo dõi các wrapper <div class=\"lazy-section\"> — placeholder đổi thành markup thật [data-lazy-block] khi cuộn.",
+      "scrollSpacer": "Cuộn xuống ↓ (khoảng trống — chưa lazy)",
+      "spacer": "Khoảng trống",
+      "keepScrolling": "Tiếp tục cuộn — footer tải gần cuối ↓",
+      "placeholderA": "Phần A — CHƯA tải. Cuộn tới đây và xem placeholder biến thành HTML thật.",
+      "placeholderB": "Phần B — CHƯA tải. Cuộn tới đây và xem placeholder biến thành HTML thật.",
+      "placeholderC": "Phần C (footer) — CHƯA tải. Cuộn tới đây và xem placeholder biến thành HTML thật.",
+      "end": "Hết demo."
+    }
+  },
+  "shops": {
+    "merch": {
+      "title": "Merch",
+      "emptyMessage": "Bạn chưa thêm merch nào cho cửa hàng của mình.",
+      "newMerch": "MERCH MỚI",
+      "faq": "MERCH FAQ",
+      "alt": {
+        "emptyCart": "Giỏ merch trống"
+      },
+      "listing": {
+        "title": "Danh sách Merch mới",
+        "closeAlt": "Đóng",
+        "stepPlaceholder": "Sắp ra mắt.",
+        "productNamePlaceholder": "Tên sản phẩm",
+        "descriptionPlaceholder": "Mô tả",
+        "subscribersOnly": "Chỉ dành cho người đăng ký",
+        "selectSubscriptionPlan": "Chọn gói đăng ký:",
+        "priceTitle": "Giá",
+        "priceSubtitle": "Bao gồm phí vận chuyển nội địa trong giá của bạn.",
+        "originalPrice": "Giá gốc",
+        "discountedPrice": "Giá giảm (tùy chọn)",
+        "tagsTitle": "Thẻ",
+        "tagsSubtitle": "Thêm tối đa 10 thẻ cho media của bạn.",
+        "tagsPlaceholder": "Tìm thẻ...",
+        "collectionTitle": "Bộ sưu tập",
+        "collectionPlaceholder": "Tìm hoặc thêm bộ sưu tập mới...",
+        "collectionNotFound": "Không tìm thấy bộ sưu tập.",
+        "createCollection": "Tạo bộ sưu tập mới",
+        "createCollectionPopup": {
+          "title": "Tạo bộ sưu tập mới",
+          "closeAlt": "Đóng",
+          "createButton": "Tạo bộ sưu tập",
+          "nextButton": "Tiếp",
+          "personalLabel": "Tạo bộ sưu tập cho mục đích cá nhân",
+          "personalHint": "Chỉ bạn có thể dùng bộ sưu tập '{collection}', không cần phê duyệt",
+          "globalLabel": "Tạo bộ sưu tập dùng chung",
+          "globalHint": "Sau khi bộ sưu tập '{collection}' được đội Fansocial phê duyệt, mọi model đều có thể dùng"
+        },
+        "saveAsDraft": "Lưu bản nháp",
+        "next": "TIẾP",
+        "gallery": {
+          "helpUploadLimit": "Bạn có thể tải lên tối đa 6 tệp hình ảnh.",
+          "helpReorder": "Kéo và thả media đã tải lên để sắp xếp lại thứ tự.",
+          "emptyIconAlt": "Thư viện trống",
+          "emptyMessage": "Thư viện của bạn đang chờ được lấp đầy bằng nội dung tuyệt vời—hãy bắt đầu nào!",
+          "imageLabel": "Hình ảnh",
+          "removeImageAlt": "Xóa hình ảnh",
+          "defaultImageName": "hình ảnh",
+          "approvalNotice": "Tải lên media mới sẽ cần được đội Fansocial phê duyệt lại.",
+          "overLimitWarning": "Bạn chỉ có thể tải lên tối đa 6 media vào thư viện của mình.",
+          "uploadSuccess": "Đã tải lên thành công {count} hình ảnh",
+          "uploadSuccessOne": "Đã tải lên thành công {count} hình ảnh"
+        },
+        "steps": {
+          "productDetails": "Chi tiết sản phẩm",
+          "gallery": "Thư viện",
+          "inventoryShipment": "Kho và vận chuyển",
+          "publishSettings": "Cài đặt xuất bản"
+        }
+      }
+    },
+    "customProductSetting": {
+      "title": "Cài đặt sản phẩm tùy chỉnh"
+    },
+    "coupons": {
+      "title": "Phiếu giảm giá"
+    }
+  },
+  "plan": {
+    "page": {
+      "titleNewTier": "Gói mới",
+      "settingsTitle": "Cài đặt đăng ký",
+      "settingsDescription": "Thiết lập bậc đăng ký của bạn tại đây. Bạn có thể xuất bản tối đa 1 bậc miễn phí và 3 bậc trả phí. LOREM IPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+      "emptyMessage": "Bạn chưa thiết lập bậc đăng ký nào vào lúc này.",
+      "addTier": "Thêm bậc",
+      "newTier": "BẬC MỚI",
+      "faq": "Câu hỏi thường gặp về đăng ký",
+      "emptyAvatarInitial": "J",
+      "back": "Quay lại",
+      "saveAsDraft": "Lưu bản nháp",
+      "saveAndPublish": "LƯU & XUẤT BẢN",
+      "schedulePublish": "LÊN LỊCH XUẤT BẢN",
+      "publishNow": "XUẤT BẢN NGAY",
+      "upload": "Tải lên",
+      "time": "Thời gian",
+      "preview": "Xem trước",
+      "tabs": {
+        "detail": "Chi tiết gói",
+        "variation": "Biến thể & Khuyến mãi",
+        "sharing": "Chia sẻ",
+        "publish": "Cài đặt xuất bản"
+      },
+      "alt": {
+        "back": "Quay lại",
+        "settings": "Cài đặt",
+        "upload": "Tải lên",
+        "time": "Thời gian",
+        "close": "Đóng",
+        "emptyKeyhole": "Bậc đăng ký",
+        "emptyAvatar": "Ảnh đại diện fan",
+        "scrollTiersLeft": "Cuộn bậc sang trái",
+        "scrollTiersRight": "Cuộn bậc sang phải"
+      },
+      "cancel": "HỦY",
+      "save": "LƯU"
+    },
+    "confirm": {
+      "leaveMessage": "Bạn có chắc muốn rời đi? Thay đổi của bạn sẽ không được lưu.",
+      "cancel": "Hủy",
+      "leave": "Rời đi",
+      "draftSavedTitle": "Gói đăng ký mới ‘{name}’ của bạn đã được lưu.",
+      "draftSavedHint": "Bạn phải thêm media vào gói này trước khi có thể xuất bản.",
+      "backToSettings": "Quay lại Cài đặt đăng ký",
+      "addMedia": "Thêm Media",
+      "untitledTier": "Gói chưa đặt tên"
+    },
+    "publish": {
+      "title": "Cài đặt xuất bản",
+      "description": "Bạn có thể làm gói đăng ký này độc quyền hơn bằng cách giới hạn khả năng hiển thị trên hồ sơ. Đặt lịch bên dưới và chúng tôi sẽ đăng gói lên hồ sơ của bạn tương ứng.",
+      "immediately": "Xuất bản ngay",
+      "schedule": "Lên lịch thời gian xuất bản",
+      "immediateHelp": "Gói này sẽ có trên hồ sơ của bạn ngay sau khi xuất bản.",
+      "scheduleHelp": "Vui lòng chỉ định khoảng thời gian xuất bản tại đây:",
+      "publishDate": "Ngày xuất bản",
+      "endDate": "Ngày kết thúc",
+      "optional": "tùy chọn",
+      "datePlaceholder": "Chọn ngày và giờ",
+      "alt": {
+        "chevron": "Mũi tên xuống",
+        "calendar": "Lịch"
+      }
+    },
+    "variation": {
+      "title": "Biến thể đăng ký",
+      "loyaltyCopy": "Thưởng cho những người trung thành với bạn! Ưu đãi giảm theo phần trăm hoặc số tiền cố định khi họ đăng ký lâu hơn! Bạn có thể thêm tối đa 3 tùy chọn giảm giá.",
+      "addPlan": "THÊM GÓI",
+      "alt": {
+        "plus": "Thêm"
+      },
+      "popup": {
+        "title": "Biến thể gói đăng ký",
+        "closeAlt": "Đóng",
+        "variationPeriodDiscount": "Chu kỳ biến thể và giảm giá",
+        "amountRequired": "Vui lòng nhập số tiền giảm giá",
+        "previewPrice": "24.88",
+        "billEvery": "Thanh toán mỗi {period}",
+        "periods": {
+          "1m": "1 tháng",
+          "2m": "2 tháng",
+          "3m": "3 tháng",
+          "6m": "6 tháng",
+          "1y": "1 năm"
+        },
+        "discountPeriod": "Thời gian giảm giá",
+        "discountPeriodHelp": "Chọn thời gian giảm giá kéo dài trước khi gia hạn.",
+        "billingCycles": "Chu kỳ thanh toán",
+        "unlimitedTime": "Không giới hạn thời gian",
+        "dateRange": "Ngày bắt đầu và kết thúc giảm giá",
+        "dateRangeHelp": "Giới hạn giảm giá theo thời gian. Đặt ngày bắt đầu và kết thúc. Để trống để tắt tính năng này.",
+        "datePlaceholder": "08/31/2024  24:00:00",
+        "fansClaim": "Bao nhiêu fan có thể dùng giảm giá này?",
+        "fansClaimHelp": "Để trống để không giới hạn số lần dùng",
+        "fansClaimMaxError": "Số phải nhỏ hơn số người đăng ký tối đa.",
+        "limitOnePerFan": "Giới hạn 1 lần dùng mỗi fan",
+        "limitOnePerFanTooltip": "Chỉ 1 lần dùng mỗi người. Không lặp lại.",
+        "whoCanUse": "Ai có thể dùng giảm giá này?",
+        "spendingRequirement": "Yêu cầu chi tiêu",
+        "spendingRequirementHelp": "Thêm yêu cầu chi tiêu tối thiểu để fan nhận giảm giá này.",
+        "addMinimumSpending": "Thêm chi tiêu tối thiểu",
+        "removeSpendingRequirement": "Xóa yêu cầu chi tiêu",
+        "minimumSpending": "Chi tiêu tối thiểu",
+        "selectSpendingCategory": "Chọn danh mục chi tiêu",
+        "spendingCategoryLabel": "Danh mục chi tiêu",
+        "selectAll": "Chọn tất cả",
+        "nSelected": "Đã chọn {count}",
+        "spendingPeriod": "Thời gian chi tiêu",
+        "spendingPeriodHelp": "Chỉ các giao dịch trong khoảng thời gian bên dưới mới được tính",
+        "allowLifetimeSpending": "Cho phép chi tiêu trọn đời của fan",
+        "spendingCategories": {
+          "tips": "Tip",
+          "subscriptions": "Đăng ký",
+          "payToView": "Pay to View",
+          "merch": "Merch"
+        },
+        "cancel": "HỦY",
+        "addDiscount": "THÊM GIẢM GIÁ"
+      },
+      "mock": {
+        "plan2mTitle": "ĐĂNG KÝ 2 THÁNG",
+        "plan6mTitle": "ĐĂNG KÝ 6 THÁNG",
+        "plan1yTitle": "ĐĂNG KÝ 1 NĂM",
+        "audienceEveryone": "Mọi người",
+        "audienceSubscribersOnly": "Chỉ người đăng ký",
+        "noEndDate": "Không có ngày kết thúc",
+        "noMinSpending": "Không có chi tiêu tối thiểu",
+        "minSpending100": "Chi tiêu tối thiểu USD$100",
+        "dateRangeApr": "23 THG 4 2025-24 THG 4 2026",
+        "dateRangeMay": "01 THG 5 2025-01 THG 6 2025",
+        "pending": "Đang chờ",
+        "none": "Không có",
+        "currency": "USD$",
+        "price2m": "24.86",
+        "price6m": "55.86",
+        "price1y": "240.34",
+        "discount20": "-20%",
+        "discount40": "-40%",
+        "discount60": "-60%",
+        "item90Off1y": "Giảm 90% 1 NĂM",
+        "item90Off6m": "Giảm 90% 6 tháng",
+        "itemFree1m": "MIỄN PHÍ 1 tháng!",
+        "itemLifetime50": "Trọn đời giảm 50%~",
+        "itemFree6m": "MIỄN PHÍ 6 tháng!",
+        "tokens1of1": "Còn 1/1",
+        "tokens5of5": "Còn 5/5",
+        "tokens50of50": "Còn 50/50",
+        "tokens10of10": "Còn 10/10"
+      }
+    },
+    "sharing": {
+      "title": "Tùy chọn chia sẻ",
+      "postToX": "Đăng cập nhật gói này lên X",
+      "inviteFans": "Mời fan",
+      "sendInvite": "Gửi lời mời",
+      "copyLink": "Sao chép liên kết",
+      "copied": "Đã sao chép!",
+      "copyFailed": "Sao chép thất bại",
+      "postPreview": "XEM TRƯỚC BÀI ĐĂNG",
+      "inviteListSubtitle": "Danh sách mời",
+      "searchFanPlaceholder": "Tìm fan theo tên người dùng...",
+      "inviteHelp": "Gửi lời mời đến fan cụ thể, hoặc chia sẻ trên mạng xã hội:",
+      "inviteLinkPlaceholder": "Nhập số lượng",
+      "verifiedFanOnly": "Chỉ fan đã xác minh",
+      "mock": {
+        "userOneName": "Người dùng Một",
+        "userOneUsername": "user1",
+        "userTwoName": "Người dùng Hai",
+        "userTwoUsername": "user2",
+        "inviteLink": "ourwebsite.com/invitelinkwww",
+        "displayName": "Jelly FISH",
+        "handle": "{'@'}jellyf1sh",
+        "date": "31 Thg 7",
+        "body": "Xem tôi ăn 10 xô gà rán bánh gia đình...đừng bỏ lỡ:",
+        "mediaLink": "our-website.app/model/jellyskitchen/media/198386476"
+      },
+      "alt": {
+        "tooltip": "Chú thích",
+        "verified": "Đã xác minh",
+        "play": "Phát",
+        "send": "Gửi",
+        "copy": "Sao chép"
+      }
+    },
+    "detail": {
+      "tierInformation": "Thông tin gói",
+      "featuredTier": "Đây là gói nổi bật",
+      "featuredHelp": "Gói nổi bật sẽ được hiển thị đầu tiên theo mặc định trên trang gói đăng ký của bạn.",
+      "featuredAlertTitle": "Gói ‘VIP Lounge’ của bạn sẽ không còn là gói nổi bật.",
+      "featuredAlertDescription": "Gói này sẽ được cập nhật thành gói nổi bật trên hồ sơ của bạn sau khi lưu.",
+      "priceSetting": "Cài đặt giá",
+      "freeTier": "Gói miễn phí",
+      "freeTierDisabledTooltip": "Không thể đặt gói miễn phí vì đã có một gói miễn phí trong cài đặt đăng ký của bạn",
+      "paidTiers": "Gói trả phí",
+      "subscriptionBasePrice": "Giá cơ bản đăng ký",
+      "subscriberDiscount": "Giảm giá người đăng ký",
+      "subscriberDiscountHelp": "Ưu đãi giảm giá cho người đăng ký lần đầu khi họ tham gia gói này.",
+      "perMonth": "/tháng",
+      "discountBillingCycles": "Giảm giá trong 6 chu kỳ thanh toán",
+      "discountBillingCyclesCount": "Giảm giá trong {count} chu kỳ thanh toán",
+      "subscriberSetting": "Cài đặt người đăng ký",
+      "whoCanSubscribe": "Ai có thể đăng ký gói này?",
+      "sendSubscriptionLinkHelp": "Gửi link đăng ký bên dưới tới fan cụ thể:",
+      "copyLink": "Sao chép link",
+      "copied": "Đã sao chép!",
+      "inviteLink": "fansocial.app/invitelinkwww",
+      "maximumSubscribers": "Số người đăng ký tối đa",
+      "maximumSubscribersHelp": "Giới hạn số fan có thể tham gia gói này cùng lúc. Để trống để tắt tính năng.",
+      "enterAmount": "Nhập số lượng",
+      "unsubscribeDiscount": "Giảm giá khi hủy đăng ký",
+      "unsubscribeDiscountHelp": "Ưu đãi giảm giá cho người đăng ký khi họ hủy gói này. Lưu ý rằng tất cả người đăng ký với các chu kỳ thanh toán khác nhau từ mọi gói sẽ được nhận cùng một mức giảm giá.",
+      "mediaOptions": "Tùy chọn media",
+      "mediaOptionsHelp": "Bạn có thể đưa media từ các gói đăng ký khác vào gói này. Người đăng ký sẽ có quyền truy cập mọi nội dung đăng trên gói đã chọn bên dưới.",
+      "perDay": "Theo ngày",
+      "perMonthDuration": "Theo tháng",
+      "perYear": "Theo năm",
+      "audienceEveryone": "Mọi người",
+      "audienceInvited": "Chỉ người được mời",
+      "edit": "SỬA",
+      "remove": "XÓA",
+      "addDiscount": "THÊM GIẢM GIÁ",
+      "tagPublished": "Gói đã xuất bản",
+      "tagDraft": "Bản nháp",
+      "mockDiscountPrice": "11.69",
+      "mockDiscountPercent": "-40%",
+      "mockDiscountDateRange": "23 THG 4 2025-24 THG 4 2026",
+      "discountPopup": {
+        "title": "Giảm giá người đăng ký",
+        "closeAlt": "Đóng",
+        "subscriptionPeriodDiscount": "Chu kỳ đăng ký và giảm giá",
+        "percentOff": "Phần trăm giảm",
+        "amountOff": "Số tiền giảm",
+        "off": "giảm",
+        "amountRequired": "Vui lòng nhập số tiền giảm giá",
+        "previewPrice": "24.88",
+        "previewBeforePrice": "248.80",
+        "beforeDiscount": "USD$ {price} trước giảm giá",
+        "discountPeriod": "Thời gian giảm giá",
+        "discountPeriodHelp": "Chọn thời gian giảm giá kéo dài trước khi quay lại giá gốc.",
+        "billingCycles": "Chu kỳ thanh toán",
+        "dateRange": "Ngày bắt đầu và kết thúc giảm giá",
+        "dateRangeHelp": "Giới hạn giảm giá theo thời gian. Đặt ngày bắt đầu và kết thúc. Để trống để tắt tính năng này.",
+        "datePlaceholder": "--/--/-- --:--",
+        "whoCanEnter": "Ai có thể tham gia?",
+        "fansClaim": "Bao nhiêu fan có thể dùng giảm giá người đăng ký mới này?",
+        "fansClaimHelp": "Để trống để không giới hạn số lần dùng",
+        "limitOnePerFan": "giới hạn 1 lần dùng mỗi fan",
+        "limitOnePerFanTooltip": "Chỉ 1 lần dùng mỗi người. Không lặp lại.",
+        "spendingRequirement": "Yêu cầu chi tiêu",
+        "spendingRequirementHelp": "Thêm yêu cầu chi tiêu tối thiểu để fan tham gia rút thăm này.",
+        "addMinimumSpending": "Thêm chi tiêu tối thiểu",
+        "cancel": "HỦY",
+        "addDiscount": "THÊM GIẢM GIÁ"
+      },
+      "unsubscribeDiscountPopup": {
+        "title": "Giảm giá khi hủy đăng ký",
+        "closeAlt": "Đóng",
+        "subscriptionPeriodDiscount": "Chu kỳ đăng ký và giảm giá",
+        "amountRequired": "Vui lòng nhập số tiền giảm giá",
+        "discountPeriod": "Thời gian giảm giá khi hủy",
+        "discountPeriodHelp": "Chọn thời gian giảm giá khi hủy kéo dài trước khi quay lại giá gốc.",
+        "billingCycles": "Chu kỳ thanh toán",
+        "unlimitedTime": "Không giới hạn thời gian",
+        "messageToFan": "Tin nhắn tới fan",
+        "messageToFanHelp": "Tin nhắn cá nhân của bạn sẽ hiển thị khi người đăng ký đang cân nhắc rời đi.",
+        "messagePlaceholder": "Sự ủng hộ của bạn rất ý nghĩa với tôi......hãy ở lại thêm một chút và tôi sẽ tặng bạn điều gì đó ngọt ngào... 👄",
+        "cancel": "HỦY",
+        "addDiscount": "THÊM GIẢM GIÁ"
+      },
+      "mediaFeatures": {
+        "someContent": {
+          "label": "Truy cập một số nội dung",
+          "meta": "16 Media"
+        },
+        "moreContent": {
+          "label": "Truy cập nhiều nội dung hơn",
+          "meta": "24 Media"
+        },
+        "someMoreContent": {
+          "label": "Truy cập thêm một số nội dung",
+          "meta": "100 Media"
+        },
+        "evenMoreContent": {
+          "label": "Truy cập còn nhiều nội dung hơn",
+          "meta": "5 Media"
+        },
+        "evenSomeMoreContent": {
+          "label": "Truy cập thêm nữa một số nội dung",
+          "meta": "3 Media"
+        },
+        "evenMostContent": {
+          "label": "Truy cập hầu hết nội dung",
+          "meta": "0 Media"
+        },
+        "evenMoreMostContent": {
+          "label": "Truy cập nhiều nhất nội dung",
+          "meta": "0 Media"
+        }
+      },
+      "alt": {
+        "weather": "Thời tiết",
+        "calendar": "Lịch",
+        "pen": "Sửa",
+        "trash": "Xóa"
+      }
+    },
+    "luckyDraw": {
+      "title": "Rút thăm may mắn",
+      "createEvent": " TẠO SỰ KIỆN",
+      "descriptionPlaceholder": "Mô tả rút thăm may mắn…",
+      "descriptionFilled": "Tùy chỉnh giảm giá cho những người đặc biệt đã chọn. Tạo rút thăm may mắn cho người theo dõi, mời fan cụ thể và hơn thế nữa.",
+      "descriptionEmpty": "Cải thiện tương tác với fan! Thêm sự kiện giảm giá để tăng độ hiển thị cho các gói đăng ký của bạn",
+      "activeTitle": "Rút thăm đang hoạt động",
+      "edit": "SỬA",
+      "remove": "XÓA",
+      "popup": {
+        "title": "SỰ KIỆN MỚI - RÚT THĂM MAY MẮN",
+        "closeAlt": "Đóng",
+        "pendingDescription": "Mô tả rút thăm đang chờ Mô tả rút thăm đang chờ Mô tả rút thăm đang chờ",
+        "titlePlaceholder": "Tiêu đề rút thăm",
+        "descriptionPlaceholder": "Mô tả...",
+        "dateRange": "Ngày bắt đầu và kết thúc",
+        "datePlaceholder": "Chọn ngày và giờ",
+        "whoCanEnter": "Ai có thể tham gia?",
+        "guaranteePrize": "Fan tham gia rút thăm sẽ được đảm bảo nhận giải",
+        "spendingRequirement": "Yêu cầu chi tiêu",
+        "spendingRequirementHelp": "Thêm yêu cầu chi tiêu tối thiểu để fan tham gia rút thăm này.",
+        "addMinimumSpending": "Thêm chi tiêu tối thiểu",
+        "prizeTitle": "Giải rút thăm",
+        "prizeHelp": "Bạn có thể thêm tối đa 5 giải khác nhau.",
+        "addPrize": "Thêm giải",
+        "prizesLeft": "{count}/5 giải còn lại",
+        "prizeQuotaLeft": "Còn {current}/{total}",
+        "pricePerDay": "/ngày",
+        "pricePerMonth": "/tháng",
+        "pricePerYear": "/năm",
+        "discountForCycles": "Giảm giá trong {count} chu kỳ thanh toán",
+        "lifetimeDiscount": "Giảm giá trọn đời",
+        "sharingOptions": "Tùy chọn chia sẻ",
+        "postToX": "Đăng rút thăm lên X",
+        "postToXTooltip": "Chia sẻ rút thăm này trên X khi tier được xuất bản.",
+        "postMessageLabel": "Tin nhắn đăng (Để trống để dùng tin nhắn mặc định của hệ thống.)",
+        "postMessagePlaceholder": "Tin nhắn tùy chỉnh...",
+        "charactersCount": "{used}/{max} ký tự",
+        "attachMedia": "Đính kèm media",
+        "noMedia": "Không đính kèm ảnh hoặc video",
+        "uploadMedia": "Tải media lên",
+        "postPreview": "XEM TRƯỚC BÀI ĐĂNG",
+        "previewBody": "Hãy thử vận may của bạn! Đây là cơ hội để thắng đăng ký miễn phí nội dung của tôi trong một NĂM! Tham gia ngay:",
+        "previewLink": "fansocial.app/model/jellyskitchen/...",
+        "cancel": "HỦY",
+        "createEvent": "TẠO SỰ KIỆN",
+        "footerNote": "Sau khi gói đăng ký này được xuất bản, fan và nhóm đủ điều kiện sẽ được thông báo về sự kiện. Chúng tôi cũng sẽ hiển thị sự kiện này trên trang hồ sơ của bạn để fan tham gia rút thăm."
+      },
+      "addPrizePopup": {
+        "title": "THÊM GIẢI",
+        "closeAlt": "Đóng",
+        "pendingDescription": "Mô tả rút thăm đang chờ Mô tả rút thăm đang chờ Mô tả rút thăm đang chờ",
+        "titlePlaceholder": "Tiêu đề giải",
+        "descriptionPlaceholder": "Mô tả..",
+        "subscriptionPrice": "Giá đăng ký",
+        "discountPeriod": "Thời gian giảm giá",
+        "discountPeriodHelp": "Chọn thời gian giảm giá kéo dài bao lâu trước khi gia hạn.",
+        "billingCycles": "Chu kỳ thanh toán",
+        "unlimitedTime": "Không giới hạn thời gian",
+        "howManyWinners": "Bao nhiêu người thắng?",
+        "addPrize": "THÊM GIẢI",
+        "footerNote": "Mô tả rút thăm đang chờ Mô tả rút thăm đang chờ Mô tả rút thăm đang chờ"
+      }
+    },
+    "subscription": {
+      "unlimitedUsage": "không giới hạn sử dụng",
+      "usage": "lượt dùng",
+      "edit": "SỬA",
+      "remove": "XÓA"
+    },
+    "dropdown": {
+      "selectOption": "Chọn tùy chọn"
+    },
+    "preview": {
+      "mock": {
+        "title": "My VVIP Lounge ❤️️️",
+        "description": "Chào mừng đến VIP Lounge của Jenny! Gói này bao gồm mọi thứ trong Basic/VIP Lounge, cộng thêm: Hậu trường mỗi shoot! đồ tôi mặc trong shoot để bán! Trò chuyện với tôi 24/7❤️ Chào mừng đến VIP Lounge của Jenny! Chào mừng đến VIP Lounge của Jenny! Gói này bao gồm mọi thứ trong Basic/VIP Lounge, cộng thêm: Hậu trường mỗi shoot! đồ tôi mặc trong shoot để bán! Trò chuyện với tôi 24/7❤️ Chào mừng đến VIP Lounge của Jenny! Chào mừng đến VIP Lounge của Jenny! Gói này bao gồm mọi thứ trong Basic/VIP Lounge, cộng thêm: Hậu trường mỗi shoot! đồ tôi mặc trong shoot để bán! Trò chuyện với tôi 24/7❤️ Chào mừng đến VIP Lounge của Jenny! ...",
+        "claimOffer": "ĐĂNG KÝ",
+        "subscribe": "ĐĂNG KÝ",
+        "leftText": "Còn 5!",
+        "rightText": "95/100 Ưu đãi",
+        "endsIn": "02:13:07",
+        "originalPrice": "$111.72",
+        "discount5": "-5%",
+        "discount50": "-50%",
+        "price": "55.86",
+        "plans": {
+          "1d": "1 ngày",
+          "1m": "1 tháng",
+          "6m": "6 tháng",
+          "1y": "1 năm"
+        }
+      }
+    },
+    "defaults": {
+      "tierName": "Basic Lounge ❤️️️",
+      "description": "Chào mừng đến lounge cơ bản của Jenny. Bạn sẽ nhận những quyền lợi cơ bản nhất trong gói này."
+    }
+  },
+  "settings": {
+    "page": {
+      "title": "Cài Đặt",
+      "actions": {
+        "back": "QUAY LẠI",
+        "cancel": "HỦY",
+        "save": "LƯU"
+      },
+      "alt": {
+        "notification": "Thông báo",
+        "language": "Ngôn ngữ",
+        "avatar": "Ảnh đại diện",
+        "hamburger": "Menu",
+        "back": "Quay lại",
+        "x": "X",
+        "stars": "Sao",
+        "star": "Sao",
+        "power": "Nguồn",
+        "phone": "Điện thoại"
+      },
+      "tabs": {
+        "accountInformation": "Thông Tin Tài Khoản",
+        "changePassword": "Đổi Mật Khẩu",
+        "privacySecurity": "Quyền Riêng Tư & Bảo Mật",
+        "shippingAddress": "Địa Chỉ Giao Hàng",
+        "payoutDetails": "Chi Tiết Thanh Toán"
+      },
+      "account": {
+        "username": "Tên người dùng",
+        "usernamePlaceholder": "carrot_popxoxo123",
+        "usernameHelp": "Tên người dùng không thể thay đổi sau tháng đầu tiên trên trang web của chúng tôi, nhưng các trường hợp đặc biệt có thể được ngoại lệ. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ thay đổi tên người dùng.",
+        "email": "Email",
+        "emailPlaceholder": "mscarrot_pops{'@'}gmail.com",
+        "firstName": "Tên",
+        "lastName": "Họ",
+        "linkXTitle": "Liên Kết Tài Khoản X",
+        "linkXBody": "Liên kết tài khoản của bạn với Twitter(X) để tự động đăng cập nhật sản phẩm và feed.",
+        "linkXCta": "Liên kết tài khoản X của bạn",
+        "promoteTitle": "Quảng Bá Bản Thân trên Tài Khoản X của trang web",
+        "promotePremium": "PREMIUM",
+        "promoteBody": "Chúng tôi sẽ tự động đăng Cập Nhật Tài Khoản của bạn lên tài khoản twitter chính thức của trang web.",
+        "upgradeCta": "Nâng Cấp Lên Premium"
+      },
+      "password": {
+        "password": "Mật khẩu",
+        "oldPlaceholder": "Mật khẩu cũ",
+        "newPlaceholder": "Mật khẩu mới",
+        "confirmLabel": "Nhập lại mật khẩu mới",
+        "confirmPlaceholder": "Nhập lại mật khẩu mới"
+      },
+      "privacy": {
+        "activeDevice": "Thiết Bị Đang Hoạt Động",
+        "logoutAll": "Đăng xuất tất cả thiết bị",
+        "logout": "Đăng xuất",
+        "deviceName": "iPhone 16",
+        "browserName": "Chrome",
+        "loggedInOn": "Đăng nhập vào xx-xx-xxxx xx:xx"
+      },
+      "shipping": {
+        "personalInformation": "Thông Tin Cá Nhân",
+        "shippingAddress": "Địa Chỉ Giao Hàng",
+        "phoneNumber": "Số điện thoại",
+        "company": "Công ty",
+        "optional": "Tùy chọn",
+        "addressLine1": "Địa chỉ dòng 1",
+        "addressLine2": "Địa chỉ dòng 2",
+        "postalCode": "Mã bưu điện",
+        "city": "Thành phố",
+        "state": "Bang/Tỉnh",
+        "country": "Quốc gia"
+      },
+      "payout": {
+        "beneficiaryTitle": "Thông Tin Người Thụ Hưởng",
+        "beneficiaryBody": "Người thụ hưởng là chủ tài khoản sẽ nhận khoản thanh toán.",
+        "beneficiaryName": "Tên người thụ hưởng",
+        "beneficiaryStreet": "Đường người thụ hưởng",
+        "beneficiaryCity": "Thành phố người thụ hưởng",
+        "beneficiaryCityPlaceholder": "Thị trấn/thành phố địa chỉ người thụ hưởng",
+        "beneficiaryPostalCode": "Mã bưu điện người thụ hưởng",
+        "beneficiaryPostalPlaceholder": "Mã bưu điện/zip địa chỉ người thụ hưởng",
+        "bankTitle": "Thông Tin Ngân Hàng",
+        "bankBody": "Tất cả giao dịch sẽ được thanh toán bằng USD.",
+        "beneficiaryAccount": "Tài khoản người thụ hưởng",
+        "beneficiaryAccountPlaceholder": "Số tài khoản địa phương hoặc định dạng IBAN",
+        "beneficiaryAccountTooltip": "Nếu tùy chọn này bị tắt, người hâm mộ sẽ được phép hủy đăng ký và tận hưởng giảm giá lại khi đăng ký lại.",
+        "country": "Quốc gia",
+        "swiftCode": "Mã BIC/SWIFT",
+        "swiftPlaceholder": "Nhập mã BIC/SWIFT",
+        "intermediarySwift": "Mã BIC/SWIFT ngân hàng trung gian",
+        "intermediaryHelp": "Nếu bạn không chắc mình cần ngân hàng trung gian cho chuyển khoản quốc tế, vui lòng liên hệ ngân hàng để biết thêm thông tin."
+      },
+      "options": {
+        "countryUnitedStates": "Hoa Kỳ (US)",
+        "countryHongKong": "Hồng Kông",
+        "countryAustralia": "Úc",
+        "countryBangladesh": "Bangladesh",
+        "stateGeorgia": "Georgia",
+        "stateFlorida": "Florida",
+        "stateHawaii": "Hawaii",
+        "stateDhaka": "Dhaka"
+      }
+    }
+  },
+  "editProfile": {
+    "page": {
+      "title": "Chỉnh sửa hồ sơ",
+      "actions": {
+        "cancel": "HỦY",
+        "save": "LƯU",
+        "upload": "Tải lên",
+        "cancelShort": "Hủy",
+        "no": "Không",
+        "confirm": "Xác nhận"
+      },
+      "alt": {
+        "notification": "Thông báo",
+        "language": "Ngôn ngữ",
+        "avatar": "Ảnh đại diện",
+        "hamburger": "Menu",
+        "edit": "Chỉnh sửa",
+        "chevronDown": "Mũi tên xuống",
+        "images": "Hình ảnh",
+        "video": "Video",
+        "close": "Đóng",
+        "remove": "Xóa",
+        "upload": "Tải lên",
+        "tooltip": "Thông tin",
+        "fullscreen": "Toàn màn hình",
+        "verified": "Đã xác minh",
+        "previewBg": "Nền xem trước",
+        "lightbox": "Media",
+        "play": "Phát",
+        "imageTag": "Hình ảnh",
+        "videoTag": "Video",
+        "selectedAvatar": "Ảnh đại diện đã chọn",
+        "reflectHorizontal": "Lật ngang",
+        "reflectVertical": "Lật dọc",
+        "zoomOut": "Thu nhỏ",
+        "zoomIn": "Phóng to",
+        "rotate": "Xoay"
+      },
+      "notice": {
+        "unsavedTitle": "Bạn có thay đổi chưa lưu",
+        "unsavedDescription": "Bạn đã chỉnh sửa hồ sơ kể từ lần lưu trước. Nhớ nhấn ‘LƯU’ để xuất bản thay đổi."
+      },
+      "fields": {
+        "profileVisibility": "Hiển thị hồ sơ",
+        "selectVisibility": "Chọn hiển thị",
+        "displayName": "Tên hiển thị",
+        "age": "Tuổi",
+        "gender": "Giới tính",
+        "country": "Quốc gia",
+        "bodyType": "Kiểu dáng",
+        "hair": "Tóc",
+        "bio": "Tiểu sử",
+        "select": "Chọn"
+      },
+      "options": {
+        "genderMale": "Nam",
+        "genderFemale": "Nữ",
+        "genderOthers": "Khác",
+        "visibilityEveryone": "Mọi người",
+        "visibilityEveryoneDesc": "Liên kết hồ sơ của bạn sẽ hiển thị với mọi người.",
+        "visibilityModelsOnly": "Chỉ người mẫu",
+        "visibilityModelsOnlyDesc": "Liên kết hồ sơ chỉ dành cho người dùng Fansocial có tài khoản model và không hiển thị với người khác.",
+        "visibilityFansOnly": "Chỉ fan",
+        "visibilityFansOnlyDesc": "Liên kết hồ sơ chỉ dành cho người dùng Fansocial có tài khoản fan và không hiển thị với người khác.",
+        "visibilityRegisteredOnly": "Chỉ người dùng đã đăng ký",
+        "visibilityRegisteredOnlyDesc": "Liên kết hồ sơ chỉ dành cho người dùng Fansocial đã đăng nhập và không hiển thị với người khác.",
+        "visibilityNobody": "Không ai",
+        "visibilityNobodyDesc": "Liên kết hồ sơ sẽ hoàn toàn riêng tư và không ai truy cập được.",
+        "countryAustralia": "Úc",
+        "countryUsa": "Mỹ",
+        "countrySingapore": "Singapore",
+        "countryThailand": "Thái Lan",
+        "bodySkinny": "Gầy",
+        "bodySlim": "Mảnh",
+        "bodyAthletic": "Thể thao",
+        "bodyMedium": "Trung bình",
+        "bodyCurvy": "Đầy đặn",
+        "bodyBbw": "BBW",
+        "hairBlonde": "Vàng",
+        "hairBlack": "Đen",
+        "hairBrunette": "Nâu sẫm",
+        "hairBrown": "Nâu",
+        "hairRedhead": "Đỏ",
+        "hairColorful": "Nhiều màu"
+      },
+      "gallery": {
+        "title": "Thư viện hồ sơ",
+        "help1": "Media đã tải lên sẽ xuất hiện làm nền trang hồ sơ. Kéo thả để sắp xếp thứ tự.",
+        "help2": "Bạn có thể tải tối đa 6 tệp media (tối đa 2 video)",
+        "empty": "Tải lên nội dung đầu tiên và tỏa sáng!",
+        "clickUpload": "Nhấn để tải lên",
+        "dragDrop": "hoặc kéo thả ảnh hoặc video vào đây",
+        "formats": "MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG hoặc JPG (tối đa 15MB)",
+        "remove": "xóa",
+        "uploading": "Đang tải lên...",
+        "unlockVideos": "Nâng cấp premium để tải video",
+        "videoLabel": "Video",
+        "successTitle": "Đã tải {count} tệp lên thư viện miễn phí thành công.",
+        "successDescription": "Nhấn ‘Lưu’ trên thanh tiêu đề để cập nhật thay đổi.",
+        "failOneTitle": "1 tệp tải lên thất bại.",
+        "failVideoDesc": "Không tải được ‘{name}’. Tối đa 2 tệp video được phép.",
+        "failAddTitle": "Không thêm được media.",
+        "failAddDesc": "Không thêm được ‘{name}’. Bạn chỉ có thể tải tối đa 6 tệp media."
+      },
+      "social": {
+        "title": "Mạng xã hội",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "wishlist": "Wishlist",
+        "additionalUrl1": "URL bổ sung 1",
+        "additionalUrl2": "URL bổ sung 2",
+        "additionalUrl3": "URL bổ sung 3",
+        "additionalUrl4": "URL bổ sung 4",
+        "unlockLinks": "Nâng cấp premium để thêm liên kết"
+      },
+      "tipping": {
+        "title": "Cài đặt tip",
+        "tipMessage": "Tin nhắn tip",
+        "tipHelp": "Fan sẽ thấy tin nhắn này khi tip cho bạn.",
+        "tipEmptyHint": "Để trống để dùng tin nhắn mặc định",
+        "tipPlaceholder": "Cảm ơn tip của bạn!",
+        "shareSettings": "Cài đặt chia sẻ",
+        "postToX": "Đăng lên X khi nhận tip",
+        "postMessageLabel": "Tin nhắn đăng (Để trống để dùng tin mặc định của hệ thống.)",
+        "postMessagePlaceholder": "Tôi vừa nhận tip dễ thương từ {'@'}username...",
+        "showUsername": "Hiện tên người dùng fan trên bài đăng",
+        "usernameTooltip": "Fan tip ẩn danh sẽ được hiển thị là '{'@'}anonymous'.",
+        "attachMedia": "Đính kèm media",
+        "uploadMedia": "Tải media lên",
+        "noMedia": "Không đính kèm media",
+        "thumbnail": "Thumbnail",
+        "postPreview": "XEM TRƯỚC BÀI ĐĂNG",
+        "previewName": "Jelly FISH",
+        "previewHandle": "{'@'}jellyf1sh",
+        "previewDate": "31 Th7",
+        "previewFallback": "Tôi vừa nhận tip dễ thương từ fan...",
+        "previewTipLine": "{'@'}manogoes4eva tip 400 token"
+      },
+      "menu": {
+        "edit": "chỉnh sửa",
+        "upload": "tải lên",
+        "uploadNew": "tải mới",
+        "chooseFromAvatars": "chọn từ avatar"
+      },
+      "crop": {
+        "title": "Cắt ảnh",
+        "zoom": "Thu phóng",
+        "rotate": "Xoay",
+        "cancel": "HỦY",
+        "save": "LƯU",
+        "upload": "TẢI LÊN"
+      },
+      "avatarPopup": {
+        "title": "Chọn avatar",
+        "avatar": "Avatar",
+        "background": "Nền",
+        "cancel": "HỦY",
+        "save": "LƯU"
+      },
+      "cancelDialog": {
+        "message": "Bạn có chắc muốn hủy? Thay đổi sẽ bị mất.",
+        "no": "Không",
+        "confirm": "Xác nhận"
+      },
+      "initialsFallback": "CP"
+    }
+  },
+  "payout": {
+    "page": {
+      "title": "Thu Nhập Của Bạn",
+      "payoutSettings": "Cài Đặt Thanh Toán",
+      "payoutHistory": "Lịch Sử Thanh Toán",
+      "allCreators": "Tất Cả Creators",
+      "searchByUsername": "Tìm theo tên người dùng...",
+      "noResult": "Không có kết quả",
+      "columns": {
+        "period": "Kỳ",
+        "status": "Trạng thái",
+        "totalEarned": "Tổng thu nhập",
+        "rollover": "Chuyển kỳ",
+        "transferFee": "Phí chuyển",
+        "commission": "Hoa hồng %",
+        "finalPayout": "Thanh toán cuối"
+      },
+      "status": {
+        "pending": "Đang chờ",
+        "paid": "Đã thanh toán",
+        "failed": "Thất bại"
+      }
+    },
+    "card": {
+      "ourWebsite": "OUR WEBSITE",
+      "premium": "PREMIUM",
+      "availableBalance": "SỐ DƯ KHẢ DỤNG",
+      "name": "TÊN",
+      "lastWithdrawn": "Lần rút gần nhất",
+      "transactionHistory": "LỊCH SỬ GIAO DỊCH",
+      "ledgerBalance": "Số dư sổ cái",
+      "ledgerTooltip": "Số dư sổ cái là bản ghi chính thức cuối ngày của các khoản đã tất toán. Đây là số dư sau khi mọi giao dịch hoàn tất được xử lý.\n\nSố dư khả dụng bao gồm các giao dịch đang chờ, cho biết bạn có thể rút bao nhiêu ngay lúc này."
+    },
+    "balanceAside": {
+      "availableTitle": "Số dư của bạn hiện đã sẵn sàng để rút.",
+      "availableBody": "💯Bạn đang làm việc chăm chỉ và điều đó đang được đền đáp. Tiếp tục cố gắng và nhớ rằng—bạn là ông chủ.",
+      "zeroTitle": "Bạn chưa có số dư khả dụng để rút.",
+      "withdrawNow": "RÚT NGAY",
+      "nextPayoutDate": "Ngày thanh toán tiếp theo",
+      "nextPayoutTooltip": "Ngày thanh toán diễn ra hàng tháng vào ngày 28. Thu nhập của tháng trước sẽ được chuyển vào số dư khả dụng để rút."
+    },
+    "processing": {
+      "singleTitle": "Yêu cầu thanh toán của bạn đang được xử lý.",
+      "multiTitle": "Bạn có {count} khoản thanh toán đang xử lý:",
+      "viewAll": "XEM TẤT CẢ",
+      "viewLess": "Thu gọn",
+      "more": "+ {count} nữa",
+      "failTitle": "Đã xảy ra lỗi với yêu cầu thanh toán gần đây của bạn",
+      "failDescriptionPrefix": "Chúng tôi không thể xử lý khoản thanh toán vì lý do sau:",
+      "submittedOn": "Gửi lúc",
+      "submittedOnDate": "Gửi lúc {date}",
+      "submittedOnEmpty": "Gửi lúc —",
+      "steps": {
+        "pending": "Đang chờ",
+        "processing": "Đang xử lý",
+        "completed": "Hoàn tất",
+        "complete": "Hoàn tất",
+        "failToProcess": "Xử lý thất bại"
+      },
+      "aria": {
+        "loadingPayout": "Đang tải thanh toán",
+        "viewPayoutDetails": "Xem chi tiết thanh toán"
+      },
+      "defaults": {
+        "failReason": "Cần thêm giấy chứng minh địa chỉ",
+        "actionUploadAddressProof": "Tải lên giấy chứng minh địa chỉ",
+        "actionContactSupport": "Liên hệ hỗ trợ để kiểm tra",
+        "failReasonMasspayCancelled": "Masspay đã bị hủy"
+      }
+    },
+    "methodBadge": {
+      "countryMethod": "{country} - {method}"
+    },
+    "settings": {
+      "step1": {
+        "title": "Cài đặt thanh toán",
+        "intro": "Quản lý thông tin thanh toán, cập nhật tùy chọn và đảm bảo giao dịch diễn ra liền mạch.",
+        "autoWithdrawSettings": "Cài đặt rút tự động",
+        "notSetUp": "Chưa thiết lập",
+        "nextPayoutDate": "Ngày thanh toán tiếp theo:",
+        "whenEarningReaches": "Khi thu nhập đạt USD$ {amount}.",
+        "setUp": "THIẾT LẬP",
+        "autoWithdrawHelp": "Thiết lập rút thu nhập tự động vào phương thức thanh toán đã chọn theo tháng hoặc theo mức thu nhập.",
+        "savedPayoutMethod": "Phương thức thanh toán đã lưu",
+        "yourSavedPayoutMethod": "Phương thức thanh toán đã lưu của bạn",
+        "noSavedMethod": "Chưa có phương thức đã lưu",
+        "add": "THÊM",
+        "savedMethodHelp": "Lưu phương thức thanh toán thường dùng để rút thu nhập nhanh hơn.",
+        "edit": "Sửa",
+        "delete": "Xóa",
+        "paysIn": "Thanh toán bằng",
+        "cardDesign": "Thiết kế thẻ",
+        "changeCardDesign": "ĐỔI THIẾT KẾ THẺ",
+        "balance": "SỐ DƯ",
+        "standard": "TIÊU CHUẨN",
+        "ourWebsite": "OUR WEBSITE",
+        "premium": "PREMIUM",
+        "name": "TÊN",
+        "lastWithdrawn": "Lần rút gần nhất",
+        "transactionHistory": "LỊCH SỬ GIAO DỊCH"
+      },
+      "step2": {
+        "titleAutoWithdraw": "Cài đặt rút tự động",
+        "titleChangeCard": "Đổi thiết kế thẻ",
+        "titleAddMethod": "Thêm phương thức thanh toán mới",
+        "back": "Quay lại",
+        "autoWithdrawIntro": "Thiết lập rút thu nhập tự động vào phương thức thanh toán đã chọn theo tháng hoặc theo mức thu nhập.",
+        "autoWithdrawLabel": "Tự động rút thu nhập vào phương thức thanh toán đã chọn:",
+        "everyMonthHelp": "Yêu cầu thanh toán tự động được xử lý vào ngày 1 hàng tháng, bao gồm thu nhập 28 ngày trước đó. Thời gian nhận tiền phụ thuộc vào phương thức bạn chọn.",
+        "earningTargets": "Mục tiêu thu nhập",
+        "optional": "Tùy chọn",
+        "earningTargetsEveryMonthHelp": "Chúng tôi sẽ không rút tiền nếu thu nhập tháng của bạn chưa đạt mức bạn chỉ định bên dưới.",
+        "earningTargetsByTargetHelp": "Thu nhập sẽ được thanh toán vào phương thức đã chọn mỗi khi số dư tích lũy đạt mức chỉ định.",
+        "enterAmount": "Nhập số tiền",
+        "usdPrefix": "USD$",
+        "payoutMethod": "Phương thức thanh toán",
+        "addNew": "Thêm mới...",
+        "paysIn": "Thanh toán bằng",
+        "usaBankPrefix": "USA -",
+        "whereToSend": "Bạn muốn gửi tiền đến đâu?",
+        "selectCountry": "Chọn quốc gia",
+        "searchCountry": "Tìm quốc gia",
+        "optionsAvailable": "Các tùy chọn cho quốc gia đã chọn:",
+        "nextPayoutDate": "Ngày thanh toán tiếp theo:",
+        "whenEarningReaches": " Khi thu nhập đạt USD$ {amount}.",
+        "save": "LƯU",
+        "next": "TIẾP",
+        "premiumDesign": "Thiết kế Premium",
+        "userAvatar": "Ảnh đại diện",
+        "userInitial": "Chữ cái tên",
+        "withdrawEveryMonth": "Mỗi tháng",
+        "withdrawEveryMonthDesc": "Tự động rút tiền vào phương thức đã chọn mỗi tháng.",
+        "withdrawByEarningTarget": "Theo mục tiêu thu nhập",
+        "withdrawByEarningTargetDesc": "Rút tiền vào phương thức đã chọn khi thu nhập đạt mức chỉ định."
+      },
+      "step3": {
+        "titleAutoWithdraw": "Cài đặt rút tự động",
+        "titleAddMethod": "Thêm phương thức thanh toán mới",
+        "back": "Quay lại",
+        "payoutDetails": "Chi tiết thanh toán",
+        "provideInfo": "Vui lòng cung cấp các thông tin sau cho giao dịch của bạn:",
+        "bankSwiftBicCode": "Mã Swift/BIC ngân hàng",
+        "swiftPlaceholder": "Nhập mã BIC/SWIFT",
+        "swiftTooltip": "Nhập mã Swift/BIC ngân hàng",
+        "bankAccountOrIban": "Số tài khoản ngân hàng hoặc IBAN",
+        "ibanPlaceholder": "Nhập số tài khoản ngân hàng hoặc IBAN",
+        "intermediaryHelp": "Nếu bạn không chắc có cần ngân hàng trung gian cho chuyển khoản quốc tế hay không, vui lòng liên hệ ngân hàng của bạn để biết thêm thông tin.",
+        "save": "LƯU"
+      }
+    },
+    "withdraw": {
+      "title": "RÚT THU NHẬP",
+      "back": "Quay lại",
+      "next": "TIẾP",
+      "submit": "GỬI",
+      "availableBalance": "Số dư khả dụng",
+      "yourFinalPayout": "THANH TOÁN CUỐI CỦA BẠN",
+      "inclusive": "BAO GỒM",
+      "yourFinalPayoutInclusive": "THANH TOÁN CUỐI BAO GỒM",
+      "serviceChargeAmount": "Phí dịch vụ USD${amount}",
+      "transferFeeAmount": "Phí chuyển USD${amount}",
+      "usdPrefix": "USD$",
+      "step1": {
+        "whereToSend": "Bạn muốn gửi tiền đến đâu?",
+        "selectCountry": "Chọn quốc gia",
+        "searchCountry": "Tìm quốc gia",
+        "enterPayoutAmount": "Nhập số tiền thanh toán:",
+        "amountPlaceholder": "00.00",
+        "insufficientBalance": "Số dư không đủ"
+      },
+      "step2": {
+        "payoutOptionsTitle": "Các tùy chọn thanh toán tại quốc gia đã chọn:",
+        "paysIn": "Thanh toán bằng"
+      },
+      "step3": {
+        "alertTitle": "Thông tin bạn cung cấp chưa chính xác, vui lòng kiểm tra lại.",
+        "payoutDetails": "Chi tiết thanh toán",
+        "enterNecessaryInfo": "Nhập thông tin cần thiết cho giao dịch này:",
+        "provideInfo": "Vui lòng cung cấp các thông tin sau cho giao dịch của bạn:",
+        "bankSwiftBicCode": "Mã Swift/BIC ngân hàng",
+        "swiftPlaceholder": "Nhập mã BIC/SWIFT",
+        "swiftTooltip": "Nhập mã Swift/BIC ngân hàng",
+        "bankAccountOrIban": "Số tài khoản ngân hàng hoặc IBAN",
+        "ibanPlaceholder": "Nhập số tài khoản ngân hàng hoặc IBAN",
+        "intermediaryHelpMobile": "Nếu bạn không chắc có cần ngân hàng trung gian cho chuyển khoản quốc tế hay không, vui lòng liên hệ ngân hàng để biết thêm thông tin.",
+        "intermediaryHelpDesktop": "Nếu bạn không chắc có cần ngân hàng trung gian cho chuyển khoản quốc tế hay không, vui lòng liên hệ ngân hàng của bạn để biết thêm thông tin.",
+        "invalidFormat": "Định dạng không hợp lệ",
+        "address": "Địa chỉ",
+        "addressHelp": "Vui lòng đảm bảo địa chỉ này khớp với địa chỉ trên sao kê ngân hàng. Tùy phương thức thanh toán, tổ chức tài chính có thể yêu cầu sao kê làm giấy chứng minh địa chỉ để duyệt chuyển khoản.",
+        "addressLine1": "Địa chỉ dòng 1",
+        "addressLine2": "Địa chỉ dòng 2",
+        "postalCode": "Mã bưu chính",
+        "city": "Thành phố",
+        "country": "Quốc gia",
+        "stateProvince": "Bang/Tỉnh",
+        "phoneNumber": "Số điện thoại"
+      },
+      "step4": {
+        "summary": "Tóm tắt",
+        "confirmInfo": "Vui lòng xác nhận các thông tin dưới đây là chính xác:",
+        "country": "Quốc gia",
+        "payoutMethod": "Phương thức thanh toán",
+        "payoutDetails": "Chi tiết thanh toán",
+        "accountNumberEnding": "Số tài khoản kết thúc bằng {ending}",
+        "withdrawAmount": "Số tiền rút",
+        "latestBalance": "Số dư mới nhất",
+        "availableBalance": "Số dư khả dụng",
+        "payoutAmount": "Số tiền thanh toán"
+      },
+      "step5": {
+        "acceptedTitle": "Yêu cầu thanh toán của bạn đã được chấp nhận.",
+        "depositMessage": "sẽ được ghi có vào tài khoản của bạn trong vòng 3–5 ngày làm việc."
+      }
+    },
+    "history": {
+      "title": "Lịch Sử Giao Dịch",
+      "columns": {
+        "date": "Ngày",
+        "to": "Đến",
+        "status": "Trạng thái",
+        "finalPayout": "Thanh toán cuối"
+      },
+      "status": {
+        "pending": "Đang chờ",
+        "failed": "Thất bại",
+        "paid": "Đã thanh toán"
+      },
+      "aria": {
+        "viewTransferDetails": "Xem chi tiết chuyển khoản"
+      }
+    },
+    "historyDetail": {
+      "title": "LỊCH SỬ THANH TOÁN",
+      "columns": {
+        "date": "Ngày",
+        "type": "Loại",
+        "from": "Từ",
+        "detail": "Chi tiết",
+        "order": "Đơn #",
+        "total": "Tổng",
+        "commission": "Hoa hồng %",
+        "finalPayout": "Thanh toán cuối"
+      },
+      "types": {
+        "sales": "Doanh số",
+        "tokens": "Token"
+      }
+    },
+    "transferDetail": {
+      "title": "Chi Tiết Chuyển Khoản",
+      "back": "Quay lại",
+      "ariaBack": "Quay lại",
+      "processingTitle": "Yêu cầu thanh toán của bạn đang được xử lý.",
+      "completedTitle": "Yêu cầu thanh toán của bạn đã hoàn tất.",
+      "failedTitle": "Đã xảy ra lỗi với yêu cầu thanh toán của bạn.",
+      "failDescriptionPrefix": "Chúng tôi không thể xử lý khoản thanh toán vì lý do sau:",
+      "country": "Quốc gia",
+      "payoutMethod": "Phương thức thanh toán",
+      "submittedOn": "Gửi lúc",
+      "payoutDetails": "Chi tiết thanh toán",
+      "withdrawAmount": "Số tiền rút",
+      "latestBalance": "Số dư mới nhất",
+      "availableBalance": "Số dư khả dụng",
+      "payoutAmount": "Số tiền thanh toán",
+      "serviceChargeBankDeposit": "Phí dịch vụ - Nạp ngân hàng",
+      "balanceAfterPayout": "Số dư sau thanh toán",
+      "steps": {
+        "pending": "Đang chờ",
+        "processing": "Đang xử lý",
+        "complete": "Hoàn tất",
+        "failToProcess": "Xử lý thất bại"
+      }
+    },
+    "alt": {
+      "settings02": "Cài đặt",
+      "avatar": "Ảnh đại diện",
+      "down": "Xuống",
+      "search": "Tìm kiếm",
+      "searchIcon": "Tìm kiếm",
+      "ourWebsiteLogo": "Logo trang web",
+      "eye": "Ẩn/hiện số dư",
+      "download": "Tải xuống",
+      "history": "Lịch sử",
+      "close": "Đóng",
+      "settings": "Cài đặt",
+      "plus": "Thêm",
+      "globe": "Toàn cầu",
+      "more": "Thêm",
+      "edit": "Sửa",
+      "delete": "Xóa",
+      "payoutCardUserAvatar": "Ảnh đại diện thẻ thanh toán",
+      "payoutCardUserInitialNoise": "Chữ cái tên trên thẻ",
+      "autoCycle": "Chu kỳ tự động",
+      "addCard": "Thêm thẻ",
+      "chevronLeft": "Quay lại",
+      "plusSquare": "Thêm",
+      "icon": "Biểu tượng",
+      "bank": "Ngân hàng",
+      "crypto": "Crypto",
+      "chevronDown": "Mở rộng",
+      "arrowLongRight": "Tiếp tục",
+      "premiumDesign": "Thiết kế premium",
+      "token": "Token",
+      "currencyDollar": "Tiền tệ",
+      "alertOrangeFull": "Cảnh báo",
+      "xClose": "Đóng",
+      "arrowDown": "Xuống",
+      "payDeposited": "Nạp tiền",
+      "pending": "Đang chờ",
+      "paid": "Đã thanh toán",
+      "failed": "Thất bại",
+      "loader": "Đang tải",
+      "arrowUpRight": "Mở chi tiết",
+      "alertBlack": "Cảnh báo",
+      "tickMark": "Đã thanh toán",
+      "clock": "Đang chờ",
+      "checkCircle": "Thành công",
+      "arrows": "Quy đổi",
+      "arrowLeft": "Quay lại",
+      "arrowRight": "Tiếp tục",
+      "helpCircle": "Trợ giúp",
+      "creditCardDownload": "Rút tiền"
+    },
+    "mock": {
+      "displayName": "MAX WANG",
+      "lastWithdrawnDate": "11-31-2024",
+      "ledgerBalance": "$24.86",
+      "availableBalanceValue": "30054.40",
+      "nextPayoutDate": "28/05/25",
+      "autoWithdrawNextDate": "03-04-2025",
+      "amountEur": "EUR€114.48",
+      "amountUsdLarge": "$23,546.40",
+      "finalPayoutEur": "EUR€114.48",
+      "serviceChargeUsd345": "USD$3.45",
+      "transferFeeUsd38": "USD$38",
+      "feeUsd345": "Phí USD$3.45",
+      "methodBankDeposit": "Nạp ngân hàng",
+      "methodBankWire": "Chuyển khoản ngân hàng",
+      "methodUsdtEth": "USDT - Ethereum(ERC20)",
+      "methodPayme": "Payme",
+      "methodBank": "Ngân hàng",
+      "typeBank": "Ngân hàng",
+      "typeCrypto": "Crypto",
+      "countryUsa": "Mỹ",
+      "countryUk": "Anh",
+      "countryAustralia": "Úc",
+      "countryChina": "Trung Quốc",
+      "countrySingapore": "Singapore",
+      "countryHongKong": "Hồng Kông",
+      "countryFrance": "Pháp",
+      "countryIndia": "Ấn Độ",
+      "countryUnitedKingdom": "Vương quốc Anh",
+      "countryUnitedStates": "Hoa Kỳ",
+      "stateFlorida": "Florida",
+      "stateHawaii": "Hawaii",
+      "stateNewYork": "New York",
+      "currencyEur": "EUR",
+      "currencyUsd": "USD",
+      "currencyCzk": "CZK",
+      "currencyUsdt": "USDT",
+      "bankNamePlaceholder": "Tên ngân hàng",
+      "accountHolderMasked": "C**** J** H**",
+      "accountEnding123": "Số tài khoản kết thúc bằng 123",
+      "withdrawAmountUsd120": "USD$120.00",
+      "availableBalanceUsd50099": "USD$500.99",
+      "payoutAmountMinus10": "-USD$10",
+      "serviceChargeMinus345": "-USD$3.45",
+      "balanceAfterDash": "--",
+      "methodLabelBankDepositEur": "Nạp ngân hàng - EUR",
+      "periodSample": "1 Th1 2024 - 31 Th1 2024",
+      "dateSample22012025": "22/01/2025",
+      "submittedOn22Jan2025": "Gửi lúc 22 Th1 2025",
+      "creatorAll": "Tất Cả Creators",
+      "creatorModelingMagic": "{'@'}ModelingMagic",
+      "creatorExquisiteEats": "{'@'}ExquisiteEats",
+      "creatorStylishFruits": "{'@'}StylishFruits",
+      "creatorFashionFiesta": "{'@'}FashionFiesta",
+      "creatorCoutureCraze": "{'@'}CoutureCraze",
+      "creatorGlamourHarvest": "{'@'}GlamourHarvest",
+      "creatorVelvetVogue": "{'@'}VelvetVogue",
+      "creatorPixelPetals": "{'@'}PixelPetals",
+      "creatorNeonNomad": "{'@'}NeonNomad",
+      "historyRow": {
+        "date1": "22 Th1 2025",
+        "date1Mobile": "22 TH1 2025",
+        "date2": "31 Th9 2024",
+        "date2Mobile": "31 TH9 2024",
+        "date3": "31 Th7 2024",
+        "date5": "31 Th6 2024",
+        "date6": "31 Th4 2024",
+        "date7": "31 Th2 2024",
+        "date8": "31 Th1 2024",
+        "toPaymeMasked": "K**F**C***",
+        "toBankMasked": "*************1234",
+        "finalPayoutDash": "--",
+        "finalPayout2312": "USD$ 23.12",
+        "finalPayout12308": "USD$ 123.08"
+      },
+      "historyDetailRow": {
+        "date": "31 Th1 2024",
+        "from": "{'@'}Mangoes4eva",
+        "detailCrLikes": "CR-Likes",
+        "detailCrClips": "CR-Clips",
+        "detailMerch": "Merch",
+        "detailTip": "Tip",
+        "detailPrivateChat": "Chat riêng",
+        "order": "#00123",
+        "orderDash": "-",
+        "total": "USD$ 130.86",
+        "commission": "88.8%",
+        "finalPayout": "USD$ 23.12",
+        "finalPayoutMobile": "USD$ 123.08"
+      },
+      "pageTableRow": {
+        "period": "1 Th1 2024 - 31 Th1 2024",
+        "totalEarned": "USD$ 130.86",
+        "rollover": "$0",
+        "transferFee": "$0",
+        "commission": "88.8%",
+        "finalPayout": "USD$ 123.08"
+      },
+      "userInitials": "CP "
+    }
+  }
+}

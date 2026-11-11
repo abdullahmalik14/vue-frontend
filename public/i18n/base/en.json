@@ -1,0 +1,40 @@
+{
+  "ui": {
+    "languageSelector": "Language selector",
+    "language": "Language",
+    "translateThisPage": "Translate this page",
+    "translatePageAction": "Translate",
+    "languageSettings": "Language",
+    "languageSettingsDescription": "Choose your preferred language. This is saved to your account when signed in.",
+    "resetLanguageToBrowser": "Reset to browser default"
+  },
+  "demo": {
+    "checkoutReusable": {
+      "paymentLoggedIn": {
+        "deleteCard": "Delete Card",
+        "cardHolderName": "Card Holder Name",
+        "expiryDate": "Expiry Date",
+        "noName": "No Name",
+        "expiryPlaceholder": "MM/YY",
+        "expPrefix": "EXP"
+      },
+      "paymentNotLoggedIn": {
+        "saveCard": "Save this card for faster checkout.",
+        "cardNumber": "Card Number",
+        "expirationDate": "Expiration Date",
+        "cardholderName": "Cardholder Name",
+        "cvv": "CVV"
+      },
+      "notes": {
+        "title": "Notes",
+        "optional": "Optional",
+        "creatorName": "Princess Carrot Pop",
+        "placeholder": "Enter notes to {'@'}jenny1234....",
+        "charactersLeft": "{count} Characters Left"
+      },
+      "totalAmount": {
+        "label": "Total"
+      }
+    }
+  }
+}

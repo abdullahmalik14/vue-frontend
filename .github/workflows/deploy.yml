@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main, staging]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Production
+        if: github.ref == 'refs/heads/main'
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: uy4sdjn4f7-vbprod
+          key: ${{ secrets.DEPLOY_KEY_PROD }}
+          script: dploy deploy main
+
+      - name: Deploy to Staging
+        if: github.ref == 'refs/heads/staging'
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: uy4sdjn4f7-vbstage
+          key: ${{ secrets.DEPLOY_KEY_STAGE }}
+          script: dploy deploy staging

@@ -1,0 +1,83 @@
+<template>
+  <div class="min-h-screen bg-gray-50 py-8 px-4">
+    <div class="max-w-2xl mx-auto">
+      <!-- Toggle Button -->
+      <div class="mb-6">
+        <button @click="toggleComponent" class="px-4 py-2 rounded-lg font-medium transition-colors"
+          :class="showComponent ? 'bg-success hover:bg-[#06c454] text-black' : 'bg-blue-600 hover:bg-blue-700 text-white'">
+          {{ showComponent ? t('demo.countryState.hide') : t('demo.countryState.show') }}
+        </button>
+      </div>
+
+      <!-- Component Display Area -->
+      <div v-if="showComponent" class="bg-white rounded-lg shadow p-6">
+        <CountryStateSelect @update:country="onCountryUpdate" @update:state="onStateUpdate" />
+
+        <!-- Selected Values -->
+        <div v-if="selectedCountry || selectedState" class="mt-6 pt-6 border-t border-gray-200">
+          <div class="text-sm text-gray-600 space-y-1">
+            <div v-if="selectedCountry">{{ t('demo.countryState.country') }} <span class="font-mono text-gray-900">{{ selectedCountry }}</span>
+            </div>
+            <div v-if="selectedState">{{ t('demo.countryState.state') }} <span class="font-mono text-gray-900">{{ selectedState }}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import CountryStateSelect from '@/components/forms/select/CountryStateSelect.vue';
+import { log } from '@/infrastructure/logging/logHandler';
+
+export default {
+  name: 'CountryStateDemo',
+
+  components: {
+    CountryStateSelect
+  },
+
+  setup() {
+    const { t } = useI18n();
+    const showComponent = ref(true);
+    const selectedCountry = ref('');
+    const selectedState = ref('');
+
+    const toggleComponent = () => {
+      showComponent.value = !showComponent.value;
+
+      log('CountryStateDemo.vue', 'toggleComponent', 'toggle', 'Component visibility toggled', {
+        visible: showComponent.value
+      });
+    };
+
+    const onCountryUpdate = (countryCode) => {
+      selectedCountry.value = countryCode;
+
+      log('CountryStateDemo.vue', 'onCountryUpdate', 'update', 'Country updated', {
+        country: countryCode
+      });
+    };
+
+    const onStateUpdate = (stateCode) => {
+      selectedState.value = stateCode;
+
+      log('CountryStateDemo.vue', 'onStateUpdate', 'update', 'State updated', {
+        state: stateCode
+      });
+    };
+
+    return {
+      t,
+      showComponent,
+      selectedCountry,
+      selectedState,
+      toggleComponent,
+      onCountryUpdate,
+      onStateUpdate
+    };
+  }
+};
+</script>

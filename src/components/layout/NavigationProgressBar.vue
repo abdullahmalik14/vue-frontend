@@ -1,0 +1,31 @@
+<template>
+  <div
+    v-if="showProgressBar"
+    class="fixed top-0 left-0 right-0 h-[3px] z-[99999] pointer-events-none"
+    role="progressbar"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    :aria-valuenow="progressPercent"
+    aria-label="Page loading"
+  >
+    <div
+      class="h-full w-full bg-blue-600 origin-left transition-transform duration-200 ease-out"
+      :style="{ transform: `scaleX(${progress})` }"
+    />
+  </div>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import { useNavigationProgress } from '@/systems/routing/navigationProgress.js';
+
+const { isActive, progress } = useNavigationProgress();
+const route = useRoute();
+
+const showProgressBar = computed(
+  () => isActive.value && route.meta?.routeConfig?.slug !== '/iframe/analytics',
+);
+
+const progressPercent = computed(() => Math.round(progress.value * 100));
+</script>

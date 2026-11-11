@@ -1,0 +1,4150 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back!",
+    "overview": "Overview",
+    "settings": "Settings",
+    "profile": {
+      "name": "lindenMay",
+      "handle": "{'@'}linden",
+      "status": {
+        "away": "Away",
+        "offline": "Offline"
+      },
+      "viewProfile": "View profile",
+      "goLive": "Go Live",
+      "videoCallStatus": "Video call status",
+      "audioCallStatus": "Audio call status",
+      "changeCustomMessages": "Change Custom Messages",
+      "repostStatusX": "Repost status message to X",
+      "writeStatus": "Write status here...",
+      "awayMessage": "Away Message...",
+      "mock": {
+        "defaultStatus": "I am all dressed up ready to eat some chicken 💋"
+      }
+    },
+    "logout": "Logout",
+    "more": "More",
+    "menu": {
+      "home": "Home",
+      "analytics": "Analytics",
+      "payout": "Payout",
+      "orders": "Orders",
+      "media": "Media",
+      "chats": "Chats",
+      "subscriptions": "Subscriptions",
+      "shops": "Shops",
+      "yourMerch": "Your Merch",
+      "customProductSetting": "Custom product setting",
+      "coupons": "Coupons",
+      "xrepost": "X Repost",
+      "blog": "Blog",
+      "ordersReceived": "Orders Received",
+      "customProductRequest": "Custom Product Request",
+      "itemPurchased": "Item Purchased",
+      "editProfile": "Edit Profile",
+      "subscribersFollowers": "Subscribers & Followers",
+      "yourPosts": "Your Posts",
+      "referrals": "Referrals",
+      "settings": "Settings"
+    },
+    "quote": {
+      "newQuote": "New Quote"
+    },
+    "xRepost": {
+      "title": "X Repost Automation",
+      "subtitle": "Tell fans what you're up to—add an automation command to post on X (Twitter)",
+      "addNew": "Add New",
+      "savedToast": "New repost automation saved.",
+      "deleteConfirm": {
+        "message": "Are you sure you want to delete?",
+        "cancel": "Cancel",
+        "confirm": "Delete"
+      },
+      "popupTitle": "I want to post about..",
+      "newRepostMenu": "New repost menu",
+      "newAutomation": "New Automation",
+      "add": "Add",
+      "deleteRule": "Delete rule",
+      "delete": "Delete",
+      "previewAndSave": "Preview and Save",
+      "previewPost": "Preview Post",
+      "editDraft": "Edit Draft",
+      "leaveConfirm": {
+        "title": "Are you sure you want to leave?",
+        "message": "Your changes will not be saved.",
+        "back": "Back",
+        "discard": "Discard Changes"
+      },
+      "postPreview": {
+        "title": "Post Preview",
+        "displayName": "Jenny P",
+        "handle": "{'@'}jennyp",
+        "body": "I'm on a mission to sell '{salesGoal}' items—let's make it happen together! I've already reached '{percentage}'% of my goal, and your support means the world to me!",
+        "bodyTemplate": "Help me reach my goal of selling (Custom Goal) items! so far i have reach (Percentage) of my goal!",
+        "edit": "edit...",
+        "discardEdit": "Discard",
+        "saveEdit": "Save",
+        "charactersCount": "{used}/{max} characters",
+        "stages": {
+          "beforeGoal": "Before goal is reached",
+          "beforeGoalHelp": "This message will post in your scheduled frequency until your custom goal is reached.",
+          "whenGoal": "When goal is reached",
+          "whenGoalHelp": "This message will only be posted when you reach your custom goal. You may customised this post for later"
+        },
+        "stats": {
+          "count": "22.4k"
+        },
+        "legend": {
+          "title": "Legend",
+          "salesGoal": "Your set custom goal",
+          "percentage": "% of your custom goal achieved",
+          "yourTarget": "Your target",
+          "targetValue": "{current}/{goal} {suffix}",
+          "nextPost": "Next scheduled post",
+          "nextPostValue": "4-12-2024 xx:xx"
+        },
+        "saveDraft": "Save as draft",
+        "savePost": "SAVE & POST",
+        "media": {
+          "modes": {
+            "topSelling": "Use Top Selling Media Image",
+            "uploadOwn": "Upload Your Own",
+            "none": "Don't Use Media"
+          },
+          "uploadTitle": "Click to upload",
+          "uploadSubtitle": "or drag and drop",
+          "uploadFileInfo": "MP4, MOV, PNG, JPG or GIF (max. 4 media, 8GB)",
+          "imageLabel": "Image"
+        }
+      },
+      "labels": {
+        "total": "Total",
+        "every": "Every",
+        "itemsSold": "Items Sold",
+        "tokens": "Tokens",
+        "cashGifts": "Cash Gifts",
+        "newSubscribers": "New Subscriber",
+        "recurringSubscribers": "Recurring Subscriber"
+      },
+      "columns": {
+        "type": "type",
+        "metric": "metric",
+        "conditions": "conditions"
+      },
+      "filters": {
+        "allType": "All Type",
+        "viewAll": "View All",
+        "tabs": {
+          "all": "All",
+          "published": "Published",
+          "draft": "Draft"
+        }
+      },
+      "types": {
+        "profile": "Profile",
+        "subscription": "Subscription",
+        "media": "Media",
+        "merch": "Merch",
+        "customRequest": "Custom Request",
+        "livestream": "Livestream",
+        "privateChat": "Private Chat",
+        "videoCall": "Video Call",
+        "audioCall": "Audio Call"
+      },
+      "metrics": {
+        "profileLikes": "Profile Likes",
+        "feedLikes": "Feed Likes",
+        "profileVisits": "Profile Visits",
+        "followers": "Followers",
+        "salesUsd": "Sales (USD)",
+        "subscribers": "Subscribers",
+        "subscriptionPlan": "Subscription Plan",
+        "salesQty": "Sales (QTY)",
+        "mediaLikes": "Media Likes",
+        "views": "Views",
+        "watchDuration": "Total Watch Duration",
+        "merchLikes": "Merch Likes",
+        "goingLive": "Going Live",
+        "tip": "Tip",
+        "cashGift": "Cash Gift",
+        "sales": "Sales",
+        "likes": "Likes",
+        "newSubs": "New Subscribers",
+        "requests": "Requests",
+        "viewers": "Viewers",
+        "messages": "Messages",
+        "calls": "Calls",
+        "earnings": "Earnings"
+      },
+      "metricHelp": {
+        "profile": {
+          "profileLikes": "Broadcast your profile likes in frequency of your choice or when target goal is reached.",
+          "feedLikes": "Broadcast your feed likes in frequency of your choice or when target goal is reached.",
+          "profileVisits": "Broadcast number of profile visits in frequency of your choice or when target goal is reached.",
+          "followers": "Broadcast your profile followers in frequency of your choice or when target goal is reached."
+        },
+        "subscription": {
+          "salesUsd": "Broadcast your subscription earnings in frequency of your choice or when target goal is reached.",
+          "subscribers": "Broadcast number of subscribers in frequency of your choice or when target goal is reached.",
+          "subscriptionPlan": "Broadcast your subscription plan info in frequency of your choice or when target goal is reached."
+        },
+        "media": {
+          "salesUsd": "Broadcast your media earnings in frequency of your choice or when target goal is reached.",
+          "salesQty": "Broadcast your total item sold in frequency of your choice or when target goal is reached.",
+          "mediaLikes": "Broadcast your media likes in frequency of your choice or when target goal is reached.",
+          "views": "Broadcast your total views in frequency of your choice or when target goal is reached.",
+          "watchDuration": "Broadcast your total watch duration in frequency of your choice or when target goal is reached."
+        },
+        "merch": {
+          "salesUsd": "Broadcast your merch earnings in frequency of your choice or when target goal is reached.",
+          "salesQty": "Broadcast your total item sold in frequency of your choice or when target goal is reached.",
+          "merchLikes": "Broadcast your merch likes in frequency of your choice or when target goal is reached.",
+          "views": "Broadcast your total views in frequency of your choice or when target goal is reached."
+        },
+        "customRequest": {
+          "salesUsd": "Broadcast your custom request earnings in frequency of your choice or when target goal is reached.",
+          "salesQty": "Broadcast your total item sold in frequency of your choice or when target goal is reached.",
+          "views": "Broadcast your total views in frequency of your choice or when target goal is reached."
+        },
+        "livestream": {
+          "goingLive": "Let your fan know when you started a live streaming session.",
+          "tip": "Make an X post when you were tipped in a live streaming session.",
+          "cashGift": "Make an X post when you receive cash gift in a live streaming session.",
+          "sales": "Make an X post when you make a sale in a live streaming session."
+        },
+        "privateChat": {
+          "tip": "Make an X post when you were tipped in a chat.",
+          "cashGift": "Make an X post when you receive cash gift during chat.",
+          "sales": "Make an X post when you make a sale during chat."
+        },
+        "videoCall": {
+          "tip": "Make an X post when you were tipped during video call.",
+          "cashGift": "Make an X post when you receive cash gift during video call.",
+          "sales": "Make an X post when you make a sale during video call."
+        },
+        "audioCall": {
+          "tip": "Make an X post when you were tipped during audio call.",
+          "cashGift": "Make an X post when you receive cash gift during audio call.",
+          "sales": "Make an X post when you make a sale during audio call."
+        }
+      },
+      "conditions": {
+        "placeholder": "Select a condition",
+        "everyNew": {
+          "label": "Every New Sale",
+          "help": "Post every time a new sale is made to keep your audience excited and engaged."
+        },
+        "customCount": {
+          "label": "Custom Sales Count",
+          "help": "Post when you reach a set number of sales. Customize the count to fit your goals."
+        },
+        "growth": {
+          "label": "Growth Comparison",
+          "help": "Post only if your sales increase compared to the previous period to highlight positive trends."
+        },
+        "total": {
+          "label": "Total Sales Count",
+          "help": "Post the total number of sales for a chosen timeframe."
+        },
+        "customGoal": {
+          "label": "Custom Goal",
+          "help": "Set a sales goal and post daily progress updates until the goal is reached."
+        }
+      },
+      "frequency": {
+        "label": "Post Frequency",
+        "placeholder": "Post Frequency",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly",
+        "customRange": "Custom Range..."
+      },
+      "units": {
+        "days": "Days"
+      },
+      "placeholders": {
+        "count": "Enter amount",
+        "amount": "Enter Amount",
+        "days": "7",
+        "postMessage": "Enter post message"
+      },
+      "seePreview": "See Preview",
+      "merch": {
+        "addMerchCollection": "Add Merch/Collection",
+        "search": "Search",
+        "noResults": "No results found."
+      },
+      "tiers": {
+        "placeholder": "Select a tier",
+        "allTier": "All Tier",
+        "allTierHelp": "Repost every time when you gain a new subscribers on any tiers.",
+        "freeTier123": "Free Tier 123",
+        "freeTier123Help": "Repost every time when you gain a new subscribers on free tier 123.",
+        "paidTier1": "Paid Tier 1",
+        "paidTier1Help": "Repost every time when you gain a new subscribers on paid tier 1.",
+        "paidTier2": "Paid Tier 2",
+        "paidTier2Help": "Repost every time when you gain a new subscribers on paid tier 2.",
+        "paidTier3": "Paid Tier 3",
+        "paidTier3Help": "Repost every time when you gain a new subscribers on paid tier 3.",
+        "paidTier4": "Paid Tier 4",
+        "paidTier4Help": "Repost every time when you gain a new subscribers on paid tier 4.",
+        "paidTier5": "Paid Tier 5",
+        "paidTier5Help": "Repost every time when you gain a new subscribers on paid tier 5."
+      }
+    },
+    "referrals": {
+      "promo": {
+        "heading": "Maximize your earnings and watch your income grow!",
+        "body": "Hey {username}! 👋 Share your referral link and earn a {bonus} from your friends' monthly earnings. More creators, more cash—start now and watch your earnings grow!",
+        "username": "{'@'}username",
+        "bonus": "2% referral bonus"
+      },
+      "copyLink": "Copy referral link",
+      "copied": "Copied",
+      "totalEarning": "Total Referral Earning",
+      "monthlyEarning": "Your Referral Earning this Month",
+      "details": "Details",
+      "amountUsd": "{amount} USD",
+      "table": {
+        "title": "Your Referrals",
+        "searchPlaceholder": "Search by username",
+        "profile": "Profile",
+        "empty": "No referrals found",
+        "deactivatedOn": "Deactivated on {date}",
+        "columns": {
+          "from": "From",
+          "status": "Status",
+          "joinDate": "Join Date"
+        },
+        "status": {
+          "approved": "Approved",
+          "inviteSent": "Invite Sent",
+          "deactivated": "Deactivated"
+        }
+      },
+      "earningHistory": {
+        "title": "Referral Earning History",
+        "close": "Close",
+        "allTime": "All Time",
+        "empty": "No earning history found",
+        "amountUsd": "USD$ {amount}",
+        "columns": {
+          "referee": "Referee",
+          "amount": "Amount"
+        },
+        "months": {
+          "jan": "Jan",
+          "feb": "Feb",
+          "mar": "Mar",
+          "apr": "Apr",
+          "may": "May",
+          "jun": "Jun",
+          "jul": "Jul",
+          "aug": "Aug",
+          "sep": "Sep",
+          "oct": "Oct",
+          "nov": "Nov",
+          "dec": "Dec"
+        }
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "tabs": {
+        "all": "All",
+        "unread": "Unread",
+        "customRequests": "Custom Requests",
+        "account": "Account"
+      },
+      "action": {
+        "dismiss": "Dismiss",
+        "takeAction": "Take Action"
+      },
+      "mock": {
+        "mediaRequired": "Media Content Required: Your profile currently has no media. Enhance your profile's visibility by adding at least 5 media items.",
+        "mediaApproved": "Congratulations: Your media 'Audio with placeholder and no preview' has been approved.",
+        "bankRequired": "Bank Details Required: To ensure seamless transactions, please complete your bank information."
+      }
+    },
+    "analytics": {
+      "page": {
+        "overviewTitle": "Overview/Insight",
+        "lastUpdated": "Last updated at",
+        "refresh": "Refresh",
+        "refreshing": "fetching data...",
+        "learnHowToEarn": "Learn how you can earn",
+        "trends": "Trends",
+        "trend": "Trend"
+      },
+      "periods": {
+        "yearly": "Yearly",
+        "monthly": "Monthly",
+        "weekly": "Weekly",
+        "daily": "Daily",
+        "allTime": "All Time"
+      },
+      "overview": {
+        "welcomeBack": "Welcome back, {name}!",
+        "creatorFallback": "Creator",
+        "new": "NEW",
+        "recurring": "RECURRING",
+        "newFollowers": "NEW FOLLOWERS",
+        "profileVisit": "PROFILE VISIT",
+        "media": "MEDIA",
+        "merch": "MERCH",
+        "profile": "PROFILE",
+        "feed": "FEED"
+      },
+      "trends": {
+        "salesInsights": "Sales Insights",
+        "tokenInsights": "Token Insights",
+        "topCountries": "Top Countries",
+        "topMedia": "Top Media",
+        "topTags": "Top Tags",
+        "topMerch": "Top Merch",
+        "noTrend": "No trend to show at the moment",
+        "learnToEarn": "Learn ways to earn",
+        "newSubscribers": "New Subscribers",
+        "recurringSubscribers": "Recurring Subscribers",
+        "subscriptionsInsight": "Subscriptions Insight",
+        "tiersBreakdown": "Tiers Breakdown",
+        "followersAndVisits": "Followers & Visits Trend",
+        "trafficSource": "Traffic Source",
+        "likesInsight": "Likes Insight",
+        "topContributors": "Top Contributors - All Time",
+        "topFans": "Top Fans",
+        "topOrderSpenders": "Top Order Spenders",
+        "subscribers": "Subscribers",
+        "earnings": "Earnings",
+        "fans": "Fans",
+        "likes": "Likes",
+        "vsYesterday": "vs yesterday",
+        "titleEarnings": "Earnings Insight",
+        "titleFans": "Fans Insight",
+        "titleLikes": "Likes Insight",
+        "titleContributors": "Contributors Insight",
+        "totalEarnings": "Total Earnings",
+        "tokensReceived": "Tokens Received",
+        "newFollowers": "New Followers",
+        "totalProfileVisit": "Total Profile Visit",
+        "vsLastDaily": "vs last 24 hour",
+        "vsLastWeekly": "vs last week",
+        "vsLastMonthly": "vs last 30 days",
+        "vsLastYearly": "vs last year",
+        "vsLastAllTime": "vs previous period"
+      },
+      "likes": {
+        "media": "Media Likes",
+        "merch": "Merch Likes",
+        "profile": "Profile Likes",
+        "feed": "Feed Likes"
+      },
+      "contributors": {
+        "contributor": "Contributor",
+        "fan": "Fan",
+        "spender": "Spender"
+      },
+      "tables": {
+        "fan": "Fan",
+        "totalUsd": "Total (USD)",
+        "salesUsd": "Sales (USD)",
+        "noTopContributors": "No top contributors yet",
+        "orders": {
+          "details": "Details",
+          "noOrders": "You don't have any orders at the moment",
+          "allOrders": "All Orders",
+          "orderLabel": "Order#",
+          "from": "From",
+          "date": "Date",
+          "total": "Total",
+          "status": "Status"
+        },
+        "tabs": {
+          "subscriptions": "Subscriptions",
+          "payToView": "Pay to View",
+          "merch": "Merch",
+          "customRequest": "Custom Request",
+          "wishtender": "Wishtender"
+        },
+        "media": {
+          "media": "Media",
+          "clicks": "# of Clicks",
+          "watchDuration": "Watch Duration",
+          "sales": "# of Sales",
+          "salesUsd": "Sales (USD)",
+          "viewsTab": "Views",
+          "p2vSalesTab": "P2V Sales"
+        },
+        "tags": {
+          "tags": "Tags",
+          "views": "# of views"
+        },
+        "merch": {
+          "merch": "Merch",
+          "views": "# of views"
+        }
+      },
+      "legends": {
+        "customrequest": "Custom Request",
+        "tipTokens": "Tip Tokens",
+        "p2v": "Pay to View",
+        "merch": "Merch",
+        "sub": "Subscription",
+        "wishtender": "Wishtender",
+        "callTokens": "Call Tokens",
+        "chatTokens": "Chat Tokens",
+        "liveStreamTokens": "Live Stream Tokens",
+        "free": "Free",
+        "tier1": "Tier 1",
+        "tier2": "Tier 2",
+        "tier3": "Tier 3",
+        "tier4": "Tier 4",
+        "tier5": "Tier 5",
+        "paytoview": "Pay to View",
+        "subscription": "Subscription",
+        "profileVisit": "Profile Visit",
+        "newFollowers": "New Followers",
+        "newSubscriber": "New Subscriber",
+        "recurringSubscriber": "Recurring Subscriber"
+      }
+    },
+    "orders": {
+      "title": "Orders Received",
+      "searchPlaceholder": "Search...",
+      "searchAlt": "Search",
+      "dropdownAlt": "Dropdown",
+      "orderTypeLabel": "Order Type",
+      "tabs": {
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "canceled": "Canceled",
+        "all": "All"
+      },
+      "orderTypes": {
+        "all": "All Types",
+        "p2v": "P2V",
+        "subscription": "Subscription",
+        "merch": "Merch",
+        "mix": "Mix"
+      },
+      "columns": {
+        "orderNum": "Order#",
+        "from": "From",
+        "status": "Status",
+        "date": "Date",
+        "total": "Total"
+      },
+      "guestUser": "Guest User",
+      "status": {
+        "new": "New"
+      },
+      "empty": {
+        "prefix": "You haven't received any",
+        "suffix": "orders yet",
+        "matching": "matching"
+      },
+      "popup": {
+        "orderTitle": "Order{orderNum}",
+        "receivedOn": "Received on {date}",
+        "closeAlt": "Close",
+        "merchAlt": "Merch",
+        "locationAlt": "Location",
+        "uploadAlt": "Upload",
+        "enterInputAlt": "Enter details manually",
+        "trashAlt": "Delete",
+        "usersAlt": "Users",
+        "locationPinAlt": "Ship to",
+        "filesAlt": "Files",
+        "editPenAlt": "Edit",
+        "logoGreenAlt": "Discount logo",
+        "tagGreenAlt": "Promo tag",
+        "uploadedImageAlt": "Uploaded screenshot",
+        "pendingShipping": {
+          "title": "Pending Shipping",
+          "description": "Please add tracking details to this order when item(s) is shipped.",
+          "addTracking": "Add Tracking Details"
+        },
+        "tracking": {
+          "title": "Add Tracking Details",
+          "uploadScreenshot": "Upload Screenshot",
+          "enterManually": "Enter Details Manually",
+          "courierLabel": "Courier",
+          "courierPlaceholder": "Select Courier",
+          "trackingNumberLabel": "Tracking Number/ID",
+          "updateDetail": "Update detail",
+          "shareInfo": "We will share these information to {'@'}{fanHandle}",
+          "uploadTitle": "Click to upload",
+          "uploadSubtitle": "or drag and drop",
+          "uploadFileInfo": "SVG, PNG, JPG or GIF (max. 800x400px)"
+        },
+        "details": {
+          "from": "From",
+          "shipTo": "Ship to",
+          "notesFromBuyer": "Notes from buyer",
+          "shippingInformation": "Shipping Information",
+          "courier": "Courier",
+          "trackingNumber": "Tracking number/ID",
+          "edit": "EDIT"
+        },
+        "pricing": {
+          "merchDiscount": "{percent}% off merch",
+          "p2vDiscount": "{percent}% off P2V",
+          "subtotal": "Subtotal",
+          "totalDiscount": "Total Discount",
+          "total": "Total"
+        },
+        "couriers": {
+          "dhl": "DHL",
+          "fedex": "FedEx",
+          "ups": "UPS"
+        },
+        "cancelUpload": {
+          "deleteScreenshot": "Are you sure you want to delete your screenshot?",
+          "leaveWithoutSaving": "Are you sure you want to leave? Your changes will not be saved."
+        },
+        "notification": {
+          "title": "Tracking Details added to Order {orderNum}",
+          "fanNotified": "{'@'}{fanHandle} will be notified of this update."
+        },
+        "mock": {
+          "fanHandle": "mangoes",
+          "fanEmail": "email{'@'}email.com",
+          "shipToAddress": "101 S Chicago Ave. Portales, New York, 88130",
+          "buyerNotes": "Here is some order notes Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis tortor at sem luctus blandit ac ac tortor. Vivamus lobortis.",
+          "promoCode": "JENNY2024",
+          "itemMerchTaiwan": "Mango (Taiwan)",
+          "itemMerchPhilippines": "Mango (Philippines)",
+          "itemP2v": "Watch me eat 10 family size chicken bucket!! You wont's bel"
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "update": "Update",
+    "edit": "Edit",
+    "delete": "Delete",
+    "optional": "Optional",
+    "tokens": "Tokens",
+    "descriptionOptional": "Description (Optional)",
+    "searchByUsernameEmail": "Search by username & email",
+    "requiredField": "This field is required."
+  },
+  "booking": {
+    "eventTitlePlaceholder": "Event Title",
+    "eventDescriptionPlaceholder": "Event Description...",
+    "basePrice": "Base Price",
+    "sessionDuration": "Session duration",
+    "minutes": "Minutes",
+    "perSession": "/session",
+    "coPerformerOptional": "Co-performer (Optional)",
+    "blockedUser": "Blocked user",
+    "bookingFee": "Enable booking fee",
+    "bookingFeeTooltip": "This amount will be on hold in fan's token balance. If booking is rejected after negotiation period, this amount will be deducted from fan's balance. If booking is accepted, the balance on hold will be deducted towards the call session payment.",
+    "offHourSurcharge": "Off-hour Surcharge",
+    "percentFromBasePrice": "% from base price",
+    "remindMe": "Remind me",
+    "minutesBeforeCall": "minutes before a",
+    "scheduledCall": "scheduled call.",
+    "originalPrice": "Original Price",
+    "discountedPriceOptional": "Discounted Price (optional)",
+    "priceRangeDescription": "Price must be between USD$ 1.95 to 500.",
+    "validationEventTitleRequired": "Event title is required.",
+    "activeSubscribersTitle": "You have 3 active subscriber in this tier",
+    "activeSubscribersDescription": "Changing detail of this plan might affect current subscriber's subscription fee and benefits.",
+    "validationTitle": "Validation Error",
+    "eventTitleRequired": "Event Title is required.",
+    "paymentFailedTitle": "Payment unsuccessful",
+    "paymentFailedDescription": "Payment was unsuccessful due to a poor network connection. Please try again later",
+    "tipSentTokens": "You have sent {amount} tokens to Jenny.",
+    "tipSentCash": "You have sent USD$ {amount} to Jenny.",
+    "tipLimitExceeded": "Input value exceeds maximum allowance (14,000 tokens)",
+    "tipSetToMax": "Set to Max",
+    "tipTokenAlt": "Token tip",
+    "tipAlertAlt": "Alert",
+    "tipChevronAlt": "Next",
+    "validationBasePriceMin": "Base price must be 0 or higher.",
+    "maximumSessionAllowed": "Maximum Session Allowed",
+    "sessions": "sessions",
+    "moreOptions": {
+      "title": "Options Dropdown",
+      "moreTime": "Ask for more time",
+      "reschedule": "Ask to reschedule",
+      "cancelCall": "Cancel Call",
+      "icons": {
+        "clock": "Clock plus",
+        "calendar": "Calendar",
+        "cancel": "Cancel call"
+      }
+    },
+    "adjustment": {
+      "titles": {
+        "moreTime": "Ask for more time",
+        "reschedule": "Ask to reschedule",
+        "cancel": "Cancel Call"
+      },
+      "eventDate": "Event date",
+      "newEventDate": "New event date",
+      "originalEventDate": "Original event date: {date}",
+      "newStartTime": "New start time",
+      "originalStartTime": "Original start time: {time}",
+      "sendRequest": "Send request to",
+      "cancel": {
+        "description": "Are you sure you want to cancel this event? Booking Fee will still be deducted from your wallet.",
+        "back": "Back",
+        "confirm": "Cancel Call"
+      },
+      "icons": {
+        "header": "Action icon",
+        "close": "Close",
+        "calendar": "Calendar",
+        "chevron": "Expand",
+        "send": "Send"
+      },
+      "samples": {
+        "eventDate": "April 24, 2025",
+        "eventDateReschedule": "Tue, August 24, 2025",
+        "originalDate": "April 24, 2025",
+        "newTime": "9:30pm",
+        "endTime": "10:30pm",
+        "originalTime": "9:15pm",
+        "userName": "jennyhunny"
+      }
+    }
+  },
+  "avatarMenu": {
+    "edit": "edit",
+    "uploadNew": "upload new",
+    "chooseFromAvatars": "choose from avatars",
+    "icons": {
+      "edit": "edit",
+      "upload": "upload",
+      "avatars": "avatar"
+    }
+  },
+  "uploadProgress": {
+    "uploading": "Uploading...",
+    "complete": "Complete"
+  },
+  "profileSettings": {
+    "editProfile": "Edit Profile",
+    "badges": {
+      "comingSoon": "(Coming Soon)"
+    },
+    "icons": {
+      "avatar": "Profile avatar",
+      "edit": "Edit profile",
+      "menuItem": "Menu item icon"
+    },
+    "creator": {
+      "categories": {
+        "general": "GENERAL",
+        "callLive": "CALL & LIVE STREAM SETTINGS",
+        "transaction": "TRANSACTION",
+        "social": "SOCIAL MEDIA AND SHARING"
+      },
+      "items": {
+        "accountInformation": "Account Information",
+        "changePassword": "Change Password",
+        "privacySecurity": "Privacy & Security",
+        "liveStreamSettings": "Live Stream Settings",
+        "callSettings": "Call Settings",
+        "shippingAddress": "Shipping Address",
+        "payoutDetails": "Payout Details",
+        "newsletterEmailSettings": "Newsletter & Email Settings",
+        "xRepostAutomation": "X Repost Automation"
+      }
+    },
+    "vendor": {
+      "categories": {
+        "storeSettings": "STORE SETTINGS",
+        "ordersFinance": "ORDERS & FINANCE"
+      },
+      "items": {
+        "shopProfile": "Shop Profile",
+        "inventoryManagement": "Inventory Management",
+        "orderHistory": "Order History",
+        "payoutSettings": "Payout Settings"
+      }
+    },
+    "fan": {
+      "categories": {
+        "myAccount": "MY ACCOUNT",
+        "billing": "BILLING"
+      },
+      "items": {
+        "profileSettings": "Profile Settings",
+        "mySubscriptions": "My Subscriptions",
+        "paymentMethods": "Payment Methods",
+        "purchaseHistory": "Purchase History"
+      }
+    },
+    "agent": {
+      "categories": {
+        "agencyControls": "AGENCY CONTROLS",
+        "finance": "FINANCE"
+      },
+      "items": {
+        "agencyDashboard": "Agency Dashboard",
+        "manageCreators": "Manage Creators",
+        "commissionReports": "Commission Reports"
+      }
+    }
+  },
+  "calendar": {
+    "newMessage": {
+      "badge": "{count} NEW MESSAGES",
+      "icons": {
+        "message": "New messages",
+        "close": "Close"
+      }
+    },
+    "chat": {
+      "title": "Chat",
+      "icons": {
+        "edit": "Edit",
+        "dropdown": "Menu",
+        "avatar": "Contact avatar"
+      },
+      "contacts": {
+        "oliviaRhye": "Olivia Rhye",
+        "portiaRhye": "Portia Rhye",
+        "samanthaRhye": "Samantha Rhye"
+      },
+      "messages": {
+        "jennyBackTonight": "Jenny: Jenny is back! Tonight I will eat mostly fruits.-> 8pm EST time👅!",
+        "jamBackInStock": "Jenny: My Jam is back in stock!",
+        "checkOutNewContent": "Jenny: Check out my new content",
+        "jennyBack": "Jenny: Jenny is back!"
+      }
+    },
+    "adjustCost": {
+      "title": "Call me and i will sing with you",
+      "date": "April 24, 2025",
+      "timeRange": "2:15pm-9:30pm",
+      "originalPrice": "500",
+      "adjustedPrice": "1337 Token",
+      "remarksLabel": "Your remarks",
+      "remarks": "I charge a flat rate of 500 tokens for each personal request. for you I need to charge USD 40 worth of tokens more for the special costume you requested on top of that.",
+      "waitingForResponse": "waiting for response",
+      "viewDetails": "View Details",
+      "icons": {
+        "dots": "More options",
+        "hourglass": "Waiting",
+        "arrowRight": "View details"
+      }
+    },
+    "callSoon": {
+      "title": "Call me and i will sing with you",
+      "date": "April 24, 2025",
+      "timeRange": "2:15pm-9:30pm",
+      "startsIn": "in 5 min",
+      "joinCall": "Join Call",
+      "otherOptions": "Other Options",
+      "icons": {
+        "dots": "More options",
+        "phoneIncoming": "Join call",
+        "dotsHorizontal": "Other options"
+      }
+    },
+    "eventDropdown": {
+      "videoCall": "Video Call",
+      "audioCall": "Audio Call",
+      "groupCall": "Group Call",
+      "showSchedule": "Show booking schedule availability"
+    },
+    "main": {
+      "showExistingEvents": "Show existing events/booking schedule"
+    }
+  },
+  "subscriptionPlanCard": {
+    "titleFeatured": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+    "price": "USD$499.99",
+    "labelNew": "New Subscription",
+    "footerBillingCycle": "Your membership will update in your next billing cycle (xx-xx-xxxx)",
+    "footerCheckoutStart": "Your subscription will begin as soon as you complete checkout. Your billing cycle will start (02-26-2025)."
+  },
+  "subscriptionCard": {
+    "badges": {
+      "featured": "FEATURED",
+      "currentSubscription": "Current Subscription"
+    },
+    "actions": {
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "subscribe": "Subscribe"
+    },
+    "readMore": "...Read more",
+    "discount": "-80%",
+    "perMonth": "/mo",
+    "currencyPrefix": "USD$",
+    "icons": {
+      "videos": "Videos",
+      "photos": "Photos",
+      "media": "Media"
+    },
+    "titles": {
+      "featuredLibrary": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+      "library": "Library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+    },
+    "plans": {
+      "tease": "Tease – Starter Access",
+      "desiree": "Desiree – Deeper Access",
+      "crave": "Crave – All Access",
+      "obey": "Obey – Ultimate VIP",
+      "free": "FREE SUBSCRIPTION"
+    },
+    "description": "Watch all of my mango eating content! content update weekly!<br><br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing",
+    "subscribeDescription": "Success in any field requires constant learning, innovation, and adaptability. In a world driven by technology, those who embrace change gain the advantage.",
+    "features": {
+      "freeTokens": "<span class=\"font-semibold text-[#FF0066]\">10 free tokens</span> each month",
+      "merchandise": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Merchandise",
+      "customRequest": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Custom Request",
+      "payToView": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Pay to View videos",
+      "subscribeFreeTokens": "<span class=\"font-semibold text-[#FF0066]\">15 free tokens</span> per month",
+      "subscribeMerchandise": "<span class=\"font-semibold text-[#FF0066]\">4% off</span> on all Merchandise",
+      "subscribePayToView": "<span class=\"font-semibold text-[#FF0066]\">4% off</span> on all Pay to View videos",
+      "subscribeCustomRequest": "<span class=\"font-semibold text-[#FF0066]\">4% off</span> on all Custom Request"
+    }
+  },
+  "profile": {
+    "feed": {
+      "monthMarch": "MARCH",
+      "monthFebruary": "FEBRUARY",
+      "year2024": "2024",
+      "pollTitle": "What Should I eat for tonight's live stream?",
+      "pollOptionOrange": "Orange",
+      "pollOptionApple": "Apple",
+      "pollOptionChicken": "Chicken",
+      "pollTimeLeft": "24 hours left to vote",
+      "mediaDescription": "Jenny is back! Tonight I will eat mostly fruits. -> 8pm EST time 👅!"
+    },
+    "mediaTabs": {
+      "payToView": "Pay to View",
+      "subscription": "Subscription",
+      "title": "Building successful teams through collaboration",
+      "timeAgo": "2h ago"
+    },
+    "merch": {
+      "title": "My top (washed) Get Jenny's favourite Mangoes!",
+      "description": "Get Jenny's favourite Mangoes! Buy them while supply last !Get Jenny's favourite Mangoes! Buy them while supply last !Get Jenny's favourite Mangoes! Buy them while supply last !",
+      "discount": "10% OFF",
+      "titleOutOfStock": "Out of Stock Item",
+      "descriptionOutOfStock": "This item is out of stock.",
+      "currency": "USD",
+      "price": "$25",
+      "finalPrice": "$25"
+    },
+    "labels": {
+      "followers": "Followers",
+      "likes": "Likes",
+      "subscribers": "Subscribers",
+      "viewAll": "View All",
+      "tip": "Tip",
+      "starting": "Starting",
+      "perMonth": "/mo",
+      "subscribe": "SUBSCRIBE",
+      "subscribeOrBuy": "Subscribe or Buy",
+      "readMore": "Read more",
+      "ellipsis": "...",
+      "votesSuffix": "votes",
+      "voteSingular": "vote",
+      "separator": "/"
+    },
+    "alt": {
+      "logoFull": "Website logo",
+      "logoWhite": "Website logo",
+      "cart": "Cart",
+      "bell": "Notifications",
+      "globe": "Language",
+      "avatar": "Profile avatar",
+      "token": "Token",
+      "call": "Call",
+      "callHover": "Call",
+      "message": "Message",
+      "onlineDot": "Online",
+      "verified": "Verified",
+      "verifiedTick": "Verified",
+      "addNormal": "Add",
+      "addActive": "Added",
+      "likeNormal": "Like",
+      "likeActive": "Liked",
+      "dots": "More options",
+      "dotsHorizontal": "More options",
+      "chevronLeft": "Back",
+      "eye": "Views",
+      "heart": "Likes",
+      "link": "Copy link",
+      "profile": "Followers",
+      "logo": "Subscribers",
+      "hotOffer": "Hot offer",
+      "subscriberBtn": "Subscribe",
+      "subscriberShape": "Subscribe",
+      "video": "Video",
+      "checkCircle": "Selected",
+      "dashboard": "Votes",
+      "notLiked": "Like",
+      "messageText": "Comments"
+    },
+    "callPopup": {
+      "call": "CALL",
+      "seeOptions": "SEE OPTIONS",
+      "viewEvents": "VIEW EVENTS"
+    }
+  },
+  "mediaCard": {
+    "published": "Published",
+    "resume": "Resume",
+    "galleryImages": "images",
+    "subscribeOrBuy": "Subscribe or Buy",
+    "alt": {
+      "poster": "Media preview",
+      "heart": "Likes",
+      "views": "Views",
+      "locked": "Locked content",
+      "type": "Media type"
+    },
+    "tags": {
+      "subscriberExclusive": "Subscriber Exclusive",
+      "subscribeOrBuy": "Subscribe or Buy",
+      "free": "Free",
+      "subOnly": "Sub Only"
+    },
+    "titles": {
+      "walkInPark": "Took a walk in the park.",
+      "walkInParkToday": "Took a walk in the park today.",
+      "walkInParkMorning": "Took a walk in the park this morning",
+      "mySecondComingSoon": "My 2nd coming soon",
+      "morningWorkout": "Morning workout session",
+      "teamsCollaboration": "Building successful teams through collaboration"
+    },
+    "timeAgo": {
+      "fiveMonths": "5mo",
+      "twoDays": "2d",
+      "twoHours": "2h ago"
+    },
+    "creators": {
+      "creatorAllen": "Creator Allen",
+      "mistressJessica": "Mistress Jessica"
+    },
+    "menu": {
+      "editDetails": "Edit Details",
+      "addToSubscriptionTier": "Add To Subscription Tier",
+      "unpublish": "Unpublish",
+      "publish": "Publish",
+      "deleteMedia": "Delete Media",
+      "goToProfile": "Go to Creator's Profile",
+      "share": "Share",
+      "report": "Report",
+      "back": "Back",
+      "publishedTier": "Published Tier",
+      "draft": "Draft",
+      "noTiersYet": "You haven't set up any tiers yet."
+    },
+    "demo": {
+      "creators": {
+        "creatorAllen": "Creator Allen",
+        "mistressJessica": "Mistress Jessica"
+      },
+      "titles": {
+        "walkInPark": "Took a walk in the park.",
+        "walkInParkToday": "Took a walk in the park today.",
+        "walkInParkMorning": "Took a walk in the park this morning",
+        "mySecondComingSoon": "My 2nd coming soon",
+        "morningWorkout": "Morning workout session"
+      },
+      "tags": {
+        "subscriberExclusive": "Subscriber Exclusive",
+        "subscribeOrBuy": "Subscribe or Buy",
+        "free": "Free",
+        "subOnly": "Sub Only"
+      },
+      "timeAgo": {
+        "fiveMonths": "5mo",
+        "twoDays": "2d"
+      }
+    }
+  },
+  "tierCard": {
+    "demo": {
+      "labels": {
+        "tier1StandardClaim": "Pink theme — standard claim footer (5 left)",
+        "tier2SpendToClaim": "Gold theme — spend to claim footer",
+        "tier3Standard95Left": "Pink theme — standard claim (95 left)",
+        "tier4HiddenProgress": "Pink theme — hidden progress footer",
+        "tier5SubscribeGreen": "Green theme — subscribe footer"
+      },
+      "title": "My VVIP Lounge ❤️",
+      "description": "Welcome to Jenny's VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot, stuff I wore from the shot for sale, and talk to me 24/7.",
+      "price": "55.86",
+      "discount5": "-5%",
+      "discount50": "-50%",
+      "plans": {
+        "oneDay": "1 day",
+        "oneMonth": "1 month",
+        "sixMonth": "6 month",
+        "oneYear": "1 year"
+      },
+      "flashSale": {
+        "endsIn": "02:13:07",
+        "originalPrice": "$111.72"
+      },
+      "footer": {
+        "claimOffer": "CLAIM<br>OFFER",
+        "subscribe": "SUBSCRIBE",
+        "fiveLeft": "5 Left!",
+        "ninetyFiveLeft": "95 Left!",
+        "offerProgressLow": "95/100 Offer",
+        "offerProgressHigh": "5/100 Offer",
+        "spendMore": "Spend $200 more to claim",
+        "spendProgress": "200/ USD400"
+      }
+    },
+    "ui": {
+      "morePlans": "More Plans",
+      "usdPrefix": "USD$",
+      "free": "FREE",
+      "readMore": "READ MORE",
+      "saleEndsIn": "Sale Ends in",
+      "featured": "FEATURED",
+      "mostValue": "Most Value",
+      "planForPrice": "{label} for USD${price}",
+      "renewsAt": "Renews at USD${price} every {label}",
+      "usdPrice": "USD${price}",
+      "spendingTooltip": "Spending includes: Pay to view, Subscriptions, Tip",
+      "empty": {
+        "tierName": "Tier Name",
+        "description": "Tier Description...",
+        "subscribeForFree": "SUBSCRIBE FOR FREE"
+      },
+      "features": {
+        "freeTokens": "Free Tokens",
+        "freeTokensValue": "100 tokens everyday",
+        "tokensEveryMonth": "{count} tokens every month",
+        "merchDiscount": "Merch Discount",
+        "ppvDiscount": "PPV Discount",
+        "customRequest": "Custom Request",
+        "unsubscribeDiscount": "Unsubscribe Discount",
+        "amountOff": "USD$ {amount} off",
+        "percentOffAmount": "{amount}% off",
+        "percentOff10": "10% off",
+        "percentOff5": "5% off"
+      }
+    },
+    "alt": {
+      "video": "Video",
+      "images": "Images",
+      "audio": "Audio",
+      "flash": "Flash",
+      "doubleArrows": "Expand",
+      "tooltip": "Tooltip",
+      "hot": "Hot"
+    }
+  },
+  "eventCard": {
+    "demo": {
+      "labels": {
+        "orangeButton": "Orange theme — with CTA button",
+        "orangeProgress": "Orange theme — dual progress (no button)",
+        "pinkButton": "Pink theme — with CTA button",
+        "pinkProgress": "Pink theme — dual progress (no button)"
+      },
+      "titles": {
+        "subscriberDiscount": "Subscriber Discount",
+        "luckyDraw": "Lucky Draw!"
+      },
+      "creatorName": "Princess Carrot Pop",
+      "spendMoreClaim": "Spend $200 more to claim",
+      "spendMoreEnter": "Spend $200 more to enter",
+      "offersLeft": "10 offers left!",
+      "chancesLeft": "5 chances left!",
+      "progressCount": "95/100",
+      "progressOffer": "95/100 Offer",
+      "progressRatio": "200/ USD400",
+      "endsIn": "Ends in",
+      "timer": {
+        "hours": "02",
+        "minutes": "13",
+        "seconds": "07"
+      },
+      "buttons": {
+        "claimDiscount": "CLAIM DISCOUNT",
+        "enterLuckyDraw": "ENTER LUCKY DRAW"
+      }
+    },
+    "alt": {
+      "close": "Close",
+      "mascot": "Event mascot",
+      "verified": "Verified",
+      "tooltip": "Tooltip"
+    }
+  },
+  "notificationCard": {
+    "demo": {
+      "labels": {
+        "warningMediaRequired": "Warning variant (media required)",
+        "successApproved": "Success variant (approved)",
+        "infoBankDetails": "Info variant (bank details)",
+        "errorDestructive": "Error variant (destructive)",
+        "noticeCyan": "Notice variant (cyan)",
+        "alertAmber": "Alert variant (amber)",
+        "successTeal": "Success-teal variant",
+        "limitExceededDark": "Limit-exceeded variant (dark)",
+        "withIcon": "With icon (default)",
+        "withoutIcon": "Without icon",
+        "withDescription": "With description",
+        "withoutDescription": "Without description (title only)",
+        "withoutTitle": "Without title (description only)",
+        "withClose": "With close button",
+        "withoutClose": "Without close button",
+        "customIcon": "Custom icon (assetMap URL)",
+        "withLink": "With link",
+        "withoutLink": "Without link"
+      },
+      "titles": {
+        "mediaRequired": "Media Content Required",
+        "congratulations": "Congratulations",
+        "bankDetails": "Bank Details Required",
+        "actionRequired": "Action Required",
+        "unsavedChanges": "You have unsaved changes",
+        "activeSubscribers": "You have 3 active subscribers in this tier",
+        "profileUpdated": "Profile updated successfully",
+        "uploadLimit": "Upload limit exceeded",
+        "connectX": "Connect your X account",
+        "titleOnly": "Reminder: complete your profile"
+      },
+      "descriptions": {
+        "mediaRequired": "Your profile currently has no media. Enhance your profile's visibility by adding at least 5 media items.",
+        "mediaApproved": "Your media 'Audio with placeholder and no preview' has been approved.",
+        "bankDetails": "To ensure seamless transactions, please complete your bank information.",
+        "securityUpdate": "Critical update needed for your account security settings.",
+        "unsavedChanges": "You have made changes since your last save. Remember to click SAVE to publish your changes.",
+        "activeSubscribers": "Changing details of this plan might affect current subscribers' subscription fee and benefits.",
+        "profileUpdated": "Your profile changes were saved and are now visible to subscribers.",
+        "uploadLimit": "You have reached the maximum number of uploads allowed on your current plan.",
+        "connectX": "You must connect to your X account before using the auto repost feature.",
+        "completeProfile": "Add a bio and profile photo to help subscribers discover you."
+      },
+      "links": {
+        "learnMore": "Learn more",
+        "connectNow": "Connect now",
+        "viewDetails": "View details"
+      }
+    }
+  },
+  "mediaUploader": {
+    "search": {
+      "defaultPlaceholder": "Search...",
+      "add": "Add",
+      "remove": "Remove",
+      "maxItemsAlert": "Maximum {max} items allowed",
+      "languageLabel": "繁體中文",
+      "languageTraditional": "繁體中文",
+      "languageSimplified": "簡體中文",
+      "languageEnglish": "English",
+      "iconAlt": "search"
+    },
+    "tagTabs": {
+      "az": "A-Z",
+      "hobby": "癖好",
+      "clothing": "服裝",
+      "scene": "場景",
+      "identity": "身分",
+      "body": "身型"
+    },
+    "thumbnail": {
+      "label": "Thumbnail",
+      "blurToggle": "Blur thumbnail"
+    },
+    "postPreview": {
+      "heading": "POST PREVIEW",
+      "displayName": "Jelly FISH",
+      "handle": "{'@'}jellyf1sh",
+      "defaultMessage": "Don't miss out—check this exclusive content and be the first to experience it!",
+      "linkPreview": "fansocial.app/model/jellyskitchen/...",
+      "avatarAlt": "avatar",
+      "verifiedAlt": "verified"
+    },
+    "a11y": {
+      "selectedThumbnail": "selected",
+      "video": "video",
+      "delete": "delete",
+      "play": "play",
+      "expand": "expand",
+      "deleteIcon": "delete-icon",
+      "expandIcon": "expand-icon"
+    },
+    "publishDatePicker": {
+      "defaultLabel": "Set date and time for publishing:",
+      "placeholder": "--/--/----   --:-- --",
+      "calendarAlt": "calendar-icon"
+    },
+    "fileUploadPlaceholder": {
+      "alt": "file-upload-placeholder"
+    },
+    "trailerSetting": {
+      "label": "Show Preview Trailer",
+      "paragraph": "Allow non-subscriber to preview your video on your media detail page.",
+      "paragraphAudio": "Allow non-subscriber to preview audio clip on your media detail page."
+    },
+    "thumbnailUploader": {
+      "title": "Click to upload",
+      "subtitle": "or drag and drop image file here",
+      "fileInfo": "PNG or JPG (max. 10MB)",
+      "selected": "Selected: {name}"
+    },
+    "mediaThumbnailUploader": {
+      "cancel": "Cancel",
+      "processing": "Processing for something awesome...",
+      "maxGallery": "(max: 10 files {size})",
+      "maxSingle": "(max: {size})",
+      "closeAlt": "close-btn",
+      "clickToUpload": "Click to upload",
+      "dropText": " or drag and drop"
+    },
+    "blurEffect": {
+      "blurAlt": "blur",
+      "dropdownAlt": "dropdown arrow"
+    },
+    "shell": {
+      "uploadMedia": "Upload Media",
+      "closeAlt": "close",
+      "back": "Back",
+      "next": "Next",
+      "steps": {
+        "previewSettings": "Preview Settings",
+        "subscriptionP2v": "Subscription and P2V",
+        "mediaDetails": "Media Details",
+        "publishSharing": "Publish & Sharing Settings",
+        "submit": "Submit"
+      }
+    },
+    "empty": {
+      "title": "Media",
+      "description": "You haven't added any medias yet.",
+      "uploadCta": "Upload Media",
+      "faq": "Media FAQ",
+      "iconAlt": "No media"
+    },
+    "library": {
+      "searchPlaceholder": "Search...",
+      "searchAlt": "Search media",
+      "filter": "Filter",
+      "emptyCell": "--",
+      "gridView": "Grid view",
+      "listView": "List view",
+      "tabs": {
+        "all": "All",
+        "published": "Published",
+        "notPublished": "Not Published",
+        "draft": "Draft",
+        "reviewing": "Reviewing"
+      },
+      "status": {
+        "reviewing": "Reviewing",
+        "draft": "Draft",
+        "published": "Published"
+      },
+      "table": {
+        "media": "Media",
+        "status": "Status",
+        "p2v": "P2V",
+        "tiers": "Tiers",
+        "appearOn": "Appear on",
+        "uploadDate": "Upload Date"
+      },
+      "appearOn": {
+        "profile": "Profile page",
+        "discovery": "Discovery page"
+      },
+      "trailer": "Trailer",
+      "lastTierPopup": {
+        "message": "This media can't be removed—it's the last one linked to the '{tier}' tier.",
+        "back": "Back"
+      },
+      "filterTypes": {
+        "all": "All types",
+        "video": "Video",
+        "image": "Image",
+        "gallery": "Gallery",
+        "audio": "Audio"
+      },
+      "filterPopup": {
+        "title": "Filter",
+        "closeAlt": "Close",
+        "sortBy": "Sort by:",
+        "uploadDate": "Upload Date",
+        "payToViewAvailable": "Pay to View Available",
+        "mediaType": "Media type",
+        "subscriptionTier": "Subscription tier",
+        "selectAll": "Select All",
+        "types": {
+          "video": "Video",
+          "singleImage": "Single Image",
+          "imageGallery": "Image Gallery",
+          "audio": "Audio"
+        },
+        "reset": "Reset Filter",
+        "apply": "Apply"
+      },
+      "submittedToast": "Your {kind} ‘{title}’ is submitted for approval.",
+      "kind": {
+        "video": "video",
+        "singleImage": "image",
+        "imageGallery": "gallery",
+        "audio": "audio"
+      }
+    },
+    "uploadPopup": {
+      "title": "Upload Media",
+      "editTitle": "Edit Details",
+      "closeAlt": "Close",
+      "tabsAria": "Media type",
+      "tabs": {
+        "video": "Video",
+        "singleImage": "Single Image",
+        "imageGallery": "Image Gallery",
+        "audio": "Audio"
+      },
+      "drop": {
+        "video": "or drag and drop video file here",
+        "singleImage": "or drag and drop",
+        "imageGallery": "or drag and drop multiple files here",
+        "audio": "or drag and drop audio file here"
+      },
+      "formats": {
+        "video": "MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG. (Max. 2000MB)",
+        "singleImage": "PNG or JPG (max. 10MB)",
+        "imageGallery": "PNG or JPG (max. 2000MB)",
+        "audio": "MP3, WAV, OGG or WEBM. (Max. 200MB)"
+      },
+      "galleryEmpty": {
+        "iconAlt": "Empty gallery",
+        "message": "You don't have anything in your gallery at the moment."
+      },
+      "progress": {
+        "uploading": "Uploading...",
+        "processing": "Processing...",
+        "cancel": "Cancel"
+      },
+      "preview": {
+        "deleteAlt": "Delete video",
+        "deleteImageAlt": "Delete image",
+        "deleteAudioAlt": "Delete audio",
+        "imageAlt": "Uploaded image preview",
+        "audioAlt": "Uploaded audio"
+      },
+      "gallery": {
+        "remove": "remove",
+        "removeImageAlt": "Remove image",
+        "defaultImageName": "image",
+        "selectMore": "Select more files..",
+        "upload": "Upload",
+        "uploadSuccess": "{count} images uploaded successfully",
+        "uploadSuccessOne": "{count} image uploaded successfully"
+      },
+      "leaveConfirm": {
+        "title": "Are you sure you want to leave?",
+        "description": "You can choose to save your current progress as draft or discard your progress and leave.",
+        "saveDraft": "Save Draft",
+        "leave": "Leave without saving"
+      },
+      "tabChangeConfirm": {
+        "message": "If you change media type now, you will lose all progress. Do you want to continue?",
+        "back": "Back",
+        "continue": "Continue"
+      }
+    },
+    "subscription": {
+      "settingsTitle": "Subscription Settings",
+      "linkToggle": "Link this media to subscription plan",
+      "addTier": "Add Tier",
+      "payToViewTitle": "Pay to View Settings",
+      "payToViewToggle": "Make this media available for pay to view",
+      "originalPrice": "Original Price",
+      "discountedPrice": "Discounted Price (optional)",
+      "originalPriceHint": "Price must be between USD$ 1.95 to 500.",
+      "discountPriceHint": "Leave blank to disable discount display.",
+      "originalPriceError": "Price must be between USD$ 1.95 to 500.",
+      "discountPriceError": "Discounted price must be lower than original price.",
+      "tierAddedToast": "New subscription tier added.",
+      "noTiersYet": "You haven't set up any tiers yet.",
+      "displayTitle": "Display this media on:",
+      "discoveryPage": "Discovery Page",
+      "profilePage": "My Profile Page",
+      "usd": "USD$",
+      "plans": {
+        "free": "FREE library of LOREM LPSUM ATIER dolor sit amet.",
+        "amazing": "Amazing library of LOREM LPSUM ATIER dolor sit amet.",
+        "complete": "Complete library of LOREM LPSUM ATIER dolor sit amet.",
+        "featured": "Featured library of LOREM LPSUM ATIER dolor sit amet.",
+        "basic": "Basic library of LOREM LPSUM ATIER dolor sit amet.",
+        "premium": "Premium library of LOREM LPSUM ATIER dolor sit amet.",
+        "nsfw": "NSFW library of LOREM LPSUM ATIER dolor sit amet."
+      }
+    },
+    "publish": {
+      "useOriginal": "Use original thumbnail and preview",
+      "useCustom": "Upload a different thumbnail and preview",
+      "none": "Do not attach thumbnail and preview",
+      "postMessageLabel": "Post Message (Leave blank to use system default message.)",
+      "postMessagePlaceholder": "Don't miss out—check this exclusive content and be the first to experience it!",
+      "attachMedia": "Attach Media",
+      "charactersCount": "{used}/{max} characters",
+      "whenTitle": "When do you like to publish this media?",
+      "publishImmediately": "Publish immediately after approval",
+      "schedulePublish": "Schedule a publish time",
+      "selectOption": "Select an option",
+      "immediateHelp": "We will publish the media according to your subscription and Pay to view preference. It will usually take 2 working days.",
+      "shareSettings": "Share Settings",
+      "postToX": "Post to X when my media is published",
+      "thumbnail": "Thumbnail",
+      "trailer": "Trailer",
+      "imageDropSubtitle": "or drag and drop thumbnail image",
+      "imageFileInfo": "SVG, PNG, JPG or GIF (max. 800x400px)",
+      "videoDropSubtitle": "or drag and drop trailer file",
+      "videoFileInfo": "MP3, MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG. (Max. 2000MB)",
+      "connectXNotice": "You must connect to your X account before using auto repost feature.",
+      "connectX": "Connect X account",
+      "scheduleLabel": "Set date and time for publishing:",
+      "scheduleMessage": "Date must be minimum 2 days ahead.",
+      "featureComingSoon": "Feature this media on 'coming soon' section",
+      "featureComingSoonTip": "This media will be added to the 'coming soon' section on your profile media page.",
+      "preorderPrice": "Preorder price (Optional)",
+      "preorderUsd": "USD",
+      "preorderBullet1": "Offer special offer to fans who pre orders this media.",
+      "preorderBullet2": "Leave blank to disable feature."
+    },
+    "addTier": {
+      "title": "Add New Tier",
+      "draftNotice": "You've used all available published tier slots; the new tier will be saved as a draft.",
+      "cancel": "CANCEL",
+      "save": "SAVE",
+      "closeAlt": "Close",
+      "tierNamePlaceholder": "Tier Name...",
+      "tierDescriptionPlaceholder": "Tier description...",
+      "description": "Description",
+      "backgroundImage": "Background Image",
+      "backgroundImageLabel": "Background image",
+      "backgroundPreviewAlt": "background preview",
+      "deleteAlt": "delete",
+      "uploadTitle": "Click here",
+      "uploadSubtitle": "to select image or drag and drop image here",
+      "uploadFileInfo": "(Allowed formats: JPEG, PNG. Max size: 10MB)",
+      "subscriptionFee": "SUBSCRIPTION FEE",
+      "freeTier": "Free Tier",
+      "paidTier": "Paid Tier",
+      "originalPrice": "Original Price",
+      "discountedPrice": "Discounted Price (optional)",
+      "originalPriceHint": "Price must be between USD$ 1.95 to 500.",
+      "discountPriceHint": "Leave blank to disable discount display.",
+      "discountPriceError": "Discounted price must be lower than original price.",
+      "usd": "USD$",
+      "subscriberBenefits": "Subscriber Benefits",
+      "optional": "Optional",
+      "freeTokens": "Free tokens",
+      "freeTokensTooltip": "Set amount of free tokens given to member of this tier every recurring billing cycle. Frequency is based on your based subscription plan setting.",
+      "merchDiscount": "Merch Discount",
+      "merchDiscountBullet1": "Set percentage discount for all the merch in your shop (e.g. type '10' in the input field if you want 10% off)",
+      "merchDiscountBullet2": "Leave blank to disable feature.",
+      "payToViewDiscount": "Pay to View Discount",
+      "payToViewDiscountBullet": "Set percentage discount for all pay to view product in your shop(e.g. type '10' in the input field if you want 10% off)",
+      "customRequestDiscount": "Custom Request Discount",
+      "customRequestBullet1": "Set percentage discount for custom product request(e.g. type '10' in the input field if you want 10% off)",
+      "customRequestBullet2": "Leave blank to disable feature.",
+      "unsubscribeDiscount": "Unsubscribe discount",
+      "unsubscribeTooltip": "Set amount of free tokens given to member of this tier every recurring billing cycle. Frequency is based on your based subscription plan setting.",
+      "applyOnSale": "Apply to items already on sale",
+      "percentOff": "% off",
+      "tokensPerMonth": "Tokens/mo",
+      "rangeError": "Value must be between 1-99"
+    },
+    "preview": {
+      "thumbnailSettings": "Thumbnail Settings",
+      "trailerSettings": "Trailer Settings",
+      "chooseScreenshot": "Choose screenshot",
+      "useImageAsThumbnail": "Use image as thumbnail",
+      "usePlaceholder": "Use placeholder",
+      "uploadThumbnail": "Upload your own thumbnail",
+      "siteGeneratedTrailer": "Use system generated trailer",
+      "uploadOwnTrailer": "Upload your own trailer",
+      "videoDropSubtitle": "or drag and drop video file here",
+      "videoFileInfo": "MP3, MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG. (Max. 2000MB)",
+      "audioTrailerDropSubtitle": "or drag and drop video/audio file here",
+      "audioTrailerFileInfo": "MP3 or MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, JPEG, PNG. (Max. 2000MB)",
+      "uploadSuccess": "Successfully uploaded new video.",
+      "uploadSuccessImage": "Successfully uploaded new image.",
+      "uploadSuccessAudio": "Successfully uploaded new audio file.",
+      "audioFallbackName": "audio file"
+    },
+    "mediaDetails": {
+      "titlePlaceholder": "Video Title (Optional)",
+      "descriptionPlaceholder": "Description (Optional)",
+      "tagsTitle": "Tags",
+      "tagsSubtitle": "Add maximum of 10 tags to your media.",
+      "tagsPlaceholder": "Search Tags...",
+      "coPerformerTitle": "Co-performer",
+      "coPerformerSubtitle": "If this media includes other performers, please tag them below.",
+      "coPerformerPlaceholder": "Jelly"
+    },
+    "createTag": {
+      "title": "Create New Tag",
+      "closeAlt": "Close",
+      "notFound": "Tags not found.",
+      "notFoundHint": "You can add this tag for your personal use only or submit it for global use site wide.",
+      "create": "Create",
+      "createButton": "Create Tag",
+      "nextButton": "Next",
+      "personalLabel": "Create Tags for Personal Use",
+      "personalHint": "Only you can use the tag '{tag}', no approval needed",
+      "globalLabel": "Create Tags for Global Use",
+      "globalHint": "After the tag '{tag}' is approved by Fansocial's team, all models will be able to use this tag",
+      "pendingTooltip": "This global tag is pending for approval."
+    },
+    "submit": {
+      "certifyTitle": "By clicking the boxes below, I certify and confirm that:",
+      "term1": "All individuals appearing in the piece of content I am presently uploading on Fansocial (the Content):",
+      "term1Bullet1": "consent to appear in the Content.",
+      "term1Bullet2": "agree for this Content to be uploaded.",
+      "term1Bullet3": "were at least 18 years of age at the time the Content was produced, or the age of majority in the jurisdiction or country where Content was produced.",
+      "term2": "I have verified, preserved and currently hold all identification cards and documents required under Record Keeping Requirements, 18 U.S.C. 2257 and 28 C.F.R. 75, or applicable laws in any other jurisdictions, countries, and territories (“2257 documentation”), for all individuals appearing in the Content.",
+      "term3": "I have verified, preserved and currently hold all identification cards and documents required under Record Keeping Requirements, 18 U.S.C. 2257 and 28 C.F.R. 75, or applicable laws in any other jurisdictions, countries, and territories (“2257 documentation”), for all individuals appearing in the Content.",
+      "term4": "The Content does not violate Fansocial’s Terms of Service, and any of its related policies namely but without limitation, its Child Sexual Abuse Material Policy, or Anti-Sexual Exploitation Policies, all of which I have read and expressly agree to.",
+      "term5": "The Content does not violate Fansocial’s Terms of Service, and any of its related policies namely but without limitation, its Child Sexual Abuse Material Policy, or Anti-Sexual Exploitation Policies, all of which I have read and expressly agree to.",
+      "warning": "WARNING: Uploading (or attempting to upload) content that violates any laws or criminal laws (ex: child pornography or non-consensual content), our Child Sexual Abuse Material Policy or Anti-Sexual Exploitation Policies, will result in related accounts to be immediately terminated and reported to law enforcement authorities.",
+      "submitButton": "SUBMIT MEDIA FOR APPROVAL",
+      "acceptAllAlert": "Please accept all terms and conditions before submitting.",
+      "successAlert": "Media Submitted Successfully!",
+      "failAlert": "Submission failed. Please try again.",
+      "errorAlert": "An error occurred during submission."
+    }
+  },
+  "checkout": {
+    "proceedPayment": "Proceed Payment",
+    "agreeAndProceed": "AGREE & PROCEED",
+    "tip": {
+      "title": "Before Check out\nLet’s Make their day even brighter! ✨",
+      "chooseModels": "Choose One or More Models to Tip!",
+      "selectAll": "Select All",
+      "selectedWord": "Selected",
+      "selectedSep": "|",
+      "selectedSummary": "{count} Selected | {total}",
+      "selectTipBelow": "Select a tip below—it'll be added to your checkout.",
+      "supportHelpPrefix": "Your extra support helps",
+      "supportHelpSuffix": "keep creating magic. 92% of fans add a tip here!",
+      "notesPlaceholder": "Enter notes....",
+      "charactersLeft": "{count} Characters Left",
+      "customAmountPlaceholder": "Enter custom amount",
+      "firstTipTooltip": "No one has tipped her yet. Be the first!",
+      "fansTipTooltip": "92% of fans add a tip here!",
+      "chargePrefix": "By completing this tip,",
+      "chargeMiddle": "will be charged to your card ending in",
+      "chargeSuffix": "and added to your checkout total.",
+      "confirmTip": "Confirm Tip",
+      "closeAlt": "Close",
+      "prevModelsAlt": "Previous models",
+      "nextModelsAlt": "Next models",
+      "deselectAlt": "Deselect",
+      "amount1": "$1.00",
+      "amount3": "$3.00",
+      "amount5": "$5.00",
+      "amount10": "$10.00",
+      "custom": "CUSTOM",
+      "demoModelName": "Carrot Pop",
+      "demoModelUsername": "@sammisjelly187",
+      "demoSupportHandle": "@Princess Carrot Pop"
+    }
+  },
+  "cart": {
+    "title": "Your Cart",
+    "primaryCart": "Primary Cart",
+    "defaultBadge": "Default",
+    "setAsDefault": "Set as Default",
+    "typeStandard": "Standard",
+    "typeDefault": "DEFAULT",
+    "syncLive": "SYNC LIVE",
+    "renamePlaceholder": "Rename Cart...",
+    "save": "SAVE",
+    "couponAppliedPlaceholder": "Coupon Applied",
+    "couponPlaceholder": "Coupon Code...",
+    "apply": "APPLY",
+    "remove": "REMOVE",
+    "emptyTitle": "Cart is Empty",
+    "emptyDescription": "Your cart is currently empty.",
+    "addNbaCard": "+ ADD NBA CARD ($12.23)",
+    "addVintageShirt": "+ ADD VINTAGE T-SHIRT ($25.00)",
+    "lookupTestHint": "(Strict products.json lookup test)",
+    "standardSeller": "Standard Seller",
+    "shipFromGermany": "Ship from Germany",
+    "currencyPrefix": "USD$",
+    "shipping": "+${amount} shipping",
+    "syncAt": "Sync: {time}",
+    "subtotal": "Subtotal ({count} items)",
+    "serviceFees": "Service Fees",
+    "couponDiscount": "Coupon Discount",
+    "planDiscount": "Plan Discount",
+    "estimatedTotal": "ESTIMATED TOTAL",
+    "checkout": "ChECK OUT",
+    "chevronLeftAlt": "chevron-left",
+    "avatarAlt": "avatar",
+    "decreaseAlt": "decrease",
+    "increaseAlt": "increase",
+    "tagAlt": "tag",
+    "verifiedAlt": "Verified"
+  },
+  "cookies": {
+    "title": "This website uses cookies.",
+    "description": "We use cookies to analyze website traffic and optmize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.",
+    "accept": "Accept"
+  },
+  "cloudflareSuccess": {
+    "success": "Success!",
+    "brand": "CLOUDFLARE",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "demo": {
+    "page": {
+      "title": "Dashboard Component Showcase",
+      "sections": {
+        "dashboardTextInput": "DashboardTextInput",
+        "heading": "Heading",
+        "paragraph": "Paragraph",
+        "validationIconMessage": "IconMessageList",
+        "cloudflareSuccess": "CloudflareSuccess",
+        "subscriptionPlanCard": "SubscriptionPlanCard",
+        "cookies": "Cookies",
+        "tierCards": "Tier Cards",
+        "eventCards": "Event Cards",
+        "shoppingCart": "Shopping Cart",
+        "shoppingCartDescription": "Interactive cart component driven by custom events. Open console to see interaction commands.",
+        "spinner": "Spinner",
+        "allButtons": "All Buttons — Full Catalog",
+        "otherComponents": "Other Components"
+      },
+      "mediaCards": {
+        "mediaCardV1Title": "Media Card Variations (V1)",
+        "mediaCardV1Description": "Multiple display logic and layout variants for our primary media card.",
+        "creatorMyMedia": "1. Creator: My Media",
+        "continueWatching": "2. Fan: Continue Watching",
+        "latestMedia": "3. Fan: Latest Media",
+        "purchasedMedia": "4. Fan: Purchased Media",
+        "gridView": "5. Fan: Grid View (Zoom Effect)",
+        "mediaCardV2Title": "Media Card Variations (V2)",
+        "mediaCardV2Description": "An alternative design language for cards with hover expansion effects.",
+        "gallery": "Gallery",
+        "image": "Image",
+        "video": "Video"
+      }
+    },
+    "validationIconMessage": {
+      "captions": {
+        "authSignUpPasswordErrors": "AuthSignUp — password errors (InformationCircle)",
+        "authSignUpPasswordSuccess": "AuthSignUp — password success checklist (CheckCircle)",
+        "authSignUpConfirmError": "AuthSignUp — confirm password mismatch",
+        "authLoginEmailErrors": "AuthLogin — email errors",
+        "authLoginPasswordError": "AuthLogin — password required",
+        "authOnboardingUsername": "AuthSignUpOnboarding — username errors",
+        "authCodeErrors": "AuthCodeInput — code errors (ConfirmEmail / ResetPassword)",
+        "authForgotPasswordEmail": "AuthForgotPassword — email errors",
+        "dashboardResetPasswordSuccess": "DashboardResetPasswordPage — new password success",
+        "planDetailRangeError": "PlanDetail / AddTierPopup — free tokens range (Hexagon)",
+        "addTierMerchError": "PlanDetail / AddTierPopup — merch discount range (Hexagon)",
+        "planVariationFansClaim": "SubscriptionPlanVariationsPopup — fans claim max (BaseInput Hexagon)",
+        "authSignUpFormBanner": "AuthSignUp — form-level error banner"
+      }
+    },
+    "heading": {
+      "h1Primary": "Primary H1",
+      "h2Secondary": "Secondary H2",
+      "h3Section": "Section H3",
+      "h2Dashboard": "Dashboard Title",
+      "h2Auth": "Login",
+      "h4Form": "Profile Settings",
+      "h1Demo": "Demo H1 Bold",
+      "h3Demo": "Demo H3 Medium",
+      "withIcon": "With Icon",
+      "order": "Order #1234",
+      "labels": {
+        "h1Primary": "h1 — defaultPrimaryHeading",
+        "h2Secondary": "h2 — defaultSecondaryHeading",
+        "h3Section": "h3 — sectionHeading",
+        "h2Dashboard": "h2 — dashboardHeading",
+        "h2Auth": "h2 — AuthHeading",
+        "h4Form": "h4 — formHeading",
+        "h1Demo": "h1 — demoHeadings",
+        "h3Demo": "h3 — demoHeadings",
+        "withLeftIcon": "With Left Icon",
+        "orderHeading": "h1 — orderHeading"
+      }
+    },
+    "paragraph": {
+      "default": "This is a default paragraph with standard styling.",
+      "small": "Small text paragraph for captions.",
+      "large": "Large paragraph text.",
+      "bold": "Bold paragraph text.",
+      "blue": "Blue paragraph text.",
+      "error": "This field is required.",
+      "success": "Action successful!",
+      "italic": "Italic paragraph text for notes.",
+      "withIcon": "Info message here",
+      "xs": "Helper text displayed below the input field.",
+      "labels": {
+        "default": "Default",
+        "small": "Small (text-sm)",
+        "large": "Large (text-xl)",
+        "bold": "Bold",
+        "customColor": "Custom Color (Blue)",
+        "errorRed": "Error Red",
+        "successGreen": "Success Green",
+        "italic": "Italic",
+        "withLeftIcon": "With Left Icon",
+        "extraSmall": "Extra Small (text-xs)"
+      }
+    },
+    "dashboardTextInput": {
+      "generalVariations": "General variations",
+      "bookingPatterns": "Booking form patterns ($t + assetMap)",
+      "username": "Username",
+      "usernamePlaceholder": "carrot_popxoxo123",
+      "usernameDescription": "Usernames cannot be changed after your first month on our website, but special circumstances may allow for exceptions.",
+      "email": "Email",
+      "emailPlaceholder": "mscarrot_pops{'@'}gmail.com",
+      "firstName": "First Name",
+      "noLabelPlaceholder": "Type without a label...",
+      "title": "Title",
+      "displayName": "Display Name",
+      "plainNoIconsPlaceholder": "Plain input, no icons",
+      "emailSupport": "Email Support",
+      "enterEmailPlaceholder": "Enter email...",
+      "fullName": "Full Name",
+      "requiredPlaceholder": "Required field",
+      "emailAddress": "Email Address",
+      "advancedSearch": "Advanced Search",
+      "searchFiltersPlaceholder": "Search with filters...",
+      "bio": "Bio",
+      "tipMessage": "Tip Message",
+      "tipMessagePlaceholder": "Thank you for your tip!",
+      "tipMessageDescription": "Your fan will see this message when they tip you.",
+      "quantity": "Quantity",
+      "age": "Age",
+      "usernameAvailable": "Username is available.",
+      "usdPrefix": "USD$",
+      "variations": {
+        "labelDescPlaceholder": "Label + Description + Placeholder",
+        "labelPlaceholder": "Label + Placeholder (No Description)",
+        "labelNoPlaceholder": "Label, No Placeholder",
+        "noLabelWithPlaceholder": "No Label, With Placeholder",
+        "plain": "No Label / No Placeholder / No Description",
+        "title": "Label + Placeholder (Title)",
+        "leftIconSearch": "Left Icon — Search (assetMap: icon.search)",
+        "noIcon": "No Icon",
+        "rightIcon": "Right Icon — EnvelopeIcon",
+        "autofill": "Autofill (browser saved email)",
+        "requiredStar": "Required — Asterisk (*)",
+        "requiredItalic": "Required — Italic \"Required\"",
+        "bothIcons": "Both Icons (Left + Right)",
+        "textareaCounter": "Textarea — maxLength Counter",
+        "textareaDescCounter": "Textarea — Description + Counter",
+        "noLabelEventTitle": "No Label — Event Title Placeholder",
+        "coPerformerSearch": "Co-performer Search (i18n + icon.search)",
+        "numberMinutes": "Number + Minutes (suffix outside input)",
+        "basePriceTokens": "Base Price + Tokens (suffix outside input)",
+        "leftSpanUsd": "Left Span — USD$ Prefix",
+        "numberStepper": "Number — Stepper",
+        "numberNoStepper": "Number — No Stepper (:showControls=\"false\")",
+        "tooltipOnly": "Tooltip Only — DropdownMenu",
+        "offHourSurcharge": "Off-hour Surcharge % (suffix outside input)",
+        "disabled": "Disabled State",
+        "validationErrors": "Validation Errors",
+        "requiredTextError": "Required Text Error",
+        "success": "Success State",
+        "remindMe": "Remind Me — Inline Copy (text outside input)"
+      }
+    },
+    "baseInput": {
+      "variations": {
+        "defaultText": "Default Text",
+        "withLabel": "With Label",
+        "disabled": "Disabled",
+        "numberWithControls": "Number with Controls",
+        "withCharacterCounter": "With Character Counter",
+        "textareaMode": "Textarea Mode",
+        "textareaCounter": "Textarea + Counter",
+        "arrayValidations": "Array Validations",
+        "numberNoControls": "Number (No Controls)"
+      },
+      "fields": {
+        "enterTextPlaceholder": "Enter text...",
+        "disabled": "Disabled",
+        "disabledPlaceholder": "Disabled input",
+        "maxCharsPlaceholder": "Max 50 chars...",
+        "description": "Description",
+        "enterDescriptionPlaceholder": "Enter description...",
+        "bioPlaceholder": "Your bio...",
+        "validEmailPlaceholder": "Type valid email...",
+        "readonlyText": "Readonly Text",
+        "mustContainAt": "Must contain an {'@'} symbol",
+        "mustContainDomain": "Must contain a domain root",
+        "containsAt": "Contains {'@'} symbol",
+        "containsDomain": "Contains domain root"
+      },
+      "sectionTitle": "BaseInput"
+    },
+    "baseTextInput": {
+      "variations": {
+        "default": "Default",
+        "withLeftIcon": "With Left Icon",
+        "withRightIcon": "With Right Icon",
+        "arrayValidations": "Array Validations",
+        "required": "Required (*)",
+        "optionalLabel": "Optional Label",
+        "textarea": "Textarea",
+        "numberType": "Number Type",
+        "leftSpanPrefix": "Left Span Prefix",
+        "withDescription": "With Description"
+      },
+      "fields": {
+        "enterTextPlaceholder": "Enter text...",
+        "search": "Search",
+        "searchPlaceholder": "Search...",
+        "emailPlaceholder": "Email...",
+        "validEmailPlaceholder": "Enter valid email",
+        "requiredPlaceholder": "Required",
+        "requiredField": "Required Field",
+        "optionalPlaceholder": "Optional...",
+        "nickname": "Nickname",
+        "description": "Description",
+        "amount": "Amount",
+        "amountPlaceholder": "0",
+        "price": "Price",
+        "pricePlaceholder": "0.00",
+        "usernameRules": "Only letters and numbers allowed.",
+        "mustContainAt": "Must contain an {'@'} symbol",
+        "mustContainDomain": "Must contain a domain root",
+        "containsAt": "Contains {'@'} symbol",
+        "containsDomain": "Contains domain root"
+      },
+      "sectionTitle": "BaseTextInput"
+    },
+    "validationShowcase": {
+      "sectionTitle": "Unified rules.js — live validation",
+      "introBefore": "These fields use the same canonical rules as production forms (",
+      "introVia": " via ",
+      "introAfter": "). Try the sample values in the hints, then click Validate all.",
+      "titles": {
+        "emailFormats": "Email formats",
+        "url": "URL",
+        "numbers": "Numbers",
+        "numericRange": "Numeric range",
+        "password": "Password (isSecurePassword)"
+      },
+      "hints": {
+        "emailValid": "Valid:",
+        "emailInvalid": "Invalid:",
+        "urlValid": "Valid:",
+        "urlInvalid": "Invalid:",
+        "urlProtocolRequired": "(protocol required)",
+        "numbersValid": "Valid:",
+        "numbersInvalid": "Invalid:",
+        "numbersBareMinus": "(bare minus)",
+        "ageRuleBefore": "Rule: age between",
+        "ageRuleAnd": "and",
+        "ageRuleAfter": "(minNum / maxNum)",
+        "passwordRule": "One rule: upper + lower + digit + special + 8+ chars.",
+        "passwordTry": "Try",
+        "passwordFails": "(fails) vs",
+        "passwordPasses": "(passes)."
+      },
+      "labels": {
+        "email": "Email (isEmail)",
+        "website": "Website (isUrl)",
+        "amount": "Amount (isNumeric)"
+      },
+      "errors": {
+        "url": "Enter a full http:// or https:// URL with a valid host.",
+        "numeric": "Enter a valid number (optional minus, digits, optional decimal).",
+        "ageMin": "Minimum age is 18.",
+        "ageMax": "Maximum age is 120.",
+        "ageNan": "Age must be a valid number.",
+        "securePassword": "Use 8+ characters with upper, lower, number, and a special character."
+      },
+      "validateAll": "Validate all fields",
+      "allPassed": "All showcase fields passed validation.",
+      "stillInvalid": "{count} field(s) still invalid — fix the highlighted errors above."
+    },
+    "buttons": {
+      "showLoadingState": "Show loading state on all catalog buttons (text replaced by spinner)",
+      "loadingSection": "Loading state — loading prop (text replaced by spinner)",
+      "clickToLoadHint": "Click any button to preview loading — text and icons are replaced by spinner only (no Loading label).",
+      "catalogIntro": "Exactly the same buttons used across the app (same text, variant, size, width and icons), so another developer can copy the real thing. Each label shows the variant and where it is used.",
+      "sections": {
+        "auth": "Auth pages — login / sign up / onboarding",
+        "checkout": "Checkout / purchase / cart popups",
+        "profileMedia": "Profile / media",
+        "payoutSettings": "Payout settings",
+        "planSharing": "Plan sharing",
+        "mediaUploader": "Media uploader",
+        "dashboardAnalytics": "Dashboard analytics",
+        "eventsAddons": "Events / add-ons / scheduling",
+        "twoPieceButton": "TwoPieceButton — variants"
+      },
+      "labels": {
+        "authSignIn": "authPink — size lg — login/signup submit",
+        "authTransparentSocial": "authTransparent — size lg — social",
+        "checkoutProceed": "checkoutProceedpayment — checkout/buy-now",
+        "actionGreenX": "actionGreen — guest purchase",
+        "profileBack": "profileMediaBtn — ProfileViewAll popup",
+        "payoutSave": "none + custom — PayoutSettings step 2/3",
+        "sendInvite": "simpleBtn — PlanSharing",
+        "addTier": "polygonLeft — Add Tier",
+        "polygonNext": "polygonLeft — Next (enabled + disabled)",
+        "submitMedia": "polygonLeft — Submit",
+        "allOrders": "none + custom — orders table",
+        "trend": "none + custom — metric card",
+        "newEvents": "none + custom — NEW EVENTS",
+        "publishSchedule": "polygonLeft — PUBLISH SCHEDULE",
+        "addonService": "none + custom — add-on service",
+        "addonServiceV2": "none + custom — add-on service v2",
+        "twoPieceLinkX": "link-x — Settings",
+        "twoPiecePremium": "premium-upgrade — Settings",
+        "twoPiecePink": "link-x (pink) — Edit Profile"
+      },
+      "authSignIn": "Sign in",
+      "continueWithX": "Continue with X (Twitter)",
+      "continueWithTelegram": "Continue with Telegram",
+      "proceedPayment": "Proceed Payment",
+      "back": "Back",
+      "save": "SAVE",
+      "sendInvite": "Send invite",
+      "addTier": "Add Tier",
+      "next": "Next",
+      "submitMediaForApproval": "SUBMIT MEDIA FOR APPROVAL",
+      "allOrders": "All Orders",
+      "trend": "Trend",
+      "newEvents": "NEW EVENTS",
+      "publishSchedule": "PUBLISH SCHEDULE",
+      "addonService": "add-on service",
+      "linkYourXAccount": "Link your X account",
+      "upgradeToPremium": "Upgrade To Premium",
+      "unlockPremiumVideos": "Unlock premium to upload videos"
+    },
+    "showCodeToggle": {
+      "showCode": "Show Code",
+      "hideCode": "Hide Code",
+      "copy": "Copy",
+      "copied": "✓ Copied",
+      "vueLabel": "Vue"
+    },
+    "lazySizes": {
+      "pageTitle": "LazySizes — Image & Background Test",
+      "intro": "This page uses lazysizes with assetMap URLs. Open DevTools → Network, filter by Img, reload, and confirm the demo assets below are not fetched until you scroll them into view.",
+      "networkHint": "Tip: disable cache in Network tab, reload at the top of this page, then scroll down slowly.",
+      "scrollHint": "Scroll down ↓ — lazy assets are below these spacers",
+      "spacer": "Keep scrolling ↓",
+      "lazyImageTitle": "Lazy <img> (data-src)",
+      "lazyImageDescription": "Uses LazyImage with lazysizes — loads only when the container enters the viewport (IntersectionObserver + data-src).",
+      "lazyImageAlt": "Demo poster image",
+      "contentImageLabel": "Content <img> — the image itself is the UI",
+      "lazyBackgroundTitle": "Lazy CSS background (cover layer + overlay)",
+      "lazyBackgroundDescription": "Background image loads lazily behind content. Text and button sit on top — the image is decorative (not a content <img>).",
+      "backgroundBadge": "Background layer",
+      "backgroundOverlayTitle": "Premium tier hero card",
+      "backgroundOverlaySubtitle": "This text is foreground UI. The photo behind it is the lazy-loaded background.",
+      "backgroundCta": "Subscribe now",
+      "footer": "End of lazysizes test page."
+    },
+    "spinner": {
+      "groups": {
+        "inUse": "In use",
+        "variations": "Variations",
+        "sizes": "Sizes",
+        "themeColors": "Theme colours",
+        "trackThicknessSpeed": "Track, thickness & speed"
+      },
+      "usage": {
+        "analyticsTrend": "Dashboard analytics trend popup",
+        "addTier": "Add tier popup",
+        "orderDetails": "Order details popup",
+        "flexChatInitial": "Flex chat — initial load",
+        "flexChatLoadMore": "Flex chat — load more",
+        "proceedPayment": "Proceed payment popup",
+        "upgradeTier": "Upgrade tier popup",
+        "tipStep": "Tip step — custom slot",
+        "buttonLoading": "Dashboard / two-piece button loading"
+      },
+      "svgThin": "Thin track",
+      "thick": "Thick track",
+      "noTrack": "No track",
+      "speedSlow": "Speed — slow",
+      "speedFast": "Speed — fast",
+      "withText": "With loading text",
+      "colorSuccess": "Success (brand green)",
+      "colorBrandPink": "Brand pink",
+      "colorPrimary": "Primary blue",
+      "colorInk": "Ink / light text primary",
+      "colorWhite": "White"
+    },
+    "tierCard": {
+      "sectionDescription": "Modern tier cards with integrated feature lists and price toggles ($t + assetMap)"
+    },
+    "eventCard": {
+      "sectionDescription": "Event promo cards with theme variants and button/progress layouts ($t + assetMap)"
+    },
+    "quillEditor": {
+      "labels": {
+        "default": "Default (empty)",
+        "customPlaceholder": "Custom placeholder",
+        "initialContent": "With initial content",
+        "richInitialContent": "With rich initial content (HTML)",
+        "withLabelWrapper": "With label wrapper (production pattern)"
+      },
+      "fieldLabels": {
+        "description": "Description",
+        "tierDescription": "Tier description",
+        "eventDescription": "Event description"
+      },
+      "placeholders": {
+        "default": "Description...",
+        "tierDescription": "Tier Description...",
+        "eventDescription": "Event Description...",
+        "bio": "Write your bio..."
+      },
+      "initialContent": {
+        "simple": "<p><strong>Hello World!</strong> This is pre-loaded content.</p>",
+        "rich": "<p><strong>Welcome!</strong> Edit this <em>tier description</em> with the toolbar.</p><ul><li>Bold, italic, and links</li><li>Ordered and bullet lists</li></ul><p><a href=\"#\">Example link</a></p>"
+      }
+    },
+    "checkboxGroup": {
+      "sectionTitle": "CheckboxGroup",
+      "sections": {
+        "checkout": "Checkout",
+        "auth": "Auth — Login",
+        "checkoutDark": "Checkout — Dark Section",
+        "dashboard": "Dashboard",
+        "mediaSubmit": "Media Uploader — Submit Step",
+        "mediaPublish": "Media Uploader — Publish & Sharing",
+        "mediaSubscription": "Media Uploader — Subscription P2V",
+        "booking": "Booking",
+        "calendar": "Calendar",
+        "calendarEventDropdown": "Calendar — Event Dropdown",
+        "adjustEvent": "Adjust Event Details",
+        "bookingStep2": "Booking — Additional Request",
+        "topUp": "Top Up Form",
+        "trailer": "Media Uploader — Trailer"
+      },
+      "links": {
+        "terms": "Terms and Condition",
+        "privacy": "Privacy Policy"
+      },
+      "checkout": {
+        "websiteTermsPrefix": "I agree to Our Website's",
+        "fansocialTermsPrefix": "I agree to Fansocial's",
+        "and": "and",
+        "saveAddress": "Save this address for future use.",
+        "sameShipping": "Same as Shipping Address",
+        "saveCard": "Save this card for faster checkout.",
+        "cardBrandAlt": "Visa"
+      },
+      "checkoutDark": {
+        "saveAddress": "Save this address for future use.",
+        "saveCard": "Save this card for faster checkout."
+      },
+      "auth": {
+        "rememberMe": "Remember me"
+      },
+      "planSharing": {
+        "verifiedFan": "Verified fan only"
+      },
+      "dashboard": {
+        "applySale": "Apply to items already on sale",
+        "verifiedFan": "Verified fan only"
+      },
+      "planMedia": {
+        "someContent": "Access to some content",
+        "moreContent": "Access to more content",
+        "draftContent": "Access to even some more content",
+        "noMeta": "Access to even more the most content",
+        "meta16": "16 Media",
+        "meta24": "24 Media",
+        "meta3": "3 Media"
+      },
+      "mediaSubmit": {
+        "item0": "All individuals appearing in the piece of content I am presently uploading on Fansocial (the Content):",
+        "item1": "I have verified, preserved and currently hold all identification cards and documents required under Record Keeping Requirements, 18 U.S.C. 2257 and 28 C.F.R. 75, or applicable laws in any other jurisdictions, countries, and territories (2257 documentation), for all individuals appearing in the Content.",
+        "item2": "The Content does not violate Fansocial's Terms of Service, and any of its related policies namely but without limitation, its Child Sexual Abuse Material Policy, or Anti-Sexual Exploitation Policies, all of which I have read and expressly agree to."
+      },
+      "mediaPublish": {
+        "comingSoon": "Feature this media on 'coming soon' section"
+      },
+      "mediaSubscription": {
+        "freePlan": "Free Plan",
+        "premiumTier": "Premium Tier",
+        "discovery": "Discovery Page",
+        "profile": "My Profile Page"
+      },
+      "booking": {
+        "longerSessions": "Allow longer sessions",
+        "longerDiscount": "Enable longer session discount",
+        "recurringDiscount": "Enable discount for recurring events",
+        "instantBooking": "Allow instant booking",
+        "disableChat": "Disable chat before call",
+        "emojiReply": "Allow reply with emoji",
+        "allowRecording": "Allow recording",
+        "cancellationFee": "Enable cancellation fee",
+        "bufferTime": "Set buffer time between booked appointments",
+        "bufferTooltip": "Buffer time between booked appointments",
+        "waitlist": "Allow fans to join waitlist if event is full"
+      },
+      "calendar": {
+        "videoCall": "Video Call",
+        "audioCall": "Audio Call",
+        "groupEvent": "Group Event",
+        "showSchedule": "Show booking schedule availability",
+        "showExisting": "Show existing schedule"
+      },
+      "calendarEventDropdown": {
+        "videoCall": "Video Call",
+        "audioCall": "Audio Call",
+        "groupCall": "Group Call"
+      },
+      "calendarMain": {
+        "showExistingEvents": "Show existing events/booking schedule"
+      },
+      "bookingStep2": {
+        "allowFanRecord": "Allow fan record the session",
+        "allowPersonalRequest": "Allow personal request",
+        "allowFanRecordTooltip": "If enabled, fans can purchase a session recording as an add-on. The recording includes the creator's full video feed and will be available after the booking ends.",
+        "allowPersonalRequestTooltip": "If enabled, fans can include a personal request in the booking form. You can review it and adjust the price before confirming the booking."
+      },
+      "adjustEvent": {
+        "recordSession": "Record our session",
+        "exclusiveVideo": "Make video exclusive",
+        "cosplay": "Cosplay",
+        "topless": "Topless"
+      },
+      "trailer": {
+        "uploadOwn": "Upload your own trailer"
+      },
+      "tags": {
+        "publishedTier": "Published Tier",
+        "draft": "Draft"
+      }
+    },
+    "checkboxSwitch": {
+      "sectionTitle": "CheckboxSwitch",
+      "sections": {
+        "mediaPublish": "Media Uploader — Publish & Sharing",
+        "mediaSubscription": "Media Uploader — Subscription P2V",
+        "trailerSettings": "Media Uploader — Trailer Settings",
+        "videoThumbnail": "Media Uploader — Video Thumbnail Selector",
+        "planDetail": "Plan — Plan Detail",
+        "planSharing": "Plan — Plan Sharing",
+        "profileViewAll": "Profile — View All Popup",
+        "editProfile": "Edit Profile — Share Settings",
+        "bookingXRepost": "Booking — X Repost Settings",
+        "twitterRepostPopup": "Twitter Repost Settings Popup",
+        "devDemo": "Dev Demo Page"
+      },
+      "wrapperLabels": {
+        "darkMode": "Dark Mode"
+      },
+      "mediaPublish": {
+        "postToX": "Post to X when my media is published"
+      },
+      "mediaSubscription": {
+        "linkPlan": "Link this media to subscription plan",
+        "payToView": "Make this media available for pay to view"
+      },
+      "trailer": {
+        "showPreview": "Show Preview Trailer"
+      },
+      "thumbnail": {
+        "blur": "Blur thumbnail"
+      },
+      "planDetail": {
+        "featuredTier": "This is a Featured Tier"
+      },
+      "planSharing": {
+        "postToX": "Post updates of this tier to X"
+      },
+      "profile": {
+        "payPerView": "Pay per view",
+        "watchNow": "Watch now"
+      },
+      "editProfile": {
+        "postToXTips": "Post to X when you receive tips"
+      },
+      "booking": {
+        "xPostLive": "Post to X when my booking schedule is live",
+        "xPostBooked": "Post to X when a booking is received",
+        "xPostInSession": "Post to X when I am in a session",
+        "xPostTipped": "Post to X when I am tipped in a session",
+        "xPostPurchase": "Post to X when someone made a purchase in a session"
+      },
+      "devDemo": {
+        "toggleDarkMode": "Toggle Dark mode"
+      }
+    },
+    "chatsPage": {
+      "labels": {
+        "modelChat": "MODEL chat",
+        "fanChat": "FAN chat",
+        "groupChatCreator": "GROUP chat (CREATOR)",
+        "groupChatFan1": "GROUP chat (FAN 1)",
+        "groupChatFan2": "GROUP chat (FAN 2)"
+      },
+      "vvipTier": "VVIP TIER",
+      "pendingRequests": "{n} pending request | {n} pending requests",
+      "replyPlaceholder": "Write a reply..."
+    },
+    "notificationCard": {
+      "sectionTitle": "NotificationCard",
+      "sections": {
+        "devDemo": "Dev Demo Page",
+        "mediaPublish": "Media Uploader — Publish & Sharing",
+        "mediaSubmit": "Media Uploader — Submit Step",
+        "mediaPreviewToast": "Media Uploader — Preview Settings (Toast)",
+        "bookingCalendar": "Booking — Unified Booking Form",
+        "planDetail": "Plan — Plan Detail",
+        "tipStep2": "Tip — Tip Step 2",
+        "editProfileUnsaved": "Edit Profile — Unsaved Changes",
+        "editProfileGallery": "Edit Profile — Gallery Upload Toast",
+        "mediaPreviewSettings": "Media Uploader — Preview Settings",
+        "bookingUnified": "Booking — Unified Booking Form (Active Subscribers)",
+        "bookingStep1": "Booking — One-on-One Step 1",
+        "withdrawEarnings": "Withdraw Earnings — Step 5"
+      },
+      "alt": {
+        "alert": "Alert",
+        "chevronLeft": "Next"
+      },
+      "devDemo": {
+        "activeSubscribersTitle": "You have 3 active subscriber in this tier",
+        "activeSubscribersDescription": "Changing detail of this plan might affect current subscriber's subscription fee and benefits.",
+        "learnMore": "Learn more",
+        "successTitle": "Action completed successfully",
+        "successDescription": "All systems are now up and running.",
+        "errorTitle": "Payment failed",
+        "errorDescription": "Please update your billing information to continue.",
+        "infoTitle": "Heads up",
+        "infoDescription": "We updated our terms of service."
+      },
+      "mediaPreviewSettings": {
+        "trailerReviewTitle": "Your media will be under review because you have uploaded a new trailer."
+      },
+      "bookingCalendar": {
+        "title": "Your are now viewing your booking setting in personal event calendar view.",
+        "description": "To preview how your booking schedule will look like on your profile, go to preview booking schedule."
+      },
+      "tipStep2": {
+        "limitExceededTitle": "Input value exceeds maximum allowance (14,000 tokens)",
+        "setToMax": "Set to Max"
+      },
+      "bookingUnified": {
+        "activeSubscribersTitle": "You have 3 active subscriber in this tier",
+        "activeSubscribersDescription": "Changing detail of this plan might affect current subscriber's subscription fee and benefits."
+      },
+      "bookingStep1": {
+        "validationTitle": "Validation Error",
+        "validationDescription": "Title is required."
+      },
+      "planDetail": {
+        "featuredTierTitle": "Your ‘VIP Lounge tier’ will not longer be a featured tier.",
+        "featuredTierDescription": "This tier will be updated as the feature tier in your profile after saving."
+      },
+      "withdrawEarnings": {
+        "payoutAcceptedTitle": "Your payout request has been accepted."
+      }
+    },
+    "checkoutReusable": {
+      "sectionTitle": "Checkout Reusable Components",
+      "sections": {
+        "mediaPreview": "CheckoutMediaPreview — Subscribe Login Popup",
+        "sectionHeader": "SectionHeader — Subscribe / Cart Checkout Login",
+        "orderSummaryToggle": "SectionToggleHeader — Cart Checkout (ORDER SUMMARY)",
+        "paymentToggle": "SectionToggleHeader no toggleable— Purchase Flow (PAYMENT METHOD)",
+        "addressCard": "AddressCard — Cart Checkout Login",
+        "planDropdown": "BasePlanDropdown — Purchase / Cart Checkout (Dark)",
+        "orderSummary": "OrderSummary — Cart / Guest Purchase",
+        "paymentCompact": "PaymentMethodLoggedIn — Purchase Flow (Compact)",
+        "paymentLarge": "PaymentMethodLoggedIn — Purchase Flow / Fan Booking (Large)",
+        "paymentNotLoggedIn": "PaymentMethodNotLoggedIn — Purchase Flow (max-width)",
+        "notesWithAvatars": "CheckoutNotes — Cart Checkout (showAvatars true)",
+        "notesWithoutAvatars": "CheckoutNotes — Subscribe Login (showAvatars false)",
+        "notesGuest": "CheckoutNotes — Guest Purchase / Subscription Order",
+        "totalAmount": "TotalAmountRow — All Checkout Popups",
+        "accountEmail": "SectionToggleHeader — Tip Step 3 (ACCOUNT EMAIL)",
+        "topUpPayment": "SectionToggleHeader toggleable — Top Up Step 2 (PAYMENT METHOD)",
+        "addressTopUp": "AddressCard — Top Up / Tip (Saved Billing)"
+      },
+      "mediaPreview": {
+        "creatorName": "Princess Carrot Pop",
+        "creatorHandle": "{'@'}sammisjelly187",
+        "description": "Subscribe now to instantly unlock 300+ premium media resources."
+      },
+      "sectionHeader": {
+        "title": "ACCOUNT EMAIL"
+      },
+      "orderSummary": {
+        "title": "ORDER SUMMARY",
+        "product": "Product",
+        "subtotal": "Subtotal",
+        "alt": {
+          "avatar": "Creator avatar",
+          "verified": "Verified"
+        }
+      },
+      "payment": {
+        "title": "PAYMENT METHOD",
+        "holderName": "John Carter"
+      },
+      "address": {
+        "cart": "Chan Tai Man,10/F Block5,Fook Yip Bldg,12345,Kwai Chung,Hong Kong",
+        "topUp": "John Carter, 123 Main Street, Los Angeles, CA, 90001, United States"
+      },
+      "addressCard": {
+        "alt": {
+          "edit": "Edit address"
+        }
+      },
+      "planDropdown": {
+        "country": "Country",
+        "state": "State"
+      },
+      "cart": {
+        "itemName": "Orange (Philippines)",
+        "creatorName": "Princess Carrot Pop",
+        "price": "$5.99/mo",
+        "oldPrice": "$123.45"
+      },
+      "subscription": {
+        "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+        "priceMonthly": "USD$499.99/mo",
+        "price": "USD$499.99",
+        "footerBillingCycle": "Your membership will update in your next billing cycle (xx-xx-xxxx)",
+        "footerCheckoutStart": "Your subscription will begin as soon as you complete checkout. Your billing cycle will start (02-26-2025)."
+      },
+      "total": {
+        "amount": "USD$6.99"
+      },
+      "paymentLoggedIn": {
+        "deleteCard": "Delete Card",
+        "cardHolderName": "Card Holder Name",
+        "expiryDate": "Expiry Date",
+        "noName": "No Name",
+        "expiryPlaceholder": "MM/YY",
+        "expPrefix": "EXP"
+      },
+      "paymentNotLoggedIn": {
+        "saveCard": "Save this card for faster checkout.",
+        "cardNumber": "Card Number",
+        "expirationDate": "Expiration Date",
+        "cardholderName": "Cardholder Name",
+        "cvv": "CVV"
+      },
+      "notes": {
+        "title": "Notes",
+        "optional": "Optional",
+        "creatorName": "Princess Carrot Pop",
+        "placeholder": "Enter notes to {'@'}jenny1234....",
+        "charactersLeft": "{count} Characters Left"
+      },
+      "totalAmount": {
+        "label": "Total"
+      },
+      "options": {
+        "hongKong": "Hong Kong",
+        "australia": "Australia",
+        "usa": "USA",
+        "florida": "Florida",
+        "hawaii": "Hawaii",
+        "newYork": "New York",
+        "unitedStates": "United States",
+        "canada": "Canada",
+        "unitedKingdom": "United Kingdom",
+        "california": "California",
+        "texas": "Texas"
+      }
+    },
+    "mediaUploaderComponents": {
+      "sectionTitle": "Media Uploader Helper Components",
+      "tags": {
+        "history": {
+          "bluebettle": "Bluebettle",
+          "dhdt": "dhdt",
+          "hello": "Hello"
+        },
+        "list": {
+          "apple": "Apple",
+          "april": "April",
+          "apricote": "Apricote",
+          "bigSmile": "Big smile",
+          "bigEnergy": "Big Energy",
+          "bluebettle": "Bluebettle",
+          "cantonese": "Cantonese",
+          "chinese": "Chinese",
+          "dumplings": "Dumplings",
+          "eeeee": "EEEEE"
+        }
+      },
+      "performers": {
+        "jellyJam": {
+          "name": "Jelly's Jam",
+          "username": "sammisjelly187"
+        },
+        "sammiJelly": {
+          "name": "Jelly's Jam",
+          "username": "sammisjelly187"
+        },
+        "jellyJamTwo": {
+          "name": "Jelly's Jam",
+          "username": "sammisjelly187"
+        }
+      },
+      "planSharing": {
+        "userOne": "User One",
+        "userTwo": "User Two"
+      }
+    },
+    "actionMenuDropdown": {
+      "sectionTitle": "ActionMenuDropdown",
+      "cards": {
+        "actionMenu": "ActionMenuDropdown",
+        "avatarMenu": "AvatarMenu"
+      }
+    },
+    "bookingAdjustment": {
+      "sectionTitle": "BookingAdjustmentPopup",
+      "cards": {
+        "moreTime": "Ask for more time",
+        "reschedule": "Ask to reschedule",
+        "cancel": "Cancel Call"
+      },
+      "sample": {
+        "eventDate": "April 24, 2025",
+        "eventDateReschedule": "Tue, August 24, 2025",
+        "originalDate": "April 24, 2025",
+        "newTime": "9:30pm",
+        "endTime": "10:30pm",
+        "originalTime": "9:15pm",
+        "userName": "jennyhunny"
+      }
+    },
+    "premiumOrders": {
+      "sectionTitle": "PremiumOrdersTable",
+      "title": "Orders",
+      "searchPlaceholder": "Search...",
+      "searchAlt": "Search",
+      "dropdownAlt": "Dropdown",
+      "orderTypeLabel": "Order Type",
+      "empty": "No orders found",
+      "tabs": {
+        "inProgress": "In Progress",
+        "completed": "Completed",
+        "canceled": "Canceled",
+        "all": "All"
+      },
+      "orderTypes": {
+        "all": "All Types",
+        "p2v": "P2V",
+        "subscription": "Subscription",
+        "merch": "Merch",
+        "mix": "Mix"
+      },
+      "columns": {
+        "orderNum": "Order#",
+        "from": "From",
+        "status": "Status",
+        "date": "Date",
+        "total": "Total"
+      },
+      "links": {
+        "eventDetail": "Event detail",
+        "bookingDetail": "Booking detail"
+      }
+    },
+    "ordersReceived": {
+      "sectionTitle": "Orders Received Page",
+      "sectionDescription": "Production Orders Received components from DashboardOrdersReceivedPage.vue — tabs, search, dropdown, table, and popup — shown with real usage (assetMap + i18n + mockOrdersBackend). Show Code lives only in this demo.",
+      "badges": {
+        "ordersReceived": "Orders Received"
+      },
+      "groups": {
+        "controls": "Page Controls",
+        "page": "Composed Page",
+        "popup": "Order Details Popup"
+      },
+      "items": {
+        "tabs": "DashboardTabs",
+        "search": "OrdersTableSearchInput",
+        "dropdown": "CustomDropdown (order type filter)",
+        "fullPage": "DashboardOrdersReceivedPage (composed)",
+        "popup": "OrderDetailsPopup"
+      },
+      "notes": {
+        "tableNoPopup": "Table uses disable-row-popup on the demo page — row clicks do not open the popup here.",
+        "popupTrigger": "Popup is opened via the button below for showcase only."
+      },
+      "openPopup": "Open Order Details Popup"
+    },
+    "plan": {
+      "sectionTitle": "Plan Publish Page",
+      "sectionDescription": "Production Plan publish-flow components from PlanPage.vue — Detail, Variation, Sharing, Publish Setting — shown with real usage (assetMap via usePlanAssets, section-dashboard-global plan.* i18n). Show Code lives only in this demo.",
+      "badges": {
+        "plan": "Plan"
+      },
+      "groups": {
+        "steps": "Step Components",
+        "page": "Full Page"
+      },
+      "items": {
+        "detail": "PlanDetail",
+        "variation": "PlanVariation",
+        "sharing": "PlanSharing",
+        "publish": "PlanPublishSetting",
+        "fullPage": "PlanPage (route /subscription/plan)"
+      },
+      "notes": {
+        "fullPage": "Open /subscription/plan for the full composed page (tabs, CTA, preview TierCard). Demo embeds each step with the same step-engine wiring."
+      }
+    },
+    "uploadingProgressBar": {
+      "sectionTitle": "UploadingProgressBar",
+      "cards": {
+        "start": "0%",
+        "quarter": "25%",
+        "half": "50%",
+        "threeQuarter": "75%",
+        "complete": "100%",
+        "animated": "Animated"
+      }
+    },
+    "dashProfileSettings": {
+      "sectionTitle": "DashProfileSettings",
+      "cards": {
+        "creator": "Creator",
+        "vendor": "Vendor",
+        "fan": "Fan",
+        "agent": "Agent"
+      },
+      "sample": {
+        "displayName": "lindenMay",
+        "handle": "{'@'}linden",
+        "email": "developer{'@'}contactlinden.com"
+      }
+    },
+    "subscriptionPlanCard": {
+      "sectionTitle": "SubscriptionPlanCard"
+    },
+    "radioGroup": {
+      "sectionTitle": "RadioGroup",
+      "selected": "Selected",
+      "labels": {
+        "pickOne": "Pick one option",
+        "pickMultiple": "Pick multiple options",
+        "attachMedia": "Attach Media"
+      },
+      "options": {
+        "optionA": "Choice A",
+        "optionB": "Choice B",
+        "optionC": "Choice C",
+        "useOriginal": "Use original thumbnail and preview",
+        "useCustom": "Upload a different thumbnail and preview",
+        "none": "Do not attach thumbnail and preview"
+      },
+      "cards": {
+        "default": "Default",
+        "withLabel": "With Label",
+        "mediaUploaderStyle": "Media Uploader Style",
+        "preselected": "Pre-selected"
+      }
+    },
+    "calendarChat": {
+      "sectionTitle": "CalendarChat",
+      "cards": {
+        "newMessage": "NewMessage",
+        "chatSection": "ChatSection",
+        "adjustCostBooking": "AdjustCostBooking",
+        "callSoonChat": "CallSoonChat"
+      }
+    },
+    "paymentMethods": {
+      "sectionTitle": "Payment Methods"
+    },
+    "checkoutPanelComponents": {
+      "sectionTitle": "Checkout Panel Components"
+    },
+    "planPage": {
+      "sectionTitle": "Plan"
+    },
+    "thumbnailUploader": {
+      "sectionTitle": "ThumbnailUploader"
+    },
+    "tabs": {
+      "sectionTitle": "Tabs"
+    },
+    "subscriptionCards": {
+      "sectionTitle": "Subscription Cards",
+      "labels": {
+        "card1": "Card 1 — Standard",
+        "card2Featured": "Card 2 — Featured",
+        "card3Current": "Card 3 — Current Subscription",
+        "card4": "Card 4 — Standard",
+        "card5": "Card 5 — Standard"
+      },
+      "cards": {
+        "1": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "2": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "3": {
+          "title": "Library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "4": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "5": {
+          "title": "FEATURED library of LOREM LPSUM ATIER dolor sit amet, consectetur adipiscing elit."
+        },
+        "description": "Watch all of my mango eating content! content update weekly!<br><br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing<br>• 100% real content<br>• no editing"
+      },
+      "features": {
+        "freeTokens": "<span class=\"font-semibold text-[#FF0066]\">10 free tokens</span> each month",
+        "merchandise": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Merchandise",
+        "customRequest": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Custom Request",
+        "payToView": "<span class=\"font-semibold text-[#FF0066]\">10% off</span> on all Pay to View videos"
+      }
+    },
+    "profileComponents": {
+      "sectionTitle": "Profile Section Components",
+      "sectionDescription": "All 18 audited profile-section components, shown with the exact real usage from ProfileWrapper.vue over a hero-style dark backdrop (assetMap + i18n driven).",
+      "badges": {
+        "desktop": "Desktop",
+        "mobileOnly": "Mobile only (<768px)",
+        "always": "Always"
+      },
+      "groups": {
+        "header": "Header Cluster",
+        "hero": "Hero / Meta Cluster",
+        "sharing": "Description & Sharing",
+        "cta": "Subscribe & Right Actions",
+        "cards": "Media Tabs & Cards",
+        "subscription": "Subscription Carousel"
+      },
+      "items": {
+        "profileHeader": "ProfileHeader",
+        "profileHeaderActions": "ProfileHeaderActions",
+        "profileHeaderOptionButtons": "ProfileHeaderOptionButtons",
+        "profileHeaderUserDesktop": "ProfileHeaderUserDesktop",
+        "profileHeaderUserResponsive": "ProfileHeaderUserResponsive",
+        "profileMeta": "ProfileMeta",
+        "profileMetaResponsive": "ProfileMetaResponsive",
+        "profileRightButtons": "ProfileRightButtons",
+        "profileDescription": "ProfileDescription",
+        "profileSharing": "ProfileSharing",
+        "profileSharingResponsive": "ProfileSharingResponsive",
+        "profileSubscribeCta": "ProfileSubscribeCta",
+        "profileMediaTabHeading": "ProfileMediaTabHeading",
+        "feedPollCard": "FeedPollCard",
+        "feedMediaCard": "FeedMediaCard",
+        "profileMediaGrid": "MediaCardV2 (Media Grid)",
+        "merchCard": "MerchCard",
+        "profileSubscriptionCards": "ProfileSubscriptionCards"
+      },
+      "notes": {
+        "mobileOnly": "This component only renders at mobile widths (<768px). Resize the window to preview it.",
+        "wide": "Uses a fixed wide layout (min-width 45rem) — scroll horizontally to see the full button.",
+        "tall": "Full-height carousel, exactly as it appears on the live profile page."
+      },
+      "data": {
+        "pollTitle": "What Should I eat for tonight's live stream?",
+        "pollOptionOrange": "Orange",
+        "pollOptionApple": "Apple",
+        "pollOptionChicken": "Chicken",
+        "pollTimeLeft": "24 hours left to vote",
+        "feedDescription": "Jenny is back! Tonight I will eat mostly fruits. -> 8pm EST time 👅!",
+        "mediaTitle": "Building successful teams through collaboration",
+        "mediaAlt": "Video {n}",
+        "mediaTimeAgo": "2h ago",
+        "mediaTabPayToView": "Pay to View",
+        "mediaTabSubscription": "Subscription",
+        "merchTitle": "My top (washed) Get Jenny's favourite Mangoes!",
+        "merchDescription": "Get Jenny's favourite Mangoes! Buy them while supply last !Get Jenny's favourite Mangoes! Buy them while supply last !Get Jenny's favourite Mangoes! Buy them while supply last !",
+        "merchDiscount": "10% OFF",
+        "merchTitleOutOfStock": "Out of Stock Item",
+        "merchDescriptionOutOfStock": "This item is out of stock."
+      }
+    },
+    "homeComponents": {
+      "sectionTitle": "Home Page Components",
+      "sectionDescription": "All 9 audited homeComponents, shown with the exact real usage from HomePage.vue and homeSections (assetMap + i18n driven). Show Code lives only in this demo — not inside the home components.",
+      "badges": {
+        "homePage": "HomePage",
+        "heroSection": "HeroSection",
+        "joinSection": "JoinSection",
+        "aboutFaq": "About / FAQ / etc.",
+        "aboutSection": "AboutSection",
+        "serviceTabs": "ServiceTabsSection",
+        "sliders": "Gallery / MostViewed / Recent"
+      },
+      "groups": {
+        "shell": "Page Shell",
+        "hero": "Hero Cluster",
+        "blocks": "Section Building Blocks",
+        "media": "Media Slider"
+      },
+      "items": {
+        "homeNavbar": "HomeNavbar",
+        "homeBackgroundVideo": "HomeBackgroundVideo",
+        "homeFooter": "HomeFooter",
+        "homeHeroIntro": "HomeHeroIntro",
+        "homeCreatorSignupFormHero": "HomeCreatorSignupForm (variant=\"hero\")",
+        "homeCreatorSignupFormSection": "HomeCreatorSignupForm (variant=\"section\")",
+        "heroCluster": "Hero cluster (intro + signup)",
+        "homeSectionHeader": "HomeSectionHeader",
+        "homeFeatureTextBlock": "HomeFeatureTextBlock",
+        "homeServiceTabNav": "HomeServiceTabNav",
+        "homeMediaSlider": "HomeMediaSlider"
+      },
+      "notes": {
+        "backgroundVideo": "Absolute full-bleed layer on HomePage. Demo wraps it in a fixed-height frame so it is visible here.",
+        "heroCluster": "Same pairing as HeroSection.vue — intro copy + creator signup form.",
+        "mediaSlider": "Same data shape as GallerySlider.vue (getAssetUrls + t('home.sliders.*'))."
+      }
+    },
+    "settingsComponents": {
+      "sectionTitle": "Settings Page Components",
+      "sectionDescription": "All component usages from SettingsPage.vue — every input, heading, paragraph, select, and button variant listed with Show Code.",
+      "items": {
+        "dashProfileSettings": "DashProfileSettings",
+        "settingsProfileAvatar": "SettingsProfileAvatar",
+        "baseHeadingAll": "Heading — all tab & section titles",
+        "baseParagraphAll": "Paragraph — all copy blocks",
+        "buttonsAll": "DashboardPrimaryButton — BACK / CANCEL / SAVE",
+        "dashboardTextInputAll": "DashboardTextInput — all fields",
+        "settingsLanguageField": "SettingsLanguageField",
+        "unifiedSelectAll": "UnifiedSelect — all selects",
+        "twoPieceAll": "TwoPieceButton — all variants"
+      }
+    },
+    "editProfileComponents": {
+      "sectionTitle": "Edit Profile Page Components",
+      "sectionDescription": "All component usages from EditProfilePage.vue — every input, dropdown, heading, and popup listed with Show Code.",
+      "items": {
+        "editProfileMenu": "EditProfileMenu",
+        "headingsAll": "Headings — all page titles",
+        "customDropdownAll": "CustomDropdown — all selects",
+        "dashboardTextInputAll": "DashboardTextInput — all fields",
+        "twoPieceAll": "TwoPieceButton — unlock CTAs",
+        "checkboxSwitch": "CheckboxSwitch",
+        "radioGroup": "RadioGroup",
+        "notificationCardAll": "NotificationCard — all variants",
+        "uploadingProgressBar": "UploadingProgressBar",
+        "imageCropperModal": "ImageCropperModal",
+        "avatarUploadPopup": "AvatarUploadPopup",
+        "cancelUploadPopup": "CancelUploadPopup"
+      }
+    },
+    "authCodeInput": {
+      "sectionTitle": "AuthCodeInput",
+      "variations": {
+        "default": "Default",
+        "withLabel": "With Label",
+        "requiredAsterisk": "Required (*)",
+        "disabled": "Disabled",
+        "dynamicErrors": "Dynamic Errors",
+        "toggleSubmitting": "Toggle Submitting State"
+      },
+      "dynamicErrorsHint": "Type \"123456\" to see the error disappear. Otherwise it shows an error.",
+      "triggerSubmitting": "Trigger Submitting",
+      "stopSubmitting": "Stop Submitting",
+      "messages": {
+        "codeEntered": "Code fully entered.",
+        "codeValid": "Valid code.",
+        "codeInvalid": "Invalid code."
+      }
+    },
+    "socialLinking": {
+      "title": "Social Account Linking",
+      "description": "Link your social media accounts to enable one-click login in the future.",
+      "loading": "Loading profile data...",
+      "notLinked": "Not linked",
+      "linkedId": "Linked (ID: {id})",
+      "unlink": "Unlink",
+      "linkAccount": "Link Account",
+      "twitter": "X (Twitter)",
+      "telegram": "Telegram"
+    },
+    "authComponent": {
+      "sectionTitle": "AuthTextInput — Live Demo",
+      "verificationTitle": "Verification (OTP)",
+      "onboardingTitle": "Onboarding — Role & Username"
+    },
+    "countryState": {
+      "show": "Show Component",
+      "hide": "Hide Component",
+      "country": "Country:",
+      "state": "State:"
+    },
+    "lazySection": {
+      "pageTitle": "Lazy Section Loading — live demo",
+      "intro": "Open DevTools → Elements (and optionally Network), then scroll down slowly. Each section below is wrapped in <LazySection>. While off-screen only an empty placeholder div exists; as you approach it, the real HTML is created into the inspector and its JS chunk is fetched in Network.",
+      "hint": "Tip: in the Elements panel, watch the <div class=\"lazy-section\"> wrappers — the placeholder swaps to the real [data-lazy-block] markup on scroll.",
+      "scrollSpacer": "Scroll down ↓ (spacer — nothing lazy here)",
+      "spacer": "Spacer",
+      "keepScrolling": "Keep scrolling — footer loads near the bottom ↓",
+      "placeholderA": "Section A — NOT loaded yet. Scroll here and watch this placeholder turn into real HTML.",
+      "placeholderB": "Section B — NOT loaded yet. Scroll here and watch this placeholder turn into real HTML.",
+      "placeholderC": "Section C (footer) — NOT loaded yet. Scroll here and watch this placeholder turn into real HTML.",
+      "end": "End of demo."
+    }
+  },
+  "shops": {
+    "merch": {
+      "title": "Merch",
+      "emptyMessage": "You haven't added any merch for your shop yet.",
+      "newMerch": "NEW MERCH",
+      "faq": "MERCH FAQ",
+      "alt": {
+        "emptyCart": "Empty merch cart"
+      },
+      "listing": {
+        "title": "New Merch Listing",
+        "closeAlt": "Close",
+        "stepPlaceholder": "Coming soon.",
+        "productNamePlaceholder": "Product Name",
+        "descriptionPlaceholder": "Description",
+        "subscribersOnly": "For Subscribers Only",
+        "selectSubscriptionPlan": "Select Subscription Plan:",
+        "priceTitle": "Price",
+        "priceSubtitle": "Include domestic shipping cost in your price.",
+        "originalPrice": "Original Price",
+        "discountedPrice": "Discounted Price (optional)",
+        "tagsTitle": "Tags",
+        "tagsSubtitle": "Add maximum of 10 tags to your media.",
+        "tagsPlaceholder": "Search tags...",
+        "collectionTitle": "Collection",
+        "collectionPlaceholder": "Search or add new collection...",
+        "collectionNotFound": "Collection not found.",
+        "createCollection": "Create new collection",
+        "createCollectionPopup": {
+          "title": "Create New Collection",
+          "closeAlt": "Close",
+          "createButton": "Create Collection",
+          "nextButton": "Next",
+          "personalLabel": "Create Collection for Personal Use",
+          "personalHint": "Only you can use the collection '{collection}', no approval needed",
+          "globalLabel": "Create Collection for Global Use",
+          "globalHint": "After the collection '{collection}' is approved by Fansocial's team, all models will be able to use this collection"
+        },
+        "saveAsDraft": "Save as draft",
+        "next": "NEXT",
+        "gallery": {
+          "helpUploadLimit": "You may upload up to 6 image files.",
+          "helpReorder": "Drag and drop uploaded media to reorder sequence.",
+          "emptyIconAlt": "Empty gallery",
+          "emptyMessage": "Your gallery is waiting to be filled with amazing content—let's get started!",
+          "imageLabel": "Image",
+          "removeImageAlt": "Remove image",
+          "defaultImageName": "image",
+          "approvalNotice": "Uploading any new media will require approval again from Fansocial Team.",
+          "overLimitWarning": "You can only upload maximum of 6 media to your gallery.",
+          "uploadSuccess": "{count} images uploaded successfully",
+          "uploadSuccessOne": "{count} image uploaded successfully"
+        },
+        "steps": {
+          "productDetails": "Product Details",
+          "gallery": "Gallery",
+          "inventoryShipment": "Inventory and Shipment",
+          "publishSettings": "Publish Settings"
+        }
+      }
+    },
+    "customProductSetting": {
+      "title": "Custom product setting"
+    },
+    "coupons": {
+      "title": "Coupons"
+    }
+  },
+  "plan": {
+    "page": {
+      "titleNewTier": "New Tier",
+      "settingsTitle": "Subscription Settings",
+      "settingsDescription": "Set up your subscription tier here. You may publish up to 1 free and 3 paid tiers. LOREM IPSUM ATIER dolor sit amet, consectetur adipiscing elit.",
+      "emptyMessage": "You don't have any subscription tiers set up at the moment.",
+      "addTier": "Add Tier",
+      "newTier": "NEW TIER",
+      "faq": "Subscription FAQ",
+      "emptyAvatarInitial": "J",
+      "back": "Back",
+      "saveAsDraft": "Save as draft",
+      "saveAndPublish": "SAVE & PUBLISH",
+      "schedulePublish": "SCHEDULE PUBLISH",
+      "publishNow": "PUBLISH NOW",
+      "upload": "Upload",
+      "time": "Time",
+      "preview": "Preview",
+      "tabPublished": "Published ({count})",
+      "tabDraft": "Draft ({count})",
+      "upgradeToAddMore": "Upgrade to add more tiers",
+      "upgradeBanner": "Upgrade to premium to add more plans. You have used all 3 paid tier slots on your free plan. Upgrade to add up to 6 paid tiers.",
+      "upgradeBannerTitle": "Upgrade to premium to add more plans",
+      "upgradeBannerDescription": "You have used all 3 paid tier slots on your free plan. Upgrade to add up to 6 paid tiers",
+      "learnMore": "Learn more",
+      "upgradeNow": "Upgrade Now",
+      "statusDraft": "DRAFT",
+      "noFollowersYet": "No followers yet",
+      "followersCount": "{count} Followers",
+      "hover": {
+        "editDetails": "Edit Details",
+        "publishTier": "Publish Tier",
+        "publish": "Publish",
+        "addMedia": "Add Media to this Tier",
+        "deleteTier": "Delete Tier",
+        "featureTier": "Feature this Tier",
+        "removeFeatured": "Remove Featured Tag",
+        "unpublish": "Unpublish",
+        "cannotPublishNoMedia": "Cannot publish because there are no media added to this tier.",
+        "cannotPublishAtLimit": "Cannot publish — you already used all free or paid tier slots. Upgrade to add more.",
+        "cannotDeleteFollowers": "Cannot delete because you have followers in this tier."
+      },
+      "featureTokensAccent": "{count} free tokens",
+      "featureTokensSuffix": "each month",
+      "featurePercentAccent": "{amount}% off",
+      "featureMerchSuffix": "on all Merchandise",
+      "featureCustomSuffix": "on all Custom Request",
+      "featurePpvSuffix": "on all Pay to View videos",
+      "tabs": {
+        "detail": "Plan Detail",
+        "variation": "Plan Variations & Promotion",
+        "sharing": "Sharing",
+        "publish": "Publish Setting"
+      },
+      "alt": {
+        "back": "Back",
+        "settings": "Settings",
+        "upload": "Upload",
+        "time": "Time",
+        "close": "Close",
+        "emptyKeyhole": "Subscription tiers",
+        "emptyAvatar": "Fan avatar",
+        "scrollTiersLeft": "Scroll tiers left",
+        "scrollTiersRight": "Scroll tiers right"
+      },
+      "cancel": "CANCEL",
+      "save": "SAVE"
+    },
+    "confirm": {
+      "leaveMessage": "Are you sure you want to leave? Your changes will not be saved.",
+      "cancel": "Cancel",
+      "leave": "Leave",
+      "draftSavedTitle": "Your new subscription tier ‘{name}’ has been saved.",
+      "draftSavedHint": "You must add media to this tier before you can publish it.",
+      "backToSettings": "Back to Subscription Settings",
+      "addMedia": "Add Media",
+      "untitledTier": "Untitled tier",
+      "cannotProcessImage": "Cannot Process Image",
+      "fileSizeTooLarge": "File size is too large",
+      "wrongFormat": "Wrong format",
+      "back": "Back",
+      "ok": "OK",
+      "deleteQuestion": "Are you sure you want to delete this tier?",
+      "deleteWithUndo": "Are you sure you want to delete this tier? This action cannot be undone.",
+      "unpublishMessage": "Are you sure you want to unpublish this tier? It will be moved to drafts.",
+      "publishMessage": "Are you sure you want to publish this tier? It will be moved to published."
+    },
+    "toast": {
+      "detailsUpdated": "Tier Details Updated",
+      "published": "Your tier ‘{name}’ has been published.",
+      "updatedAndPublished": "Your tier ‘{name}’ has been updated and published.",
+      "deletedTitle": "Tier Deleted",
+      "deleted": "Your tier ‘{name}’ has been deleted.",
+      "unpublishedTitle": "Tier Unpublished",
+      "unpublished": "Your tier ‘{name}’ has been unpublished and moved to draft.",
+      "featuredName": "FEATURED {name}",
+      "justNow": "Just now",
+      "viewInProfile": "View in profile"
+    },
+    "publish": {
+      "title": "Publish Setting",
+      "description": "You can make this subscription tier more exclusive by limiting its availability on your profile. Schedule your time below and we will post your subscription tier on your profile accordingly.",
+      "immediately": "Publish immediately",
+      "schedule": "Schedule a publish time",
+      "immediateHelp": "This Tier will be available immediately on your profile after publishing.",
+      "scheduleHelp": "Please specify your publishing period here:",
+      "publishDate": "Publish Date",
+      "endDate": "End Date",
+      "optional": "optional",
+      "datePlaceholder": "Select date and time",
+      "alt": {
+        "chevron": "Chevron down",
+        "calendar": "Calendar"
+      }
+    },
+    "variation": {
+      "title": "Subscription Variations",
+      "loyaltyCopy": "Award those who are loyal to you! Offer percentage off or exact amount off when they subscribe for longer period of time! You may add up to 3 discount options.",
+      "addPlan": "ADD PLAN",
+      "alt": {
+        "plus": "Add"
+      },
+      "popup": {
+        "title": "Subscription Plan Variations",
+        "closeAlt": "Close",
+        "variationPeriodDiscount": "Variation period and discount",
+        "amountRequired": "Please enter discount amount",
+        "previewPrice": "24.88",
+        "billEvery": "Bill every {period}",
+        "periods": {
+          "1m": "1 month",
+          "2m": "2 months",
+          "3m": "3 months",
+          "6m": "6 months",
+          "1y": "1 year"
+        },
+        "discountPeriod": "Discount period",
+        "discountPeriodHelp": "Choose how long the discount period lasts before renewing.",
+        "billingCycles": "Billing cycles",
+        "unlimitedTime": "Unlimited time",
+        "dateRange": "Discount start and end date",
+        "dateRangeHelp": "Make discount limited time only. Set start and end date to your discount. Leave blank to disable this feature.",
+        "datePlaceholder": "08/31/2024  24:00:00",
+        "fansClaim": "How many fans can use this Discount?",
+        "fansClaimHelp": "Leave blank for unlimited uses",
+        "fansClaimMaxError": "Number must be smaller than maximum subscribers.",
+        "limitOnePerFan": "Limit to 1 time use per fan",
+        "limitOnePerFanTooltip": "Only 1 use per person. No repeats.",
+        "whoCanUse": "Who can use this discount?",
+        "spendingRequirement": "Spending requirement",
+        "spendingRequirementHelp": "Add minimum spending requirements for fan to claim this discount.",
+        "addMinimumSpending": "Add minimum spending",
+        "removeSpendingRequirement": "Remove spending requirement",
+        "minimumSpending": "Minimum Spending",
+        "selectSpendingCategory": "Select spending category",
+        "spendingCategoryLabel": "Spending category",
+        "selectAll": "Select All",
+        "nSelected": "{count} Selected",
+        "spendingPeriod": "Spending period",
+        "spendingPeriodHelp": "Only purchases made during the specified time below will be counted",
+        "allowLifetimeSpending": "Allow fan’s lifetime spending",
+        "spendingCategories": {
+          "tips": "Tip",
+          "subscriptions": "Subscription",
+          "payToView": "Pay to View",
+          "merch": "Merch"
+        },
+        "cancel": "CANCEL",
+        "addDiscount": "ADD DISCOUNT"
+      },
+      "mock": {
+        "plan2mTitle": "2 MONTH SUBSCRIPTION",
+        "plan6mTitle": "6 MONTH SUBSCRIPTION",
+        "plan1yTitle": "1 YEAR SUBSCRIPTION",
+        "audienceEveryone": "Everyone",
+        "audienceSubscribersOnly": "Subscribers Only",
+        "noEndDate": "No End Date",
+        "noMinSpending": "No Min. spending",
+        "minSpendingWithAmount": "{currency}{amount} Min. spending",
+        "minSpending100": "USD$100 Min. spending",
+        "dateRangeApr": "23 APR 2025-24 APR 2026",
+        "dateRangeMay": "01 MAY 2025-01 JUN 2025",
+        "pending": "Pending",
+        "none": "None",
+        "currency": "USD$",
+        "price2m": "24.86",
+        "price6m": "55.86",
+        "price1y": "240.34",
+        "discount20": "-20%",
+        "discount40": "-40%",
+        "discount60": "-60%",
+        "item90Off1y": "90% off 1 YEAR",
+        "item90Off6m": "90% off 6 months",
+        "itemFree1m": "FREE 1 month!",
+        "itemLifetime50": "Lifetime 50% off~",
+        "itemFree6m": "FREE 6 months!",
+        "tokens1of1": "1/1 Left",
+        "tokens5of5": "5/5 Left",
+        "tokens50of50": "50/50 Left",
+        "tokens10of10": "10/10 Left"
+      }
+    },
+    "sharing": {
+      "title": "Sharing Options",
+      "postToX": "Post updates of this tier to X",
+      "inviteFans": "Invite Fans",
+      "sendInvite": "Send invite",
+      "copyLink": "Copy Link",
+      "copied": "Copied!",
+      "copyFailed": "Failed to copy",
+      "postPreview": "POST PREVIEW",
+      "inviteListSubtitle": "Invite list",
+      "searchFanPlaceholder": "Search fan by username...",
+      "inviteHelp": "Send invite to specific fans, or share it on your social media:",
+      "inviteLinkPlaceholder": "Enter amount",
+      "verifiedFanOnly": "Verified fan only",
+      "mock": {
+        "userOneName": "User One",
+        "userOneUsername": "user1",
+        "userTwoName": "User Two",
+        "userTwoUsername": "user2",
+        "inviteLink": "ourwebsite.com/invitelinkwww",
+        "displayName": "Jelly FISH",
+        "handle": "{'@'}jellyf1sh",
+        "date": "Jul 31",
+        "body": "Watch me eat 10 family size fried chicken bucket...you don’t wanna miss this:",
+        "mediaLink": "our-website.app/model/jellyskitchen/media/198386476"
+      },
+      "alt": {
+        "tooltip": "Tooltip",
+        "verified": "Verified",
+        "play": "Play",
+        "send": "Send",
+        "copy": "Copy"
+      }
+    },
+    "detail": {
+      "tierInformation": "Tier information",
+      "featuredTier": "This is a Featured Tier",
+      "featuredHelp": "Featured tier will be displayed first by default on your subscription tier page.",
+      "featuredAlertTitle": "Your ‘VIP Lounge tier’ will not longer be a featured tier.",
+      "featuredAlertDescription": "This tier will be updated as the feature tier in your profile after saving.",
+      "priceSetting": "Price Setting",
+      "freeTier": "Free Tier",
+      "freeTierDisabledTooltip": "Cannot make this a free tier because there is already a free tier in your subscription setting",
+      "paidTiers": "Paid Tier",
+      "subscriptionBasePrice": "Subscription Base Price",
+      "subscriberDiscount": "Subscriber Discount",
+      "subscriberDiscountHelp": "Offer first-time subscriber discount when they join this tier for the first time.",
+      "perMonth": "/mo",
+      "discountBillingCycles": "Discount for 6 billing cycle",
+      "discountBillingCyclesCount": "Discount for {count} billing cycle",
+      "subscriberSetting": "Subscriber Setting",
+      "whoCanSubscribe": "Who can subscribe to this plan tier?",
+      "sendSubscriptionLinkHelp": "Send subscription link below to specific fans:",
+      "copyLink": "Copy Link",
+      "copied": "Copied!",
+      "inviteLink": "fansocial.app/invitelinkwww",
+      "maximumSubscribers": "Maximum subscribers",
+      "maximumSubscribersHelp": "Limit how many fans can join this tier at once. Leave blank to disable feature.",
+      "enterAmount": "Enter amount",
+      "unsubscribeDiscount": "Unsubscribe Discount",
+      "unsubscribeDiscountHelp": "Offer discount to your subscribers when they unsubscribe from this tier. Note that all subscribers with different billing cycles from all tiers will be offered the same discount.",
+      "mediaOptions": "Media Options",
+      "mediaOptionsHelp": "You can include medias from other subscription tiers to this tier. Subscribers will gain access to all content posted to selected tier below.",
+      "perDay": "Per day",
+      "perMonthDuration": "Per month",
+      "perYear": "Per year",
+      "audienceEveryone": "Everyone",
+      "audienceInvited": "Only those invited",
+      "edit": "EDIT",
+      "remove": "REMOVE",
+      "addDiscount": "ADD DISCOUNT",
+      "tagPublished": "Published Tier",
+      "tagDraft": "Draft",
+      "mockDiscountPrice": "11.69",
+      "mockDiscountPercent": "-40%",
+      "mockDiscountDateRange": "23 APR 2025-24 APR 2026",
+      "discountPopup": {
+        "title": "Subscriber discount",
+        "closeAlt": "Close",
+        "subscriptionPeriodDiscount": "Subscription period and discount",
+        "percentOff": "Percent off",
+        "amountOff": "Amount off",
+        "off": "off",
+        "amountRequired": "Please enter discount amount",
+        "previewPrice": "24.88",
+        "previewBeforePrice": "248.80",
+        "beforeDiscount": "USD$ {price} before discount",
+        "discountPeriod": "Discount period",
+        "discountPeriodHelp": "Choose how long the discount period lasts before renewing.",
+        "billingCycles": "Billing cycles",
+        "dateRange": "Discount start and end date",
+        "dateRangeHelp": "Make discount limited time only. Set start and end date to your discount. Leave blank to disable this feature.",
+        "datePlaceholder": "--/--/-- --:--",
+        "whoCanEnter": "Who can enter?",
+        "fansClaim": "How many fans can use this new subscriber Discount?",
+        "fansClaimHelp": "Leave blank for unlimited uses",
+        "limitOnePerFan": "limit to 1 time use per fan",
+        "limitOnePerFanTooltip": "Only 1 use per person. No repeats.",
+        "spendingRequirement": "Spending requirement",
+        "spendingRequirementHelp": "Add minimum spending requirements for fan to enter this luck draw.",
+        "addMinimumSpending": "Add minimum spending",
+        "cancel": "CANCEL",
+        "addDiscount": "ADD DISCOUNT"
+      },
+      "unsubscribeDiscountPopup": {
+        "title": "Unsubscribe Discount",
+        "closeAlt": "Close",
+        "subscriptionPeriodDiscount": "Subscription period and discount",
+        "amountRequired": "Please enter discount amount",
+        "discountPeriod": "Unsubscribe Discount period",
+        "discountPeriodHelp": "Choose how long the unsubscribe discount lasts before charging back original price.",
+        "billingCycles": "Billing cycles",
+        "unlimitedTime": "Unlimited time",
+        "messageToFan": "Message to Fan",
+        "messageToFanHelp": "Your personal message will be displayed to your subscriber when they are considering leaving.",
+        "messagePlaceholder": "Your support means the world to me......consider staying with me for a little longer and I will give you something sweet... 👄",
+        "cancel": "CANCEL",
+        "addDiscount": "ADD DISCOUNT"
+      },
+      "mediaFeatures": {
+        "someContent": {
+          "label": "Access to some content",
+          "meta": "16 Media"
+        },
+        "moreContent": {
+          "label": "Access to more content",
+          "meta": "24 Media"
+        },
+        "someMoreContent": {
+          "label": "Access to some more content",
+          "meta": "100 Media"
+        },
+        "evenMoreContent": {
+          "label": "Access to even more content",
+          "meta": "5 Media"
+        },
+        "evenSomeMoreContent": {
+          "label": "Access to even some more content",
+          "meta": "3 Media"
+        },
+        "evenMostContent": {
+          "label": "Access to even the most content",
+          "meta": "0 Media"
+        },
+        "evenMoreMostContent": {
+          "label": "Access to even more the most content",
+          "meta": "0 Media"
+        }
+      },
+      "alt": {
+        "weather": "Weather",
+        "calendar": "Calendar",
+        "pen": "Edit",
+        "trash": "Delete"
+      }
+    },
+    "luckyDraw": {
+      "title": "Lucky Draw",
+      "createEvent": " CREATE EVENT",
+      "descriptionPlaceholder": "Lucky Draw description…",
+      "descriptionFilled": "Customise discount for the selected special ones. Create lucky draw for your followers, invite specific fans and more.",
+      "descriptionEmpty": "Improve your engagement with your fans! Add Discountal events to boost visibility to your subscription plans",
+      "activeTitle": "Active Lucky Draw",
+      "edit": "EDIT",
+      "remove": "REMOVE",
+      "popup": {
+        "title": "NEW EVENT - LUCKY DRAW",
+        "closeAlt": "Close",
+        "pendingDescription": "Pending lucky draw description Pending lucky draw description Pending lucky draw description",
+        "titlePlaceholder": "Lucky draw Title",
+        "descriptionPlaceholder": "Description...",
+        "dateRange": "Start and end date",
+        "datePlaceholder": "Select date and time",
+        "whoCanEnter": "Who can enter?",
+        "guaranteePrize": "Fan who enter the lucky draw will be guaranteed winning a prize",
+        "spendingRequirement": "Spending requirement",
+        "spendingRequirementHelp": "Add minimum spending requirements for fan to enter this luck draw.",
+        "addMinimumSpending": "Add minimum spending",
+        "prizeTitle": "Luck Draw prize",
+        "prizeHelp": "You may add up to 5 different prizes.",
+        "addPrize": "Add Prize",
+        "prizesLeft": "{count}/5 Prizes left",
+        "prizeQuotaLeft": "{current}/{total} Left",
+        "pricePerDay": "/day",
+        "pricePerMonth": "/mo",
+        "pricePerYear": "/yr",
+        "discountForCycles": "Discount for {count} billing cycle",
+        "lifetimeDiscount": "Lifetime discount",
+        "sharingOptions": "Sharing Options",
+        "postToX": "Post Lucky Draw to X",
+        "postToXTooltip": "Share this lucky draw on X when the tier is published.",
+        "postMessageLabel": "Post Message (Leave blank to use system default message.)",
+        "postMessagePlaceholder": "Custom message...",
+        "charactersCount": "{used}/{max} characters",
+        "attachMedia": "Attach Media",
+        "noMedia": "Do not attach image or video",
+        "uploadMedia": "Upload media",
+        "postPreview": "POST PREVIEW",
+        "previewBody": "Come Try your luck! Now it's your chance to win free subscription to my content for a YEAR! Enter now:",
+        "previewLink": "fansocial.app/model/jellyskitchen/...",
+        "cancel": "CANCEL",
+        "createEvent": "CREATE EVENT",
+        "footerNote": "After this subscription tier is published, eligible fans and groups will be notified of this event. We will also display this event on your profile page for fans to enter the luck draw."
+      },
+      "addPrizePopup": {
+        "title": "ADD PRIZE",
+        "closeAlt": "Close",
+        "pendingDescription": "Pending lucky draw description Pending lucky draw description Pending lucky draw description",
+        "titlePlaceholder": "Prize title",
+        "descriptionPlaceholder": "Description..",
+        "subscriptionPrice": "Subscription Price",
+        "discountPeriod": "Discount period",
+        "discountPeriodHelp": "Choose how long the discount period lasts before renewing.",
+        "billingCycles": "Billing cycles",
+        "unlimitedTime": "Unlimited time",
+        "howManyWinners": "How many winners?",
+        "addPrize": "ADD PRIZE",
+        "footerNote": "Pending lucky draw description Pending lucky draw description Pending lucky draw description"
+      }
+    },
+    "subscription": {
+      "unlimitedUsage": "unlimited usage",
+      "usage": "usage",
+      "edit": "EDIT",
+      "remove": "REMOVE"
+    },
+    "dropdown": {
+      "selectOption": "Select option"
+    },
+    "preview": {
+      "mock": {
+        "title": "My VVIP Lounge ❤️️️",
+        "description": "Welcome to Jenny's VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7❤️ Welcome to Jenny's VIP Lounge! Welcome to Jenny's VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7❤️ Welcome to Jenny's VIP Lounge! Welcome to Jenny's VIP Lounge! This plan includes everything in Basic/VIP Lounge, plus: Behind the scene of every shot! stuff i wore from the shot for sale! Talk to me 24/7❤️ Welcome to Jenny's VIP Lounge! ...",
+        "claimOffer": "SUBSCRIBE",
+        "subscribe": "SUBSCRIBE",
+        "leftText": "5 Left!",
+        "rightText": "95/100 Offer",
+        "endsIn": "02:13:07",
+        "originalPrice": "$111.72",
+        "discount5": "-5%",
+        "discount50": "-50%",
+        "price": "55.86",
+        "plans": {
+          "1d": "1 day",
+          "1m": "1 month",
+          "6m": "6 month",
+          "1y": "1 year"
+        }
+      }
+    },
+    "defaults": {
+      "tierName": "Basic Lounge ❤️️️",
+      "description": "Welcome to Jenny’s basic lounge. You will get the most basic things in this tier."
+    }
+  },
+  "settings": {
+    "page": {
+      "title": "Settings",
+      "actions": {
+        "back": "BACK",
+        "cancel": "CANCEL",
+        "save": "SAVE"
+      },
+      "alt": {
+        "notification": "Notification",
+        "language": "Language",
+        "avatar": "User avatar",
+        "hamburger": "Menu",
+        "back": "Back",
+        "x": "X",
+        "stars": "Stars",
+        "star": "Star",
+        "power": "Power",
+        "phone": "Phone"
+      },
+      "tabs": {
+        "accountInformation": "Account Information",
+        "changePassword": "Change Password",
+        "privacySecurity": "Privacy & Security",
+        "shippingAddress": "Shipping Address",
+        "payoutDetails": "Payout Details"
+      },
+      "account": {
+        "username": "Username",
+        "usernamePlaceholder": "carrot_popxoxo123",
+        "usernameHelp": "Usernames cannot be changed after your first month on our website, but special circumstances may allow for exceptions. Please contact us if you need assistance with changing your username.",
+        "email": "Email",
+        "emailPlaceholder": "mscarrot_pops{'@'}gmail.com",
+        "firstName": "First Name",
+        "firstNamePlaceholder": "Enter First Name",
+        "lastName": "Last Name",
+        "lastNamePlaceholder": "Enter Last Name",
+        "linkXTitle": "Link X Account",
+        "linkXBody": "Link your account to your Twitter(X) account to post product and feed updates automatically.",
+        "linkXCta": "Link your X account",
+        "promoteTitle": "Promote Yourself on our website's X Account",
+        "promotePremium": "PREMIUM",
+        "promoteBody": "We will automatically post your Account Updates to our website's official twitter account.",
+        "upgradeCta": "Upgrade To Premium"
+      },
+      "password": {
+        "password": "Password",
+        "oldPlaceholder": "Old Password",
+        "newPlaceholder": "New Password",
+        "confirmLabel": "Re-enter New Password",
+        "confirmPlaceholder": "Re-enter New Password"
+      },
+      "privacy": {
+        "activeDevice": "Active Device",
+        "logoutAll": "Log out of all device",
+        "logout": "Log out",
+        "deviceName": "iPhone 16",
+        "browserName": "Chrome",
+        "loggedInOn": "Logged in on xx-xx-xxxx xx:xx"
+      },
+      "shipping": {
+        "personalInformation": "Personal Information",
+        "shippingAddress": "Shipping Address",
+        "phoneNumber": "Phone Number",
+        "emailPlaceholder": "Enter Email",
+        "phonePlaceholder": "Enter Phone",
+        "company": "Company",
+        "companyPlaceholder": "Enter Company",
+        "optional": "Optional",
+        "addressLine1": "Address Line 1",
+        "addressLine1Placeholder": "Enter Address Line 1",
+        "addressLine2": "Address Line 2",
+        "addressLine2Placeholder": "Enter Address Line 2",
+        "postalCode": "Postal Code",
+        "postalCodePlaceholder": "Enter Postal Code",
+        "city": "City",
+        "cityPlaceholder": "Enter City",
+        "state": "State",
+        "country": "Country"
+      },
+      "payout": {
+        "beneficiaryTitle": "Beneficiary Information",
+        "beneficiaryBody": "Beneficiary is the account holder who will receive the payment.",
+        "beneficiaryName": "Beneficiary name",
+        "beneficiaryNamePlaceholder": "Enter Beneficiary Name",
+        "beneficiaryStreet": "Beneficiary Street",
+        "beneficiaryStreetPlaceholder": "Enter Beneficiary Street",
+        "beneficiaryCity": "Beneficiary City",
+        "beneficiaryCityPlaceholder": "Beneficiary address town/city",
+        "beneficiaryPostalCode": "Beneficiary Postal Code",
+        "beneficiaryPostalPlaceholder": "Beneficiary address post/zip code",
+        "bankTitle": "Bank Information",
+        "bankBody": "All transaction will be paid in USD.",
+        "beneficiaryAccount": "Beneficiary Account",
+        "beneficiaryAccountPlaceholder": "Acccount number in local or IBAN format",
+        "beneficiaryAccountTooltip": "If this option is turned off, fans will be allow to unsubscribe and enjoy the discount again when resubscribe.",
+        "country": "Country",
+        "swiftCode": "BIC/SWIFT code",
+        "swiftPlaceholder": "Enter BIC/SWIFT code",
+        "intermediarySwift": "Intermediary Bank BIC/SWIFT code",
+        "intermediaryHelp": "If you are not sure if you need an intermediary Bank for international transfer, please contact your bank for future information."
+      },
+      "options": {
+        "countryUnitedStates": "United States (US)",
+        "countryHongKong": "Hong Kong",
+        "countryAustralia": "Australia",
+        "countryBangladesh": "Bangladesh",
+        "stateGeorgia": "Georgia",
+        "stateFlorida": "Florida",
+        "stateHawaii": "Hawaii",
+        "stateDhaka": "Dhaka"
+      }
+    }
+  },
+  "editProfile": {
+    "page": {
+      "title": "Edit Profile",
+      "actions": {
+        "cancel": "CANCEL",
+        "save": "SAVE",
+        "upload": "Upload",
+        "cancelShort": "Cancel",
+        "no": "No",
+        "confirm": "Confirm"
+      },
+      "alt": {
+        "notification": "Notification",
+        "language": "Language",
+        "avatar": "User avatar",
+        "hamburger": "Menu",
+        "edit": "Edit",
+        "chevronDown": "Chevron down",
+        "images": "Images",
+        "video": "Video",
+        "close": "Close",
+        "remove": "Remove",
+        "upload": "Upload",
+        "tooltip": "Info",
+        "fullscreen": "Fullscreen",
+        "verified": "Verified",
+        "previewBg": "Preview background",
+        "lightbox": "Media",
+        "play": "Play",
+        "imageTag": "Image",
+        "videoTag": "Video",
+        "selectedAvatar": "Selected avatar",
+        "reflectHorizontal": "Flip horizontal",
+        "reflectVertical": "Flip vertical",
+        "zoomOut": "Zoom out",
+        "zoomIn": "Zoom in",
+        "rotate": "Rotate"
+      },
+      "notice": {
+        "unsavedTitle": "You have unsaved changes",
+        "unsavedDescription": "You have made changes to your profile since your last saved. Remember to click ‘SAVE’ to publish your changes."
+      },
+      "fields": {
+        "profileVisibility": "Profile Visibility",
+        "selectVisibility": "Select Visibility",
+        "displayName": "Display Name",
+        "displayNamePlaceholder": "Enter Display Name",
+        "age": "Age",
+        "agePlaceholder": "Enter Age",
+        "gender": "Gender",
+        "country": "Country",
+        "bodyType": "Body Type",
+        "hair": "Hair",
+        "bio": "Bio",
+        "bioPlaceholder": "Enter Bio",
+        "select": "Select"
+      },
+      "options": {
+        "genderMale": "Male",
+        "genderFemale": "Female",
+        "genderOthers": "Others",
+        "visibilityEveryone": "Everyone",
+        "visibilityEveryoneDesc": "Your profile link will be visible to everyone.",
+        "visibilityModelsOnly": "Models Only",
+        "visibilityModelsOnlyDesc": "Your profile link will be accessible only to Fansocial users with model accounts and will not be visible to other users.",
+        "visibilityFansOnly": "Fans Only",
+        "visibilityFansOnlyDesc": "Your profile link will be accessible only to Fansocial users with fan accounts and will not be visible to other users.",
+        "visibilityRegisteredOnly": "Registered User Only",
+        "visibilityRegisteredOnlyDesc": "Your profile link will be accessible only to logged-in Fansocial users and will not be visible to others.",
+        "visibilityNobody": "Nobody",
+        "visibilityNobodyDesc": "Your profile link will remain completely private and inaccessible to anyone.",
+        "countryAustralia": "Australia",
+        "countryUsa": "USA",
+        "countrySingapore": "Singapore",
+        "countryThailand": "Thailand",
+        "bodySkinny": "Skinny",
+        "bodySlim": "Slim",
+        "bodyAthletic": "Athletic",
+        "bodyMedium": "Medium",
+        "bodyCurvy": "Curvy",
+        "bodyBbw": "BBW",
+        "hairBlonde": "Blonde",
+        "hairBlack": "Black",
+        "hairBrunette": "Brunette",
+        "hairBrown": "Brown",
+        "hairRedhead": "Redhead",
+        "hairColorful": "Colorful"
+      },
+      "gallery": {
+        "title": "Profile Gallery",
+        "help1": "Your uploaded media will appear on your profile page background. Drag and drop uploaded media to reorder sequence.",
+        "help2": "You may upload up to 6 media files (Max. 2 video files)",
+        "empty": "Upload your first piece and watch yourself shine!",
+        "clickUpload": "Click to upload",
+        "dragDrop": "or drag and drop image or video files here",
+        "formats": "MP4, AVI, QUICKTIME, X-MATROSKA, X-MS-WMV, WEBM, OGG, PNG or JPG (max. 15MB)",
+        "remove": "remove",
+        "uploading": "Uploading...",
+        "unlockVideos": "Unlock premium to upload videos",
+        "videoLabel": "Video",
+        "successTitle": "{count} files uploaded to your free gallery successfully.",
+        "successDescription": "Click ‘Save’ on header to update change.",
+        "failOneTitle": "1 file failed to upload.",
+        "failVideoDesc": "Failed to upload ‘{name}’. Maximum 2 video files allowed.",
+        "failAddTitle": "Failed to add media.",
+        "failAddDesc": "Failed to add ‘{name}’. You can only upload up to 6 media files in total.",
+        "sampleVideoFile": "clip.mp4",
+        "sampleImageFile": "photo.png"
+      },
+      "social": {
+        "title": "Social Media",
+        "twitter": "Twitter",
+        "twitterPlaceholder": "Enter Twitter",
+        "instagram": "Instagram",
+        "instagramPlaceholder": "Enter Instagram",
+        "wishlist": "Wishlist",
+        "wishlistPlaceholder": "Enter Wishlist URL",
+        "additionalUrl1": "Additional URL 1",
+        "additionalUrl1Placeholder": "Enter Additional URL 1",
+        "additionalUrl2": "Additional URL 2",
+        "additionalUrl2Placeholder": "Enter Additional URL 2",
+        "additionalUrl3": "Additional URL 3",
+        "additionalUrl3Placeholder": "Enter Additional URL 3",
+        "additionalUrl4": "Additional URL 4",
+        "additionalUrl4Placeholder": "Enter Additional URL 4",
+        "unlockLinks": "Unlock premium to add more links"
+      },
+      "tipping": {
+        "title": "Tipping Settings",
+        "tipMessage": "Tip Message",
+        "tipHelp": "Your fan will see this message when they tip you.",
+        "tipEmptyHint": "Leave empty to show default message",
+        "tipPlaceholder": "Thank you for your tip!",
+        "shareSettings": "Share Settings",
+        "postToX": "Post to X when you receive tips",
+        "postMessageLabel": "Post Message (Leave blank to use system default message.)",
+        "postMessagePlaceholder": "I got some lovely tips from {'@'}username...",
+        "showUsername": "Show fan’s username on your post",
+        "usernameTooltip": "Fan who tips anonymously will be recognized as '{'@'}anonymous'.",
+        "attachMedia": "Attach Media",
+        "uploadMedia": "Upload media",
+        "noMedia": "Do not attach media",
+        "thumbnail": "Thumbnail",
+        "postPreview": "POST PREVIEW",
+        "previewName": "Jelly FISH",
+        "previewHandle": "{'@'}jellyf1sh",
+        "previewDate": "Jul 31",
+        "previewFallback": "I got some lovely tips from fans...",
+        "previewTipLine": "{'@'}manogoes4eva tipped 400 tokens"
+      },
+      "menu": {
+        "edit": "edit",
+        "upload": "upload",
+        "uploadNew": "upload new",
+        "chooseFromAvatars": "choose from avatars"
+      },
+      "crop": {
+        "title": "Crop photo",
+        "zoom": "Zoom",
+        "rotate": "Rotate",
+        "cancel": "CANCEL",
+        "save": "SAVE",
+        "upload": "UPLOAD"
+      },
+      "avatarPopup": {
+        "title": "Choose Avatar",
+        "avatar": "Avatar",
+        "background": "Background",
+        "cancel": "CANCEL",
+        "save": "SAVE"
+      },
+      "cancelDialog": {
+        "message": "Are you sure you want to cancel? Your changes will be lost.",
+        "no": "No",
+        "confirm": "Confirm"
+      },
+      "initialsFallback": "CP"
+    }
+  },
+  "payout": {
+    "page": {
+      "title": "Your Earnings",
+      "payoutSettings": "Payout Settings",
+      "payoutHistory": "Payout History",
+      "allCreators": "All Creators",
+      "searchByUsername": "Search by username...",
+      "noResult": "No result",
+      "columns": {
+        "period": "Period",
+        "status": "Status",
+        "totalEarned": "Total Earned",
+        "rollover": "Rollover",
+        "transferFee": "Transfer Fee",
+        "commission": "Commission %",
+        "finalPayout": "Final Payout"
+      },
+      "status": {
+        "pending": "Pending",
+        "paid": "Paid",
+        "failed": "Failed"
+      }
+    },
+    "card": {
+      "ourWebsite": "OUR WEBSITE",
+      "premium": "PREMIUM",
+      "availableBalance": "AVAILABLE BALANCE",
+      "name": "NAME",
+      "lastWithdrawn": "Last Withdrawn",
+      "transactionHistory": "TRANSACTION HISTORY",
+      "ledgerBalance": "Ledger balance",
+      "ledgerTooltip": "Ledger balance is the official end-of-day record of cleared funds. It's what your balance was after all completed transactions were processed.\n\nAvailable balance includes pending transactions which tells you how much you can withdraw right this second."
+    },
+    "balanceAside": {
+      "availableTitle": "Your Balance are now available for withdrawal.",
+      "availableBody": "💯You're grinding and it’s paying off. Keep hustling, stay lit, and remember—you're a boss.",
+      "zeroTitle": "You don’t have available balance to cash out yet.",
+      "withdrawNow": "WITHDRAW NOW",
+      "nextPayoutDate": "Next Payout Date",
+      "nextPayoutTooltip": "Payout date happens monthly on the 28th. Earnings made in the previous month will be transferred to your available balance for withdrawal."
+    },
+    "processing": {
+      "singleTitle": "Your payout is being processed.",
+      "multiTitle": "You have {count} processing payout:",
+      "viewAll": "VIEW ALL",
+      "viewLess": "View less",
+      "more": "+ {count} more",
+      "failTitle": "Something went wrong with your recent payout request",
+      "failDescriptionPrefix": "We were unable to process your payout because of the following reason:",
+      "submittedOn": "Submitted on",
+      "submittedOnDate": "Submitted on {date}",
+      "submittedOnEmpty": "Submitted on —",
+      "steps": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "completed": "Completed",
+        "complete": "Complete",
+        "failToProcess": "Fail to process"
+      },
+      "aria": {
+        "loadingPayout": "Loading payout",
+        "viewPayoutDetails": "View payout details"
+      },
+      "defaults": {
+        "failReason": "Additional address proof needed",
+        "actionUploadAddressProof": "Upload Address proof",
+        "actionContactSupport": "Contact Support To Investigate",
+        "failReasonMasspayCancelled": "Masspay cancelled"
+      }
+    },
+    "methodBadge": {
+      "countryMethod": "{country} - {method}"
+    },
+    "settings": {
+      "step1": {
+        "title": "Payout setting",
+        "intro": "Manage your payout details, update payment preferences, and ensure seamless transactions.",
+        "autoWithdrawSettings": "Auto Withdraw Settings",
+        "notSetUp": "Not set up",
+        "nextPayoutDate": "Next payout date:",
+        "whenEarningReaches": "When earning reaches USD$ {amount}.",
+        "setUp": "SET UP",
+        "autoWithdrawHelp": "Setup auto withdraw earnings to your selected payout method by month or by earning amounts.",
+        "savedPayoutMethod": "Saved Payout Method",
+        "yourSavedPayoutMethod": "Your saved payout method",
+        "noSavedMethod": "No saved method",
+        "add": "ADD",
+        "savedMethodHelp": "Save frequently used payout method for quick earnings withdrawal.",
+        "edit": "Edit",
+        "delete": "Delete",
+        "paysIn": "Pays in",
+        "cardDesign": "Card Design",
+        "changeCardDesign": "CHANGE CARD DESIGN",
+        "balance": "BALANCE",
+        "standard": "STANDARD",
+        "ourWebsite": "OUR WEBSITE",
+        "premium": "PREMIUM",
+        "name": "NAME",
+        "lastWithdrawn": "Last Withdrawn",
+        "transactionHistory": "TRANSACTION HISTORY"
+      },
+      "step2": {
+        "titleAutoWithdraw": "Auto Withdraw Setting",
+        "titleChangeCard": "Change Card Design",
+        "titleAddMethod": "Add new payout method",
+        "back": "Back",
+        "autoWithdrawIntro": "Setup auto withdraw earnings to your selected payout method by month or by earning amounts.",
+        "autoWithdrawLabel": "Auto withdraw earnings to my selected payout method :",
+        "everyMonthHelp": "Automatic payout requests are processed on the 1st of each month, including earnings from the past 28 days. Fund arrival depends on the payout method you choose.",
+        "earningTargets": "Earning targets",
+        "optional": "Optional",
+        "earningTargetsEveryMonthHelp": "We will not withdraw your money if your monthly earning does not reach your specified amount below.",
+        "earningTargetsByTargetHelp": "Your earnings will be paid out to your selected method every time your accumulated earnings reach the specified amount.",
+        "enterAmount": "Enter Amount",
+        "usdPrefix": "USD$",
+        "payoutMethod": "Payout Method",
+        "addNew": "Add New...",
+        "paysIn": "Pays in",
+        "usaBankPrefix": "USA -",
+        "whereToSend": "Where would you liked to send money to?",
+        "selectCountry": "Select country",
+        "searchCountry": "Search country",
+        "optionsAvailable": "Options available for your selected country:",
+        "nextPayoutDate": "Next payout date:",
+        "whenEarningReaches": " When earning reaches USD$ {amount}.",
+        "save": "SAVE",
+        "next": "NEXT",
+        "premiumDesign": "Premium Design",
+        "userAvatar": "User Avatar",
+        "userInitial": "User Initial",
+        "withdrawEveryMonth": "Every Month",
+        "withdrawEveryMonthDesc": "Withdraw money to selected payout method every month automatically.",
+        "withdrawByEarningTarget": "By earning target",
+        "withdrawByEarningTargetDesc": "Withdraw money to selected payout method when your earning hits a specific amount."
+      },
+      "step3": {
+        "titleAutoWithdraw": "Auto Withdraw Setting",
+        "titleAddMethod": "Add new payout method",
+        "back": "Back",
+        "payoutDetails": "Payout Details",
+        "provideInfo": "Please provide the following information for your transaction:",
+        "bankSwiftBicCode": "Bank Swift/BIC Code",
+        "swiftPlaceholder": "Enter BIC/SWIFT code",
+        "swiftTooltip": "Enter Bank Swift/BIC Code",
+        "bankAccountOrIban": "Bank Account Number or IBAN",
+        "ibanPlaceholder": "Enter Bank Account Number or IBAN",
+        "intermediaryHelp": "If you are not sure if you need an intermediary Bank for international transfer, please contact your bank for future information.",
+        "save": "SAVE"
+      }
+    },
+    "withdraw": {
+      "title": "WITHDRAW EARNINGS",
+      "back": "Back",
+      "next": "NEXT",
+      "submit": "SUBMIT",
+      "availableBalance": "Available Balance",
+      "yourFinalPayout": "YOUR FINAL PAYOUT",
+      "inclusive": "INCLUSIVE",
+      "yourFinalPayoutInclusive": "YOUR FINAL PAYOUT INCLUSIVE",
+      "serviceChargeAmount": "Service Charge USD${amount}",
+      "transferFeeAmount": "USD${amount} Transfer Fee",
+      "usdPrefix": "USD$",
+      "step1": {
+        "whereToSend": "Where would you like to send money?",
+        "selectCountry": "Select country",
+        "searchCountry": "Search country",
+        "enterPayoutAmount": "Enter the payout amount:",
+        "amountPlaceholder": "00.00",
+        "insufficientBalance": "Insufficient Balance"
+      },
+      "step2": {
+        "payoutOptionsTitle": "Payout options in your chosen country:",
+        "paysIn": "Pays in"
+      },
+      "step3": {
+        "alertTitle": "Something isn’t right with the information you provided, please double check.",
+        "payoutDetails": "Payout Details",
+        "enterNecessaryInfo": "Enter the necessary information for this transaction:",
+        "provideInfo": "Please provide the following information for your transaction:",
+        "bankSwiftBicCode": "Bank Swift/BIC Code",
+        "swiftPlaceholder": "Enter BIC/SWIFT code",
+        "swiftTooltip": "Enter Bank Swift/BIC Code",
+        "bankAccountOrIban": "Bank Account Number or IBAN",
+        "ibanPlaceholder": "Enter Bank Account Number or IBAN",
+        "intermediaryHelpMobile": "If you're unsure whether an intermediary bank is required for your international transfer, please contact your bank for further information.",
+        "intermediaryHelpDesktop": "If you are not sure if you need an intermediary Bank for international transfer, please contact your bank for future information.",
+        "invalidFormat": "Invalid Format",
+        "address": "Address",
+        "addressHelp": "Please ensure this address matches the one on your bank statement. Depending on your payout method, the financial institution may require your bank statement as proof of address to approve the transfer.",
+        "addressLine1": "Address Line 1",
+        "addressLine2": "Address Line 2",
+        "postalCode": "Postal Code",
+        "city": "City",
+        "country": "Country",
+        "stateProvince": "State/Province",
+        "phoneNumber": "Phone Number"
+      },
+      "step4": {
+        "summary": "Summary",
+        "confirmInfo": "Please confirm that the information below is correct:",
+        "country": "Country",
+        "payoutMethod": "Payout Method",
+        "payoutDetails": "Payout Details",
+        "accountNumberEnding": "Account number ending {ending}",
+        "withdrawAmount": "Withdraw Amount",
+        "latestBalance": "Latest Balance",
+        "availableBalance": "Available Balance",
+        "payoutAmount": "Payout Amount"
+      },
+      "step5": {
+        "acceptedTitle": "Your payout request has been accepted.",
+        "depositMessage": "will be deposited into your account within 3-5 business days."
+      }
+    },
+    "history": {
+      "title": "Transaction History",
+      "columns": {
+        "date": "Date",
+        "to": "To",
+        "status": "Status",
+        "finalPayout": "Final Payout"
+      },
+      "status": {
+        "pending": "Pending",
+        "failed": "Failed",
+        "paid": "Paid"
+      },
+      "aria": {
+        "viewTransferDetails": "View transfer details"
+      }
+    },
+    "historyDetail": {
+      "title": "PAYOUT HISTORY",
+      "columns": {
+        "date": "Date",
+        "type": "Type",
+        "from": "From",
+        "detail": "Detail",
+        "order": "Order#",
+        "total": "Total",
+        "commission": "Commission %",
+        "finalPayout": "Final Payout"
+      },
+      "types": {
+        "sales": "Sales",
+        "tokens": "Tokens"
+      }
+    },
+    "transferDetail": {
+      "title": "Transfer Details",
+      "back": "Back",
+      "ariaBack": "Back",
+      "processingTitle": "Your payout is being processed.",
+      "completedTitle": "Your payout has been completed.",
+      "failedTitle": "Something went wrong with your payout request.",
+      "failDescriptionPrefix": "We were unable to process your payout because of the following reason:",
+      "country": "Country",
+      "payoutMethod": "Payout Method",
+      "submittedOn": "Submitted on",
+      "payoutDetails": "Payout Details",
+      "withdrawAmount": "Withdraw Amount",
+      "latestBalance": "Latest Balance",
+      "availableBalance": "Available Balance",
+      "payoutAmount": "Payout Amount",
+      "serviceChargeBankDeposit": "Service Charge - Bank Deposit",
+      "balanceAfterPayout": "Balance after payout",
+      "steps": {
+        "pending": "Pending",
+        "processing": "Processing",
+        "complete": "Complete",
+        "failToProcess": "Fail to process"
+      }
+    },
+    "alt": {
+      "settings02": "Settings",
+      "avatar": "Avatar",
+      "down": "Down",
+      "search": "Search",
+      "searchIcon": "Search",
+      "ourWebsiteLogo": "Our website logo",
+      "eye": "Toggle balance visibility",
+      "download": "Download",
+      "history": "History",
+      "close": "Close",
+      "settings": "Settings",
+      "plus": "Add",
+      "globe": "Globe",
+      "more": "More",
+      "edit": "Edit",
+      "delete": "Delete",
+      "payoutCardUserAvatar": "Payout card user avatar",
+      "payoutCardUserInitialNoise": "Payout card user initial",
+      "autoCycle": "Auto cycle",
+      "addCard": "Add card",
+      "chevronLeft": "Back",
+      "plusSquare": "Add",
+      "icon": "Icon",
+      "bank": "Bank",
+      "crypto": "Crypto",
+      "chevronDown": "Expand",
+      "arrowLongRight": "Continue",
+      "premiumDesign": "Premium design",
+      "token": "Token",
+      "currencyDollar": "Currency",
+      "alertOrangeFull": "Alert",
+      "xClose": "Close",
+      "arrowDown": "Down",
+      "payDeposited": "Deposit",
+      "pending": "Pending",
+      "paid": "Paid",
+      "failed": "Failed",
+      "loader": "Loading",
+      "arrowUpRight": "Open details",
+      "alertBlack": "Alert",
+      "tickMark": "Paid",
+      "clock": "Pending",
+      "checkCircle": "Success",
+      "arrows": "Exchange",
+      "arrowLeft": "Back",
+      "arrowRight": "Continue",
+      "helpCircle": "Help",
+      "creditCardDownload": "Withdraw"
+    },
+    "mock": {
+      "displayName": "MAX WANG",
+      "lastWithdrawnDate": "11-31-2024",
+      "ledgerBalance": "$24.86",
+      "availableBalanceValue": "30054.40",
+      "nextPayoutDate": "28/05/25",
+      "autoWithdrawNextDate": "Apr-03-2025",
+      "amountEur": "EUR€114.48",
+      "amountUsdLarge": "$23,546.40",
+      "finalPayoutEur": "EUR€114.48",
+      "serviceChargeUsd345": "USD$3.45",
+      "transferFeeUsd38": "USD$38",
+      "feeUsd345": "USD$3.45 fee",
+      "methodBankDeposit": "Bank Deposit",
+      "methodBankWire": "Bank Wire",
+      "methodUsdtEth": "USDT - Ethereum(ERC20)",
+      "methodPayme": "Payme",
+      "methodBank": "Bank",
+      "typeBank": "Bank",
+      "typeCrypto": "Crypto",
+      "countryUsa": "USA",
+      "countryUk": "UK",
+      "countryAustralia": "Australia",
+      "countryChina": "China",
+      "countrySingapore": "Singapore",
+      "countryHongKong": "Hong Kong",
+      "countryFrance": "France",
+      "countryIndia": "India",
+      "countryUnitedKingdom": "United Kingdom",
+      "countryUnitedStates": "United States",
+      "stateFlorida": "Florida",
+      "stateHawaii": "Hawaii",
+      "stateNewYork": "New York",
+      "currencyEur": "EUR",
+      "currencyUsd": "USD",
+      "currencyCzk": "CZK",
+      "currencyUsdt": "USDT",
+      "bankNamePlaceholder": "Bank name bank bank bank name",
+      "accountHolderMasked": "C**** J** H**",
+      "accountEnding123": "Account number ending 123",
+      "withdrawAmountUsd120": "USD$120.00",
+      "availableBalanceUsd50099": "USD$500.99",
+      "payoutAmountMinus10": "-USD$10",
+      "serviceChargeMinus345": "-USD$3.45",
+      "balanceAfterDash": "--",
+      "methodLabelBankDepositEur": "Bank Deposit - EUR",
+      "periodSample": "1 Jan 2024 - 31 Jan 2024",
+      "dateSample22012025": "22/01/2025",
+      "submittedOn22Jan2025": "Submitted on 22 Jan 2025",
+      "creatorAll": "All Creators",
+      "creatorModelingMagic": "{'@'}ModelingMagic",
+      "creatorExquisiteEats": "{'@'}ExquisiteEats",
+      "creatorStylishFruits": "{'@'}StylishFruits",
+      "creatorFashionFiesta": "{'@'}FashionFiesta",
+      "creatorCoutureCraze": "{'@'}CoutureCraze",
+      "creatorGlamourHarvest": "{'@'}GlamourHarvest",
+      "creatorVelvetVogue": "{'@'}VelvetVogue",
+      "creatorPixelPetals": "{'@'}PixelPetals",
+      "creatorNeonNomad": "{'@'}NeonNomad",
+      "historyRow": {
+        "date1": "22 Jan 2025",
+        "date1Mobile": "22 JAN 2025",
+        "date2": "31 Sep 2024",
+        "date2Mobile": "31 SEP 2024",
+        "date3": "31 Jul 2024",
+        "date5": "31 Jun 2024",
+        "date6": "31 Apr 2024",
+        "date7": "31 Feb 2024",
+        "date8": "31 Jan 2024",
+        "toPaymeMasked": "K**F**C***",
+        "toBankMasked": "*************1234",
+        "finalPayoutDash": "--",
+        "finalPayout2312": "USD$ 23.12",
+        "finalPayout12308": "USD$ 123.08"
+      },
+      "historyDetailRow": {
+        "date": "31 Jan 2024",
+        "from": "{'@'}Mangoes4eva",
+        "detailCrLikes": "CR-Likes",
+        "detailCrClips": "CR-Clips",
+        "detailMerch": "Merch",
+        "detailTip": "Tip",
+        "detailPrivateChat": "Private Chat",
+        "order": "#00123",
+        "orderDash": "-",
+        "total": "USD$ 130.86",
+        "commission": "88.8%",
+        "finalPayout": "USD$ 23.12",
+        "finalPayoutMobile": "USD$ 123.08"
+      },
+      "pageTableRow": {
+        "period": "1 Jan 2024 - 31 Jan 2024",
+        "totalEarned": "USD$ 130.86",
+        "rollover": "$0",
+        "transferFee": "$0",
+        "commission": "88.8%",
+        "finalPayout": "USD$ 123.08"
+      },
+      "userInitials": "CP "
+    }
+  }
+}

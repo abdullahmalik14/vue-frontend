@@ -1,0 +1,13 @@
+---
+description: TierCard DemoPage — variant presets inside TierCard; short pasteable Show Code
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# TierCard on DemoPage
+
+- Demo lives in `TierCardsDemo.vue` only.
+- Prefer `<TierCard variant="standardClaim" />` (presets built inside `TierCard.vue` with assetMap + `tierCard.*` i18n).
+- Real pages still pass `:tier="…"` (e.g. PlanPage).
+- Show Code must stay short and pasteable — do not dump full theme/footer objects into snippets.
+- No hardcoded user-facing copy; no `demo.` keys inside Show Code.

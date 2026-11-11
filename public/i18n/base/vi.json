@@ -1,0 +1,40 @@
+{
+  "ui": {
+    "languageSelector": "Bộ chọn ngôn ngữ",
+    "language": "Ngôn ngữ",
+    "translateThisPage": "Dịch trang này",
+    "translatePageAction": "Dịch",
+    "languageSettings": "Ngôn ngữ",
+    "languageSettingsDescription": "Chọn ngôn ngữ ưu tiên. Được lưu vào tài khoản khi đã đăng nhập.",
+    "resetLanguageToBrowser": "Đặt lại theo trình duyệt"
+  },
+  "demo": {
+    "checkoutReusable": {
+      "paymentLoggedIn": {
+        "deleteCard": "Xóa thẻ",
+        "cardHolderName": "Tên chủ thẻ",
+        "expiryDate": "Ngày hết hạn",
+        "noName": "Chưa có tên",
+        "expiryPlaceholder": "MM/YY",
+        "expPrefix": "HSD"
+      },
+      "paymentNotLoggedIn": {
+        "saveCard": "Lưu thẻ này để thanh toán nhanh hơn.",
+        "cardNumber": "Số thẻ",
+        "expirationDate": "Ngày hết hạn",
+        "cardholderName": "Tên chủ thẻ",
+        "cvv": "CVV"
+      },
+      "notes": {
+        "title": "Ghi chú",
+        "optional": "Tùy chọn",
+        "creatorName": "Princess Carrot Pop",
+        "placeholder": "Nhập ghi chú tới {'@'}jenny1234....",
+        "charactersLeft": "Còn {count} ký tự"
+      },
+      "totalAmount": {
+        "label": "Tổng"
+      }
+    }
+  }
+}

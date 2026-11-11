@@ -1,0 +1,65 @@
+{
+  "scope": "dashboard",
+  "locale": "fr",
+  "counts": {
+    "englishStrings": 2945,
+    "translated": 0,
+    "missing": 2945,
+    "empty": 0,
+    "structureErrors": 0,
+    "reviewCandidates": 0,
+    "sourceChanged": 0
+  },
+  "byFile": {
+    "section-dash/en.json": {
+      "englishStrings": 75,
+      "translated": 0,
+      "missing": 75,
+      "empty": 0,
+      "structureErrors": 0,
+      "reviewCandidates": 0,
+      "sourceChanged": 0
+    },
+    "section-dashboard-creator/en.json": {
+      "englishStrings": 7,
+      "translated": 0,
+      "missing": 7,
+      "empty": 0,
+      "structureErrors": 0,
+      "reviewCandidates": 0,
+      "sourceChanged": 0
+    },
+    "section-dashboard-fan/en.json": {
+      "englishStrings": 6,
+      "translated": 0,
+      "missing": 6,
+      "empty": 0,
+      "structureErrors": 0,
+      "reviewCandidates": 0,
+      "sourceChanged": 0
+    },
+    "section-dashboard-global/en.json": {
+      "englishStrings": 2857,
+      "translated": 0,
+      "missing": 2857,
+      "empty": 0,
+      "structureErrors": 0,
+      "reviewCandidates": 0,
+      "sourceChanged": 0
+    }
+  },
+  "fileErrors": [],
+  "generatedAt": "2026-10-16T18:26:36.391Z",
+  "costEstimate": {
+    "model": "grok-3-mini",
+    "verifiedAgainstAccount": false,
+    "inputTokens": 106112,
+    "outputTokens": 65396,
+    "estimatedUsd": 0.064532,
+    "note": "Confirm model, rates, token limits, trial credit, and Batch API discount in the xAI account before any live call."
+  },
+  "batchApi": {
+    "used": false,
+    "note": "Estimates assume chat completions with several strings per request. That is not the xAI Batch API discount."
+  }
+}

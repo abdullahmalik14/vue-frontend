@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueApp - Section-Based Architecture</title>
+
+    <!--
+      Start the Vue entry immediately so the iframe analytics page can
+      paint real cards instead of waiting on AmCharts. Chart scripts stay
+      deferred and still load before a user can open a Trend popup.
+    -->
+    <script type="module" src="/src/app/main.js"></script>
+
+    <style>
+      html, body, #app {
+        margin: 0;
+        background: transparent;
+      }
+    </style>
+
+    <!-- Fonts: non-blocking. Swapped to a stylesheet once downloaded. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    </noscript>
+
+    <!-- DebugLogger shim — chartsHandler/Calculator/Utilities require it.
+         Inline so it exists before any deferred chart script executes. -->
+    <script>
+      window.DebugLogger = {
+        log: function() {},
+        warn: function() {},
+        error: function() {},
+        table: function() {},
+        group: function() {},
+        groupEnd: function() {},
+        groupCollapsed: function() {}
+      };
+    </script>
+
+    <!--
+      Chart stack. Deferred so it never blocks Vue first paint. Order is
+      required: AmCharts files, then local chart helpers, then chartsBoot.
+    -->
+    <link rel="preconnect" href="https://cdn.amcharts.com" crossorigin>
+    <script defer src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script defer src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script defer src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script defer src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script defer src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script defer src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script defer src="/chartsUtilities.js"></script>
+    <script defer src="/chartsCalculator.js"></script>
+    <script defer src="/chartsHandler.js"></script>
+    <script defer src="/chartsBoot.js"></script>
+    <script data-charts="config" type="application/json">
+      {
+        "datasetsSrc": "/api/charts/456?nocache=1"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

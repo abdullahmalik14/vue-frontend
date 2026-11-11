@@ -1,0 +1,760 @@
+[
+  {
+    "slug": "/confirm-email",
+    "section": "auth",
+    "requiresAuth": false,
+    "redirectIfLoggedIn": "/dashboard",
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/ConfirmEmailPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ]
+  },
+  {
+    "slug": "/callback",
+    "section": "auth",
+    "requiresAuth": false,
+    "redirectIfLoggedIn": "/dashboard",
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/TwitterAuthPage.vue",
+    "preLoadSections": [],
+    "hideLayout": true
+  },
+  {
+    "slug": "/auth/callback",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/AuthCallbackPage.vue",
+    "hideLayout": true
+  },
+  {
+    "slug": "/404",
+    "section": "misc",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/dev/templates/misc/NotFoundPage.vue",
+    "preLoadSections": []
+  },
+  {
+    "slug": "/dashboard",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "redirectIfNotAuth": "/log-in",
+    "assetPreloadRef": ["dashboardMenuIcons", "dashboardPopupChrome"],
+    "componentPath": "@/dev/templates/dashboard/role/DashboardDevPlaygroundPage.vue",
+    "customComponentPath": {
+      "fan": {
+        "componentPath": "@/dev/templates/fan/Fan.vue"
+      }
+    },
+    "dependencies": {
+      "roles": {
+        "creator": {
+          "onboardingPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding"
+          },
+          "kycPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding/kyc"
+          }
+        },
+        "fan": {
+          "onboardingPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding"
+          }
+        },
+        "vendor": {
+          "onboardingPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding"
+          }
+        },
+        "agent": {
+          "onboardingPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding"
+          }
+        },
+        "guest": {
+          "onboardingPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding"
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "/dashboard/fan",
+    "section": "dashboard-fan",
+    "requiresAuth": true,
+    "enabled": true,
+    "supportedRoles": [
+      "fan"
+    ],
+    "redirectIfNotAuth": "/log-in",
+    "assetPreloadRef": ["dashboardMenuIcons", "dashboardPopupChrome"],
+    "componentPath": "@/dev/templates/fan/Fan.vue"
+  },
+  {
+    "slug": "/log-in",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "redirectIfLoggedIn": "/dashboard",
+    "redirectFrom": [
+      "/login",
+      "/sign-in"
+    ],
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/LoginPage.vue",
+    "assetPreload": [
+      {
+        "src": "https://i.ibb.co/jPw7ChWb/auth-bg.webp",
+        "type": "image",
+        "priority": "high"
+      }
+    ],
+    "preLoadSections": [
+      "dashboard"
+    ]
+  },
+  {
+    "slug": "/forgot-password",
+    "section": "auth",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/ForgotPasswordPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ]
+  },
+  {
+    "slug": "/reset-password",
+    "section": "auth",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/ResetPasswordPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ]
+  },
+  {
+    "slug": "/sign-up",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/SignUpPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ]
+  },
+  {
+    "slug": "/dashboard/reset-password",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/dev/templates/dashboard/role/DashboardResetPasswordPage.vue"
+  },
+  {
+    "slug": "/dashboard/social-linking",
+    "envAccess": "development",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "enabled": true,
+    "redirectIfNotAuth": "/log-in",
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/dev/templates/demo/SocialLinkingDemoPage.vue"
+  },
+  {
+    "slug": "/dashboard/telegram-post",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "redirectIfNotAuth": "/log-in",
+    "componentPath": "@/dev/templates/dashboard/role/TelegramPostPage.vue"
+  },
+  {
+    "slug": "/dashboard/twitter-post",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "redirectIfNotAuth": "/log-in",
+    "componentPath": "@/dev/templates/x-repost/XRepostPage.vue"
+  },
+  {
+    "slug": "/dashboard/overview",
+    "section": {
+      "creator": "dashboard-creator"
+    },
+    "inheritConfigFromParent": true,
+    "supportedRoles": [
+      "creator"
+    ],
+    "componentPath": "@/dev/templates/dashboard/creator/CreatorDashboardOverviewPage.vue",
+    "assetPreload": [
+      {
+        "name": "dashboard-metrics-lib",
+        "src": "/scripts/dashboard-metrics.js",
+        "type": "script",
+        "priority": "high",
+        "flags": [
+          "dashboard-metrics"
+        ],
+        "location": "head-last",
+        "defer": true,
+        "async": false
+      }
+    ]
+  },
+  {
+    "slug": "/dashboard/chats",
+    "section": {
+      "creator": "dashboard-creator",
+      "fan": "dashboard-fan",
+      "agent": "dashboard-agent",
+      "vendor": "dashboard-vendor"
+    },
+    "inheritConfigFromParent": true,
+    "supportedRoles": [
+      "creator",
+      "fan"
+    ],
+    "customComponentPath": {
+      "creator": {
+        "componentPath": "@/dev/templates/dashboard/creator/CreatorDashboardChatsPage.vue"
+      },
+      "fan": {
+        "componentPath": "@/dev/templates/dashboard/fan/FanDashboardChatsPage.vue"
+      }
+    }
+  },
+  {
+    "slug": "/sign-up/onboarding",
+    "section": "auth",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/creator/CreatorSignUpOnboardingPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ],
+    "dependencies": {
+      "roles": {
+        "creator": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/sign-up/onboarding/kyc"
+          },
+          "kycPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        },
+        "vendor": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        },
+        "agent": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        },
+        "fan": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "/sign-up/onboarding/kyc",
+    "section": "auth",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "supportedRoles": [
+      "creator"
+    ],
+    "componentPath": "@/templates/auth/page/creator/CreatorSignUpOnboardingKycPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ],
+    "dependencies": {
+      "roles": {
+        "creator": {
+          "onboardingPassed": {
+            "required": true,
+            "fallbackSlug": "/sign-up/onboarding"
+          },
+          "kycPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        },
+        "vendor": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        },
+        "agent": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        },
+        "fan": {
+          "onboardingPassed": {
+            "redirectIfComplete": true,
+            "fallbackSlug": "/dashboard"
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "/auth/callback/social/facebook",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/FacebookAuthPage.vue"
+  },
+  {
+    "slug": "/auth/callback/social/google",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/GoogleAuthPage.vue"
+  },
+  {
+    "slug": "/auth/callback/social/twitter",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/TwitterAuthPage.vue"
+  },
+  {
+    "slug": "/auth/callback/social/telegram",
+    "section": "auth",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "componentPath": "@/templates/auth/page/shared/TelegramAuthPage.vue"
+  },
+  {
+    "slug": "/sign-up/onboarding/kyc/callback",
+    "section": "auth",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "supportedRoles": [
+      "creator",
+      "fan",
+      "agent",
+      "vendor"
+    ],
+    "componentPath": "@/templates/auth/page/shared/SignUpOnboardingKycCallbackPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ],
+    "dependencies": {
+      "roles": {
+        "creator": {
+          "kycPassed": {
+            "required": false,
+            "fallbackSlug": "/dashboard"
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "/sign-up/onboarding/kyc/status",
+    "section": "auth",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "supportedRoles": [
+      "creator"
+    ],
+    "componentPath": "@/templates/auth/page/creator/CreatorSignUpOnboardingKycStatusPage.vue",
+    "preLoadSections": [
+      "dashboard"
+    ],
+    "dependencies": {
+      "roles": {
+        "creator": {
+          "kycPassed": {
+            "required": false,
+            "fallbackSlug": "/dashboard"
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "/dev/country-state-demo",
+    "envAccess": "development",
+    "requiresAuth": false,
+    "section": "dev",
+    "supportedRoles": [
+      "all"
+    ],
+    "enabled": true,
+    "componentPath": "@/dev/templates/demo/CountryStateDemo.vue",
+    "preLoadSections": []
+  },
+  {
+    "slug": "/dashboard/orders/order-received",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/dashboard/orders/DashboardOrdersReceivedPage.vue",
+    "supportedRoles": [
+      "all"
+    ],
+    "preLoadSections": []
+  },
+  {
+    "slug": "/dashboard/demo-page",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/demo/DemoPage.vue",
+    "supportedRoles": [
+      "all"
+    ],
+    "preLoadSections": [
+      "misc",
+      "auth"
+    ]
+  },
+  {
+    "slug": "/dev/datepicker-showcase",
+    "section": "dev",
+    "componentPath": "@/components/forms/date-picker/DatePickerShowcase.vue",
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/dev/bookingform",
+    "envAccess": "development",
+    "section": "dev",
+    "componentPath": "@/dev/templates/demo/UnifiedBookingFormPage.vue",
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/demo/purchase-flow",
+    "section": "dev",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "hideLayout": true,
+    "componentPath": "@/dev/templates/demo/DemoPurchaseFlowPage.vue"
+  },
+  {
+    "slug": "/demo/lazy-sections",
+    "envAccess": "development",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/demo/LazySectionDemo.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/demo/lazy-sizes",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/lazyimagedemo/LazySizesDemoPage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/demo/audit/auth-components",
+    "envAccess": "development",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/demo/demo-audit/AuthComponentDemo.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ],
+    "preLoadSections": [
+      "auth"
+    ]
+  },
+  {
+    "slug": "/settings",
+    "section": "misc",
+    "componentPath": "@/dev/templates/settings/SettingsPage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ],
+    "preLoadSections": [
+      "dashboard-global"
+    ]
+  },
+  {
+    "slug": "/subscription/plan",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/plan/PlanPage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/shops/merch",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/shops/MerchPage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/shops/custom-product-setting",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/shops/CustomProductSettingPage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/shops/coupons",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/shops/CouponsPage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/demo-dropdowns",
+    "envAccess": "development",
+    "requiresAuth": false,
+    "section": "dashboard-global",
+    "supportedRoles": [
+      "all"
+    ],
+    "enabled": true,
+    "componentPath": "@/components/ui/dropdowns/demo/DemoDropdowns.vue"
+  },
+  {
+    "slug": "/edit-profile",
+    "envAccess": "development",
+    "section": "misc",
+    "componentPath": "@/dev/templates/edit-profile/EditProfilePage.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ],
+    "preLoadSections": [
+      "dashboard-global"
+    ]
+  },
+  {
+    "slug": "/profile",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/profile/ProfileWrapper.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/media-uploader",
+    "section": "dashboard-global",
+    "componentPath": "@/templates/media/MediaUploaderPage.vue",
+    "redirectFrom": [
+      "/mediaUploader"
+    ],
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/payout",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "componentPath": "@/dev/templates/payout/PayoutPage.vue",
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/dashboard/analytics",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "componentPath": "@/templates/dashboard/global/DashboardAnalyticsPage.vue",
+    "supportedRoles": [
+      "all"
+    ],
+    "assetPreloadRef": "dashboardAnalyticsChrome"
+  },
+  {
+    "slug": "/iframe/analytics",
+    "section": "dashboard-global",
+    "requiresAuth": false,
+    "componentPath": "@/templates/dashboard/global/DashboardAnalyticsPage.vue",
+    "supportedRoles": [
+      "all"
+    ],
+    "hideLayout": true
+  },
+  {
+    "slug": "/",
+    "section": "misc",
+    "requiresAuth": false,
+    "enabled": true,
+    "supportedRoles": [
+      "all"
+    ],
+    "redirectFrom": [
+      "/home"
+    ],
+    "componentPath": "@/dev/templates/home/HomePage.vue",
+    "assetPreloadRef": "homeChrome"
+  },
+  {
+    "slug": "/referrals",
+    "section": "dashboard-global",
+    "requiresAuth": true,
+    "redirectIfNotAuth": "/log-in",
+    "componentPath": "@/dev/templates/referral/ReferralPage.vue",
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/maintenance-page",
+    "section": "misc",
+    "requiresAuth": false,
+    "hideLayout": true,
+    "componentPath": "@/dev/templates/maintenance/MaintenancePage.vue",
+    "assetPreload": [
+      { "flag": "maintenance.hero", "type": "image", "priority": "high" },
+      { "flag": "maintenance.logo", "type": "image", "priority": "high" }
+    ],
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/thank-you-page",
+    "section": "misc",
+    "requiresAuth": false,
+    "hideLayout": true,
+    "componentPath": "@/dev/templates/thankyou/ThankYouPageForMediaOrders.vue",
+    "assetPreload": [
+      { "flag": "thankyou.hero", "type": "image", "priority": "high" },
+      { "flag": "thankyou.logo", "type": "image", "priority": "high" },
+      { "flag": "thankyou.orderDetail", "type": "image", "priority": "high" }
+    ],
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/payment-failed-page",
+    "section": "misc",
+    "requiresAuth": false,
+    "hideLayout": true,
+    "componentPath": "@/dev/templates/payment-failed/PaymentFailedPage.vue",
+    "assetPreload": [
+      { "flag": "paymentFailed.hero", "type": "image", "priority": "high" },
+      { "flag": "paymentFailed.icon", "type": "image", "priority": "high" },
+      { "flag": "thankyou.logo", "type": "image", "priority": "high" }
+    ],
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/thank-you-subscription-page",
+    "section": "misc",
+    "requiresAuth": false,
+    "hideLayout": true,
+    "componentPath": "@/dev/templates/thankyou/ThankyouPageForSubscription.vue",
+    "assetPreload": [
+      { "flag": "thankyouSubscription.hero", "type": "image", "priority": "high" },
+      { "flag": "thankyou.logo", "type": "image", "priority": "high" }
+    ],
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/payouts-cosmo",
+    "section": "misc",
+    "requiresAuth": false,
+    "hideLayout": false,
+    "componentPath": "@/dev/templates/payout/PayoutCosmoPage.vue",
+    "assetPreloadRef": "payoutCosmoChrome",
+    "supportedRoles": [
+      "all"
+    ]
+  },
+  {
+    "slug": "/:pathMatch(.*)*",
+    "redirect": "/404"
+  }
+]

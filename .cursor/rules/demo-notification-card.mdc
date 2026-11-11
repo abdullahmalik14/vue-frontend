@@ -1,0 +1,23 @@
+---
+description: DemoPage NotificationCard — every real project call, including toasts
+globs: src/dev/templates/demo/**/*
+alwaysApply: false
+---
+
+# NotificationCard on DemoPage
+
+## Source of truth
+- Every sample is a real `NotificationCard` call from this project, including toasts.
+- Copy the variant, icon, badge, slot, and classes. Every visible string is a `t()` call.
+- The Show Code is the full `<NotificationCard>` a developer pastes. No comment-only stub and no `triggerNotification` payload in place of the tag.
+- Same markup used twice (publish connect-X, purchase payment-fail) is shown once.
+- Same look shown once: tip tokens/cash → one tip card; mint upload/submitted toasts → one upload success card.
+- Slot CTAs use `DashboardPrimaryButton` — never a raw `<button>`.
+- Description text goes through `NotificationCard` `:description` (renders `Paragraph` inside). Do not nest `Paragraph` in the slot.
+- Long button style strings use `DashboardPrimaryButton` `theme` (e.g. `payoutFail`, `tipLimitAction`). Long card looks use `NotificationCard` `theme` (e.g. `payoutFail`, `tipSuccess`, `tipLimit`).
+- Tip success / tip limit: use `theme="tipSuccess"` / `theme="tipLimit"` — no `#icon` / `#default` template markup and no ibb URLs in Show Code. Icons come from the asset map inside the card.
+
+## Do not demo
+- Invented variants, “learn more” links, or demo-only sentences that no page renders.
+- `TopUpStep1.vue` — it imports the component and never renders it.
+- Duplicate tip cash vs tokens, or duplicate mint success-teal upload toasts.

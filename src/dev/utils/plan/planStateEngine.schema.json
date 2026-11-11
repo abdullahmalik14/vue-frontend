@@ -1,0 +1,90 @@
+{
+  "flowId": "subscriptionTiers",
+  "description": "Official subscription plan (tier) schema for mock API + State Engine. Plan media is a separate domain — not covered by these mock APIs.",
+  "entity": "plan",
+  "notes": [
+    "A plan entry is the creator subscription tier (draft or published).",
+    "formValues holds the publish-wizard state (pricing, discounts, audience, schedule, etc.).",
+    "card is a derived TierCard view-model for the plan list UI.",
+    "selectedMediaOptions may appear inside formValues as checkbox selections only — there is no mock API for uploading or managing plan media assets."
+  ],
+  "limits": {
+    "maxFreePublished": 1,
+    "maxPaidPublished": 3
+  },
+  "planEntry": {
+    "id": { "type": "string", "required": true },
+    "status": { "type": "string", "enum": ["draft", "published"], "required": true },
+    "isFreeTier": { "type": "boolean" },
+    "followers": { "type": "number", "default": 0 },
+    "hasMedia": {
+      "type": "boolean",
+      "description": "Derived from formValues.selectedMediaOptions length. Not a media API."
+    },
+    "formValues": {
+      "type": "object",
+      "description": "Publish wizard persistable state (see SubscriptionTierPopup defaults).",
+      "fields": {
+        "tierName": { "type": "string" },
+        "description": { "type": "string" },
+        "bgImage": { "type": ["string", "null"] },
+        "planDetailSubstep": { "type": "string", "enum": ["free-tier", "paid-tier"] },
+        "publishSettingSubstep": {
+          "type": "string",
+          "enum": ["publish-immediately", "schedule-publish-time"]
+        },
+        "priceDuration": { "type": "string" },
+        "basePrice": { "type": "string" },
+        "isFeaturedTier": { "type": "boolean" },
+        "subscriberDiscount": { "type": ["object", "null"] },
+        "unsubscribeDiscount": { "type": ["object", "null"] },
+        "tierAudience": { "type": "string" },
+        "maxSubscribers": { "type": "string" },
+        "freeTokensDiscount": { "type": "string" },
+        "merchDiscount": { "type": "string" },
+        "payToViewDiscount": { "type": "string" },
+        "customRequestDiscount": { "type": "string" },
+        "selectedMediaOptions": {
+          "type": "array",
+          "description": "UI checkbox values only — no media upload mock API."
+        },
+        "publishDate": { "type": "string" },
+        "publishEndDate": { "type": "string" },
+        "postToX": { "type": "boolean" },
+        "postMessage": { "type": "string" },
+        "invitedPerformers": { "type": "array" }
+      }
+    },
+    "card": {
+      "type": "object",
+      "description": "Derived list-card payload for TierCard (settingsList mode)."
+    }
+  },
+  "mockApis": {
+    "GET /plans": {
+      "description": "List all plans. Optional query.status = published | draft.",
+      "scenarios": ["success", "failure"]
+    },
+    "POST /plans": {
+      "description": "Create a plan (draft or published).",
+      "scenarios": ["success", "failure"]
+    },
+    "GET /plans/detail": {
+      "description": "Get one plan by query.id.",
+      "scenarios": ["success", "failure"]
+    },
+    "PATCH /plans/detail": {
+      "description": "Edit/update a plan. Body must include id.",
+      "scenarios": ["success", "failure"]
+    },
+    "DELETE /plans/detail": {
+      "description": "Delete a plan by query.id or body.id.",
+      "scenarios": ["success", "failure"]
+    }
+  },
+  "outOfScope": [
+    "Plan media upload / library / attach media APIs",
+    "Payment / checkout APIs",
+    "Real backend persistence"
+  ]
+}
