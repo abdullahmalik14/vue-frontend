@@ -153,7 +153,7 @@
       "usernameNoSpace": "cannot contain space.",
       "usernameTaken": "Username is already taken",
       "displayNameRequired": "Display Name is required",
-      "displayNameCharset": "can contain any letters from a-z, and some special characters(!@#$%^&*()_ +)",
+      "displayNameCharset": "can contain any letters from a-z, and some special characters(!{'@'}{'$'}%^&*()_ +)",
       "displayNameLengthRange": "Display name must be more than 6 and less than or equal to 20 characters.",
       "termsRequired": "Please agree to the Terms of Service and Privacy Policy",
       "fixField": "Please fix this field",
