@@ -2772,9 +2772,111 @@
       "alt": {
         "emptyCart": "Giỏ merch trống"
       },
+      "library": {
+        "gridView": "Xem lưới",
+        "listView": "Xem danh sách",
+        "searchPlaceholder": "Tìm kiếm",
+        "searchAlt": "Tìm kiếm",
+        "filter": "Bộ lọc",
+        "demoProductName": "Orange (Australia)",
+        "inStock": "{count} còn hàng",
+        "totalSalesValue": "USD$ {amount}",
+        "tabs": {
+          "all": "Tất cả",
+          "published": "Đã xuất bản",
+          "draft": "Bản nháp",
+          "reviewing": "Đang duyệt"
+        },
+        "status": {
+          "published": "Đã xuất bản",
+          "draft": "Bản nháp",
+          "reviewing": "Đang duyệt",
+          "preorder": "Đặt trước"
+        },
+        "table": {
+          "media": "Media",
+          "status": "Trạng thái",
+          "collection": "Bộ sưu tập",
+          "inventory": "Kho",
+          "itemsSold": "Tổng số đã bán",
+          "totalSales": "Tổng doanh số"
+        },
+        "toast": {
+          "updatedPublishSettings": "Bạn đã cập nhật cài đặt xuất bản của merch '{name}'.",
+          "unpublished": "Merch '{name}' đã được gỡ khỏi cửa hàng hồ sơ và người dùng đã đặt trước sẽ được hoàn tiền.",
+          "unpublishedSuccess": "Đã gỡ merch khỏi cửa hàng thành công.",
+          "submittedForApproval": "Merch '{name}' của bạn đã được gửi để duyệt.",
+          "deleted": "Merch '{name}' của bạn đã bị xóa.",
+          "viewInStore": "Xem trong cửa hàng"
+        },
+        "menu": {
+          "edit": "Edit",
+          "publish": "Xuất bản",
+          "deleteMerch": "Xóa Merch"
+        },
+        "badges": {
+          "subscriberOnly": "Chỉ người đăng ký",
+          "preOrder": "ĐẶT TRƯỚC",
+          "sale": "SALE"
+        },
+        "filterPopup": {
+          "title": "Bộ lọc",
+          "closeAlt": "Đóng",
+          "sortBy": "Sắp xếp theo:",
+          "uploadDate": "Ngày tải lên",
+          "mostPopular": "Phổ biến nhất",
+          "preOrder": "ĐẶT TRƯỚC",
+          "subscriberOnly": "Chỉ người đăng ký",
+          "onSale": "Đang giảm giá",
+          "tags": "Tags",
+          "collections": "Bộ sưu tập",
+          "searchTags": "Tìm tags...",
+          "searchCollections": "Tìm bộ sưu tập...",
+          "subscriptionTier": "Bậc đăng ký",
+          "selectAll": "Chọn tất cả",
+          "reset": "Đặt lại bộ lọc",
+          "apply": "Áp dụng"
+        }
+      },
+      "detail": {
+        "editDetails": "Chỉnh sửa chi tiết",
+        "unpublish": "GỠ XUẤT BẢN",
+        "publish": "XUẤT BẢN",
+        "buyNow": "MUA NGAY",
+        "addToCart": "Thêm vào giỏ",
+        "preOrderNow": "Đặt trước NGAY",
+        "outOfStock": "HẾT HÀNG",
+        "preOrderDiscount": "Giảm giá đặt trước",
+        "officialRelease": "Phát hành chính thức: {date}",
+        "leftInStock": "CÒN {count}",
+        "unlimitedStock": "Không giới hạn kho",
+        "discountPercent": "-{percent}%",
+        "publishedOn": "Xuất bản vào {date}",
+        "reviewingHint": "Merch này sẽ được xuất bản sau khi duyệt.",
+        "unpublishConfirm": {
+          "title": "Gỡ xuất bản Merch",
+          "message": "Merch này sẽ bị gỡ khỏi cửa hàng và không còn xuất hiện trên trang hồ sơ sau khi gỡ xuất bản. Bạn vẫn phải hoàn thành các đơn đang xử lý.",
+          "back": "Quay lại",
+          "confirm": "Gỡ xuất bản"
+        },
+        "deleteConfirm": {
+          "title": "Xóa Merch",
+          "message": "Bạn có chắc muốn xóa merch này? Hành động này không thể hoàn tác.",
+          "back": "Quay lại",
+          "confirm": "Xóa Merch"
+        }
+      },
       "listing": {
         "title": "Danh sách Merch mới",
+        "editTitle": "Chỉnh sửa chi tiết Merch",
+        "save": "LƯU",
         "closeAlt": "Đóng",
+        "leaveConfirm": {
+          "title": "Bạn có thay đổi chưa lưu",
+          "message": "Bạn đã chỉnh sửa kể từ lần xuất bản trước. Nếu rời đi bây giờ, các thay đổi sẽ bị mất.",
+          "back": "Quay lại",
+          "leave": "Rời đi mà không lưu"
+        },
         "stepPlaceholder": "Sắp ra mắt.",
         "productNamePlaceholder": "Tên sản phẩm",
         "descriptionPlaceholder": "Mô tả",
@@ -2815,6 +2917,71 @@
           "overLimitWarning": "Bạn chỉ có thể tải lên tối đa 6 media vào thư viện của mình.",
           "uploadSuccess": "Đã tải lên thành công {count} hình ảnh",
           "uploadSuccessOne": "Đã tải lên thành công {count} hình ảnh"
+        },
+        "inventory": {
+          "stockTitle": "Kho",
+          "stockSubtitle": "Sản phẩm của bạn sẽ hiển thị là 'Sold Out' khi không còn hàng trong kho.",
+          "enterAmountPlaceholder": "Nhập số lượng",
+          "unlimitedStock": "Kho không giới hạn",
+          "limitOnePerBuyer": "Giới hạn 1 món mỗi người mua",
+          "shipmentTitle": "Vận chuyển",
+          "packageWeight": "Trọng lượng kiện hàng",
+          "originCountry": "Quốc gia/Khu vực xuất xứ",
+          "selectCountryPlaceholder": "Chọn quốc gia",
+          "estimatedShippingDays": "Số ngày giao hàng ước tính",
+          "numberOfDaysPlaceholder": "Số ngày",
+          "daysSuffix": "Ngày",
+          "shipInternationally": "Giao hàng quốc tế",
+          "additionalShippingCost": "Phí vận chuyển bổ sung",
+          "weightUnits": {
+            "lb": "lb.",
+            "kg": "kg",
+            "oz": "oz"
+          },
+          "countries": {
+            "taiwan": "Đài Loan",
+            "usa": "Hoa Kỳ",
+            "singapore": "Singapore",
+            "australia": "Úc",
+            "uk": "Vương quốc Anh"
+          }
+        },
+        "publish": {
+          "whenTitle": "Bạn muốn xuất bản merch này lên hồ sơ khi nào?",
+          "publishImmediately": "Xuất bản ngay sau khi được duyệt",
+          "schedulePublish": "Lên lịch thời gian xuất bản",
+          "immediateHelp": "Chúng tôi sẽ xuất bản merch lên cửa hàng của bạn sau khi admin duyệt. Thường mất 2 ngày làm việc.",
+          "publishDate": "Ngày xuất bản",
+          "datePlaceholder": "Chọn ngày và giờ",
+          "calendarAlt": "Lịch",
+          "openForPreorder": "Mở đặt trước",
+          "openForPreorderTip": "Cho phép fan đặt trước merch này trước ngày xuất bản.",
+          "preorderPrice": "Giá đặt trước (tuỳ chọn)",
+          "afterPreorder": "Sau ngày kết thúc đặt trước:",
+          "keepInStore": "Giữ merch này trong cửa hàng",
+          "unpublishFromStore": "Gỡ xuất bản merch này khỏi cửa hàng",
+          "preorderPeriodBanner": "Sản phẩm này đang trong giai đoạn đặt trước",
+          "stopPreorderNow": "Dừng đặt trước ngay",
+          "preorderHelp": "Sản phẩm của bạn sẽ mở đặt trước trên hồ sơ từ hiện tại đến ngày và giờ bạn chọn",
+          "endPreorder": {
+            "title": "Kết thúc giai đoạn đặt trước",
+            "keepInStore": "Giữ merch trong cửa hàng",
+            "keepInStoreHint": "Chúng tôi sẽ kết thúc giai đoạn đặt trước và đưa merch này vào bán.",
+            "unpublishFromStore": "Gỡ xuất bản merch này khỏi cửa hàng",
+            "unpublishHint": "Merch này sẽ không còn xuất hiện trong cửa hàng hồ sơ của bạn. Người dùng đã đặt trước sẽ được hoàn tiền.",
+            "updateButton": "Cập nhật cài đặt xuất bản"
+          }
+        },
+        "submitForApproval": "GỬI ĐỂ DUYỆT",
+        "validation": {
+          "characterCount": "{used}/{max} ký tự",
+          "productNameRequired": "Tên sản phẩm là bắt buộc.",
+          "descriptionRequired": "Mô tả là bắt buộc.",
+          "selectAtLeastOneTier": "Vui lòng chọn ít nhất 1 bậc",
+          "valueBetween": "Giá trị phải nằm trong khoảng {min}-{max}.",
+          "selectCountryOfOrigin": "Vui lòng chọn quốc gia xuất xứ",
+          "publishDateAfter": "Ngày xuất bản phải sau {datetime}.",
+          "preorderPriceBetween": "Giá phải nằm trong khoảng USD {min} - USD {max}"
         },
         "steps": {
           "productDetails": "Chi tiết sản phẩm",

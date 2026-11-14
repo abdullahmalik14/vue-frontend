@@ -213,6 +213,42 @@ const dashboardPrimaryButtonThemes = {
     leftIconClass:
       "w-6 h-6 [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)]",
   },
+  /** MerchPage — NEW MERCH (Figma: black + green text/icon; hover = green bg / black text+icon) */
+  merchNewCta: {
+    variant: "none",
+    leftIconClass:
+      "!w-3.5 !h-3.5 object-contain [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)]",
+    textClass: "!text-lg !font-medium !leading-7 text-inherit",
+    customClass:
+      "group inline-flex self-stretch items-center justify-center gap-2.5 bg-black px-2 py-1 text-[#07F468] border-none outline-none cursor-pointer enabled:hover:bg-[#07F468] enabled:hover:text-black",
+  },
+  /** ProfileMerchPopup owner — Edit Details (black / green; reverse hover; disabled = gray-400) */
+  merchEditDetails: {
+    variant: "none",
+    leftIconClass:
+      "!w-6 !h-6 object-contain [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)] group-disabled:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(8%)_saturate(285%)_hue-rotate(179deg)_brightness(92%)_contrast(88%)] group-disabled:group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(8%)_saturate(285%)_hue-rotate(179deg)_brightness(92%)_contrast(88%)]",
+    textClass: "!text-lg !font-medium !leading-7 text-inherit",
+    customClass:
+      "group inline-flex h-10 items-center justify-center gap-2.5 bg-black px-2 py-1 text-[#07F468] border-none outline-none cursor-pointer enabled:hover:bg-[#07F468] enabled:hover:text-black disabled:pointer-events-none disabled:cursor-default disabled:bg-transparent disabled:text-gray-400 disabled:opacity-100",
+  },
+  /** ProfileMerchPopup owner — PUBLISH (green / black; reverse hover + black hard shadow) */
+  merchPublish: {
+    variant: "none",
+    leftIconClass:
+      "!w-6 !h-6 object-contain [filter:brightness(0)] group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]",
+    textClass: "!text-lg !font-medium !leading-7 !uppercase text-inherit",
+    customClass:
+      "group inline-flex h-10 items-center justify-center gap-2.5 bg-[#07F468] px-2 py-1 text-black shadow-[4px_4px_0_0_#000] border-none outline-none cursor-pointer enabled:hover:bg-black enabled:hover:text-[#07F468] enabled:hover:shadow-[4px_4px_0_0_#07F468]",
+  },
+  /** ProfileMerchPopup owner — UNPUBLISH (orange / black; reverse hover) */
+  merchUnpublish: {
+    variant: "none",
+    leftIconClass:
+      "!w-5 !h-5 object-contain [filter:brightness(0)] group-hover:[filter:brightness(0)_saturate(100%)_invert(32%)_sepia(98%)_saturate(2878%)_hue-rotate(357deg)_brightness(101%)_contrast(107%)]",
+    textClass: "!text-base !font-medium !leading-6 !uppercase text-inherit",
+    customClass:
+      "group inline-flex h-10 items-center justify-center gap-2 bg-[#FF4405] px-2 py-1 text-black border-none outline-none cursor-pointer enabled:hover:bg-black enabled:hover:text-[#FF4405]",
+  },
   mediaFilterSelectTight: {
     variant: "mediaBtn",
     leftIconClass: "w-4 h-4 object-contain group-hover:brightness-0",
@@ -246,7 +282,7 @@ const dashboardPrimaryButtonThemes = {
   mediaAddTierPanel: {
     variant: "polygonLeft",
     leftIconClass:
-      "w-4 h-4 [filter:invert(72%)_sepia(94%)_saturate(464%)_hue-rotate(85deg)_brightness(101%)_contrast(105%)] group-hover:filter-none",
+      "w-4 h-4 pointer-events-none transition-[filter] duration-200 [filter:invert(72%)_sepia(94%)_saturate(464%)_hue-rotate(85deg)_brightness(101%)_contrast(105%)] group-hover/dpb:filter-none",
     customClass: "gap-[2px] text-sm !h-10 flex items-center",
   },
   analyticsRefresh: {
@@ -271,6 +307,13 @@ const dashboardPrimaryButtonThemes = {
     rightIconClass: "w-4 h-4",
     textClass: "text-xs leading-normal font-medium text-[#155eef] dark:text-[#2b8cf1]",
     customClass: "inline-flex justify-start items-center gap-0.5 cursor-pointer bg-transparent border-none outline-none p-0",
+  },
+  /** Merch keep-in-store toast — View in Store link (teal + arrow-up-right). */
+  merchToastViewInStore: {
+    variant: "none",
+    textClass: "text-xs font-medium leading-[1.125rem] text-teal-400",
+    customClass:
+      "group inline-flex items-center gap-0.5 text-xs font-medium leading-[1.125rem] text-teal-400 bg-transparent border-none outline-none p-0 cursor-pointer",
   },
   quoteRefresh: {
     variant: "none",
@@ -452,6 +495,35 @@ const dashboardPrimaryButtonThemes = {
     customClass:
       "flex h-10 items-center justify-center px-4 bg-[#22CCEE] text-white enabled:hover:bg-transparent enabled:hover:text-[#22CCEE]",
   },
+  /** Merch publish — Stop pre-order now (#FF4405 XS) */
+  merchStopPreorder: {
+    variant: "none",
+    textClass:
+      "!text-xs !font-semibold capitalize tracking-tight text-white",
+    customClass:
+      "min-w-14 px-2 py-1 bg-[#FF4405] inline-flex justify-center items-center gap-2 text-white enabled:hover:bg-[#E03D04]",
+  },
+  /** End Pre-order Period popup — Update Publish Settings */
+  merchEndPreorderUpdate: {
+    variant: "none",
+    textClass: "!text-sm !font-semibold !normal-case text-[#07F468]",
+    customClass:
+      "inline-flex items-center justify-center px-4 py-2 bg-[#0C111D] text-[#07F468] enabled:hover:opacity-90",
+  },
+  /**
+   * Merch listing footer Next / SAVE (Figma bottom-right Brand):
+   * h-10, icon↔text gap 10px only, leading check, text-lg, hard black shadow, slanted left.
+   */
+  merchListingCta: {
+    variant: "none",
+    // Asset has ~10px transparent padding; w-9 ≈ Figma w-5 glyph inside w-6 slot.
+    leftIconClass:
+      "!w-9 !h-9 !min-w-9 !min-h-9 shrink-0 object-contain [filter:brightness(0)] group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-disabled:[filter:brightness(0)_saturate(100%)_invert(67%)_sepia(8%)_saturate(281%)_hue-rotate(182deg)_brightness(91%)_contrast(88%)]",
+    textClass:
+      "!text-lg !font-medium !leading-7 !uppercase text-black group-hover:!text-[#07F468] group-disabled:!text-[#98A2B3]",
+    customClass:
+      "group inline-flex h-10 items-center justify-center !gap-[10px] bg-[#07F468] py-1 pl-6 pr-2 text-black shadow-[4px_4px_0_0_#000] border-none outline-none cursor-pointer [clip-path:polygon(16px_0,100%_0,100%_100%,0_100%)] [&>span]:!gap-[10px] [&>span>span]:!gap-[10px] enabled:hover:bg-black enabled:hover:text-[#07F468] enabled:hover:shadow-[4px_4px_0_0_#07F468] disabled:cursor-not-allowed disabled:bg-[#3440540D] disabled:text-[#98A2B3] disabled:shadow-none disabled:opacity-100",
+  },
 };
 
 const props = defineProps({
@@ -548,9 +620,9 @@ const themeClasses = {
   "skew-right":
     "group w-max pl-2 gap-2.5 pr-2.5 h-10 relative flex justify-center items-center appearance-button transition-opacity duration-100 ease-in-out normal-case overflow-visible outline-none border-none bg-[var(--btn-bg)] enabled:hover:bg-[var(--btn-hover-bg)] enabled:hover:after:bg-[var(--btn-hover-bg)] before:content-[''] before:block before:w-full before:h-full before:absolute before:top-0 before:right-0 before:z-[1] before:shadow-[4px_4px_0_0_#000] before:transition-all before:ease-in-out before:duration-0 after:content-[''] after:block after:w-4 after:h-full after:absolute after:top-0 after:-right-[0.43rem] after:z-[1] after:shadow-[4px_4px_0_0_#000] after:skew-x-[20deg] after:translate-x-0 after:transition-all after:ease-in-out after:duration-0 after:bg-[var(--btn-bg)]",
   polygonLeft:
-    "w-max group flex items-center justify-center gap-[0.625rem] py-1 pl-[1.4rem] pr-2 bg-[var(--btn-bg)] enabled:hover:bg-[var(--btn-hover-bg)] text-[var(--btn-text)] enabled:hover:text-[var(--btn-hover-text)] text-sm sm:text-lg leading-7 font-medium uppercase transition-colors duration-200 relative enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 [clip-path:polygon(8%_0,100%_0,105%_105%,0_105%)]",
+    "w-max group/dpb flex items-center justify-center gap-[0.625rem] py-1 pl-[1.4rem] pr-2 bg-[var(--btn-bg)] hover:bg-[var(--btn-hover-bg)] text-[var(--btn-text)] hover:text-[var(--btn-hover-text)] text-sm sm:text-lg leading-7 font-medium uppercase transition-colors duration-200 relative enabled:cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-[var(--btn-bg)] disabled:hover:text-[var(--btn-text)] [clip-path:polygon(8%_0,100%_0,105%_105%,0_105%)] [&_img]:pointer-events-none",
   polygonRight:
-    "w-max group flex items-center justify-center gap-[0.625rem] py-1 pr-[1.4rem] pl-2 bg-black enabled:hover:bg-[#07f468] text-[#fff] text-[1.125rem] leading-7 font-medium uppercase transition-colors duration-200 enabled:hover:text-black relative cursor-pointer [clip-path:polygon(0_0,92%_0,100%_105%,0_105%)]",
+    "w-max group/dpb flex items-center justify-center gap-[0.625rem] py-1 pr-[1.4rem] pl-2 bg-black hover:bg-[#07f468] text-[#fff] text-[1.125rem] leading-7 font-medium uppercase transition-colors duration-200 hover:text-black relative cursor-pointer [clip-path:polygon(0_0,92%_0,100%_105%,0_105%)] [&_img]:pointer-events-none",
   bgGreen:
     "group flex items-center justify-center gap-2.5 py-6 px-[1.4rem] bg-[#07f468] enabled:hover:bg-black text-[#000] text-[1.125rem] leading-7 font-medium uppercase transition-colors duration-200 enabled:hover:text-[#07f468] relative cursor-pointer ",
   mediaBtn:

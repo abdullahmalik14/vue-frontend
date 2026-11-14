@@ -102,7 +102,7 @@
             <!-- Dashboard Chevron -->
             <img 
               v-else
-              class="select-arrow h-6 w-6 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(45%)_sepia(6%)_saturate(1597%)_hue-rotate(183deg)_brightness(91%)_contrast(76%)]"
+              class="select-arrow h-5 w-5 transition-transform duration-200 [filter:brightness(0)_saturate(100%)_invert(45%)_sepia(6%)_saturate(1597%)_hue-rotate(183deg)_brightness(91%)_contrast(76%)]"
               :class="{ 'rotate-180': isOpen }"
               src="https://i.ibb.co.com/jkt6FN7G/chevron-down.webp" 
               alt="chevron down" 

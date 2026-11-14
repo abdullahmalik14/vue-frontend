@@ -303,22 +303,35 @@ function resolveContainAnchor() {
     document.querySelector('[data-upload-media-popup]') ||
     document.querySelector('[data-merch-listing-popup]');
   if (!content) return null;
-  return content.closest('[role="dialog"]') || content;
+  const dialog = content.closest('[role="dialog"]');
+  // Prefer the visible panel box; closed/display:none dialogs measure 0×0.
+  if (dialog) {
+    const rect = dialog.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) return dialog;
+  }
+  const contentRect = content.getBoundingClientRect();
+  if (contentRect.width > 0 && contentRect.height > 0) return content;
+  return null;
 }
 
 function syncContainOverlayBox() {
+  const fallback = {
+    top: '0px',
+    left: '0px',
+    width: '100vw',
+    height: '100dvh',
+    zIndex: '10050',
+  };
   const anchor = resolveContainAnchor();
   if (!anchor) {
-    containOverlayStyle.value = {
-      top: '0px',
-      left: '0px',
-      width: '100vw',
-      height: '100dvh',
-      zIndex: '10050',
-    };
+    containOverlayStyle.value = fallback;
     return;
   }
   const rect = anchor.getBoundingClientRect();
+  if (rect.width <= 0 || rect.height <= 0) {
+    containOverlayStyle.value = fallback;
+    return;
+  }
   const hostZ = Number(window.getComputedStyle(anchor).zIndex);
   const zIndex = Number.isFinite(hostZ) && hostZ > 0 ? String(hostZ + 50) : '10050';
   containOverlayStyle.value = {
@@ -352,6 +365,7 @@ watch(
       unbindContainListeners();
     }
   },
+  { immediate: true },
 );
 
 onUnmounted(() => {

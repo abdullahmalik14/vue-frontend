@@ -54,30 +54,30 @@
         <div class="flex flex-col gap-2 px-5 lg:px-10 lg:flex-row lg:items-center lg:gap-4">
           <div class="flex items-center gap-4 shrink-0">
             <div
-              class="hidden md:flex h-[48px] w-[104px] shrink-0 items-center rounded-[48px] bg-[#E8CBE1] p-1"
+              class="hidden md:inline-flex shrink-0 items-center overflow-hidden rounded-[5px] bg-gray-50/50 outline outline-1 outline-gray-300"
             >
               <button
                 type="button"
-                class="flex h-full flex-1 justify-center items-center outline-none cursor-pointer rounded-[48px]"
-                :class="viewMode === 'grid' ? 'bg-[#000000]' : 'bg-transparent'"
+                class="min-h-10 px-4 py-2 border-r border-gray-300 flex justify-center items-center gap-2 cursor-pointer outline-none"
+                :class="viewMode === 'grid' ? 'bg-gray-900' : 'bg-transparent'"
                 :aria-label="t('mediaUploader.library.gridView')"
                 @click="viewMode = 'grid'"
               >
                 <Squares2X2Icon
                   class="w-5 h-5"
-                  :class="viewMode === 'grid' ? 'text-white' : 'text-[#0C111D]'"
+                  :class="viewMode === 'grid' ? 'text-white' : 'text-gray-400'"
                 />
               </button>
               <button
                 type="button"
-                class="flex h-full flex-1 justify-center items-center outline-none cursor-pointer rounded-[48px]"
-                :class="viewMode === 'table' ? 'bg-[#000000]' : 'bg-transparent'"
+                class="min-h-10 px-4 py-2 border-r border-gray-300 flex justify-center items-center gap-2 cursor-pointer outline-none"
+                :class="viewMode === 'table' ? 'bg-gray-900' : 'bg-transparent'"
                 :aria-label="t('mediaUploader.library.listView')"
                 @click="viewMode = 'table'"
               >
                 <Bars3Icon
                   class="w-5 h-5"
-                  :class="viewMode === 'table' ? 'text-white' : 'text-[#0C111D]'"
+                  :class="viewMode === 'table' ? 'text-white' : 'text-gray-400'"
                 />
               </button>
             </div>

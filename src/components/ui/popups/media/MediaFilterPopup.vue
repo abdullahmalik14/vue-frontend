@@ -236,6 +236,7 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  /** Applied filter snapshot from the host page (media / merch keep their own). */
   appliedFilters: {
     type: Object,
     default: () => ({
@@ -246,19 +247,31 @@ const props = defineProps({
       tiers: [],
     }),
   },
+  /**
+   * Library rows for live counts. When omitted, media uploader store is used.
+   * Merch passes its own library so media + merch stay independent.
+   */
+  items: {
+    type: Array,
+    default: null,
+  },
+  /** interactionsEngine scope — media vs merch must not share field state. */
+  scopeId: {
+    type: String,
+    default: 'mediaUploaderFilter',
+  },
 });
 
 const emit = defineEmits(['update:modelValue', 'apply']);
 
 const { t } = useI18n();
 const uploaderStore = useMediaUploaderStore();
-const SCOPE_ID = 'mediaUploaderFilter';
 const {
   fieldConfig,
   registerField,
   changeField,
   clear: clearInteractions,
-} = useMediaInteractions(SCOPE_ID);
+} = useMediaInteractions(props.scopeId);
 
 const payToViewConfig = fieldConfig('payToViewOnly');
 const mediaTypesConfig = fieldConfig('mediaTypes');
@@ -306,7 +319,10 @@ const sortOptions = computed(() => [
   },
 ]);
 
-const libraryItems = computed(() => uploaderStore.libraryItems || []);
+const libraryItems = computed(() => {
+  if (Array.isArray(props.items)) return props.items;
+  return uploaderStore.libraryItems || [];
+});
 
 const payToViewCount = computed(
   () => libraryItems.value.filter((item) => hasPayToView(item)).length,
@@ -464,8 +480,19 @@ function toggleSortDir() {
   draft.sortDir = draft.sortDir === 'asc' ? 'desc' : 'asc';
 }
 
+function selectAllMediaTypes() {
+  draft.mediaTypes = [...MEDIA_TYPE_IDS];
+  changeField(mediaTypesConfig, [...draft.mediaTypes]);
+}
+
+function selectAllTiers() {
+  draft.tiers = [...tierRows.value];
+  changeField(tiersConfig, [...draft.tiers]);
+}
+
 function resetDraft() {
   const next = createDefaultFilters();
+  // Defaults: all media types on, no tier filter, P2V off, newest first.
   applyDraft(next);
   emit('apply', cloneFilters(next));
 }

@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import DashboardTextInput from '@/components/forms/inputs/DashboardTextInput.vue';
 import CheckboxSwitch from '@/components/forms/checkboxes/CheckboxSwitch.vue';
@@ -8,6 +8,7 @@ import DashboardPrimaryButton from '@/components/ui/buttons/DashboardPrimaryButt
 import CatalogSearchSelect from '@/dev/components/ui/search/CatalogSearchSelect.vue';
 import AddTierPopup from '@/components/ui/popups/media/AddTierPopup.vue';
 import { useAssetUrl } from '@/composables/useAssetUrl.js';
+import { interactionsEngine } from '@/utils/validation/interactionsEngine.js';
 
 const props = defineProps({
   /** createStepStateEngine instance for this merch listing flow */
@@ -20,7 +21,13 @@ const props = defineProps({
 const { t } = useI18n();
 const { url: addTierIconUrl } = useAssetUrl('mediaUploader.icon.addTier');
 
+const SCOPE_ID = 'merchListingProductDetails';
+const PRODUCT_NAME_MAX = 100;
+const DESCRIPTION_MAX = 500;
+
 const showAddTierPopup = ref(false);
+const attemptedSubmit = ref(false);
+const rootEl = ref(null);
 
 const productName = computed({
   get: () => props.engine.state.productName || '',
@@ -71,6 +78,203 @@ const planCheckboxClass =
 const planLabelClass =
   'text-[14px] text-text-primary font-[400] cursor-pointer truncate min-w-0';
 
+const productNameFieldConfig = computed(() => ({
+  scope: SCOPE_ID,
+  id: 'productName',
+  validation: {
+    required: true,
+    rules: [
+      {
+        type: 'minLength',
+        param: 1,
+        message: t('shops.merch.listing.validation.productNameRequired'),
+      },
+      {
+        type: 'maxLength',
+        param: PRODUCT_NAME_MAX,
+        message: t('shops.merch.listing.validation.characterCount', {
+          used: String(productName.value || '').length,
+          max: PRODUCT_NAME_MAX,
+        }),
+      },
+    ],
+  },
+  validateOnInput: true,
+  validateOnMount: false,
+}));
+
+const descriptionFieldConfig = computed(() => ({
+  scope: SCOPE_ID,
+  id: 'description',
+  validation: {
+    required: true,
+    rules: [
+      {
+        type: 'minLength',
+        param: 1,
+        message: t('shops.merch.listing.validation.descriptionRequired'),
+      },
+      {
+        type: 'maxLength',
+        param: DESCRIPTION_MAX,
+        message: t('shops.merch.listing.validation.characterCount', {
+          used: String(description.value || '').length,
+          max: DESCRIPTION_MAX,
+        }),
+      },
+    ],
+  },
+  validateOnInput: true,
+  validateOnMount: false,
+}));
+
+const subscriptionTiersFieldConfig = computed(() => ({
+  scope: SCOPE_ID,
+  id: 'subscriptionTiers',
+  validation: {
+    required: false,
+    rules: [
+      {
+        type: 'custom',
+        message: t('shops.merch.listing.validation.selectAtLeastOneTier'),
+        param: () => {
+          if (!props.engine.state.subscribersOnly) return true;
+          return (props.engine.state.subscriptionPlanIds || []).length >= 1;
+        },
+      },
+    ],
+  },
+  validateOnInput: true,
+  validateOnMount: false,
+}));
+
+const originalPriceFieldConfig = computed(() => ({
+  scope: SCOPE_ID,
+  id: 'originalPrice',
+  validation: {
+    required: false,
+    rules: [
+      {
+        type: 'minNum',
+        param: 1.95,
+        message: t('mediaUploader.subscription.originalPriceError'),
+      },
+      {
+        type: 'maxNum',
+        param: 500,
+        message: t('mediaUploader.subscription.originalPriceError'),
+      },
+    ],
+  },
+  validateOnMount: true,
+  validateOnInput: true,
+}));
+
+const discountPriceFieldConfig = computed(() => ({
+  scope: SCOPE_ID,
+  id: 'discountPrice',
+  dependsOn: ['originalPrice'],
+  validation: {
+    required: false,
+    rules: [
+      {
+        type: 'custom',
+        message: t('mediaUploader.subscription.discountPriceError'),
+        param: (value, ctx) => {
+          const disc = parseFloat(value);
+          const orig = parseFloat(ctx.getFieldValue(ctx.scope, 'originalPrice'));
+          return !(disc && orig && disc >= orig);
+        },
+      },
+    ],
+  },
+  validateOnMount: true,
+  validateOnInput: true,
+}));
+
+const productNameFieldState = computed(() =>
+  interactionsEngine.getFieldState(productNameFieldConfig.value),
+);
+const descriptionFieldState = computed(() =>
+  interactionsEngine.getFieldState(descriptionFieldConfig.value),
+);
+const subscriptionTiersFieldState = computed(() =>
+  interactionsEngine.getFieldState(subscriptionTiersFieldConfig.value),
+);
+const originalPriceFieldState = computed(() =>
+  interactionsEngine.getFieldState(originalPriceFieldConfig.value),
+);
+const discountPriceFieldState = computed(() =>
+  interactionsEngine.getFieldState(discountPriceFieldConfig.value),
+);
+
+function hasEnteredNumber(raw) {
+  if (raw === '' || raw === null || raw === undefined) return false;
+  return Number.isFinite(Number(raw));
+}
+
+const isProductNameInvalid = computed(() => {
+  if (!attemptedSubmit.value && String(productName.value || '').trim()) {
+    return !!productNameFieldState.value && !productNameFieldState.value.isValid;
+  }
+  if (!attemptedSubmit.value) return false;
+  return !!productNameFieldState.value && !productNameFieldState.value.isValid;
+});
+
+const isDescriptionInvalid = computed(() => {
+  if (!attemptedSubmit.value && String(description.value || '').trim()) {
+    return !!descriptionFieldState.value && !descriptionFieldState.value.isValid;
+  }
+  if (!attemptedSubmit.value) return false;
+  return !!descriptionFieldState.value && !descriptionFieldState.value.isValid;
+});
+
+const isTierInvalid = computed(() => {
+  if (!attemptedSubmit.value) return false;
+  if (!subscribersOnly.value) return false;
+  return !!subscriptionTiersFieldState.value && !subscriptionTiersFieldState.value.isValid;
+});
+
+const isOriginalPriceInvalid = computed(() => {
+  if (attemptedSubmit.value && !hasEnteredNumber(originalPrice.value)) {
+    return !!originalPriceFieldState.value && !originalPriceFieldState.value.isValid;
+  }
+  if (!hasEnteredNumber(originalPrice.value)) return false;
+  return !!originalPriceFieldState.value && !originalPriceFieldState.value.isValid;
+});
+
+const isDiscountPriceInvalid = computed(() => {
+  if (!hasEnteredNumber(discountedPrice.value)) return false;
+  return !!discountPriceFieldState.value && !discountPriceFieldState.value.isValid;
+});
+
+const productNameCountClass = computed(() =>
+  isProductNameInvalid.value ? 'text-error' : 'text-dark-gray',
+);
+const descriptionCountClass = computed(() =>
+  isDescriptionInvalid.value ? 'text-error' : 'text-dark-gray',
+);
+
+const originalPriceDescription = computed(() =>
+  t('mediaUploader.subscription.originalPriceHint'),
+);
+const originalPriceDescriptionClass = computed(() =>
+  isOriginalPriceInvalid.value ? 'text-error' : 'text-dark-gray',
+);
+
+const discountPriceDescription = computed(() => {
+  if (isDiscountPriceInvalid.value) {
+    return (
+      discountPriceFieldState.value?.failedRules?.[0]?.message ||
+      t('mediaUploader.subscription.discountPriceError')
+    );
+  }
+  return t('mediaUploader.subscription.discountPriceHint');
+});
+const discountPriceDescriptionClass = computed(() =>
+  isDiscountPriceInvalid.value ? 'text-error' : 'text-dark-gray',
+);
+
 function isPlanSelected(id) {
   return subscriptionPlanIds.value.includes(id);
 }
@@ -120,7 +324,6 @@ function onTierSaved() {
 
 watch(subscribersOnly, (on) => {
   if (!on) return;
-  // Static design seed — only when merch has no tiers yet (isolated from media store)
   if ((props.engine.state.subscriptionPlans || []).length > 0) return;
   const seeded = [
     { id: 'merch_static_free', label: t('mediaUploader.subscription.plans.free') },
@@ -134,36 +337,126 @@ watch(subscribersOnly, (on) => {
   props.engine.setState('subscriptionPlans', seeded);
   props.engine.setState('subscriptionPlanIds', ['merch_static_featured']);
 });
+
+watch(productName, (val) => {
+  interactionsEngine.processFieldChange(productNameFieldConfig.value, val);
+});
+watch(description, (val) => {
+  interactionsEngine.processFieldChange(descriptionFieldConfig.value, val);
+});
+watch(originalPrice, (val) => {
+  interactionsEngine.processFieldChange(originalPriceFieldConfig.value, val);
+});
+watch(discountedPrice, (val) => {
+  interactionsEngine.processFieldChange(discountPriceFieldConfig.value, val);
+});
+watch([subscribersOnly, subscriptionPlanIds], () => {
+  interactionsEngine.processFieldChange(
+    subscriptionTiersFieldConfig.value,
+    props.engine.state.subscriptionPlanIds || [],
+  );
+});
+
+const FIELD_ORDER = [
+  'productName',
+  'description',
+  'subscriptionTiers',
+  'originalPrice',
+  'discountPrice',
+];
+
+function scrollToField(fieldId) {
+  const el = rootEl.value?.querySelector(`[data-merch-field="${fieldId}"]`);
+  el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function validateStep() {
+  attemptedSubmit.value = true;
+  interactionsEngine.processFieldChange(productNameFieldConfig.value, productName.value);
+  interactionsEngine.processFieldChange(descriptionFieldConfig.value, description.value);
+  interactionsEngine.processFieldChange(
+    subscriptionTiersFieldConfig.value,
+    props.engine.state.subscriptionPlanIds || [],
+  );
+  interactionsEngine.processFieldChange(originalPriceFieldConfig.value, originalPrice.value);
+  interactionsEngine.processFieldChange(discountPriceFieldConfig.value, discountedPrice.value);
+
+  const summary = interactionsEngine.validateScope(SCOPE_ID);
+  if (summary.isValid) return true;
+
+  const firstId =
+    summary.firstInvalidField?.fieldId ||
+    FIELD_ORDER.find((id) => summary.invalidFields?.some((f) => f.fieldId === id));
+  if (firstId) {
+    void nextTick(() => scrollToField(firstId));
+  }
+  return false;
+}
+
+onMounted(() => {
+  interactionsEngine.register(productNameFieldConfig.value, productName.value, null);
+  interactionsEngine.register(descriptionFieldConfig.value, description.value, null);
+  interactionsEngine.register(
+    subscriptionTiersFieldConfig.value,
+    props.engine.state.subscriptionPlanIds || [],
+    null,
+  );
+  interactionsEngine.register(originalPriceFieldConfig.value, originalPrice.value, null);
+  interactionsEngine.register(discountPriceFieldConfig.value, discountedPrice.value, null);
+});
+
+onBeforeUnmount(() => {
+  interactionsEngine.clearScope(SCOPE_ID);
+});
+
+defineExpose({ validateStep });
 </script>
 
 <template>
   <div
+    ref="rootEl"
     data-component="merch-product-details-step"
     class="flex flex-col gap-6"
   >
     <!-- 1. Basic info + subscribers -->
     <div class="flex flex-col gap-4">
-      <DashboardTextInput
-        id="merch_product_name"
-        type="text"
-        v-model="productName"
-        :placeholder="t('shops.merch.listing.productNamePlaceholder')"
-      />
+      <div data-merch-field="productName">
+        <DashboardTextInput
+          id="merch_product_name"
+          type="text"
+          v-model="productName"
+          :placeholder="t('shops.merch.listing.productNamePlaceholder')"
+          :max-length="PRODUCT_NAME_MAX"
+          :description-class="productNameCountClass"
+        />
+      </div>
 
-      <DashboardTextInput
-        id="merch_description"
-        type="textarea"
-        textAreaRows="3"
-        v-model="description"
-        :placeholder="t('shops.merch.listing.descriptionPlaceholder')"
-      />
+      <div data-merch-field="description">
+        <DashboardTextInput
+          id="merch_description"
+          type="textarea"
+          textAreaRows="3"
+          v-model="description"
+          :placeholder="t('shops.merch.listing.descriptionPlaceholder')"
+          :max-length="DESCRIPTION_MAX"
+          :description-class="descriptionCountClass"
+        />
+      </div>
 
-      <CheckboxSwitch
-        id="merch-subscribers-only"
-        v-model="subscribersOnly"
-        :label="t('shops.merch.listing.subscribersOnly')"
-        theme="linkRow"
-      />
+      <div data-merch-field="subscriptionTiers" class="flex flex-col gap-2">
+        <CheckboxSwitch
+          id="merch-subscribers-only"
+          v-model="subscribersOnly"
+          :label="t('shops.merch.listing.subscribersOnly')"
+          theme="linkRow"
+        />
+        <p
+          v-if="isTierInvalid"
+          class="text-sm text-error"
+        >
+          {{ t('shops.merch.listing.validation.selectAtLeastOneTier') }}
+        </p>
+      </div>
 
       <div v-if="subscribersOnly" class="flex flex-col gap-4">
         <div class="flex w-full justify-between items-center gap-4">
@@ -229,7 +522,7 @@ watch(subscribersOnly, (on) => {
         </p>
       </div>
       <div class="md:flex md:justify-between md:items-start gap-4">
-        <div class="flex-1">
+        <div class="flex-1" data-merch-field="originalPrice">
           <DashboardTextInput
             id="merch_original_price"
             type="number"
@@ -238,11 +531,11 @@ watch(subscribersOnly, (on) => {
             :label-text="t('shops.merch.listing.originalPrice')"
             leftSpan
             :leftSpanText="t('mediaUploader.subscription.usd')"
-            :description="t('mediaUploader.subscription.originalPriceHint')"
-            description-class="text-dark-gray"
+            :description="originalPriceDescription"
+            :description-class="originalPriceDescriptionClass"
           />
         </div>
-        <div class="flex-1">
+        <div class="flex-1" data-merch-field="discountPrice">
           <DashboardTextInput
             id="merch_discount_price"
             type="number"
@@ -251,8 +544,8 @@ watch(subscribersOnly, (on) => {
             :label-text="t('shops.merch.listing.discountedPrice')"
             leftSpan
             :leftSpanText="t('mediaUploader.subscription.usd')"
-            :description="t('mediaUploader.subscription.discountPriceHint')"
-            description-class="text-dark-gray"
+            :description="discountPriceDescription"
+            :description-class="discountPriceDescriptionClass"
           />
         </div>
       </div>
@@ -282,9 +575,8 @@ watch(subscribersOnly, (on) => {
     />
 
     <AddTierPopup
-      :modelValue="showAddTierPopup"
+      v-model="showAddTierPopup"
       :save-handler="saveMerchTier"
-      @update:modelValue="(val) => (showAddTierPopup = val)"
       @close="showAddTierPopup = false"
       @saved="onTierSaved"
     />

@@ -610,8 +610,8 @@ const primaryBtnText = computed(() => (isSubmitDisabled.value ? '#98A2B3' : 'bla
 
 const primaryNextIconClass = computed(() =>
   isSubmitDisabled.value
-    ? 'w-5 h-5 [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(8%)_saturate(281%)_hue-rotate(182deg)_brightness(91%)_contrast(88%)]'
-    : 'w-5 h-5 transition duration-200 brightness-0 group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]',
+    ? 'w-5 h-5 pointer-events-none [filter:brightness(0)_saturate(100%)_invert(67%)_sepia(8%)_saturate(281%)_hue-rotate(182deg)_brightness(91%)_contrast(88%)]'
+    : 'w-5 h-5 pointer-events-none transition-[filter] duration-200 brightness-0 group-hover/dpb:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]',
 );
 
 const successToastTitle = computed(() => {

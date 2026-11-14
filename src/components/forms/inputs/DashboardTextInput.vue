@@ -57,12 +57,21 @@
           </div>
         </div>
 
-        <textarea v-if="type === 'textarea'" v-bind="resolvedAttrs.inputAttrs" :rows="textAreaRows" :maxlength="maxLength" :disabled="disabled" @input="
-          $emit(
-            'update:modelValue',
-            ($event.target as HTMLInputElement).value
-          )
-          " :class="[inputClass, autofillClass, disabled ? 'opacity-50 cursor-not-allowed' : '']"></textarea>
+        <textarea
+          v-if="type === 'textarea'"
+          v-bind="resolvedAttrs.inputAttrs"
+          :value="modelValue"
+          :rows="textAreaRows"
+          :maxlength="maxLength"
+          :disabled="disabled"
+          :class="[inputClass, autofillClass, disabled ? 'opacity-50 cursor-not-allowed' : '']"
+          @input="
+            $emit(
+              'update:modelValue',
+              ($event.target as HTMLTextAreaElement).value
+            )
+          "
+        ></textarea>
       </div>
 
       <HexagonExclamationIcon
@@ -103,8 +112,9 @@
           <component v-else :is="rightIcon" class="w-5 h-5" />
         </div>
 
-        <!-- right span -->
-        <Paragraph v-if="rightSpan" :text="rightSpanText" :class="rightSpanClass" fontSize="text-base"
+        <!-- right span (slot overrides text when provided) -->
+        <slot v-if="$slots.rightSpan" name="rightSpan" />
+        <Paragraph v-else-if="rightSpan" :text="rightSpanText" :class="rightSpanClass" fontSize="text-base"
           fontWeight="font-medium" fontColor="" layoutClass="whitespace-nowrap" />
       </div>
     </div>
@@ -131,13 +141,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed, type Component, ref } from "vue";
+import { computed, type Component, ref, useSlots } from "vue";
 import { resolveAllConfigs } from "@/utils/componentRenderingUtils";
 import Paragraph from "../../ui/typography/Paragraph.vue";
 import IconMessageList from "@/components/ui/list/IconMessageList.vue";
 import HexagonExclamationIcon from "@/components/icons/HexagonExclamationIcon.vue";
 import { InformationCircleIcon } from "@heroicons/vue/24/outline";
 import DropdownMenu from "@/components/ui/dropdowns/DropdownMenu.vue";
+
+const slots = useSlots();
 
 const props = defineProps({
   modelValue: [String, Number],
@@ -252,7 +264,7 @@ const showNumberControls = computed(
 );
 
 const hasTrailingSlot = computed(
-  () => Boolean(props.rightIcon || props.showTooltip || props.rightSpan),
+  () => Boolean(props.rightIcon || props.showTooltip || props.rightSpan || slots.rightSpan),
 );
 
 const showInlineErrorIcon = computed(

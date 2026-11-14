@@ -37,7 +37,9 @@
           :src="tab.icon"
           :alt="tab.label"
           class="w-5 h-5 shrink-0"
-          :class="activeTab === tab.id ? 'brightness-0 invert' : ''"
+          :class="activeTab === tab.id
+            ? 'brightness-0 invert'
+            : '[filter:brightness(0)_saturate(100%)_invert(65%)_sepia(5%)_saturate(982%)_hue-rotate(179deg)_brightness(101%)_contrast(84%)]'"
         />
         <span class="whitespace-nowrap">{{ tab.label }}</span>
       </button>
@@ -184,7 +186,7 @@ const resolvedActiveClass = computed(
 const resolvedInactiveClass = computed(
   () =>
     props.inactiveClass ||
-    'bg-primary-bg text-secondary-text poppins-medium dark:bg-cosmo-shell dark:text-cosmo-darkInk',
+    'bg-gray-50 text-secondary-text poppins-medium dark:bg-cosmo-shell dark:text-cosmo-darkInk',
 );
 
 const localEngine =

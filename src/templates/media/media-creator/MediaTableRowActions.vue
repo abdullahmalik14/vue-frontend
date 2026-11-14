@@ -3,15 +3,25 @@
     <div class="flex justify-center items-center px-3 py-2">
       <button
         type="button"
-        class="w-6 h-6 flex justify-center items-center cursor-pointer"
+        class="group flex justify-center items-center cursor-pointer p-1 rounded-[5px] hover:bg-blue-600/20 focus:bg-blue-600/20 focus-visible:bg-blue-600/20"
         :aria-label="t('mediaCard.menu.editDetails')"
         @click="handleMenuSelect('edit')"
       >
+        <span
+          v-if="editIconUrl && isMerchTheme"
+          aria-hidden="true"
+          class="inline-block !h-3 !w-3 shrink-0 bg-[#344054] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center] [-webkit-mask-size:contain] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] group-hover:!bg-blue-600 group-focus:!bg-blue-600"
+          :style="{
+            WebkitMaskImage: `url(${editIconUrl})`,
+            maskImage: `url(${editIconUrl})`,
+          }"
+        />
         <img
-          v-if="editIconUrl"
+          v-else-if="editIconUrl"
           :src="editIconUrl"
           alt=""
-          class="w-4 h-4 dark:[filter:brightness(0)_saturate(100%)_invert(100%)]"
+          class="!h-3 !w-3 !max-w-none shrink-0 object-contain"
+          :class="iconToneClass"
         />
       </button>
     </div>
@@ -20,14 +30,19 @@
       <div
         ref="menuAnchor"
         tabindex="0"
-        class="w-6 h-6 flex justify-center items-center cursor-pointer"
+        class="group flex justify-center items-center cursor-pointer p-1 rounded-[5px] hover:bg-blue-600/20 focus:bg-blue-600/20 focus-visible:bg-blue-600/20"
+        :class="menuOpen ? 'bg-blue-600/20' : ''"
         @click="onMenuTriggerClick"
       >
-        <img
+        <span
           v-if="menuDotsUrl"
-          :src="menuDotsUrl"
-          alt=""
-          class="w-4 h-4 dark:[filter:brightness(0)_saturate(100%)_invert(100%)]"
+          aria-hidden="true"
+          class="inline-block h-4 w-4 bg-current [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center] [-webkit-mask-size:contain] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] group-hover:!bg-blue-600 group-focus:!bg-blue-600"
+          :class="[isMerchTheme ? 'text-black' : 'text-black dark:text-white', menuOpen ? '!bg-blue-600' : '']"
+          :style="{
+            WebkitMaskImage: `url(${menuDotsUrl})`,
+            maskImage: `url(${menuDotsUrl})`,
+          }"
         />
       </div>
 
@@ -55,7 +70,7 @@
               :src="option.icon"
               alt=""
               class="w-4 h-4 shrink-0 object-contain"
-              :class="option.danger ? '[filter:brightness(0)_saturate(100%)_invert(32%)_sepia(98%)_saturate(2000%)_hue-rotate(2deg)]' : ''"
+              :class="optionIconClass(option)"
             />
             <span
               class="text-xs font-medium whitespace-nowrap"
@@ -93,7 +108,7 @@
               :src="option.icon"
               alt=""
               class="w-6 h-6 shrink-0 object-contain"
-              :class="option.danger ? '[filter:brightness(0)_saturate(100%)_invert(32%)_sepia(98%)_saturate(2000%)_hue-rotate(2deg)]' : ''"
+              :class="optionIconClass(option)"
             />
             <span
               class="text-base font-medium break-words"
@@ -109,7 +124,7 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { CloudArrowUpIcon } from '@heroicons/vue/24/outline';
 import { useAssetUrl } from '@/composables/useAssetUrl.js';
@@ -122,6 +137,11 @@ const props = defineProps({
     type: String,
     default: 'draft',
   },
+  /** media (default) | merch — merch uses black icons + provided edit asset */
+  theme: {
+    type: String,
+    default: 'media',
+  },
 });
 
 const emit = defineEmits(['menu-action']);
@@ -130,49 +150,101 @@ const { t } = useI18n();
 const menuAnchor = ref(null);
 const menuDropdownRef = ref(null);
 const mobileMenuOpen = ref(false);
+const menuOpen = ref(false);
 const isMobileViewport = computed(() => breakpoints.state.mobile);
+const isMerchTheme = computed(() => props.theme === 'merch');
 
-const { url: editIconUrl } = useAssetUrl('icon.media.menu.edit');
+const { url: mediaEditIconUrl } = useAssetUrl('icon.media.menu.edit');
+const { url: merchEditIconUrl } = useAssetUrl('shops.merch.icon.edit');
 const { url: menuDotsUrl } = useAssetUrl('icon.media.threeDotsVertical');
 const { url: shareIconUrl } = useAssetUrl('icon.media.menu.share');
 const { url: unpublishIconUrl } = useAssetUrl('icon.media.menu.unpublish');
 const { url: deleteIconUrl } = useAssetUrl('icon.media.menu.delete');
 
+const editIconUrl = computed(() =>
+  isMerchTheme.value ? merchEditIconUrl.value : mediaEditIconUrl.value,
+);
+
+const iconToneClass = computed(() =>
+  isMerchTheme.value
+    ? '[filter:brightness(0)]'
+    : 'dark:[filter:brightness(0)_saturate(100%)_invert(100%)]',
+);
+
 const isPublished = computed(() => props.status === 'published');
 
-const menuDropdownConfig = {
+const dangerIconClass =
+  '[filter:brightness(0)_saturate(100%)_invert(32%)_sepia(98%)_saturate(2000%)_hue-rotate(2deg)]';
+
+function optionIconClass(option) {
+  if (option.danger) return dangerIconClass;
+  if (isMerchTheme.value) return '[filter:brightness(0)]';
+  return '';
+}
+
+const menuDropdownConfig = computed(() => ({
   trigger: 'click',
   align: 'right',
-  width: 130,
+  width: isMerchTheme.value ? 160 : 130,
   zIndexBase: 10100,
   closeOnOutsideClick: true,
   style: {
     class: 'rounded-[0.625rem] bg-mediaUi-whiteB2 overflow-hidden shadow-lg backdrop-blur-[12px]',
   },
-};
+}));
 
-const menuOptions = computed(() => [
-  { label: t('mediaCard.menu.share'), value: 'share', icon: shareIconUrl.value },
-  isPublished.value
-    ? {
-        label: t('mediaCard.menu.unpublish'),
-        value: 'unpublish',
-        icon: unpublishIconUrl.value,
-        danger: true,
-        divider: true,
-      }
-    : {
-        label: t('mediaCard.menu.publish'),
+const isReviewing = computed(() => props.status === 'reviewing');
+
+const menuOptions = computed(() => {
+  if (isMerchTheme.value) {
+    const options = [
+      {
+        label: t('shops.merch.library.menu.edit'),
+        value: 'edit',
+        icon: editIconUrl.value,
+      },
+    ];
+    // Reviewing only — draft keeps Publish CTA → edit → submit for approval flow
+    if (isReviewing.value) {
+      options.push({
+        label: t('shops.merch.library.menu.publish'),
         value: 'publish',
         divider: true,
-      },
-  {
-    label: t('mediaCard.menu.deleteMedia'),
-    value: 'delete',
-    icon: deleteIconUrl.value,
-    danger: true,
-  },
-]);
+      });
+    }
+    options.push({
+      label: t('shops.merch.library.menu.deleteMerch'),
+      value: 'delete',
+      icon: deleteIconUrl.value,
+      danger: true,
+      divider: true,
+    });
+    return options;
+  }
+
+  return [
+    { label: t('mediaCard.menu.share'), value: 'share', icon: shareIconUrl.value },
+    isPublished.value
+      ? {
+          label: t('mediaCard.menu.unpublish'),
+          value: 'unpublish',
+          icon: unpublishIconUrl.value,
+          danger: true,
+          divider: true,
+        }
+      : {
+          label: t('mediaCard.menu.publish'),
+          value: 'publish',
+          divider: true,
+        },
+    {
+      label: t('mediaCard.menu.deleteMedia'),
+      value: 'delete',
+      icon: deleteIconUrl.value,
+      danger: true,
+    },
+  ];
+});
 
 const mobileMenuPopupConfig = {
   actionType: 'slideIn',
@@ -194,26 +266,56 @@ const mobileMenuPopupConfig = {
   scrollable: false,
 };
 
+function syncMenuOpenFromDropdown() {
+  const open = typeof menuDropdownRef.value?.isOpen === 'function'
+    ? menuDropdownRef.value.isOpen()
+    : false;
+  menuOpen.value = !!open;
+}
+
 function onMenuTriggerClick() {
-  if (!isMobileViewport.value) return;
+  if (!isMobileViewport.value) {
+    requestAnimationFrame(syncMenuOpenFromDropdown);
+    setTimeout(syncMenuOpenFromDropdown, 0);
+    return;
+  }
   mobileMenuOpen.value = true;
+  menuOpen.value = true;
 }
 
 function onMobileMenuOpenChange(open) {
   mobileMenuOpen.value = open;
+  menuOpen.value = open;
 }
 
 function handleMenuSelect(action) {
   emit('menu-action', action);
   menuDropdownRef.value?.close();
   mobileMenuOpen.value = false;
+  menuOpen.value = false;
+}
+
+function onDocumentPointerDown() {
+  if (isMobileViewport.value) return;
+  // After outside-close, DropdownMenu clears; sync chip off on next tick
+  setTimeout(syncMenuOpenFromDropdown, 0);
 }
 
 watch(isMobileViewport, (mobile) => {
   if (mobile) {
     menuDropdownRef.value?.close();
+    menuOpen.value = false;
     return;
   }
   mobileMenuOpen.value = false;
+  menuOpen.value = false;
+});
+
+onMounted(() => {
+  document.addEventListener('pointerdown', onDocumentPointerDown, true);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('pointerdown', onDocumentPointerDown, true);
 });
 </script>

@@ -1,6 +1,9 @@
 <template>
-    <BasePopup :modelValue="modelValue" @update:modelValue="(val) => emit('update:modelValue', val)"
-        :popupConfig="profileMerchPopupConfig">
+    <BasePopup
+        :modelValue="modelValue"
+        :popupConfig="profileMerchPopupConfig"
+        @update:modelValue="onPopupModelUpdate"
+    >
         <!-- wrapper   -->
         <div ref="popupWrapper"
             class="bg-black/50 relative before:absolute before:inset-0 before:bg-[url('/images/ai-art.png')] before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] before:z-[-1] dark:bg-[#181a1b]/50">
@@ -44,8 +47,8 @@
 
                 <!-- text-section -->
                 <div
-                    class="flex flex-col p-2 lg:w-1/2 lg:h-screen lg:overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-order-style:none] [scrollbar-width:none] lg:p-6 lg:px-10">
-                    <div class="flex flex-col gap-6 lg:gap-10">
+                    class="flex flex-col lg:w-1/2 lg:h-screen lg:overflow-hidden">
+                    <div class="flex min-h-0 flex-1 flex-col gap-6 overflow-y-auto p-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:gap-10 lg:p-6 lg:px-10">
                         <!-- text-section__header -->
                         <div class="flex flex-col gap-6">
                             <!-- title-section -->
@@ -78,25 +81,12 @@
                                     class="w-4 h-4 min-w-[1rem]">
 
                                 <div class="flex items-center gap-2 flex-wrap">
-                                    <!-- tag -->
                                     <div
-                                        class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]">
-                                        <span
-                                            class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">Featured</span>
-                                    </div>
-
-                                    <!-- tag -->
-                                    <div
-                                        class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]">
-                                        <span class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">Best
-                                            Seller</span>
-                                    </div>
-
-                                    <!-- tag -->
-                                    <div
-                                        class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]">
-                                        <span class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">Seasonal
-                                            Offers</span>
+                                        v-for="tag in merchTags"
+                                        :key="tag"
+                                        class="flex justify-center items-center px-2 h-6 bg-[#0C111D] cursor-pointer dark:bg-[#0a0e17]"
+                                    >
+                                        <span class="text-sm font-medium text-[#F9FAFB] dark:text-[#dddad5]">{{ tag }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -124,86 +114,118 @@
                             </div>
 
                             <!-- price-display -->
-                            <div class="flex flex-col gap-2 md:flex-row md:items-center">
-                                <!-- price -->
-                                <div class="flex items-baseline gap-0.5 drop-shadow-[0px_0px_40px_#FFC300]">
-                                    <span
-                                        class="text-xl leading-normal font-semibold align-bottom text-white dark:text-[#e8e6e3]">{{ merchCurrency }}</span>
-                                    <span
-                                        class="text-base font-medium line-through align-middle text-white dark:text-[#e8e6e3]">{{ merchOldPrice }}</span>
-                                    <span
-                                        class="text-6xl leading-[4.5rem] font-semibold align-bottom -tracking-[0.075rem] text-white dark:text-[#e8e6e3]">{{ merchFinalPrice }}</span>
-                                </div>
-
-                                <!-- labels -->
-                                <div
-                                    class="flex items-center gap-3 pt-[0.0625rem] pb-2.5 flex-wrap md:items-start md:flex-col md:pb-5">
-                                    <!-- yellow-label with icon -->
+                            <div class="flex flex-col gap-2">
+                                <div class="inline-flex items-center gap-2">
                                     <div
-                                        class="flex justify-center items-center gap-1 px-1.5 py-0.5 bg-[linear-gradient(90deg,#D8AF0D_0%,#9F8009_100%)]">
-                                        <img src="https://i.ibb.co.com/3m6JKJSh/clock.webp" alt="clock" class="w-4 h-4">
+                                        class="flex items-end gap-0.5 bg-transparent"
+                                        :class="{
+                                            'drop-shadow-[0_0_40px_rgba(255,195,0,1)]': variant === 'pre-order' || variant === 'subscriber-pre-order',
+                                            'drop-shadow-[0_0_27px_rgba(246,0,254,1)]': variant === 'regular' || variant === 'subscriber-grab',
+                                        }"
+                                    >
+                                        <span class="text-xl font-semibold leading-8 text-white">{{ merchCurrency }}</span>
                                         <span
-                                            class="text-xs leading-normal font-semibold text-black dark:text-[#e8e6e3]">Pre-Order
-                                            Discount</span>
+                                            class="text-base font-medium leading-5 text-white line-through"
+                                        >{{ merchOldPrice }}</span>
+                                        <span class="text-6xl font-semibold leading-[72px] text-white">{{ merchFinalPrice }}</span>
                                     </div>
 
-                                    <!-- yellow-label -->
+                                    <!-- Badges next to price: yellow preorder / -% discount / left-stock (same column as -80%) -->
                                     <div
-                                        class="flex justify-center items-center gap-1 px-1.5 py-0.5 bg-[linear-gradient(90deg,#D8AF0D_0%,#9F8009_100%)]">
-                                        <span
-                                            class="text-xs leading-normal font-semibold text-black dark:text-[#e8e6e3]">Official
-                                            Release: 12 Jul 2024</span>
-                                    </div>
+                                        v-if="showPriceSideBadges"
+                                        class="inline-flex flex-col items-start justify-center gap-3 pt-px pb-2.5"
+                                    >
+                                        <template v-if="variant === 'pre-order' || variant === 'subscriber-pre-order'">
+                                            <div
+                                                class="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-yellow-500 to-yellow-700 px-1.5 py-1"
+                                            >
+                                                <img src="https://i.ibb.co.com/3m6JKJSh/clock.webp" alt="" class="h-4 w-4 shrink-0">
+                                                <span class="text-xs font-semibold leading-none text-black">
+                                                    {{ t('shops.merch.detail.preOrderDiscount') }}
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="inline-flex items-center justify-center gap-1 bg-gradient-to-r from-yellow-500 to-yellow-700 px-1.5 py-1"
+                                            >
+                                                <span class="text-xs font-semibold leading-none text-black">
+                                                    {{ t('shops.merch.detail.officialRelease', { date: officialReleaseDate }) }}
+                                                </span>
+                                            </div>
+                                        </template>
 
-                                    <!-- red-label -->
-                                    <div class="flex justify-center items-center gap-1 px-1.5 py-0.5 bg-[#FF4405]">
-                                        <span
-                                            class="text-xs leading-normal font-semibold text-white dark:text-[#e8e6e3]">1
-                                            LEFT IN STOCK</span>
+                                        <div
+                                            v-else-if="merchDiscountPercent != null"
+                                            class="inline-flex items-center justify-center bg-fuchsia-500 px-1.5 py-1 outline outline-2 outline-offset-[-1px] outline-fuchsia-500"
+                                        >
+                                            <span class="text-xs font-semibold leading-none text-black">
+                                                {{ t('shops.merch.detail.discountPercent', { percent: merchDiscountPercent }) }}
+                                            </span>
+                                        </div>
+
+                                        <div
+                                            v-if="showStockBesidePrice"
+                                            class="inline-flex m-0 items-center text-xs font-semibold leading-none text-white justify-center bg-orange-600 px-1.5 py-1"
+                                        >
+                                            {{
+                                                merch?.unlimitedStock
+                                                    ? t('shops.merch.detail.unlimitedStock')
+                                                    : t('shops.merch.detail.leftInStock', { count: lowStockCount })
+                                            }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- button-container -->
-                            <div ref="stickyContainer"
+                            <!-- button-container: shopper CTAs only once the merch is live -->
+                            <div
+                                v-if="showShopperCtas"
+                                ref="stickyContainer"
                                 :class="['flex w-full group/button-container sticky bottom-0', isSticky ? 'is-sticky w-[calc(100%+1rem)] -ml-2 py-6 bg-[linear-gradient(0deg,rgba(255,255,255,0.01)_0%,rgba(255,255,255,0)_100%)] backdrop-blur-[50px]' : '']">
 
                                 <!-- State: pre-order (Yellow) -->
                                 <button v-if="variant === 'pre-order'"
                                     type="button"
                                     @click="openPurchase"
-                                    class="relative flex-grow h-14 mx-3 group-[.is-sticky]/button-container:mx-5 border-[3px] border-[#FFFADD] bg-[rgba(242,242,3,0.7)] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[inset_0_0_1px_0_#FFF3A1,0_0_10px_0_#FFB909B2,0_5px_50px_0_#F2F20380,0px_0px_10px_0px_#F2F2030D] before:absolute before:inset-0 before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75">
+                                    class="relative flex-grow h-14 mx-3 group-[.is-sticky]/button-container:mx-5 border-[3px] border-[#FFFADD] bg-[rgba(242,242,3,0.7)] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[inset_0_0_1px_0_#FFF3A1,0_0_10px_0_#FFB909B2,0_5px_50px_0_#F2F20380,0px_0px_10px_0px_#F2F2030D] before:absolute before:inset-0 before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 lg:h-[4.5rem]">
                                     <div
                                         class="w-full h-full flex justify-center items-center gap-0.5 relative z-10 skew-x-[24deg]">
                                         <span
-                                            class="text-xl font-bold text-[#F5F5F5] drop-shadow-[0px_0px_30px_#10182880] whitespace-nowrap uppercase">Pre-order
-                                            NOW</span>
+                                            class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]">
+                                            {{ t('shops.merch.detail.preOrderNow') }}
+                                        </span>
                                     </div>
                                 </button>
 
-                                <!-- State: regular (Pink Buy Now + Add to Cart) -->
+                                <!-- State: regular (Pink Buy Now + Add to Cart) — keep skew/parallelogram shape -->
                                 <template v-else-if="variant === 'regular'">
                                     <button
                                         type="button"
                                         @click="openPurchase"
-                                        class="relative flex-grow h-14 ml-3 group-[.is-sticky]/button-container:ml-5 border-[3px] border-[#FFE1FC] bg-[#F600FE]/50 [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[0_0_10px_0_#F600FEB2,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,inset_0_0_1px_0_#FF97F3E5] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 md:before:opacity-65 md:shadow-[0_0_10px_0_#F600FEB2,0_0_40px_0_#E803AE80_inset,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,0_0_1px_0_#FF97F3E5_inset] lg:h-[4.5rem]">
-                                        <!-- text-container -->
+                                        class="relative flex-grow h-14 ml-3 group-[.is-sticky]/button-container:ml-5 border-[3px] border-[#FFE1FC] bg-[#F600FE]/50 [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[0_0_10px_0_#F600FEB2,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,inset_0_0_1px_0_#FF97F3E5] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 md:before:opacity-65 md:shadow-[0_0_10px_0_#F600FEB2,0_0_40px_0_#E803AE80_inset,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,0_0_1px_0_#FF97F3E5_inset] lg:h-[4.5rem]"
+                                    >
                                         <div
-                                            class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]">
+                                            class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]"
+                                        >
                                             <span
-                                                class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]">BUY
-                                                NOW</span>
+                                                class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]"
+                                            >
+                                                {{ t('shops.merch.detail.buyNow') }}
+                                            </span>
                                         </div>
                                     </button>
 
                                     <button
-                                        class="relative flex-grow h-14 -ml-[3px] mr-3 group-[.is-sticky]/button-container:mr-5 border-[3px] border-[#FFE1FC] bg-[#E0007880] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[0_0_10px_0_#F600FEB2,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,inset_0_0_1px_0_#FF97F3E5] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 md:before:opacity-65 md:shadow-[0_0_10px_0_#F600FEB2,0_0_40px_0_#E803AE80_inset,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,0_0_1px_0_#FF97F3E5_inset] lg:h-[4.5rem]">
-                                        <!-- text-container -->
+                                        type="button"
+                                        class="relative flex-grow h-14 -ml-[3px] mr-3 group-[.is-sticky]/button-container:mr-5 border-[3px] border-[#FFE1FC] bg-[#E0007880] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[0_0_10px_0_#F600FEB2,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,inset_0_0_1px_0_#FF97F3E5] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 md:before:opacity-65 md:shadow-[0_0_10px_0_#F600FEB2,0_0_40px_0_#E803AE80_inset,0_5px_50px_0_#E803AE80,0_0_35px_0_#E803AE40,0_0_10px_0_#E803AE0D,0_0_1px_0_#FF97F3E5_inset] lg:h-[4.5rem]"
+                                    >
                                         <div
-                                            class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]">
+                                            class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]"
+                                        >
                                             <span
-                                                class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]">Add
-                                                to Cart</span>
+                                                class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]"
+                                            >
+                                                {{ t('shops.merch.detail.addToCart') }}
+                                            </span>
                                         </div>
                                     </button>
                                 </template>
@@ -211,7 +233,6 @@
                                 <!-- State: subscriber-pre-order (Blue) -->
                                 <button v-else-if="variant === 'subscriber-pre-order'"
                                     class="relative flex-grow h-14 mx-3 group-[.is-sticky]/button-container:mx-5 border-[3px] border-white bg-[#1EBBFFB2] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[inset_0_0_40px_0_#0D71FC80,inset_0_0_1px_0_#1B45FF,inset_0_0_10px_0_#1EBBFFB2,0_5px_50px_0_#0D71FC80,0_0_35px_0_#0D71FC40,0_0_10px_0_#0D71FC0D] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 lg:h-[4.5rem]">
-                                    <!-- text-container -->
                                     <div
                                         class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]">
                                         <span
@@ -223,7 +244,6 @@
                                 <!-- State: subscriber-grab (Blue) -->
                                 <button v-else-if="variant === 'subscriber-grab'"
                                     class="relative flex-grow h-14 mx-3 group-[.is-sticky]/button-container:mx-5 border-[3px] border-white bg-[#1EBBFFB2] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[inset_0_0_40px_0_#0D71FC80,inset_0_0_1px_0_#1B45FF,inset_0_0_10px_0_#1EBBFFB2,0_5px_50px_0_#0D71FC80,0_0_35px_0_#0D71FC40,0_0_10px_0_#0D71FC0D] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-75 lg:h-[4.5rem]">
-                                    <!-- text-container -->
                                     <div
                                         class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]">
                                         <span
@@ -232,22 +252,23 @@
                                     </div>
                                 </button>
 
-                                <!-- State: out-of-stock (Red) -->
+                                <!-- State: out-of-stock (Red) — same skew shape, red colors -->
                                 <button v-else-if="variant === 'out-of-stock'"
+                                    type="button"
                                     class="relative flex-grow h-14 mx-3 group-[.is-sticky]/button-container:mx-5 border-[3px] border-[#FFE0E3] bg-[#FF44000D] [background-blend-mode:overlay] px-1 transform skew-x-[-24deg] shadow-[0px_0px_40px_0px_#FC190D80_inset,0px_5px_50px_0px_#FC190D80,0px_0px_35px_0px_#FC190D40,0px_0px_10px_0px_#FC190D0D,0px_0px_1px_0px_#FFB6BC_inset] before:absolute before:inset-0 before:w-full before:h-full before:content-[''] before:bg-[url('https://i.ibb.co.com/GfcYM2zK/button-bg.webp')] before:bg-center before:bg-cover before:opacity-40 lg:h-[4.5rem]">
-                                    <!-- text-container -->
                                     <div
                                         class="w-full h-full flex justify-center items-center gap-0.5 relative z-[10] skew-x-[24deg]">
                                         <span
-                                            class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]">OUT
-                                            OF STOCK</span>
+                                            class="text-xl leading-normal font-semibold align-middle text-[#F5F5F5] drop-shadow-[0px_0px_30px_0px_#10182880] whitespace-nowrap lg:text-3xl lg:leading-[2.375rem]">
+                                            {{ t('shops.merch.detail.outOfStock') }}
+                                        </span>
                                     </div>
                                 </button>
                             </div>
                         </div>
 
                         <!-- tab-section -->
-                        <div class="flex flex-col gap-4 pb-20">
+                        <div class="flex flex-col gap-4" :class="showOwnerActions ? 'pb-4' : 'pb-20'">
                             <!-- tab-button-container -->
                             <div class="flex items-center gap-4">
                                 <button @click="activeTab = 'product-details'"
@@ -265,21 +286,14 @@
                             <!-- tab-container -->
                             <div class="flex flex-col">
                                 <div v-if="activeTab === 'product-details'" class="flex flex-col gap-4">
-                                    <p class="text-sm text-[#F5F5F4] dark:text-[#e1dfdb]">Get Jenny’s favourite Mangoes!
-                                        Buy
-                                        them while supply last !Get Jenny’s favourite Mangoes! Buy them while supply
-                                        last
-                                        !Get Jenny’s favourite Mangoes! Buy them while supply last !</p>
-
-                                    <ul class="flex flex-col">
-                                        <li v-for="i in 7" :key="i"
-                                            class="text-sm text-[#F5F5F4] dark:text-[#e1dfdb] relative pl-4 before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-white before:absolute before:left-[0.188rem] before:top-[0.438rem]">
-                                            Get Jenny’s favourite Mangoes! Buy them while supply last !</li>
-                                    </ul>
+                                    <p class="text-sm text-[#F5F5F4] dark:text-[#e1dfdb] whitespace-pre-wrap">{{ merchDescription }}</p>
                                 </div>
 
                                 <div v-else class="flex flex-col gap-4">
-                                    <div class="flex items-center gap-2">
+                                    <div
+                                        v-if="merch?.shipInternationally"
+                                        class="flex items-center gap-2"
+                                    >
                                         <img src="https://i.ibb.co.com/7NBsK3xG/plane.webp" alt="plane" class="w-5 h-5">
                                         <p class="text-sm font-medium text-[#07F468] dark:text-[#23f97b]">This product
                                             ships internationally.</p>
@@ -298,7 +312,7 @@
                                             from</span>
                                         <div class="flex gap-2 items-center grow flex-wrap">
                                             <span
-                                                class="text-sm font-medium text-[#F5F5F4] dark:text-[#e1dfdb]">Taiwan</span>
+                                                class="text-sm font-medium text-[#F5F5F4] dark:text-[#e1dfdb]">{{ originCountryLabel }}</span>
                                         </div>
                                     </div>
 
@@ -311,7 +325,7 @@
                                                 class="w-[12.5rem] min-w-[12.5rem] text-xs text-[#F5F5F4] dark:text-[#e1dfdb]">Domestic</span>
                                             <div class="flex gap-2 items-center grow flex-wrap">
                                                 <span
-                                                    class="text-sm font-medium text-[#F5F5F4] dark:text-[#e1dfdb]">Taiwan</span>
+                                                    class="text-sm font-medium text-[#F5F5F4] dark:text-[#e1dfdb]">{{ originCountryLabel }}</span>
                                             </div>
                                         </div>
 
@@ -372,39 +386,199 @@
                             </div>
                         </div>
 
-                        <!-- button-container -->
-                        <div class="flex justify-end items-end gap-2">
+                        <!-- button-container (fan view) -->
+                        <div
+                            v-if="!showOwnerActions"
+                            class="flex justify-end items-end gap-2"
+                        >
                             <button
                                 v-for="icon in ['https://i.ibb.co.com/fGdzgLXp/share-06.webp', 'https://i.ibb.co.com/hFw7MBf2/icon.webp']"
                                 :key="icon"
-                                class="flex justify-center items-center w-8 h-8 backdrop-blur-[50px] rounded-full border-[0.5px] border-[#E9E5D3] bg-[#E9E5D3]/5 dark:border-[#36311b] dark:bg-[#36311b]/5">
-                                <img :src="icon" class="w-4 h-4">
+                                type="button"
+                                class="inline-flex h-8 w-8 items-center justify-center gap-4 rounded-3xl bg-stone-200/5 p-2 outline outline-[0.5px] outline-offset-[-0.5px] outline-stone-200"
+                            >
+                                <img :src="icon" class="h-4 w-4" alt="">
                             </button>
+                        </div>
+                    </div>
+
+                    <!-- Owner footer — flush to bottom of right column (hide while lightGallery open).
+                         Out of stock: no bar bg / no action buttons — only share + menu. -->
+                    <div
+                        v-if="showOwnerActions && !isGalleryOpen"
+                        class="relative z-20 flex h-16 w-full shrink-0 items-center justify-end gap-4 px-2 py-4"
+                        :class="isOutOfStock ? 'bg-transparent' : 'bg-black/50 backdrop-blur-[50px]'"
+                    >
+                        <div
+                            v-if="!isOutOfStock"
+                            class="flex min-w-0 flex-1 items-center justify-between gap-3"
+                        >
+                            <div class="flex flex-wrap items-center gap-2">
+                                <DashboardPrimaryButton
+                                    theme="merchEditDetails"
+                                    type="button"
+                                    :text="t('shops.merch.detail.editDetails')"
+                                    :leftIcon="editIconUrl"
+                                    :disabled="isReviewing"
+                                    :customClass="isReviewing ? '!bg-transparent disabled:!bg-transparent' : ''"
+                                    @click="onEditDetails"
+                                />
+
+                                <div
+                                    v-if="isReviewing"
+                                    class="inline-flex h-10 min-w-24 items-center gap-2.5 bg-amber-400 px-2 py-2"
+                                >
+                                    <img
+                                        v-if="reviewingIconUrl"
+                                        :src="reviewingIconUrl"
+                                        alt=""
+                                        class="h-5 w-5 object-contain"
+                                    >
+                                    <span class="text-base font-medium leading-6 text-gray-900">
+                                        {{ t('shops.merch.library.status.reviewing') }}
+                                    </span>
+                                </div>
+
+                                <DashboardPrimaryButton
+                                    v-else-if="canUnpublish"
+                                    theme="merchUnpublish"
+                                    type="button"
+                                    :text="t('shops.merch.detail.unpublish')"
+                                    :leftIcon="unpublishIconUrl"
+                                    @click="unpublishConfirmOpen = true"
+                                />
+
+                                <DashboardPrimaryButton
+                                    v-else-if="canPublish"
+                                    theme="merchPublish"
+                                    type="button"
+                                    :text="t('shops.merch.detail.publish')"
+                                    :leftIcon="publishedIconUrl"
+                                    @click="emit('published')"
+                                />
+                            </div>
+
+                            <p
+                                v-if="isReviewing"
+                                class="shrink text-right text-xs font-normal leading-4 text-amber-400"
+                            >
+                                {{ t('shops.merch.detail.reviewingHint') }}
+                            </p>
+                            <div
+                                v-else-if="showPublishedMeta"
+                                class="flex items-center gap-2 text-xs text-white"
+                            >
+                                <img
+                                    v-if="publishedIconUrl"
+                                    :src="publishedIconUrl"
+                                    alt=""
+                                    class="h-4 w-4 object-contain [filter:brightness(0)_saturate(100%)_invert(100%)]"
+                                >
+                                <span>{{ publishedLabel }}</span>
+                            </div>
+                        </div>
+
+                        <div
+                            data-merch-owner-menu
+                            class="relative flex shrink-0 items-end gap-2"
+                        >
+                            <button
+                                v-if="showShareIcon || isOutOfStock"
+                                type="button"
+                                class="inline-flex h-8 w-8 items-center justify-center gap-4 rounded-3xl bg-stone-200/5 p-2 outline outline-[0.5px] outline-offset-[-0.5px] outline-stone-200"
+                            >
+                                <img
+                                    src="https://i.ibb.co.com/fGdzgLXp/share-06.webp"
+                                    class="h-4 w-4"
+                                    alt=""
+                                >
+                            </button>
+
+                            <button
+                                type="button"
+                                class="inline-flex h-8 w-8 cursor-pointer items-center justify-center gap-4 rounded-3xl bg-stone-200/5 p-2 outline outline-[0.5px] outline-offset-[-0.5px] outline-stone-200"
+                                :aria-expanded="ownerMenuOpen"
+                                :aria-label="t('shops.merch.library.menu.deleteMerch')"
+                                @click.stop="ownerMenuOpen = !ownerMenuOpen"
+                            >
+                                <img
+                                    v-if="menuDotsUrl"
+                                    :src="menuDotsUrl"
+                                    alt=""
+                                    class="h-4 w-4 object-contain [filter:brightness(0)_saturate(100%)_invert(92%)]"
+                                >
+                            </button>
+
+                            <!-- Figma: menu opens above the ⋮ — kept inside popup (no teleport) -->
+                            <div
+                                v-if="ownerMenuOpen"
+                                class="absolute bottom-full right-0 z-[30] rounded-md mb-2 min-w-[10.5rem] overflow-hidden bg-white/60 py-1 shadow-[0_4px_12px_rgba(0,0,0,0.18)] backdrop-blur-[12px]"
+                                @click.stop
+                            >
+                                <div class="flex justify-center items-center px-1.5 py-px">
+                                    <button
+                                        type="button"
+                                        class="flex items-center gap-2 rounded-md px-2.5 py-2 text-left"
+                                        @click="onDeleteMenuClick"
+                                    >
+                                        <img
+                                            v-if="deleteIconUrl"
+                                            :src="deleteIconUrl"
+                                            alt=""
+                                            class="h-4 w-4 shrink-0 object-contain [filter:brightness(0)_saturate(100%)_invert(32%)_sepia(98%)_saturate(2000%)_hue-rotate(2deg)]"
+                                        >
+                                        <span class="text-sm font-medium leading-5 text-[#FF4405]">
+                                            {{ t('shops.merch.library.menu.deleteMerch') }}
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <MerchActionConfirmPopup
+            v-model="unpublishConfirmOpen"
+            overlay-class="merchDestructive"
+            :title="t('shops.merch.detail.unpublishConfirm.title')"
+            :message="t('shops.merch.detail.unpublishConfirm.message')"
+            :back-label="t('shops.merch.detail.unpublishConfirm.back')"
+            :confirm-label="t('shops.merch.detail.unpublishConfirm.confirm')"
+            @confirm="emit('unpublished')"
+        />
+        <MerchActionConfirmPopup
+            v-model="deleteConfirmOpen"
+            overlay-class="merchDestructive"
+            :title="t('shops.merch.detail.deleteConfirm.title')"
+            :message="t('shops.merch.detail.deleteConfirm.message')"
+            :back-label="t('shops.merch.detail.deleteConfirm.back')"
+            :confirm-label="t('shops.merch.detail.deleteConfirm.confirm')"
+            @confirm="emit('deleted')"
+        />
     </BasePopup>
 </template>
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css/core';
 import lightGallery from 'lightgallery';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import BasePopup from '@/components/ui/popups/BasePopup.vue';
+import DashboardPrimaryButton from '@/components/ui/buttons/DashboardPrimaryButton.vue';
+import MerchActionConfirmPopup from '@/dev/components/ui/popups/shops/MerchActionConfirmPopup.vue';
+import { useAssetUrl } from '@/composables/useAssetUrl.js';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-thumbnail.css';
 
-const images = [
+const FALLBACK_IMAGES = [
     { src: "/images/referral-img.png", thumb: "/images/referral-img.png" },
     { src: "/images/ai-art.png", thumb: "/images/ai-art.png" },
     { src: "/images/background.png", thumb: "/images/background.png" },
     { src: "/images/ai-art-girl.png", thumb: "/images/ai-art-girl.png" },
-    { src: "https://picsum.photos/id/251/1920/1080", thumb: "https://picsum.photos/id/251/240/160" },
-    { src: "https://picsum.photos/id/160/1920/1080", thumb: "https://picsum.photos/id/160/240/160" },
 ];
 
 const activeTab = ref('product-details');
@@ -415,8 +589,12 @@ const lgTrigger = ref(null);
 const stickyContainer = ref(null);
 const popupWrapper = ref(null);
 const isGalleryOpen = ref(false);
+const unpublishConfirmOpen = ref(false);
+const deleteConfirmOpen = ref(false);
+const ownerMenuOpen = ref(false);
 let lgInstance = null;
 let startX, startY;
+let ownerMenuOutsideHandler = null;
 
 const props = defineProps({
     modelValue: { type: Boolean, default: false },
@@ -429,53 +607,232 @@ const props = defineProps({
         type: Object,
         default: null
     },
+    /** Creator shop page — show Edit / Unpublish / Delete footer */
+    showOwnerActions: {
+        type: Boolean,
+        default: false,
+    },
+    /**
+     * When a stacked popup (edit listing, etc.) is open on top, do not dismiss
+     * this panel on outside click / Escape — only the top popup should close.
+     */
+    suppressDismiss: {
+        type: Boolean,
+        default: false,
+    },
 });
 
-const emit = defineEmits(["update:modelValue", "purchase"]);
+const emit = defineEmits([
+    "update:modelValue",
+    "purchase",
+    "edit-details",
+    "unpublished",
+    "published",
+    "deleted",
+]);
+
+const { t } = useI18n();
+const { url: editIconUrl } = useAssetUrl('shops.merch.icon.edit');
+const { url: unpublishIconUrl } = useAssetUrl('icon.media.menu.unpublish');
+const { url: deleteIconUrl } = useAssetUrl('icon.media.menu.delete');
+const { url: publishedIconUrl } = useAssetUrl('icon.media.upload');
+const { url: reviewingIconUrl } = useAssetUrl('shops.merch.icon.reviewing');
+const { url: menuDotsUrl } = useAssetUrl('icon.media.threeDotsVertical');
 
 const stripMoney = (value, fallback) => String(value ?? fallback).replace(/^\$/, '');
 
+const images = computed(() => {
+    const gallery = Array.isArray(props.merch?.galleryUploaded) ? props.merch.galleryUploaded : [];
+    const mapped = gallery
+        .map((item) => {
+            const src = item?.dataUrl || item?.objectUrl || item?.src || '';
+            if (!src) return null;
+            return { src, thumb: item?.thumb || src };
+        })
+        .filter(Boolean);
+    if (mapped.length) return mapped;
+    if (props.merch?.thumbnail) {
+        return [{ src: props.merch.thumbnail, thumb: props.merch.thumbnail }];
+    }
+    return FALLBACK_IMAGES;
+});
+
 const merchTitle = computed(() => props.merch?.title || '[Peach] from my farm-Peach from my farm (Autumn harvest)');
+const merchDescription = computed(() =>
+    props.merch?.description
+    || "Get Jenny’s favourite Mangoes! Buy them while supply last !",
+);
+const merchTags = computed(() => {
+    const tags = Array.isArray(props.merch?.tags) ? props.merch.tags : [];
+    const names = tags.map((tag) => (typeof tag === 'string' ? tag : tag?.name)).filter(Boolean);
+    return names.length ? names : ['Featured', 'Best Seller', 'Seasonal Offers'];
+});
 const merchCurrency = computed(() => {
     const currency = props.merch?.currency || 'USD';
     return currency.endsWith('$') ? currency : `${currency}$`;
 });
-const merchOldPrice = computed(() => stripMoney(props.merch?.price, '12.99'));
-const merchFinalPrice = computed(() => stripMoney(props.merch?.finalPrice, '6.99'));
+const merchOldPrice = computed(() =>
+    stripMoney(props.merch?.originalPrice ?? props.merch?.price, '12.99'),
+);
+const merchFinalPrice = computed(() =>
+    stripMoney(props.merch?.discountedPrice ?? props.merch?.finalPrice, '6.99'),
+);
+const merchDiscountPercent = computed(() => {
+    const original = Number(merchOldPrice.value);
+    const final = Number(merchFinalPrice.value);
+    if (!Number.isFinite(original) || !Number.isFinite(final) || original <= 0 || final >= original) {
+        return null;
+    }
+    return Math.round(((original - final) / original) * 100);
+});
+const officialReleaseDate = computed(() =>
+    props.merch?.officialReleaseDate || props.merch?.releaseDate || '12 Jul 2024',
+);
+const lowStockCount = computed(() => {
+    const stock = Number(props.merch?.stockAmount ?? props.merch?.stock);
+    return Number.isFinite(stock) && stock > 0 ? stock : 1;
+});
+/** Inventory step: unlimited checkbox OR limited stock amount > 0. */
+const showStockBadge = computed(() => {
+    if (props.variant === 'out-of-stock') return false;
+    if (props.merch?.unlimitedStock) return true;
+    const raw = props.merch?.stockAmount ?? props.merch?.stock;
+    if (raw === '' || raw == null) return false;
+    const stock = Number(raw);
+    return Number.isFinite(stock) && stock > 0;
+});
+/** Left-stock sits with the -% badge (not under yellow pre-order badges). */
+const showStockBesidePrice = computed(() => {
+    if (props.variant === 'pre-order' || props.variant === 'subscriber-pre-order') return false;
+    return showStockBadge.value;
+});
+const showPriceSideBadges = computed(() => {
+    if (props.variant === 'pre-order' || props.variant === 'subscriber-pre-order') return true;
+    if (merchDiscountPercent.value != null) return true;
+    return showStockBesidePrice.value;
+});
+const publishedLabel = computed(() => {
+    const date = props.merch?.publishedAt || props.merch?.publishedOn || 'Nov-3-2024 23:23';
+    return t('shops.merch.detail.publishedOn', { date });
+});
+
+const merchStatus = computed(() => props.merch?.status || 'draft');
+const isOutOfStock = computed(() => props.variant === 'out-of-stock');
+const isReviewing = computed(() => merchStatus.value === 'reviewing');
+const canUnpublish = computed(() =>
+    merchStatus.value === 'published' || merchStatus.value === 'preorder',
+);
+/** Live shopper CTAs, or the OUT OF STOCK skew button (draft out-of-stock). */
+const showShopperCtas = computed(() => canUnpublish.value || isOutOfStock.value);
+const canPublish = computed(() => merchStatus.value === 'draft');
+const showShareIcon = computed(() => !isReviewing.value && !canPublish.value);
+const showPublishedMeta = computed(() =>
+    canUnpublish.value && Boolean(props.merch?.publishedAt || props.merch?.publishedOn),
+);
+
+const originCountryLabel = computed(() => {
+    const key = props.merch?.originCountry;
+    if (!key) return 'Taiwan';
+    const i18nKey = `shops.merch.listing.inventory.countries.${key}`;
+    const label = t(i18nKey);
+    return label === i18nKey ? key : label;
+});
+
+function onEditDetails() {
+    if (isReviewing.value) return;
+    emit('edit-details');
+}
+
+function onDeleteMenuClick() {
+    ownerMenuOpen.value = false;
+    deleteConfirmOpen.value = true;
+}
+
+function bindOwnerMenuOutside() {
+    if (typeof document === 'undefined') return;
+    unbindOwnerMenuOutside();
+    ownerMenuOutsideHandler = (event) => {
+        if (event.target?.closest?.('[data-merch-owner-menu]')) return;
+        ownerMenuOpen.value = false;
+    };
+    // Next tick so the opening click does not immediately close.
+    setTimeout(() => {
+        if (!ownerMenuOutsideHandler) return;
+        document.addEventListener('click', ownerMenuOutsideHandler, true);
+    }, 0);
+}
+
+function unbindOwnerMenuOutside() {
+    if (typeof document === 'undefined' || !ownerMenuOutsideHandler) return;
+    document.removeEventListener('click', ownerMenuOutsideHandler, true);
+    ownerMenuOutsideHandler = null;
+}
+
+watch(ownerMenuOpen, (open) => {
+    if (open) bindOwnerMenuOutside();
+    else unbindOwnerMenuOutside();
+});
 
 const openPurchase = () => {
     emit('purchase', props.merch);
 };
 
-// When popup opens, Splide needs to recalculate dimensions because
-// it was mounted while the popup was hidden (zero dimensions).
-watch(() => props.modelValue, async (val) => {
-    if (val) {
-        await nextTick();
-        // Small delay to ensure BasePopup has finished its transition
+function refreshGallery() {
+    nextTick(() => {
         setTimeout(() => {
             mainSplide.value?.splide?.refresh();
             thumbSplide.value?.splide?.refresh();
         }, 50);
+    });
+}
+
+// When popup opens, Splide + lightGallery need current merch slides (not stale init/fallback).
+watch(() => props.modelValue, async (open) => {
+    if (!open) {
+        ownerMenuOpen.value = false;
+        if (lgInstance && isGalleryOpen.value) {
+            lgInstance.closeGallery();
+            isGalleryOpen.value = false;
+        }
+        return;
     }
+    await nextTick();
+    refreshGallery();
+    syncLightGallery();
 });
 
-const profileMerchPopupConfig = {
+watch(images, () => {
+    if (!props.modelValue) return;
+    refreshGallery();
+    syncLightGallery();
+});
+
+const lockProfileDismiss = computed(
+    () => props.suppressDismiss || unpublishConfirmOpen.value || deleteConfirmOpen.value,
+);
+
+/** Ignore outside/Escape close while a stacked popup is open — keep profile merch open. */
+function onPopupModelUpdate(val) {
+    if (!val && lockProfileDismiss.value) return;
+    emit('update:modelValue', val);
+}
+
+const profileMerchPopupConfig = computed(() => ({
     actionType: "slideIn",
     from: "right",
     offset: "0px",
     speed: "250ms",
     effect: "ease-in-out",
     shouldShowOverlay: false,
-    shouldCloseOnOutsideClick: true,
+    shouldCloseOnOutsideClick: !lockProfileDismiss.value,
     shouldLockBodyScroll: true,
-    shouldCloseOnEscape: true,
+    shouldCloseOnEscape: !lockProfileDismiss.value,
     width: { default: "100%", "<768": "100%" },
     height: { default: "100%", "<768": "100%" },
     scrollable: true,
     closeSpeed: "250ms",
     closeEffect: "cubic-bezier(0.4, 0, 0.2, 1)",
-};
+}));
 
 const mainOptions = {
     type: 'fade',
@@ -500,10 +857,32 @@ const thumbOptions = {
     mediaQuery: 'min',
 };
 
+function getLgDynamicEl() {
+    return images.value.map((img) => ({
+        src: img.src,
+        thumb: img.thumb || img.src,
+    }));
+}
+
+/** Keep lightGallery in sync with current merch images (init alone uses stale/fallback slides). */
+function syncLightGallery() {
+    if (!lgInstance) return;
+    const els = getLgDynamicEl();
+    if (typeof lgInstance.refresh === 'function') {
+        lgInstance.refresh(els);
+        return;
+    }
+    if (lgInstance.settings) {
+        lgInstance.settings.dynamicEl = els;
+    }
+}
+
 const onMouseDown = (e) => { startX = e.clientX; startY = e.clientY; };
 const onMouseUp = (index, e) => {
     const dist = Math.hypot(e.clientX - startX, e.clientY - startY);
-    if (dist < 12) lgInstance.openGallery(index);
+    if (dist >= 12 || !lgInstance) return;
+    syncLightGallery();
+    lgInstance.openGallery(index);
 };
 
 const checkSticky = () => {
@@ -523,11 +902,11 @@ onMounted(async () => {
 
     if (!lgTrigger.value || !popupWrapper.value) return;
 
-    // Init LightGallery
+    // Init LightGallery — slides refreshed via syncLightGallery() whenever merch images change
     lgInstance = lightGallery(lgTrigger.value, {
         container: popupWrapper.value,
         dynamic: true,
-        dynamicEl: images.map(img => ({ src: img.src, thumb: img.thumb })),
+        dynamicEl: getLgDynamicEl(),
         plugins: [lgThumbnail],
         speed: 400,
         download: false,
@@ -538,6 +917,7 @@ onMounted(async () => {
         backdropClass: 'lg-profile-merch-backdrop',
         thumbMargin: 0,
     });
+    syncLightGallery();
 
     // Parallax & Custom Cursor Logic
     lgTrigger.value.addEventListener('lgAfterOpen', () => {
@@ -640,9 +1020,9 @@ onMounted(async () => {
             wrapper.classList.add('!h-auto', '!aspect-square', '!mb-0', 'backdrop-blur-[10px]', 'bg-white/20', '[border:1px_solid_transparent_!important;]', '[&.active]:[border:1px_solid_#F5F5F4_!important;]', 'dark:bg-[#181a1b]/20', 'dark:[&.active]:[border:1px_solid_#333739_!important;]');
             // Dynamic width calculation
             if (window.innerWidth >= 1024) {
-                wrapper.style.setProperty('width', `calc((45rem - 1.75rem) / ${images.length})`, 'important');
+                wrapper.style.setProperty('width', `calc((45rem - 1.75rem) / ${images.value.length})`, 'important');
             } else {
-                wrapper.style.setProperty('width', `calc((100vw - 1.75rem) / ${images.length})`, 'important');
+                wrapper.style.setProperty('width', `calc((100vw - 1.75rem) / ${images.value.length})`, 'important');
             }
 
             const img = wrapper.querySelector('img');
@@ -778,6 +1158,7 @@ onMounted(async () => {
 });
 
 onUnmounted(() => {
+    unbindOwnerMenuOutside();
     window.removeEventListener('scroll', checkSticky, true);
     window.removeEventListener('resize', checkSticky);
     lgInstance?.destroy();

@@ -3,16 +3,26 @@
     data-component="merch-gallery-step"
     class="relative flex w-full flex-col gap-6"
   >
-    <!-- Flush top notice: over-limit warning or post-upload approval — no gap under tabs -->
+    <!-- Flush top notices — approval + over-limit can stack -->
     <div
       v-if="showTopNotice"
-      class="absolute left-0 right-0 top-0 z-20 -mx-6 -mt-4"
+      class="absolute left-0 right-0 top-0 z-20 -mx-6 -mt-4 flex flex-col"
     >
       <NotificationCard
-        v-model="topNoticeOpen"
-        :variant="showOverLimitWarning ? 'alert' : 'notice'"
-        :theme="showOverLimitWarning ? 'merchGalleryAlert' : 'merchGalleryNotice'"
-        :title="topNoticeTitle"
+        v-if="showApprovalNotice"
+        v-model="approvalNoticeOpen"
+        variant="notice"
+        theme="merchGalleryNotice"
+        :title="t('shops.merch.listing.gallery.approvalNotice')"
+        :icon="limitWarningIconUrl"
+        closable
+      />
+      <NotificationCard
+        v-if="showOverLimitWarning"
+        v-model="overLimitNoticeOpen"
+        variant="alert"
+        theme="merchGalleryAlert"
+        :title="t('shops.merch.listing.gallery.overLimitWarning')"
         :icon="limitWarningIconUrl"
         closable
       />
@@ -20,7 +30,7 @@
 
     <ul
       class="flex list-disc flex-col gap-1 pl-5 marker:text-[#344054]"
-      :class="showTopNotice ? 'pt-16' : ''"
+      :class="topNoticePadClass"
     >
       <li>
         <Paragraph
@@ -185,7 +195,7 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Paragraph from '@/components/ui/typography/Paragraph.vue';
 import NotificationCard from '@/components/ui/card/dashboard/NotificationCard.vue';
@@ -194,8 +204,11 @@ import MediaGalleryPendingList from '@/components/media/uploader/parts/MediaGall
 import MediaUploadProgressState from '@/components/media/uploader/parts/MediaUploadProgressState.vue';
 import MerchGalleryMediaGrid from '@/dev/components/shops/merch/MerchGalleryMediaGrid.vue';
 import { useAssetUrl } from '@/composables/useAssetUrl.js';
+import { useMediaInteractions } from '@/composables/useMediaInteractions.js';
+import { fileToDataUrl, isBlobUrl, revokeIfBlobUrl } from '@/utils/fileToDataUrl.js';
 
 const MAX_GALLERY = 6;
+const SCOPE_ID = 'merchListingGallery';
 
 const props = defineProps({
   /** createStepStateEngine instance for this merch listing flow */
@@ -207,12 +220,19 @@ const { url: galleryEmptyIconUrl } = useAssetUrl('mediaUploader.icon.galleryEmpt
 const { url: gallerySuccessTickUrl } = useAssetUrl('mediaUploader.icon.gallerySuccessTick');
 const { url: limitWarningIconUrl } = useAssetUrl('shops.merch.icon.galleryLimitWarning');
 
+const {
+  isVisible,
+  setVisible,
+  fieldConfig,
+  registerField,
+  changeField,
+  clear: clearInteractions,
+} = useMediaInteractions(SCOPE_ID);
+
 const pendingFiles = ref([]);
 const uploadedFiles = ref([]);
 const galleryPhase = ref('idle');
 const uploadProgress = ref(0);
-const showSuccessToast = ref(false);
-const showApprovalNotice = ref(false);
 /** User closed the over-limit warning; show again if they leave then re-enter over-limit. */
 const overLimitDismissed = ref(false);
 const lastUploadCount = ref(0);
@@ -243,33 +263,48 @@ const totalSelected = computed(
 
 const isOverLimit = computed(() => totalSelected.value > MAX_GALLERY);
 
+/** interactionsEngine visibility — over-limit card */
 const showOverLimitWarning = computed(
-  () => isOverLimit.value && !overLimitDismissed.value,
+  () => isVisible('overLimitWarning') && !overLimitDismissed.value,
 );
+
+/** interactionsEngine visibility — post-upload approval notice */
+const showApprovalNotice = computed(() => isVisible('approvalNotice'));
+
+/** interactionsEngine visibility — upload success toast */
+const showSuccessToast = computed({
+  get: () => isVisible('successToast'),
+  set: (open) => setVisible('successToast', !!open),
+});
 
 const showTopNotice = computed(
   () => showOverLimitWarning.value || showApprovalNotice.value,
 );
 
-const topNoticeTitle = computed(() => {
-  if (showOverLimitWarning.value) {
-    return t('shops.merch.listing.gallery.overLimitWarning');
-  }
-  return t('shops.merch.listing.gallery.approvalNotice');
+/** One card ≈ 4rem; two stacked ≈ 8rem — keep help list clear of banners. */
+const topNoticePadClass = computed(() => {
+  const count =
+    (showApprovalNotice.value ? 1 : 0) + (showOverLimitWarning.value ? 1 : 0);
+  if (count >= 2) return 'pt-32';
+  if (count === 1) return 'pt-16';
+  return '';
 });
 
-const topNoticeOpen = computed({
-  get: () => showTopNotice.value,
+const approvalNoticeOpen = computed({
+  get: () => showApprovalNotice.value,
   set: (open) => {
-    if (!open) {
-      if (showOverLimitWarning.value) overLimitDismissed.value = true;
-      showApprovalNotice.value = false;
-    }
+    if (!open) setVisible('approvalNotice', false);
   },
 });
 
-watch(isOverLimit, (over) => {
-  if (!over) overLimitDismissed.value = false;
+const overLimitNoticeOpen = computed({
+  get: () => showOverLimitWarning.value,
+  set: (open) => {
+    if (!open) {
+      overLimitDismissed.value = true;
+      setVisible('overLimitWarning', false);
+    }
+  },
 });
 
 /** Hide dropzone once gallery already has 6 uploaded media. */
@@ -288,17 +323,32 @@ const successToastTitle = computed(() => {
   return t('shops.merch.listing.gallery.uploadSuccess', { count });
 });
 
+const galleryTotalFieldConfig = computed(() =>
+  fieldConfig('galleryTotal', {
+    validation: {
+      required: false,
+      rules: [
+        {
+          type: 'maxNum',
+          param: MAX_GALLERY,
+          message: t('shops.merch.listing.gallery.overLimitWarning'),
+        },
+      ],
+    },
+    validateOnInput: true,
+    validateOnMount: false,
+    events: {
+      input: {
+        onInvalid: [{ type: 'showElement', elementKey: `${SCOPE_ID}_overLimitWarning` }],
+        onValid: [{ type: 'hideElement', elementKey: `${SCOPE_ID}_overLimitWarning` }],
+      },
+    },
+  }),
+);
+
 function nextGalleryId() {
   galleryIdSeq += 1;
   return `merch-gallery-${Date.now()}-${galleryIdSeq}`;
-}
-
-function isBlobUrl(url) {
-  return typeof url === 'string' && url.startsWith('blob:');
-}
-
-function revokeIfBlobUrl(url) {
-  if (isBlobUrl(url)) URL.revokeObjectURL(url);
 }
 
 function mapPayloads(payloads) {
@@ -310,15 +360,30 @@ function mapPayloads(payloads) {
   }));
 }
 
-function syncEngineUploaded() {
-  props.engine.setState(
-    'galleryUploaded',
-    uploadedFiles.value.map((item) => ({
-      id: item.id,
-      name: item.name,
-      objectUrl: item.objectUrl,
-    })),
+async function syncEngineUploaded() {
+  const items = await Promise.all(
+    uploadedFiles.value.map(async (item) => {
+      let dataUrl = item.dataUrl || '';
+      if (!dataUrl && item.file instanceof File) {
+        try {
+          dataUrl = await fileToDataUrl(item.file);
+          item.dataUrl = dataUrl;
+        } catch {
+          /* keep blob preview */
+        }
+      }
+      if (!dataUrl && item.objectUrl && !isBlobUrl(item.objectUrl)) {
+        dataUrl = item.objectUrl;
+      }
+      return {
+        id: item.id,
+        name: item.name,
+        objectUrl: dataUrl || item.objectUrl || '',
+        dataUrl: dataUrl || '',
+      };
+    }),
   );
+  props.engine.setState('galleryUploaded', items);
 }
 
 function stopProgressSimulation() {
@@ -336,23 +401,35 @@ function clearToastTimer() {
 }
 
 function openSuccessToast() {
-  showSuccessToast.value = true;
-  showApprovalNotice.value = true;
+  setVisible('successToast', true);
+  setVisible('approvalNotice', true);
   clearToastTimer();
   toastTimer = setTimeout(() => {
-    showSuccessToast.value = false;
+    setVisible('successToast', false);
   }, 4000);
+}
+
+function syncGalleryTotalToEngine() {
+  changeField(galleryTotalFieldConfig.value, totalSelected.value);
+  if (!isOverLimit.value) {
+    overLimitDismissed.value = false;
+  } else if (overLimitDismissed.value) {
+    // Keep dismissed until count drops back under the limit.
+    setVisible('overLimitWarning', false);
+  }
 }
 
 function onFilesSelected(payloads) {
   if (!payloads?.length || galleryIsFull.value) return;
   pendingFiles.value = [...pendingFiles.value, ...mapPayloads(payloads)];
   galleryPhase.value = 'idle';
+  syncGalleryTotalToEngine();
 }
 
 function addPending(payloads) {
   if (!payloads?.length || galleryIsFull.value) return;
   pendingFiles.value = [...pendingFiles.value, ...mapPayloads(payloads)];
+  syncGalleryTotalToEngine();
 }
 
 function removePending(id) {
@@ -362,6 +439,7 @@ function removePending(id) {
   if (!pendingFiles.value.length && uploadedFiles.value.length) {
     galleryPhase.value = 'ready';
   }
+  syncGalleryTotalToEngine();
 }
 
 function removeUploaded(id) {
@@ -372,6 +450,7 @@ function removeUploaded(id) {
   if (!uploadedFiles.value.length && !pendingFiles.value.length) {
     galleryPhase.value = 'idle';
   }
+  syncGalleryTotalToEngine();
 }
 
 function reorderUploaded({ from, to }) {
@@ -440,12 +519,19 @@ function cancelUploadProgress() {
 function hydrateFromEngine() {
   const saved = props.engine.state?.galleryUploaded;
   if (!Array.isArray(saved) || !saved.length) return;
-  uploadedFiles.value = saved.map((item) => ({
-    id: item.id || nextGalleryId(),
-    name: item.name || t('shops.merch.listing.gallery.defaultImageName'),
-    objectUrl: item.objectUrl || item.dataUrl || '',
-    file: null,
-  }));
+  uploadedFiles.value = saved
+    .map((item) => {
+      const src = item.dataUrl || item.objectUrl || '';
+      if (!src) return null;
+      return {
+        id: item.id || nextGalleryId(),
+        name: item.name || t('shops.merch.listing.gallery.defaultImageName'),
+        objectUrl: src,
+        dataUrl: item.dataUrl || (!isBlobUrl(src) ? src : ''),
+        file: null,
+      };
+    })
+    .filter(Boolean);
   if (uploadedFiles.value.length) {
     galleryPhase.value = 'ready';
   }
@@ -453,10 +539,22 @@ function hydrateFromEngine() {
 
 watch(
   () => props.engine.state?.galleryUploaded,
-  () => {
-    if (!uploadedFiles.value.length) hydrateFromEngine();
+  (saved) => {
+    if (!Array.isArray(saved)) return;
+    const localHasSrc = uploadedFiles.value.some((f) => Boolean(f?.objectUrl || f?.dataUrl));
+    const savedHasSrc = saved.some(
+      (item) => Boolean(item?.dataUrl || item?.objectUrl),
+    );
+    // Re-hydrate on edit reopen, or when IndexedDB restores media into empty slots.
+    if (
+      !uploadedFiles.value.length
+      || uploadedFiles.value.length < saved.length
+      || (savedHasSrc && !localHasSrc)
+    ) {
+      hydrateFromEngine();
+    }
   },
-  { immediate: true },
+  { immediate: true, deep: true },
 );
 
 /** At 6 uploaded, drop any leftover pending picks so the uploader stays hidden. */
@@ -464,11 +562,22 @@ watch(galleryIsFull, (full) => {
   if (!full || !pendingFiles.value.length) return;
   for (const item of pendingFiles.value) revokeIfBlobUrl(item.objectUrl);
   pendingFiles.value = [];
+  syncGalleryTotalToEngine();
+});
+
+watch(totalSelected, () => {
+  syncGalleryTotalToEngine();
+});
+
+onMounted(() => {
+  registerField(galleryTotalFieldConfig.value, totalSelected.value);
+  syncGalleryTotalToEngine();
 });
 
 onBeforeUnmount(() => {
   stopProgressSimulation();
   clearToastTimer();
+  clearInteractions();
   // Keep uploaded blob URLs alive — they stay in engine while the listing popup is open.
   for (const item of pendingFiles.value) revokeIfBlobUrl(item.objectUrl);
 });

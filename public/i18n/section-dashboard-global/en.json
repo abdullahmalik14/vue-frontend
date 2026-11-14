@@ -2914,9 +2914,111 @@
       "alt": {
         "emptyCart": "Empty merch cart"
       },
+      "library": {
+        "gridView": "Grid view",
+        "listView": "List view",
+        "searchPlaceholder": "Search",
+        "searchAlt": "Search",
+        "filter": "Filter",
+        "demoProductName": "Orange (Australia)",
+        "inStock": "{count} in stock",
+        "totalSalesValue": "USD$ {amount}",
+        "tabs": {
+          "all": "All",
+          "published": "Published",
+          "draft": "Draft",
+          "reviewing": "Reviewing"
+        },
+        "status": {
+          "published": "Published",
+          "draft": "Draft",
+          "reviewing": "Reviewing",
+          "preorder": "Pre-order"
+        },
+        "table": {
+          "media": "Media",
+          "status": "Status",
+          "collection": "Collection",
+          "inventory": "Inventory",
+          "itemsSold": "Total Items Sold",
+          "totalSales": "Total Sales"
+        },
+        "toast": {
+          "updatedPublishSettings": "You have updated your published setting of merch '{name}'.",
+          "unpublished": "Your merch '{name}' is unpublished from your profile store and user who pre-order this item will be refunded.",
+          "unpublishedSuccess": "Successfully unpublished your merch from your store.",
+          "submittedForApproval": "Your merch '{name}' is submitted for approval.",
+          "deleted": "Your Merch '{name}' is deleted.",
+          "viewInStore": "View it in store"
+        },
+        "menu": {
+          "edit": "Edit",
+          "publish": "Publish",
+          "deleteMerch": "Delete Merch"
+        },
+        "badges": {
+          "subscriberOnly": "Subscriber Only",
+          "preOrder": "PRE-ORDER",
+          "sale": "SALE"
+        },
+        "filterPopup": {
+          "title": "Filter",
+          "closeAlt": "Close",
+          "sortBy": "Sort by:",
+          "uploadDate": "Upload Date",
+          "mostPopular": "Most Popular",
+          "preOrder": "PRE-ORDER",
+          "subscriberOnly": "Subscriber Only",
+          "onSale": "On Sale",
+          "tags": "Tags",
+          "collections": "Collections",
+          "searchTags": "Search tags...",
+          "searchCollections": "Search collections...",
+          "subscriptionTier": "Subscription tier",
+          "selectAll": "Select All",
+          "reset": "Reset Filter",
+          "apply": "Apply"
+        }
+      },
+      "detail": {
+        "editDetails": "Edit Details",
+        "unpublish": "UNPUBLISH",
+        "publish": "PUBLISH",
+        "buyNow": "BUY NOW",
+        "addToCart": "Add to Cart",
+        "preOrderNow": "Pre-order NOW",
+        "outOfStock": "OUT OF STOCK",
+        "preOrderDiscount": "Pre-Order Discount",
+        "officialRelease": "Official Release: {date}",
+        "leftInStock": "{count} LEFT IN STOCK",
+        "unlimitedStock": "Unlimited Stock",
+        "discountPercent": "-{percent}%",
+        "publishedOn": "Published on {date}",
+        "reviewingHint": "This merch will be published after review.",
+        "unpublishConfirm": {
+          "title": "Unpublish Merch",
+          "message": "This media will be remove from your store and will not be discoverable in your profile page after it is unpublished. You must fulfil orders that are already in progress.",
+          "back": "Back",
+          "confirm": "Unpublish"
+        },
+        "deleteConfirm": {
+          "title": "Delete Merch",
+          "message": "Are you sure you want to delete this merch? This action is permanent.",
+          "back": "Back",
+          "confirm": "Delete Merch"
+        }
+      },
       "listing": {
         "title": "New Merch Listing",
+        "editTitle": "Edit Merch Details",
+        "save": "SAVE",
         "closeAlt": "Close",
+        "leaveConfirm": {
+          "title": "You have unsaved change",
+          "message": "You have made changes since you last upblished, if you leave now, your changes will be lost.",
+          "back": "Back",
+          "leave": "Leave without saving"
+        },
         "stepPlaceholder": "Coming soon.",
         "productNamePlaceholder": "Product Name",
         "descriptionPlaceholder": "Description",
@@ -2957,6 +3059,71 @@
           "overLimitWarning": "You can only upload maximum of 6 media to your gallery.",
           "uploadSuccess": "{count} images uploaded successfully",
           "uploadSuccessOne": "{count} image uploaded successfully"
+        },
+        "inventory": {
+          "stockTitle": "Stock",
+          "stockSubtitle": "Your product will be displayed as 'Sold Out' when there are no more stock in your inventory.",
+          "enterAmountPlaceholder": "Enter Amount",
+          "unlimitedStock": "Unlimited Stock",
+          "limitOnePerBuyer": "Limit to 1 item per buyer",
+          "shipmentTitle": "Shipment",
+          "packageWeight": "Package Weight",
+          "originCountry": "Country/Region of Origin",
+          "selectCountryPlaceholder": "Select Country",
+          "estimatedShippingDays": "Estimated Shipping Days",
+          "numberOfDaysPlaceholder": "Number of Days",
+          "daysSuffix": "Days",
+          "shipInternationally": "Ship Internationally",
+          "additionalShippingCost": "Additional Shipping Cost",
+          "weightUnits": {
+            "lb": "lb.",
+            "kg": "kg",
+            "oz": "oz"
+          },
+          "countries": {
+            "taiwan": "Taiwan",
+            "usa": "United States",
+            "singapore": "Singapore",
+            "australia": "Australia",
+            "uk": "United Kingdom"
+          }
+        },
+        "publish": {
+          "whenTitle": "When do you like to publish this merch to your profile?",
+          "publishImmediately": "Publish immediately after approval",
+          "schedulePublish": "Schedule a publish time",
+          "immediateHelp": "We will publish the merch to your store after admin review. It usually takes 2 working days.",
+          "publishDate": "Publish Date",
+          "datePlaceholder": "Select date and time",
+          "calendarAlt": "Calendar",
+          "openForPreorder": "Open for Pre-order",
+          "openForPreorderTip": "Allow fans to pre-order this merch before the publish date.",
+          "preorderPrice": "Pre-order Price (optional)",
+          "afterPreorder": "After pre-order end date:",
+          "keepInStore": "Keep this merch in store",
+          "unpublishFromStore": "Unpublish this merch from store",
+          "preorderPeriodBanner": "This product is in pre-order period",
+          "stopPreorderNow": "Stop pre-order now",
+          "preorderHelp": "Your product will be set to be open for pre-order on your profile from now til your selected date and time",
+          "endPreorder": {
+            "title": "End Pre-order Period",
+            "keepInStore": "Keep merch in store",
+            "keepInStoreHint": "We will end your pre-order period and make this merch for sale.",
+            "unpublishFromStore": "Unpublish this merch from store",
+            "unpublishHint": "This merch will no longer be discoverable in your profile store. user who pre-order this item will be refunded.",
+            "updateButton": "Update Publish Settings"
+          }
+        },
+        "submitForApproval": "SUBMIT FOR APPROVAL",
+        "validation": {
+          "characterCount": "{used}/{max} characters",
+          "productNameRequired": "Product name is required.",
+          "descriptionRequired": "Description is required.",
+          "selectAtLeastOneTier": "Please select at least 1 tier",
+          "valueBetween": "Value must be between {min}-{max}.",
+          "selectCountryOfOrigin": "Please select country of Origin",
+          "publishDateAfter": "Publish Date must be after {datetime}.",
+          "preorderPriceBetween": "Price must be between USD {min} - USD {max}"
         },
         "steps": {
           "productDetails": "Product Details",

@@ -14,10 +14,14 @@
         <div class="dashboard-toast-inner-container relative w-full flex gap-5"
           :class="isSingleLineContent ? 'items-center' : 'items-start'">
           <!-- Close button -->
-          <div v-if="closable"
-            class="absolute right-0 px-3 cursor-pointer"
+          <button
+            v-if="closable"
+            type="button"
+            class="absolute right-0 px-3 cursor-pointer border-0 bg-transparent p-0"
             :class="resolvedCloseButtonClass"
-            @click="handleClose">
+            aria-label="Close"
+            @click="handleClose"
+          >
             <div class="flex items-center justify-center" :class="resolvedCloseWrapperClass">
               <img
                 v-if="closeIconUrl"
@@ -26,8 +30,22 @@
                 class="h-full w-full"
                 :class="resolvedCloseIconClass"
               >
+              <svg
+                v-else
+                class="h-4 w-4 text-[#98A2B3]"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 4 4 12M4 4l8 8"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
             </div>
-          </div>
+          </button>
 
           <!-- Tip limit: full custom body (alert + title + action) -->
           <template v-if="isTipLimitBody">
@@ -113,6 +131,7 @@
                 </div>
               </div>
               <div
+                v-if="hasBodyContent"
                 class="w-full"
                 :class="isStackBody
                   ? 'flex flex-col gap-2 py-1'
@@ -143,10 +162,12 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from "vue";
+import { computed, ref, useSlots, watch } from "vue";
 import { useAssetUrl } from "@/composables/useAssetUrl.js";
 import Paragraph from "@/components/ui/typography/Paragraph.vue";
 import DashboardPrimaryButton from "@/components/ui/buttons/DashboardPrimaryButton.vue";
+
+const slots = useSlots();
 
 const { url: closeIconUrl } = useAssetUrl("icon.notification.close");
 const { url: defaultTipAvatarUrl } = useAssetUrl("icon.notification.tipAvatar");
@@ -193,9 +214,13 @@ const notificationCardThemes = {
   /** PlanPage — tier published / updated-and-published toast (success-teal). */
   planTierToast: {
     bodyLayout: "stack",
-    wrapperClass: "!py-[12px] !px-[8px] !gap-3",
-    titleClass: "text-sm font-semibold text-teal-700",
+    wrapperClass: "!py-[12px] !px-[8px] !gap-3 !items-center",
+    titleClass: "text-sm font-semibold text-teal-700 pr-8",
     descriptionClass: "text-sm text-[#0F172A] pr-5",
+    closeButtonClass: "absolute right-0 top-2 px-3 cursor-pointer z-[1]",
+    closeWrapperClass: "h-4 w-4 flex items-center justify-center",
+    closeIconClass:
+      "[filter:brightness(0)_saturate(100%)_invert(45%)_sepia(7%)_saturate(500%)_hue-rotate(182deg)_brightness(95%)_contrast(90%)]",
   },
   /** Merch gallery — over-limit warning (alert). */
   merchGalleryAlert: {
@@ -214,6 +239,16 @@ const notificationCardThemes = {
     iconClass: "h-[21px] w-[21px] object-contain",
     closeButtonClass: "absolute right-0 top-2 px-3 cursor-pointer",
     closeWrapperClass: "h-4 w-4 flex items-center justify-center",
+  },
+  /** Merch publish — in pre-order period banner (notice + stop CTA). */
+  merchPreorderNotice: {
+    rootClass: "!min-h-16 w-full !rounded-none !border-b-0",
+    wrapperClass: "!gap-4 !px-4 !items-center",
+    leftBorderClass: "bg-[#22CCEE] z-[1] w-[3px]",
+    titleClass: "text-sm font-semibold text-[#088AB2]",
+    iconBgClass: "bg-[rgba(34,204,238,0.1)]",
+    iconClass:
+      "h-[21px] w-[21px] object-contain [filter:brightness(0)_saturate(100%)_invert(64%)_sepia(72%)_saturate(1497%)_hue-rotate(149deg)_brightness(97%)_contrast(95%)]",
   },
 };
 
@@ -333,8 +368,18 @@ const showIconComputed = computed(() => {
 
 const hasTitle = computed(() => Boolean(props.title));
 const hasDescription = computed(() => Boolean(props.description));
+const hasBodyContent = computed(
+  () =>
+    hasDescription.value
+    || Boolean(props.linkHref && props.linkLabel)
+    || Boolean(slots.default)
+    || Boolean(slots.actions),
+);
+/** Title-only toasts (e.g. merch submitted) center icon + text vertically. */
 const isSingleLineContent = computed(() => {
-  if (isTipLimitBody.value || isStackBody.value) return false;
+  if (isTipLimitBody.value) return false;
+  if (hasTitle.value && !hasDescription.value && !hasBodyContent.value) return true;
+  if (isStackBody.value) return false;
   return hasTitle.value !== hasDescription.value;
 });
 
@@ -362,9 +407,7 @@ const resolvedIconClass = computed(
 const resolvedWrapperClass = computed(() => themeBundle.value?.wrapperClass || "");
 const resolvedCloseButtonClass = computed(() => {
   if (themeBundle.value?.closeButtonClass) return themeBundle.value.closeButtonClass;
-  return isSingleLineContent.value
-    ? "absolute right-0 top-1/2 -translate-y-1/2 px-3 cursor-pointer"
-    : "absolute right-0 top-0 px-3 cursor-pointer";
+  return "absolute right-0 top-2 px-3 cursor-pointer";
 });
 const resolvedCloseWrapperClass = computed(
   () => themeBundle.value?.closeWrapperClass || "h-6 w-6 flex items-center justify-center",
