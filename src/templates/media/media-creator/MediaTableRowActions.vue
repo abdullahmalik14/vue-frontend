@@ -30,15 +30,14 @@
       <div
         ref="menuAnchor"
         tabindex="0"
-        class="group flex justify-center items-center cursor-pointer p-1 rounded-[5px] hover:bg-blue-600/20 focus:bg-blue-600/20 focus-visible:bg-blue-600/20"
-        :class="menuOpen ? 'bg-blue-600/20' : ''"
+        class="group flex justify-center items-center cursor-pointer p-1 rounded-[5px] hover:bg-blue-600/20"
         @click="onMenuTriggerClick"
       >
         <span
           v-if="menuDotsUrl"
           aria-hidden="true"
-          class="inline-block h-4 w-4 bg-current [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center] [-webkit-mask-size:contain] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] group-hover:!bg-blue-600 group-focus:!bg-blue-600"
-          :class="[isMerchTheme ? 'text-black' : 'text-black dark:text-white', menuOpen ? '!bg-blue-600' : '']"
+          class="inline-block h-4 w-4 bg-current [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center] [-webkit-mask-size:contain] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] group-hover:!bg-blue-600"
+          :class="isMerchTheme ? 'text-black' : 'text-black dark:text-white'"
           :style="{
             WebkitMaskImage: `url(${menuDotsUrl})`,
             maskImage: `url(${menuDotsUrl})`,
@@ -73,7 +72,7 @@
               :class="optionIconClass(option)"
             />
             <span
-              class="text-xs font-medium whitespace-nowrap"
+              class="text-[14px] font-medium whitespace-nowrap"
               :class="option.danger ? 'text-error' : 'text-text-primary'"
             >
               {{ option.label }}

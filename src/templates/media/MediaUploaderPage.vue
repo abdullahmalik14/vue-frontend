@@ -52,7 +52,7 @@
 
       <template v-else-if="hasLibrary">
         <div class="flex flex-col gap-2 px-5 lg:px-10 lg:flex-row lg:items-center lg:gap-4">
-          <div class="flex items-center gap-4 shrink-0">
+          <div class="flex min-w-0 w-full items-center gap-4 sm:w-auto sm:shrink-0">
             <div
               class="hidden md:inline-flex shrink-0 items-center overflow-hidden rounded-[5px] bg-gray-50/50 outline outline-1 outline-gray-300"
             >

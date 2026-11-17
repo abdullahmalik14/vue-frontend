@@ -33,7 +33,7 @@
             v-if="crossIconUrl"
             :src="crossIconUrl"
             :alt="t('shops.merch.listing.gallery.removeImageAlt')"
-            class="h-3.5 w-3.5"
+            class="w-2.5 h-2.5 "
           />
         </button>
 

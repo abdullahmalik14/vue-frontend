@@ -118,14 +118,14 @@ function onConfirm() {
     <div
       v-if="modelValue"
       data-base-popup-portaled
-      class="fixed flex items-center justify-center bg-black/5 px-4 py-6 backdrop-blur-[7.5px]"
+      class="fixed flex items-end justify-center bg-black/5 backdrop-blur-[7.5px] md:items-center md:px-4 md:py-6"
       :style="containOverlayStyle"
       @mousedown.stop
       @click.stop.self="close"
     >
       <div
         data-component="end-preorder-popup"
-        class="flex w-full max-w-[28rem] flex-col gap-4 bg-white p-4 shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03),0px_12px_16px_-4px_rgba(16,24,40,0.08)]"
+        class="end-preorder-sheet flex w-full max-w-none flex-col gap-4 rounded-t-[0.625rem] bg-white p-4 shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03),0px_12px_16px_-4px_rgba(16,24,40,0.08)] md:max-w-[28rem] md:rounded-none"
         role="dialog"
         aria-modal="true"
         @click.stop
@@ -191,3 +191,21 @@ function onConfirm() {
     </div>
   </Teleport>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .end-preorder-sheet {
+    animation: end-preorder-sheet-in 300ms ease-in-out;
+  }
+}
+
+@keyframes end-preorder-sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+</style>

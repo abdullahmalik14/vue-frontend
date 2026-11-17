@@ -75,6 +75,23 @@ const showPreorderBanner = computed(
   () => props.isEditMode && props.isActivePreorder && openForPreorder.value,
 );
 
+/** Active pre-order edit with an existing price — input locked + warning. Empty stays editable. */
+const preorderPriceLocked = ref(false);
+
+function syncPreorderPriceLock() {
+  if (props.isEditMode && props.isActivePreorder) {
+    preorderPriceLocked.value = String(props.engine.state.preorderPrice ?? '').trim() !== '';
+    return;
+  }
+  preorderPriceLocked.value = false;
+}
+
+watch(
+  () => [props.isEditMode, props.isActivePreorder],
+  () => syncPreorderPriceLock(),
+  { immediate: true },
+);
+
 watch(showPreorderBanner, (show) => {
   if (show) preorderBannerOpen.value = true;
 });
@@ -337,7 +354,7 @@ defineExpose({ validateStep });
   >
     <div
       v-if="showPreorderBanner && preorderBannerOpen"
-      class="absolute left-0 right-0 top-0 z-20 -mx-6 -mt-4"
+      class="absolute left-0 right-0 top-0 z-20 -mx-4 -mt-4 xl:-mx-6"
     >
       <NotificationCard
         v-model="preorderBannerOpen"
@@ -489,8 +506,15 @@ defineExpose({ validateStep });
               left-span
               :left-span-text="t('mediaUploader.subscription.usd')"
               left-span-class="!text-[16px] !font-[500] !text-[#475467]"
+              :disabled="preorderPriceLocked"
             />
-            <p v-if="isPreorderPriceInvalid" class="text-sm text-error">
+            <p
+              v-if="preorderPriceLocked"
+              class="text-sm font-normal text-[#FF4405]"
+            >
+              {{ t('shops.merch.listing.publish.preorderPriceLockedHint') }}
+            </p>
+            <p v-else-if="isPreorderPriceInvalid" class="text-sm text-error">
               {{ preorderPriceErrorText }}
             </p>
           </div>

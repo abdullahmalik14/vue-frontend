@@ -443,7 +443,7 @@ defineExpose({ validateStep });
         />
       </div>
 
-      <div data-merch-field="subscriptionTiers" class="flex flex-col gap-2">
+      <div data-merch-field="subscriptionTiers" class="flex flex-col gap-4">
         <CheckboxSwitch
           id="merch-subscribers-only"
           v-model="subscribersOnly"

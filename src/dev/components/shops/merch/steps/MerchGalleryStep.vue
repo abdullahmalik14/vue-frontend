@@ -6,7 +6,7 @@
     <!-- Flush top notices — approval + over-limit can stack -->
     <div
       v-if="showTopNotice"
-      class="absolute left-0 right-0 top-0 z-20 -mx-6 -mt-4 flex flex-col"
+      class="absolute left-0 right-0 top-0 z-20 -mx-4 -mt-4 flex flex-col xl:-mx-6"
     >
       <NotificationCard
         v-if="showApprovalNotice"

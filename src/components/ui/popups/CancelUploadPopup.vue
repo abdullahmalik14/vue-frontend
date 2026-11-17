@@ -4,7 +4,7 @@
     <div
       v-if="modelValue"
       data-base-popup-portaled
-      class="fixed flex items-end justify-center bg-black/5 backdrop-blur-[7.5px] sm:items-center sm:px-4 sm:py-6"
+      class="fixed flex items-end justify-center bg-black/5 backdrop-blur-[7.5px] min-[786px]:items-center min-[786px]:px-4 min-[786px]:py-6"
       :style="containOverlayStyle"
       @mousedown.stop
       @click.stop.self="dismiss"
@@ -286,7 +286,7 @@ const resolvedConfirmLabel = computed(() => {
 });
 
 const nestedOverlayClass = computed(() =>
-  'fixed inset-y-0 right-0 z-[2000] flex w-full items-end justify-center bg-black/5 backdrop-blur-[7.5px] sm:items-center sm:px-4 sm:py-6 md:w-[30rem]',
+  'fixed inset-y-0 right-0 z-[2000] flex w-full items-end justify-center bg-black/5 backdrop-blur-[7.5px] min-[786px]:items-center min-[786px]:px-4 min-[786px]:py-6 md:w-[30rem]',
 );
 
 /** Visible BasePopup / slide-in panel box (not tall scroll content). */
@@ -372,38 +372,38 @@ onUnmounted(() => {
   unbindContainListeners();
 });
 
-/** Leave / tab-change: compact width. Nested dialogs sit flush to the bottom below sm. */
+/** Leave / tab-change: compact width. Nested dialogs sit flush to the bottom below 786px. */
 const panelClass = computed(() =>
   [
-    'relative bg-white/90 dark:bg-background-dark-appbu backdrop-blur-[50px] drop-shadow-[0px_-8px_10px_#0000000D] overflow-hidden sm:shadow-[0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A]',
+    'relative bg-white/90 dark:bg-background-dark-appbu backdrop-blur-[50px] drop-shadow-[0px_-8px_10px_#0000000D] overflow-hidden min-[786px]:shadow-[0px_2px_4px_-2px_#1018280F,0px_4px_8px_-2px_#1018281A]',
     props.nested
-      ? 'cancel-upload-sheet w-full rounded-t-[0.625rem] sm:rounded-lg'
+      ? 'cancel-upload-sheet w-full rounded-t-[0.625rem] min-[786px]:rounded-lg'
       : 'rounded-lg',
     isLeaveLayout.value
       ? props.nested
-        ? 'sm:w-[495px] sm:max-w-[calc(100%-2rem)]'
+        ? 'min-[786px]:w-[495px] min-[786px]:max-w-[calc(100%-2rem)]'
         : 'w-[495px] max-w-[calc(100%-2rem)]'
       : props.nested
-        ? 'sm:max-w-[23.4375rem]'
+        ? 'min-[786px]:max-w-[23.4375rem]'
         : 'w-full max-w-[23.4375rem]',
   ].join(' '),
 );
 
 const actionsRowClass = computed(() =>
   isLeaveLayout.value
-    ? 'flex items-center justify-start gap-2'
+    ? 'flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-start sm:gap-2'
     : 'flex items-center gap-2',
 );
 
 const secondaryBtnClass = computed(() =>
   isLeaveLayout.value
-    ? 'h-10 px-3 flex justify-center items-center bg-transparent text-[#FF4405] transition-colors hover:bg-[#FF4405] hover:text-white cursor-pointer shrink-0 rounded-[2px]'
+    ? 'w-full h-10 px-3 flex justify-center items-center bg-transparent text-[#FF4405] transition-colors hover:bg-[#FF4405] hover:text-white cursor-pointer rounded-[2px] sm:w-auto sm:shrink-0'
     : 'w-full h-10 flex justify-center items-center bg-transparent text-[#FF4405] transition-colors hover:bg-[#FF4405] hover:text-white cursor-pointer',
 );
 
 const primaryBtnClass = computed(() =>
   isLeaveLayout.value
-    ? 'h-10 px-4 flex justify-center items-center bg-[#FF4405] text-white transition-colors hover:bg-white hover:text-[#FF4405] cursor-pointer shrink-0 rounded-[2px]'
+    ? 'w-full h-10 px-4 flex justify-center items-center bg-[#FF4405] text-white transition-colors hover:bg-white hover:text-[#FF4405] cursor-pointer rounded-[2px] sm:w-auto sm:shrink-0'
     : 'w-full h-10 flex justify-center items-center bg-[#FF4405] text-white transition-colors hover:bg-white hover:text-[#FF4405] cursor-pointer',
 );
 
@@ -440,7 +440,7 @@ const uploadCancelConfig = computed(() => ({
 </script>
 
 <style scoped>
-@media (max-width: 479px) {
+@media (max-width: 785px) {
   .cancel-upload-sheet {
     animation: cancel-upload-sheet-in 300ms ease-in-out;
   }

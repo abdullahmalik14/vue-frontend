@@ -218,7 +218,7 @@ const dashboardPrimaryButtonThemes = {
     variant: "none",
     leftIconClass:
       "!w-3.5 !h-3.5 object-contain [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)]",
-    textClass: "!text-lg !font-medium !leading-7 text-inherit",
+    textClass: "md-small:!text-lg text-sm !font-medium !leading-7 text-inherit",
     customClass:
       "group inline-flex self-stretch items-center justify-center gap-2.5 bg-black px-2 py-1 text-[#07F468] border-none outline-none cursor-pointer enabled:hover:bg-[#07F468] enabled:hover:text-black",
   },
@@ -227,7 +227,7 @@ const dashboardPrimaryButtonThemes = {
     variant: "none",
     leftIconClass:
       "!w-6 !h-6 object-contain [filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)] group-hover:[filter:brightness(0)] group-disabled:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(8%)_saturate(285%)_hue-rotate(179deg)_brightness(92%)_contrast(88%)] group-disabled:group-hover:[filter:brightness(0)_saturate(100%)_invert(73%)_sepia(8%)_saturate(285%)_hue-rotate(179deg)_brightness(92%)_contrast(88%)]",
-    textClass: "!text-lg !font-medium !leading-7 text-inherit",
+    textClass: "md-small:!text-lg text-sm !font-medium !leading-7 text-inherit",
     customClass:
       "group inline-flex h-10 items-center justify-center gap-2.5 bg-black px-2 py-1 text-[#07F468] border-none outline-none cursor-pointer enabled:hover:bg-[#07F468] enabled:hover:text-black disabled:pointer-events-none disabled:cursor-default disabled:bg-transparent disabled:text-gray-400 disabled:opacity-100",
   },
@@ -236,7 +236,7 @@ const dashboardPrimaryButtonThemes = {
     variant: "none",
     leftIconClass:
       "!w-6 !h-6 object-contain [filter:brightness(0)] group-hover:[filter:brightness(0)_saturate(100%)_invert(75%)_sepia(23%)_saturate(7280%)_hue-rotate(93deg)_brightness(109%)_contrast(95%)]",
-    textClass: "!text-lg !font-medium !leading-7 !uppercase text-inherit",
+    textClass: "md-small:!text-lg text-sm !font-medium !leading-7 !uppercase text-inherit",
     customClass:
       "group inline-flex h-10 items-center justify-center gap-2.5 bg-[#07F468] px-2 py-1 text-black shadow-[4px_4px_0_0_#000] border-none outline-none cursor-pointer enabled:hover:bg-black enabled:hover:text-[#07F468] enabled:hover:shadow-[4px_4px_0_0_#07F468]",
   },
@@ -245,7 +245,7 @@ const dashboardPrimaryButtonThemes = {
     variant: "none",
     leftIconClass:
       "!w-5 !h-5 object-contain [filter:brightness(0)] group-hover:[filter:brightness(0)_saturate(100%)_invert(32%)_sepia(98%)_saturate(2878%)_hue-rotate(357deg)_brightness(101%)_contrast(107%)]",
-    textClass: "!text-base !font-medium !leading-6 !uppercase text-inherit",
+    textClass: "!text-[12px] md-small:!text-base !font-medium !leading-6 !uppercase text-inherit",
     customClass:
       "group inline-flex h-10 items-center justify-center gap-2 bg-[#FF4405] px-2 py-1 text-black border-none outline-none cursor-pointer enabled:hover:bg-black enabled:hover:text-[#FF4405]",
   },
@@ -277,7 +277,8 @@ const dashboardPrimaryButtonThemes = {
   },
   addTierSave: {
     variant: "simpleBtn",
-    customClass: "!h-10 !w-20 !text-lg !font-medium !font-['Poppins'] !leading-7 rounded-none",
+    customClass:
+      "!h-10 !w-20 !text-lg !font-medium !font-['Poppins'] !leading-7 rounded-none disabled:!bg-[#FFFFFF40] disabled:!text-[#98A2B3] disabled:hover:!bg-[#FFFFFF40] disabled:hover:!text-[#98A2B3] disabled:opacity-100 disabled:cursor-not-allowed",
   },
   mediaAddTierPanel: {
     variant: "polygonLeft",

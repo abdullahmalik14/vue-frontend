@@ -15,17 +15,39 @@
     @update:modelValue="onPopupModelUpdate"
     :popup-config="addTierPopupConfig"
   >
-    <div data-component="add-tier-popup" class="relative w-[640px] max-w-[95vw] flex flex-col bg-white/90">
-      <div class="p-6 flex flex-col gap-8">
+    <div
+      data-component="add-tier-popup"
+      class="relative flex h-full w-full flex-col bg-white/90 md:h-auto md:w-[640px] md:max-w-[95vw]"
+    >
+      <div class="flex min-h-0 flex-1 flex-col gap-8 overflow-y-auto p-6">
         <div class="self-stretch backdrop-blur-xl flex flex-col justify-start items-start gap-6">
           <div class="w-full">
-            <div class="w-full flex justify-between items-center">
+            <div class="w-full flex justify-between items-center gap-2">
               <div class="flex-1 justify-center text-gray-500 text-lg font-medium font-['Poppins'] leading-7">
                 {{ t('mediaUploader.addTier.title') }}
               </div>
 
+              <div class="flex shrink-0 items-center md:hidden">
+                <DashboardPrimaryButton
+                  :text="t('mediaUploader.addTier.cancel')"
+                  theme="addTierCancel"
+                  :disabled="isSaving"
+                  @click="onCancel"
+                />
+                <DashboardPrimaryButton
+                  :text="t('mediaUploader.addTier.save')"
+                  theme="addTierSave"
+                  btnBg="#07F468"
+                  btnHoverBg="black"
+                  btnText="black"
+                  btnHoverText="#07F468"
+                  :disabled="isSaveDisabled"
+                  @click="onSave"
+                />
+              </div>
+
               <div
-                class="cursor-pointer p-1"
+                class="hidden cursor-pointer p-1 md:block"
                 data-popup-close
                 role="button"
                 tabindex="0"
@@ -399,7 +421,7 @@
         </div>
       </div>
 
-      <div class="sticky bottom-0 z-20 w-full flex justify-end items-center bg-white/90 ">
+      <div class="sticky bottom-0 z-20 hidden w-full items-center justify-end bg-white/90 md:flex">
         <DashboardPrimaryButton
           :text="t('mediaUploader.addTier.cancel')"
           theme="addTierCancel"
@@ -413,7 +435,7 @@
           btnHoverBg="black"
           btnText="black"
           btnHoverText="#07F468"
-          :disabled="isSaving"
+          :disabled="isSaveDisabled"
           @click="onSave"
         />
       </div>
@@ -767,11 +789,19 @@ function onCancel() {
   emit('close');
 }
 
+const hasFormValue = computed(() => String(tierName.value || '').trim().length > 0);
+
+const isSaveDisabled = computed(
+  () =>
+    isSaving.value ||
+    !hasFormValue.value ||
+    isOriginalPriceInvalid.value ||
+    isDiscountPriceInvalid.value ||
+    hasBenefitRangeError.value,
+);
+
 async function onSave() {
-  if (isSaving.value) return;
-  if (isOriginalPriceInvalid.value || isDiscountPriceInvalid.value || hasBenefitRangeError.value) {
-    return;
-  }
+  if (isSaveDisabled.value) return;
 
   const name = String(tierName.value || '').trim();
   const label = name || t('mediaUploader.addTier.title');
@@ -868,8 +898,8 @@ const addTierPopupConfig = computed(() => ({
   shouldCloseOnOutsideClick: false,
   shouldLockBodyScroll: true,
   shouldCloseOnEscape: !isSaving.value,
-  width: { default: 'auto', '<480': '95%' },
-  height: { default: '90vh' },
+  width: { default: 'auto', '<768': '100%' },
+  height: { default: '90vh', '<768': '100%' },
   scrollable: true,
   closeSpeed: '250ms',
   closeEffect: 'cubic-bezier(0.4, 0, 0.2, 1)',

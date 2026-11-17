@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onUnmounted, ref, watch } from 'vue';
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { Bars3Icon, FunnelIcon, Squares2X2Icon } from '@heroicons/vue/24/outline';
 import Heading from '@/components/ui/typography/Heading.vue';
@@ -30,6 +30,7 @@ const profileCheckCircleUrl = '/dev/cdn/images/merch-toast-check.png';
 
 const {
   items: libraryItems,
+  loadMerch,
   upsertItem,
   patchItem,
   removeItem,
@@ -249,10 +250,10 @@ function onDetailEditDetails() {
   if (item) openListingEdit(item);
 }
 
-function onDetailUnpublished() {
+async function onDetailUnpublished() {
   const item = selectedItem.value;
   if (!item?.id) return;
-  patchItem(item.id, { status: 'draft', openForPreorder: false });
+  await patchItem(item.id, { status: 'draft', openForPreorder: false });
   showSuccessToast('unpublish', item.title, item.thumbnail);
 }
 
@@ -263,12 +264,12 @@ function onDetailPublished() {
   openListingEdit(item, 4);
 }
 
-function onDetailDeleted() {
+async function onDetailDeleted() {
   const item = selectedItem.value;
   if (!item?.id) return;
   const title = item.title;
   const thumb = item.thumbnail;
-  removeItem(item.id);
+  await removeItem(item.id);
   detailOpen.value = false;
   selectedId.value = null;
   showSuccessToast('deleted', title, thumb);
@@ -293,12 +294,12 @@ function showSuccessToast(kind, productName, thumb = '') {
   }, 4500);
 }
 
-function onEndPreorder({ action, productName } = {}) {
+async function onEndPreorder({ action, productName } = {}) {
   const name = productName || t('shops.merch.library.demoProductName');
   const targetId = listingItem.value?.id || selectedId.value;
   const unpublish = action === 'unpublish';
   if (targetId) {
-    const updated = patchItem(targetId, {
+    const updated = await patchItem(targetId, {
       status: unpublish ? 'draft' : 'published',
       title: name,
       openForPreorder: false,
@@ -315,7 +316,7 @@ function onEndPreorder({ action, productName } = {}) {
   showSuccessToast(unpublish ? 'unpublishPreorder' : 'keepInStore', name);
 }
 
-function onListingSaved(payload = {}) {
+async function onListingSaved(payload = {}) {
   const id = payload.id || listingItem.value?.id;
   if (!id) return;
   const existing = getItem(id) || {};
@@ -348,7 +349,7 @@ function onListingSaved(payload = {}) {
     next.openForPreorder = true;
     next.status = 'preorder';
   }
-  upsertItem(next);
+  await upsertItem(next);
   if (selectedId.value === id) {
     listingItem.value = next;
   }
@@ -359,7 +360,7 @@ function onListingSaved(payload = {}) {
   );
 }
 
-function onListingSaveDraft(payload = {}) {
+async function onListingSaveDraft(payload = {}) {
   const listing = payload.listingState || {};
   const outOfStock = isOutOfStockListing(listing);
   // Out of stock never enters review — stays draft.
@@ -378,7 +379,7 @@ function onListingSaveDraft(payload = {}) {
       createdAt: existing.createdAt,
     });
     if (outOfStock) next.openForPreorder = false;
-    upsertItem(next);
+    await upsertItem(next);
   } else {
     next = buildMerchItemFromListingState(listing, {
       status,
@@ -387,7 +388,7 @@ function onListingSaveDraft(payload = {}) {
       publishedAt: '',
     });
     if (outOfStock) next.openForPreorder = false;
-    upsertItem(next);
+    await upsertItem(next);
   }
 
   if (status === 'reviewing' && next) {
@@ -399,14 +400,14 @@ function onListingSaveDraft(payload = {}) {
   }
 }
 
-function onMenuAction({ item, action }) {
+async function onMenuAction({ item, action }) {
   if (!item?.id) return;
   if (action === 'edit') {
     openListingEdit(item);
     return;
   }
   if (action === 'delete') {
-    removeItem(item.id);
+    await removeItem(item.id);
     if (selectedId.value === item.id) {
       detailOpen.value = false;
       selectedId.value = null;
@@ -415,17 +416,22 @@ function onMenuAction({ item, action }) {
     return;
   }
   if (action === 'unpublish') {
-    patchItem(item.id, { status: 'draft', openForPreorder: false });
+    await patchItem(item.id, { status: 'draft', openForPreorder: false });
     return;
   }
   if (action === 'publish') {
     if (isOutOfStockListing(item)) return;
-    patchItem(item.id, {
+    await patchItem(item.id, {
       status: 'published',
       publishedAt: formatPublishedAt(new Date()),
     });
   }
 }
+
+onMounted(async () => {
+  // GET /merch — restore persisted listings (do not wipe on refresh).
+  await loadMerch();
+});
 
 watch(selectedItem, (item) => {
   if (detailOpen.value && listingItem.value?.id && item?.id === listingItem.value.id) {
@@ -444,7 +450,7 @@ onUnmounted(() => {
       data-component="shops-merch-page"
       class="relative flex flex-col gap-6 min-w-0 max-w-full min-h-[calc(100vh-2rem)] lg:min-h-[calc(100vh-5rem)] py-5 lg:py-10"
     >
-      <div class="flex items-center justify-between gap-4 px-5 lg:px-10">
+      <div class="flex items-center justify-between gap-4 px-4 xl:px-10">
         <Heading
           tag="h1"
           theme="custom"
@@ -463,8 +469,8 @@ onUnmounted(() => {
       </div>
 
       <template v-if="hasLibrary">
-        <div class="flex flex-col gap-2 px-5 lg:px-10 lg:flex-row lg:items-center lg:gap-4">
-          <div class="flex items-center gap-4 shrink-0">
+        <div class="flex flex-col gap-2 px-4 xl:px-10 lg:flex-row lg:items-center lg:gap-4">
+          <div class="flex min-w-0 w-full items-center gap-4 sm:w-auto sm:shrink-0">
             <div
               class="hidden md:inline-flex shrink-0 items-center overflow-hidden rounded-[5px] bg-gray-50/50 outline outline-1 outline-gray-300"
             >
@@ -526,7 +532,7 @@ onUnmounted(() => {
 
         <div
           v-if="viewMode === 'grid'"
-          class="flex flex-wrap gap-4 px-5 lg:px-10"
+          class="grid grid-cols-2 gap-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 md:gap-2 xl:gap-4 px-2 md:px-4 xl:px-10"
         >
           <MerchLibraryCard
             v-for="item in visibleItems"
@@ -546,7 +552,7 @@ onUnmounted(() => {
 
       <div
         v-else
-        class="flex flex-1 flex-col items-center justify-center gap-4 px-5 lg:px-10"
+        class="flex flex-1 flex-col items-center justify-center gap-4 px-4 xl:px-10"
       >
         <img
           v-if="emptyCartUrl"

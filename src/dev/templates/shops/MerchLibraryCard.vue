@@ -58,7 +58,7 @@ const promoBadges = computed(() => {
 <template>
   <button
     type="button"
-    class="relative w-80 h-44 max-w-96 min-w-80 overflow-hidden bg-black cursor-pointer text-left"
+    class="relative w-full h-24 overflow-hidden bg-black cursor-pointer text-left sm:h-36 md:h-28 lg:h-40 xl:h-48"
     @click="$emit('click', item)"
   >
     <img

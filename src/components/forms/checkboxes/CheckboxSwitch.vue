@@ -62,7 +62,7 @@ const checkboxSwitchThemes: Record<
   /** Subscription link toggle — horizontal row next to Add Tier. */
   linkRow: {
     wrapperOverrides: [
-      { target: "wrapper1", addClass: "!flex-row !items-center !self-auto !h-10 !gap-0" },
+      { target: "wrapper1", addClass: "!flex-row !items-center !self-auto !h-0 !gap-0" },
     ],
   },
   /** Media filter row — compact track, no visible label. */

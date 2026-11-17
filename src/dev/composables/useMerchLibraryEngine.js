@@ -6,6 +6,15 @@ import {
   loadMerchGallery,
   saveMerchGallery,
 } from '@/dev/composables/merchGalleryMediaStore.js';
+import {
+  listMerch,
+  getMerch,
+  upsertMerch,
+  deleteMerch,
+  replaceMerch,
+  getMerchStoreItems,
+  seedMerchStore,
+} from '@/dev/utils/shops/merchMockApi.js';
 
 /** Shared persisted merch library (create / edit survives refresh). */
 let merchLibraryEngine = null;
@@ -48,6 +57,8 @@ function ensureEngine() {
   if (persisted.length) {
     merchLibraryEngine.setState('items', persisted);
   }
+  // One-time: seed mock store from any previously persisted library list.
+  seedMerchStore(persisted.length ? persisted : []);
   return merchLibraryEngine;
 }
 
@@ -67,7 +78,7 @@ function clipThumb(value) {
   return value.length > MAX_THUMB_CHARS ? '' : value;
 }
 
-/** Drop heavy gallery payloads for disk only; keep card list + one small thumb when possible. */
+/** Drop heavy gallery payloads for disk / mock API only; keep card list + one small thumb when possible. */
 function leanLibraryItem(item, { keepThumb = true } = {}) {
   const gallery = Array.isArray(item?.galleryUploaded) ? item.galleryUploaded : [];
   const leanGallery = gallery.map((entry) => ({
@@ -117,6 +128,33 @@ function persistLibraryItems(items) {
   }
   console.warn('[merchLibrary] persist failed for all attempts');
   return null;
+}
+
+/** Merge mock-store lean rows with in-memory galleries so UI media stays intact. */
+function mergeStoreWithMemoryGalleries(storeItems) {
+  const engine = ensureEngine();
+  const memory = Array.isArray(engine.state.items) ? engine.state.items : [];
+  const byId = new Map(memory.map((row) => [row.id, row]));
+  return (Array.isArray(storeItems) ? storeItems : []).map((row) => {
+    const prev = byId.get(row.id);
+    if (!prev || !galleryHasMedia(prev.galleryUploaded)) return row;
+    return {
+      ...row,
+      galleryUploaded: prev.galleryUploaded,
+      thumbnail: galleryThumb({
+        galleryUploaded: prev.galleryUploaded,
+        thumbnail: row.thumbnail || prev.thumbnail,
+      }),
+    };
+  });
+}
+
+function syncEngineFromStore() {
+  const engine = ensureEngine();
+  const list = mergeStoreWithMemoryGalleries(getMerchStoreItems());
+  engine.setState('items', list);
+  persistLibraryItems(list);
+  return list;
 }
 
 export function buildMerchItemFromListingState(listingState = {}, overrides = {}) {
@@ -219,52 +257,100 @@ export function useMerchLibraryEngine() {
     engine.setState('items', list);
     // Disk may store a leaner copy if quota is tight — do not mirror that back into memory.
     persistLibraryItems(list);
+    seedMerchStore(list.map((item) => leanLibraryItem(item, { keepThumb: true })));
   }
 
-  function upsertItem(item) {
-    if (!item?.id) return null;
+  /** GET /merch — hydrate engine from mock store. */
+  async function loadMerch(options = {}) {
+    const result = await listMerch(options);
+    if (result.ok) {
+      syncEngineFromStore();
+      void rehydrateGalleriesFromIdb(engine);
+    }
+    return result;
+  }
+
+  /** GET /merch/detail */
+  async function loadMerchItem(id, options = {}) {
+    return getMerch(id, options);
+  }
+
+  function writeLocalItem(nextItem) {
     const list = Array.isArray(engine.state.items) ? [...engine.state.items] : [];
-    const index = list.findIndex((row) => row.id === item.id);
+    const index = list.findIndex((row) => row.id === nextItem.id);
+    if (index >= 0) list[index] = { ...list[index], ...nextItem };
+    else list.unshift(nextItem);
+    engine.setState('items', list);
+    persistLibraryItems(list);
+    return getItem(nextItem.id) || nextItem;
+  }
+
+  /**
+   * Create or edit via mock API (POST /merch or PATCH /merch/detail),
+   * then keep full gallery in memory + IDB.
+   * On mock failure, still mirror locally for this session (same as plans).
+   */
+  async function upsertItem(item) {
+    if (!item?.id) return null;
     const nextItem = toPersistableState({
       ...item,
       thumbnail: galleryThumb(item),
       updatedAt: new Date().toISOString(),
     });
-    if (index >= 0) list[index] = { ...list[index], ...nextItem };
-    else list.unshift(nextItem);
-    setItems(list);
-    // Prefer the pre-lean gallery payload so IndexedDB keeps full dataUrls.
+    const result = await upsertMerch(leanLibraryItem(nextItem, { keepThumb: true }));
+    const saved = writeLocalItem(nextItem);
+    if (!result.ok) {
+      seedMerchStore(
+        (Array.isArray(engine.state.items) ? engine.state.items : []).map((row) =>
+          leanLibraryItem(row, { keepThumb: true }),
+        ),
+      );
+    }
     void saveMerchGallery(item.id, item.galleryUploaded || nextItem.galleryUploaded || []);
-    return getItem(item.id) || nextItem;
+    return saved;
   }
 
-  function patchItem(id, patch) {
+  async function patchItem(id, patch) {
     if (!id) return null;
-    const list = Array.isArray(engine.state.items) ? [...engine.state.items] : [];
-    const index = list.findIndex((row) => row.id === id);
-    if (index < 0) return null;
+    const current = getItem(id);
+    if (!current) return null;
     const nextItem = toPersistableState({
-      ...list[index],
+      ...current,
       ...patch,
       id,
-      thumbnail: galleryThumb({ ...list[index], ...patch }),
+      thumbnail: galleryThumb({ ...current, ...patch }),
       updatedAt: new Date().toISOString(),
     });
-    list[index] = nextItem;
-    setItems(list);
+    const result = await upsertMerch(leanLibraryItem(nextItem, { keepThumb: true }));
+    const saved = writeLocalItem(nextItem);
+    if (!result.ok) {
+      seedMerchStore(
+        (Array.isArray(engine.state.items) ? engine.state.items : []).map((row) =>
+          leanLibraryItem(row, { keepThumb: true }),
+        ),
+      );
+    }
     if (Object.prototype.hasOwnProperty.call(patch, 'galleryUploaded')) {
       void saveMerchGallery(id, nextItem.galleryUploaded);
     }
-    return getItem(id) || nextItem;
+    return saved;
   }
 
-  function removeItem(id) {
+  /** DELETE /merch/detail */
+  async function removeItem(id) {
     if (!id) return;
+    const result = await deleteMerch(id);
     const list = (Array.isArray(engine.state.items) ? engine.state.items : []).filter(
       (row) => row.id !== id,
     );
-    setItems(list);
+    engine.setState('items', list);
+    persistLibraryItems(list);
+    if (!result.ok) {
+      // Keep UI usable if mock scenario fails — still remove locally for this session.
+      seedMerchStore(list.map((item) => leanLibraryItem(item, { keepThumb: true })));
+    }
     void deleteMerchGallery(id);
+    return result;
   }
 
   function getItem(id) {
@@ -280,7 +366,7 @@ export function useMerchLibraryEngine() {
     const fromIdb = await loadMerchGallery(item.id);
     if (fromIdb.length) {
       // Repair in-memory item so ProfileMerchPopup / grid also recover.
-      patchItem(item.id, {
+      await patchItem(item.id, {
         galleryUploaded: fromIdb,
         thumbnail: galleryThumb({ galleryUploaded: fromIdb, thumbnail: item.thumbnail }),
       });
@@ -289,14 +375,32 @@ export function useMerchLibraryEngine() {
     return Array.isArray(item.galleryUploaded) ? [...item.galleryUploaded] : [];
   }
 
+  /** Replace entire list through mock store (demo reset / seed). */
+  async function replaceItems(entries) {
+    const result = await replaceMerch(
+      (Array.isArray(entries) ? entries : []).map((entry) =>
+        leanLibraryItem(entry, { keepThumb: true }),
+      ),
+    );
+    if (result.ok) {
+      syncEngineFromStore();
+      return result.items;
+    }
+    setItems(entries);
+    return Array.isArray(entries) ? entries : [];
+  }
+
   return {
     engine,
     items,
     setItems,
+    loadMerch,
+    loadMerchItem,
     upsertItem,
     patchItem,
     removeItem,
     getItem,
     resolveItemGallery,
+    replaceItems,
   };
 }

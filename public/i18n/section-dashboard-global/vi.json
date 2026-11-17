@@ -2957,6 +2957,7 @@
           "openForPreorder": "Mở đặt trước",
           "openForPreorderTip": "Cho phép fan đặt trước merch này trước ngày xuất bản.",
           "preorderPrice": "Giá đặt trước (tuỳ chọn)",
+          "preorderPriceLockedHint": "Không thể đổi giá đặt trước vì giai đoạn đặt trước đang diễn ra.",
           "afterPreorder": "Sau ngày kết thúc đặt trước:",
           "keepInStore": "Giữ merch này trong cửa hàng",
           "unpublishFromStore": "Gỡ xuất bản merch này khỏi cửa hàng",

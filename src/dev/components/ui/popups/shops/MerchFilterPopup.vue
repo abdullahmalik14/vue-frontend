@@ -10,7 +10,7 @@
     >
       <div class="absolute inset-0 w-full h-full backdrop-blur-[30px] pointer-events-none z-[-1]"></div>
 
-      <div class="relative z-[1] flex flex-col h-full min-h-0 p-3">
+      <div class="relative z-[1] flex flex-col h-full min-h-0 ">
         <div class="w-full flex justify-between items-center shrink-0 px-2 pt-2">
           <Heading
             :text="t('shops.merch.library.filterPopup.title')"
@@ -31,7 +31,7 @@
               v-if="closeIconUrl"
               :src="closeIconUrl"
               :alt="t('shops.merch.library.filterPopup.closeAlt')"
-              class="w-[10px] h-[10px] [filter:brightness(0)_saturate(100%)_invert(68%)_sepia(8%)_saturate(456%)_hue-rotate(182deg)_brightness(92%)_contrast(87%)]"
+              class="w-[20px] h-[20px] [filter:brightness(0)_saturate(100%)_invert(68%)_sepia(8%)_saturate(456%)_hue-rotate(182deg)_brightness(92%)_contrast(87%)]"
             />
           </button>
         </div>
@@ -139,7 +139,7 @@
           <div
             class="flex flex-col gap-2 flex-1 min-h-0 overflow-y-auto overscroll-contain [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
-            <section class="flex flex-col gap-1 px-2">
+            <section class="flex flex-col gap-1 px-2.5">
               <div class="flex items-center justify-between py-1">
                 <h3 class="flex-1 text-xs font-semibold leading-4 text-gray-500">
                   {{ t('shops.merch.library.filterPopup.tags') }}
@@ -158,7 +158,7 @@
               />
             </section>
 
-            <section class="flex flex-col gap-1 px-2">
+            <section class="flex flex-col gap-1 px-2.5">
               <div class="flex items-center justify-between py-1">
                 <h3 class="flex-1 text-xs font-semibold leading-4 text-gray-500">
                   {{ t('shops.merch.library.filterPopup.collections') }}

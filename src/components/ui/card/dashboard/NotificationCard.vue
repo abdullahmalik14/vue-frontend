@@ -234,8 +234,10 @@ const notificationCardThemes = {
   },
   /** Merch gallery — post-upload approval notice (success/notice). */
   merchGalleryNotice: {
-    rootClass: "!min-h-16 w-full !rounded-none !border-b-0",
+    rootClass:
+      "!min-h-16 w-full !rounded-none !border-y-0 !border-r-0 !border-l-[3px] !border-solid !border-l-[#22CCEE]",
     wrapperClass: "!gap-4 !px-4",
+    leftBorderClass: "!hidden",
     iconClass: "h-[21px] w-[21px] object-contain",
     closeButtonClass: "absolute right-0 top-2 px-3 cursor-pointer",
     closeWrapperClass: "h-4 w-4 flex items-center justify-center",
@@ -244,7 +246,7 @@ const notificationCardThemes = {
   merchPreorderNotice: {
     rootClass: "!min-h-16 w-full !rounded-none !border-b-0",
     wrapperClass: "!gap-4 !px-4 !items-center",
-    leftBorderClass: "bg-[#22CCEE] z-[1] w-[3px]",
+    leftBorderClass: "!w-[3px] bg-[#22CCEE] z-[1]",
     titleClass: "text-sm font-semibold text-[#088AB2]",
     iconBgClass: "bg-[rgba(34,204,238,0.1)]",
     iconClass:

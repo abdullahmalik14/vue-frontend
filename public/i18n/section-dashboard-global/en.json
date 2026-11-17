@@ -3099,6 +3099,7 @@
           "openForPreorder": "Open for Pre-order",
           "openForPreorderTip": "Allow fans to pre-order this merch before the publish date.",
           "preorderPrice": "Pre-order Price (optional)",
+          "preorderPriceLockedHint": "Cannot change preorder price because pre-order period is already in progress.",
           "afterPreorder": "After pre-order end date:",
           "keepInStore": "Keep this merch in store",
           "unpublishFromStore": "Unpublish this merch from store",

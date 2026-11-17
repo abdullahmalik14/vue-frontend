@@ -406,82 +406,91 @@
                          Out of stock: no bar bg / no action buttons — only share + menu. -->
                     <div
                         v-if="showOwnerActions && !isGalleryOpen"
-                        class="relative z-20 flex h-16 w-full shrink-0 items-center justify-end gap-4 px-2 py-4"
-                        :class="isOutOfStock ? 'bg-transparent' : 'bg-black/50 backdrop-blur-[50px]'"
+                        class="relative z-20 flex w-full shrink-0 justify-end px-2 py-4"
+                        :class="[
+                            isOutOfStock ? 'bg-transparent' : 'bg-black/50 backdrop-blur-[50px]',
+                            isReviewing || showPublishedMeta
+                                ? 'h-auto flex-col items-stretch gap-2 md-small:h-16 md-small:flex-row md-small:items-center md-small:gap-4'
+                                : 'h-16 items-center gap-4',
+                        ]"
                     >
                         <div
-                            v-if="!isOutOfStock"
-                            class="flex min-w-0 flex-1 items-center justify-between gap-3"
+                            class="flex w-full min-w-0 items-center justify-end gap-3 md-small:gap-4"
+                            :class="isReviewing || showPublishedMeta ? '' : 'flex-1'"
                         >
-                            <div class="flex flex-wrap items-center gap-2">
-                                <DashboardPrimaryButton
-                                    theme="merchEditDetails"
-                                    type="button"
-                                    :text="t('shops.merch.detail.editDetails')"
-                                    :leftIcon="editIconUrl"
-                                    :disabled="isReviewing"
-                                    :customClass="isReviewing ? '!bg-transparent disabled:!bg-transparent' : ''"
-                                    @click="onEditDetails"
-                                />
+                            <div
+                                v-if="!isOutOfStock"
+                                class="flex min-w-0 flex-1 items-center justify-between gap-3"
+                            >
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <DashboardPrimaryButton
+                                        theme="merchEditDetails"
+                                        type="button"
+                                        :text="t('shops.merch.detail.editDetails')"
+                                        :leftIcon="editIconUrl"
+                                        :disabled="isReviewing"
+                                        :customClass="isReviewing ? '!bg-transparent disabled:!bg-transparent' : ''"
+                                        @click="onEditDetails"
+                                    />
 
-                                <div
-                                    v-if="isReviewing"
-                                    class="inline-flex h-10 min-w-24 items-center gap-2.5 bg-amber-400 px-2 py-2"
-                                >
-                                    <img
-                                        v-if="reviewingIconUrl"
-                                        :src="reviewingIconUrl"
-                                        alt=""
-                                        class="h-5 w-5 object-contain"
+                                    <div
+                                        v-if="isReviewing"
+                                        class="inline-flex h-10 min-w-24 items-center gap-2.5 bg-amber-400 px-2 py-2"
                                     >
-                                    <span class="text-base font-medium leading-6 text-gray-900">
-                                        {{ t('shops.merch.library.status.reviewing') }}
-                                    </span>
+                                        <img
+                                            v-if="reviewingIconUrl"
+                                            :src="reviewingIconUrl"
+                                            alt=""
+                                            class="h-5 w-5 object-contain"
+                                        >
+                                        <span class="text-base font-medium leading-6 text-gray-900">
+                                            {{ t('shops.merch.library.status.reviewing') }}
+                                        </span>
+                                    </div>
+
+                                    <DashboardPrimaryButton
+                                        v-else-if="canUnpublish"
+                                        theme="merchUnpublish"
+                                        type="button"
+                                        :text="t('shops.merch.detail.unpublish')"
+                                        :leftIcon="unpublishIconUrl"
+                                        @click="unpublishConfirmOpen = true"
+                                    />
+
+                                    <DashboardPrimaryButton
+                                        v-else-if="canPublish"
+                                        theme="merchPublish"
+                                        type="button"
+                                        :text="t('shops.merch.detail.publish')"
+                                        :leftIcon="publishedIconUrl"
+                                        @click="emit('published')"
+                                    />
                                 </div>
 
-                                <DashboardPrimaryButton
-                                    v-else-if="canUnpublish"
-                                    theme="merchUnpublish"
-                                    type="button"
-                                    :text="t('shops.merch.detail.unpublish')"
-                                    :leftIcon="unpublishIconUrl"
-                                    @click="unpublishConfirmOpen = true"
-                                />
-
-                                <DashboardPrimaryButton
-                                    v-else-if="canPublish"
-                                    theme="merchPublish"
-                                    type="button"
-                                    :text="t('shops.merch.detail.publish')"
-                                    :leftIcon="publishedIconUrl"
-                                    @click="emit('published')"
-                                />
-                            </div>
-
-                            <p
-                                v-if="isReviewing"
-                                class="shrink text-right text-xs font-normal leading-4 text-amber-400"
-                            >
-                                {{ t('shops.merch.detail.reviewingHint') }}
-                            </p>
-                            <div
-                                v-else-if="showPublishedMeta"
-                                class="flex items-center gap-2 text-xs text-white"
-                            >
-                                <img
-                                    v-if="publishedIconUrl"
-                                    :src="publishedIconUrl"
-                                    alt=""
-                                    class="h-4 w-4 object-contain [filter:brightness(0)_saturate(100%)_invert(100%)]"
+                                <p
+                                    v-if="isReviewing"
+                                    class="hidden shrink text-right text-xs font-normal leading-4 text-amber-400 md-small:block"
                                 >
-                                <span>{{ publishedLabel }}</span>
+                                    {{ t('shops.merch.detail.reviewingHint') }}
+                                </p>
+                                <div
+                                    v-else-if="showPublishedMeta"
+                                    class="hidden items-center gap-2 text-xs text-white md-small:flex"
+                                >
+                                    <img
+                                        v-if="publishedIconUrl"
+                                        :src="publishedIconUrl"
+                                        alt=""
+                                        class="h-4 w-4 object-contain [filter:brightness(0)_saturate(100%)_invert(100%)]"
+                                    >
+                                    <span>{{ publishedLabel }}</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div
-                            data-merch-owner-menu
-                            class="relative flex shrink-0 items-end gap-2"
-                        >
+                            <div
+                                data-merch-owner-menu
+                                class="relative flex shrink-0 items-end gap-2"
+                            >
                             <button
                                 v-if="showShareIcon || isOutOfStock"
                                 type="button"
@@ -533,6 +542,26 @@
                                     </button>
                                 </div>
                             </div>
+                            </div>
+                        </div>
+
+                        <p
+                            v-if="isReviewing"
+                            class="w-full text-xs font-normal leading-4 text-amber-400 md-small:hidden"
+                        >
+                            {{ t('shops.merch.detail.reviewingHint') }}
+                        </p>
+                        <div
+                            v-else-if="showPublishedMeta"
+                            class="flex w-full items-center gap-2 text-xs text-white md-small:hidden"
+                        >
+                            <img
+                                v-if="publishedIconUrl"
+                                :src="publishedIconUrl"
+                                alt=""
+                                class="h-4 w-4 object-contain [filter:brightness(0)_saturate(100%)_invert(100%)]"
+                            >
+                            <span>{{ publishedLabel }}</span>
                         </div>
                     </div>
                 </div>

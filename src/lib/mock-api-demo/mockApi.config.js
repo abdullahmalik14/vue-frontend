@@ -1351,6 +1351,157 @@ const mockApiConfig = {
         },
       },
     },
+
+    /**
+     * Merch listings (shop products) — merch entity only.
+     * Gallery media is a separate domain; no mock API for media.
+     * Stateful store lives in merchMockApi.js; these routes define the official contract + scenarios.
+     */
+    "/merch": {
+      description: "List / create merch listings. Gallery media not included.",
+      methods: {
+        GET: {
+          description: "Get all merch. Optional query.status = draft | reviewing | published | preorder.",
+          enabled: true,
+          delayMs: 120,
+          scenarios: [
+            {
+              name: "success",
+              status: 200,
+              body: {
+                ok: true,
+                items: [],
+                message: "Merch loaded.",
+              },
+            },
+            {
+              name: "failure",
+              status: 500,
+              body: {
+                ok: false,
+                error: "MERCH_LIST_FAILED",
+                message: "Could not load merch.",
+              },
+            },
+          ],
+          defaultScenario: "success",
+        },
+        POST: {
+          description: "Create a merch listing. Body = merch entry (id optional).",
+          enabled: true,
+          delayMs: 150,
+          requiredFields: ["status"],
+          scenarios: [
+            {
+              name: "success",
+              status: 201,
+              body: {
+                ok: true,
+                item: "{{request.body}}",
+                message: "Merch created.",
+              },
+            },
+            {
+              name: "failure",
+              status: 400,
+              body: {
+                ok: false,
+                error: "MERCH_CREATE_FAILED",
+                message: "Could not create merch.",
+              },
+            },
+          ],
+          defaultScenario: "success",
+        },
+      },
+    },
+
+    "/merch/detail": {
+      description: "Get / update / delete one merch by id. Gallery media endpoints are out of scope.",
+      methods: {
+        GET: {
+          description: "Get one merch. query.id required.",
+          enabled: true,
+          delayMs: 100,
+          requiredFields: ["id"],
+          scenarios: [
+            {
+              name: "success",
+              status: 200,
+              body: {
+                ok: true,
+                item: null,
+                message: "Merch loaded.",
+              },
+            },
+            {
+              name: "failure",
+              status: 404,
+              body: {
+                ok: false,
+                error: "MERCH_NOT_FOUND",
+                message: "Merch not found.",
+              },
+            },
+          ],
+          defaultScenario: "success",
+        },
+        PATCH: {
+          description: "Edit a merch listing. Body must include id + fields to update.",
+          enabled: true,
+          delayMs: 150,
+          requiredFields: ["id"],
+          scenarios: [
+            {
+              name: "success",
+              status: 200,
+              body: {
+                ok: true,
+                item: "{{request.body}}",
+                message: "Merch updated.",
+              },
+            },
+            {
+              name: "failure",
+              status: 400,
+              body: {
+                ok: false,
+                error: "MERCH_UPDATE_FAILED",
+                message: "Could not update merch.",
+              },
+            },
+          ],
+          defaultScenario: "success",
+        },
+        DELETE: {
+          description: "Delete a merch listing. query.id or body.id required.",
+          enabled: true,
+          delayMs: 120,
+          requiredFields: ["id"],
+          scenarios: [
+            {
+              name: "success",
+              status: 200,
+              body: {
+                ok: true,
+                id: "{{request.query.id}}",
+                message: "Merch deleted.",
+              },
+            },
+            {
+              name: "failure",
+              status: 400,
+              body: {
+                ok: false,
+                error: "MERCH_DELETE_FAILED",
+                message: "Could not delete merch.",
+              },
+            },
+          ],
+          defaultScenario: "success",
+        },
+      },
+    },
   },
 };
 

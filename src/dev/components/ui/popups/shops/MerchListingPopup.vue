@@ -300,7 +300,7 @@ const popupConfig = {
   shouldCloseOnOutsideClick: true,
   shouldLockBodyScroll: true,
   shouldCloseOnEscape: true,
-  width: { default: '100%', '>768': '55.9375rem' },
+  width: { default: '100%', '>1009': '55.9375rem' },
   height: { default: '100%' },
   // BasePopup panel is the scroll container — do not nest overflow-hidden on slot content.
   scrollable: true,
@@ -640,7 +640,7 @@ watch(
       data-merch-listing-popup
       class="relative flex min-h-full w-full flex-col bg-[#F9FAFBE5] backdrop-blur-[30px] shadow-[0px_0px_10px_0px_#00000040]"
     >
-      <div class="relative z-[1] w-full flex justify-between items-center py-4 px-4 md:px-6">
+      <div class="relative z-[1] w-full flex justify-between items-center py-4 px-4 xl:px-6">
         <Heading
           :text="popupTitle"
           tag="h2"
@@ -669,7 +669,7 @@ watch(
         :steps="steps"
       />
 
-      <div class="relative z-[1] flex-1 overflow-visible px-6 py-4 pb-6">
+      <div class="relative z-[1] flex-1 overflow-visible px-4 xl:px-6 py-4">
         <MerchProductDetailsStep
           v-if="activeStep === 1"
           ref="productDetailsStepRef"

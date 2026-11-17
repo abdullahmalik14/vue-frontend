@@ -1,0 +1,93 @@
+{
+  "flowId": "merchLibrary",
+  "description": "Official merch listing schema for mock API + State Engine. Gallery media is a separate domain — not covered by these mock APIs.",
+  "entity": "merch",
+  "notes": [
+    "A merch entry is one shop product listing (draft | reviewing | published | preorder).",
+    "Library list/card/table UIs read from the merch entry shape below.",
+    "galleryUploaded may appear as lean stubs (id/name only) on the mock entity — there is no mock API for uploading or managing merch gallery media assets (IndexedDB / merchGalleryMediaStore).",
+    "Subscription plan attachments are ids/snapshots only; plan CRUD lives under /plans."
+  ],
+  "merchEntry": {
+    "id": { "type": "string", "required": true },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "reviewing", "published", "preorder"],
+      "required": true
+    },
+    "subscribersOnly": { "type": "boolean" },
+    "originalPrice": { "type": "string" },
+    "discountedPrice": { "type": "string" },
+    "price": { "type": "string", "description": "Alias of originalPrice for list cards." },
+    "finalPrice": { "type": "string", "description": "discountedPrice || originalPrice." },
+    "currency": { "type": "string", "default": "USD" },
+    "tags": { "type": "array" },
+    "collections": { "type": "array" },
+    "subscriptionPlans": { "type": "array" },
+    "subscriptionPlanIds": { "type": "array", "items": { "type": "string" } },
+    "galleryUploaded": {
+      "type": "array",
+      "description": "Lean stubs only in mock API payloads. Full media is out of scope."
+    },
+    "thumbnail": {
+      "type": "string",
+      "description": "Optional small preview URL; not a media upload API."
+    },
+    "stock": { "type": "number", "default": 0 },
+    "stockAmount": { "type": "string" },
+    "unlimitedStock": { "type": "boolean" },
+    "limitOnePerBuyer": { "type": "boolean" },
+    "packageWeight": { "type": "string" },
+    "weightUnit": { "type": "string", "enum": ["lb", "kg"] },
+    "originCountry": { "type": "string" },
+    "estimatedShippingDays": { "type": "string" },
+    "shipInternationally": { "type": "boolean" },
+    "intlShippingDays": { "type": "string" },
+    "additionalShippingCost": { "type": "string" },
+    "publishSubstep": {
+      "type": "string",
+      "enum": ["publishImmediately", "schedulePublish"]
+    },
+    "publishDate": { "type": "string" },
+    "openForPreorder": { "type": "boolean" },
+    "preorderPrice": { "type": "string" },
+    "afterPreorderAction": {
+      "type": "string",
+      "enum": ["keepInStore", "unpublish"]
+    },
+    "itemsSold": { "type": "number", "default": 0 },
+    "totalSales": { "type": "string", "default": "0" },
+    "publishedAt": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  },
+  "mockApis": {
+    "GET /merch": {
+      "description": "List all merch. Optional query.status = draft | reviewing | published | preorder.",
+      "scenarios": ["success", "failure"]
+    },
+    "POST /merch": {
+      "description": "Create a merch listing.",
+      "scenarios": ["success", "failure"]
+    },
+    "GET /merch/detail": {
+      "description": "Get one merch by query.id.",
+      "scenarios": ["success", "failure"]
+    },
+    "PATCH /merch/detail": {
+      "description": "Edit/update a merch listing. Body must include id.",
+      "scenarios": ["success", "failure"]
+    },
+    "DELETE /merch/detail": {
+      "description": "Delete a merch listing by query.id or body.id.",
+      "scenarios": ["success", "failure"]
+    }
+  },
+  "outOfScope": [
+    "Merch gallery upload / media library / attach media APIs",
+    "Cart / checkout / orders APIs",
+    "Real backend persistence"
+  ]
+}

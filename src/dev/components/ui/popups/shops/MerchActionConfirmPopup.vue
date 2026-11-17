@@ -28,7 +28,7 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue', 'confirm', 'back']);
 
 const panelStyle = computed(() => ({
-  maxWidth: `${Number(props.maxWidthPx) || 520}px`,
+  '--merch-confirm-max': `${Number(props.maxWidthPx) || 520}px`,
 }));
 
 const resolvedOverlayClass = computed(() => {
@@ -143,13 +143,13 @@ onUnmounted(() => {
   <Teleport to="body">
     <div
       v-if="modelValue"
-      class="fixed z-[10200] flex items-center justify-center px-4"
+      class="fixed z-[10200] flex items-end justify-center md:items-center md:px-4"
       :class="[resolvedOverlayClass, contain ? '' : 'inset-0']"
       :style="contain ? containOverlayStyle : undefined"
       @click.self="close"
     >
       <div
-        class="inline-flex w-full flex-col items-start justify-start gap-6 rounded-[5px] bg-white/90 p-4 backdrop-blur-[50px]"
+        class="merch-action-confirm-sheet inline-flex w-full max-w-none flex-col items-start justify-start gap-6 rounded-t-[0.625rem] bg-white/90 p-4 backdrop-blur-[50px] md:max-w-[var(--merch-confirm-max)] md:rounded-[5px]"
         :style="panelStyle"
         role="dialog"
         aria-modal="true"
@@ -187,3 +187,21 @@ onUnmounted(() => {
     </div>
   </Teleport>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .merch-action-confirm-sheet {
+    animation: merch-action-sheet-in 300ms ease-in-out;
+  }
+}
+
+@keyframes merch-action-sheet-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+</style>
