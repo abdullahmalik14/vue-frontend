@@ -43,10 +43,10 @@ function applyOverlayViewportLayout() {
     overlayEl.style.inset = '0';
     overlayEl.style.width = '100%';
     overlayEl.style.height = '100%';
-    overlayEl.style.top = '';
-    overlayEl.style.left = '';
-    overlayEl.style.right = '';
-    overlayEl.style.bottom = '';
+    overlayEl.style.top = '0';
+    overlayEl.style.left = '0';
+    overlayEl.style.right = '0';
+    overlayEl.style.bottom = '0';
     return;
   }
 

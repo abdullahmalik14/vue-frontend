@@ -19,6 +19,7 @@
 
             </div>
 
+            <FanStayOfferPopupDemo />
 
             <!-- ===== SECTION: MediaCardVariants ===== -->
             <div class="flex flex-col gap-12">
@@ -958,6 +959,7 @@ import TierCardsDemo from '@/dev/templates/demo/demo-audit/TierCardsDemo.vue';
 import EventCardsDemo from '@/dev/templates/demo/demo-audit/EventCardsDemo.vue';
 import ProfileSectionComponentsDemo from '@/dev/templates/demo/demo-audit/ProfileSectionComponentsDemo.vue';
 import ButtonsDemo from '@/dev/templates/demo/demo-audit/ButtonsDemo.vue';
+import FanStayOfferPopupDemo from '@/dev/templates/demo/demo-audit/FanStayOfferPopupDemo.vue';
 import ValidationIconMessageDemo from '@/dev/templates/demo/demo-audit/ValidationIconMessageDemo.vue';
 
 const { t } = useI18n();

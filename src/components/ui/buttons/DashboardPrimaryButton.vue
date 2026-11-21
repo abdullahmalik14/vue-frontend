@@ -525,6 +525,22 @@ const dashboardPrimaryButtonThemes = {
     customClass:
       "group inline-flex h-10 items-center justify-center !gap-[10px] bg-[#07F468] py-1 pl-6 pr-2 text-black shadow-[4px_4px_0_0_#000] border-none outline-none cursor-pointer [clip-path:polygon(16px_0,100%_0,100%_100%,0_100%)] [&>span]:!gap-[10px] [&>span>span]:!gap-[10px] enabled:hover:bg-black enabled:hover:text-[#07F468] enabled:hover:shadow-[4px_4px_0_0_#07F468] disabled:cursor-not-allowed disabled:bg-[#3440540D] disabled:text-[#98A2B3] disabled:shadow-none disabled:opacity-100",
   },
+  /** Fan stay-offer popup — accept the discounted price */
+  fanStayOfferAccept: {
+    variant: "none",
+    leftIconClass: "h-6 w-6 shrink-0",
+    textClass: "!text-lg !font-medium !leading-7 !normal-case text-black",
+    customClass:
+      "flex h-10 w-full items-center justify-center !gap-2.5 bg-[#07F468] px-2 py-1 text-black shadow-[4px_4px_0_0_#000] [&>span]:!gap-2.5 [&>span>span]:!gap-2.5",
+  },
+  /** Fan stay-offer popup — continue unsubscribing */
+  fanStayOfferDecline: {
+    variant: "none",
+    leftIconClass: "h-6 w-6 shrink-0",
+    textClass: "!text-lg !font-medium !leading-7 !normal-case text-[#FF692E]",
+    customClass:
+      "flex h-10 w-full items-center justify-center !gap-2.5 bg-[rgba(255,105,46,0.2)] px-2 py-1 text-[#FF692E] [&>span]:!gap-2.5 [&>span>span]:!gap-2.5",
+  },
 };
 
 const props = defineProps({

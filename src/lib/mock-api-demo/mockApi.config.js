@@ -1204,7 +1204,7 @@ const mockApiConfig = {
     /**
      * Subscription plans (tiers) — plan entity only.
      * Plan media is a separate domain; no mock API for media.
-     * Stateful store lives in planMockApi.js; these routes define the official contract + scenarios.
+     * Stateful store lives in creatorSubscriptionMockApi.js; these routes define the official contract + scenarios.
      */
     "/plans": {
       description: "List / create subscription plans (tiers). Media not included.",

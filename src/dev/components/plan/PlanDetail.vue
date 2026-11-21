@@ -14,9 +14,9 @@ import MediaUploadTypeTabs from '@/components/media/uploader/parts/MediaUploadTy
 import MediaUploadProgressState from '@/components/media/uploader/parts/MediaUploadProgressState.vue';
 import ImageCropperModal from '@/components/ui/popups/ImageCropperModal.vue';
 import DashboardPrimaryButton from '@/components/ui/buttons/DashboardPrimaryButton.vue';
-import SubscriberDiscountPopup from '@/dev/components/ui/popups/plan/SubscriberDiscountPopup.vue';
-import UnsubscribeDiscountPopup from '@/dev/components/ui/popups/plan/UnsubscribeDiscountPopup.vue';
-import PlanConfirmPopup from '@/dev/components/ui/popups/plan/PlanConfirmPopup.vue';
+import SubscriberDiscountPopup from '@/dev/components/ui/popups/creatorSubscription/SubscriberDiscountPopup.vue';
+import UnsubscribeDiscountPopup from '@/dev/components/ui/popups/creatorSubscription/UnsubscribeDiscountPopup.vue';
+import PlanConfirmPopup from '@/dev/components/ui/popups/creatorSubscription/PlanConfirmPopup.vue';
 import Heading from '@/components/ui/typography/Heading.vue';
 import Paragraph from '@/components/ui/typography/Paragraph.vue';
 import { usePlanAssets } from '@/composables/usePlanAssets.js';

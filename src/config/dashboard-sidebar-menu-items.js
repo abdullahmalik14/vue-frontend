@@ -91,9 +91,20 @@ export const dashboardSidebarMenuItems = [
     fallbackLabel: "Subscriptions", // Fallback text
     translationKey: "dashboard.menu.subscriptions", // Translation key
     iconAssetFlag: "dashboard.menu.subscriptions", // Asset flag instead of hardcoded URL
-    route: "/subscription/plan",
+    route: "/subscription/creator-subscription",
     submenuItems: [],
-    isEnabled: true
+    isEnabled: true,
+    roles: ['creator']
+  },
+  {
+    menuItemId: 601,
+    fallbackLabel: "Subscriptions",
+    translationKey: "dashboard.menu.subscriptions",
+    iconAssetFlag: "dashboard.menu.subscriptions",
+    route: "/subscription/fan-subscription",
+    submenuItems: [],
+    isEnabled: true,
+    roles: ['fan']
   },
   // Overflow items (these will appear in the floating panel)
   {

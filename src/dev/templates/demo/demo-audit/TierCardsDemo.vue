@@ -41,7 +41,7 @@ const code = computed(() => ({
 <!-- Preset: pink theme + standard claim footer (5 left) -->
 <TierCard variant="standardClaim" />
 
-<!-- Or pass a real tier object (PlanPage.vue) -->
+<!-- Or pass a real tier object (CreatorSubscription.vue) -->
 <!-- <TierCard :tier="currentTierData" /> -->
 
 <!-- variant: 'standardClaim' | 'spendToClaim' | 'standard95' | 'hiddenProgress' | 'subscribe' -->

@@ -582,7 +582,7 @@ ${importLine}
     planTierPublished: `const { assets } = usePlanAssets();
 ${importLine}
 
-<!-- PlanPage.vue — after publish / update-and-publish -->
+<!-- CreatorSubscription.vue — after publish / update-and-publish -->
 <div class="pointer-events-none fixed right-2 top-2 z-[9999] h-max w-[calc(100%-1rem)] sm:w-[30rem]">
   <div class="pointer-events-auto">
     <NotificationCard

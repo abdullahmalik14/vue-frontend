@@ -1,6 +1,6 @@
 /**
  * Stateful mock API for subscription plans (tiers).
- * Contract lives in mockApi.config.js + planStateEngine.schema.json.
+ * Contract lives in mockApi.config.js + creatorSubscriptionStateEngine.schema.json.
  * Plan media is out of scope — no media endpoints here.
  */
 import MockApi from '@/lib/mock-api-demo/MockApi.js';
@@ -268,7 +268,7 @@ export async function replacePlans(entries = [], { scenario } = {}) {
 
 /** Console helpers for flow verification (no demo UI). */
 if (typeof window !== 'undefined') {
-  window.__planMockApi = {
+  window.__creatorSubscriptionMockApi = {
     listPlans,
     getPlan,
     createPlan,

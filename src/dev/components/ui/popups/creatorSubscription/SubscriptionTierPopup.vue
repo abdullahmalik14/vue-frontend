@@ -9,14 +9,14 @@ import PlanDetail from '@/dev/components/plan/PlanDetail.vue';
 import PlanVariation from '@/dev/components/plan/PlanVariation.vue';
 import PlanSharing from '@/dev/components/plan/PlanSharing.vue';
 import PlanPublishSetting from '@/dev/components/plan/PlanPublishSetting.vue';
-import PlanConfirmPopup from '@/dev/components/ui/popups/plan/PlanConfirmPopup.vue';
+import PlanConfirmPopup from '@/dev/components/ui/popups/creatorSubscription/PlanConfirmPopup.vue';
 import PlanFlowTabs from '@/dev/components/plan/parts/PlanFlowTabs.vue';
 import Heading from '@/components/ui/typography/Heading.vue';
 import { createDashboardSidebarSlideInConfig } from '@/systems/dashboard/createDashboardSidebarSlideInConfig.js';
 import { usePlanAssets } from '@/composables/usePlanAssets.js';
 import { useTierCardAssets } from '@/dev/composables/useTierCardAssets.js';
 import { useSubscriptionTiersEngine } from '@/dev/composables/useSubscriptionTiersEngine.js';
-import { mapPublishStateToTierCard } from '@/dev/utils/plan/mapPublishStateToTierCard.js';
+import { mapPublishStateToTierCard } from '@/dev/utils/creatorSubscription/mapPublishStateToTierCard.js';
 import { useAssetUrl } from '@/composables/useAssetUrl.js';
 
 const props = defineProps({

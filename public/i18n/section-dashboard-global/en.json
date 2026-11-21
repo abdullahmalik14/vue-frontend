@@ -1723,6 +1723,7 @@
         "shoppingCartDescription": "Interactive cart component driven by custom events. Open console to see interaction commands.",
         "spinner": "Spinner",
         "allButtons": "All Buttons — Full Catalog",
+        "stayOffer": "Stay Offer Popup",
         "otherComponents": "Other Components"
       },
       "mediaCards": {
@@ -2606,10 +2607,10 @@
         "variation": "PlanVariation",
         "sharing": "PlanSharing",
         "publish": "PlanPublishSetting",
-        "fullPage": "PlanPage (route /subscription/plan)"
+        "fullPage": "CreatorSubscription (route /subscription/creator-subscription)"
       },
       "notes": {
-        "fullPage": "Open /subscription/plan for the full composed page (tabs, CTA, preview TierCard). Demo embeds each step with the same step-engine wiring."
+        "fullPage": "Open /subscription/creator-subscription for the full composed page (tabs, CTA, preview TierCard). Demo embeds each step with the same step-engine wiring."
       }
     },
     "uploadingProgressBar": {
@@ -3139,6 +3140,73 @@
     },
     "coupons": {
       "title": "Coupons"
+    }
+  },
+  "fanSubscription": {
+    "page": {
+      "title": "Your Subscriptions"
+    },
+    "card": {
+      "updated": "Updated yesterday",
+      "followers": "Followers",
+      "likes": "Likes",
+      "subscribers": "Subscribers",
+      "more": "More options",
+      "videos": "Videos",
+      "photos": "Photos",
+      "gallery": "Gallery",
+      "audio": "Audio",
+      "handle": "@heyjenny1234",
+      "title": "Yumi’s always eating",
+      "followersValue": "15.2K",
+      "likesValue": "99K",
+      "subscribersValue": "3.8k",
+      "bio": "Fitness girl sharing all my fitness secret to you all Lorem ipsum dolor sit amet, consectetur ",
+      "managePlans": "Manage Plans",
+      "membershipHistory": "Membership History",
+      "share": "Share",
+      "report": "Report",
+      "unsubscribe": "Unsubscribe",
+      "confirmBody": "We’re sad to see you go! Are you sure you want to unsubscribe from [Subscription Name]?",
+      "cancel": "Cancel",
+      "offerTitle": "Special Offer Just for You",
+      "offerBody": "Don’t go! [Creator] is offering you [X]% off to continue your subscription. Stay and keep enjoying exclusive content!",
+      "stayDiscount": "Stay and Get Discount",
+      "cancelledTitle": "Sorry to See You Go 😔",
+      "cancelledIntro": "Your subscription has been cancelled.",
+      "accessUntil": "You can still access all content until July 31, 2026 📅",
+      "noRebill": "You will not be rebilled ✅",
+      "thanks": "Thank you for your support! ❤️",
+      "understand": "I Understand",
+      "unsubscribedToast": "You unsubscribed from ‘{name}’. You’ll have access to your member media and benefits until XX-XX-XXXX.",
+      "historyClose": "Close",
+      "historyPlan": "Subscription - Give me some",
+      "historyHandle": "@jennya",
+      "historyDate1": "Jan 20 2025",
+      "historyDate2": "Dec 20 2024",
+      "historyDate3": "Nov 20 2024",
+      "historyDate4": "Oct 20 2024",
+      "historyDate5": "Sept 20 2024",
+      "historyPrice": "USD$ 9.99",
+      "historyPriceLast": "USD$ 1000.99"
+    },
+    "stayOffer": {
+      "open": "Open stay offer",
+      "kicker": "Unsubscribe from Princess Carrot Pop",
+      "message": "Your support means the world to me......consider staying with me for a little longer and I will give you something sweet...🫦",
+      "currentPrice": "CURRENT PRICE",
+      "currency": "USD$",
+      "currentAmount": "16.99",
+      "offerAmount": "6.99",
+      "perMonth": "/mo",
+      "off": "5% OFF",
+      "offerLabel": "JENNY'S OFFER IF YOU STAY",
+      "accept": "Accept @JENNY's offer",
+      "decline": "I am still unsubscribing",
+      "name": "Princess Carrot Pop",
+      "handle": "@sammisjelly187",
+      "close": "Close",
+      "verified": "Verified"
     }
   },
   "plan": {

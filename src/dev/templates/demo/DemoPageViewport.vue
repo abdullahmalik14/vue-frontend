@@ -3,7 +3,7 @@
     Mimics live-page content column width on DemoPage (which has no page sidebar).
     dashboard → DashboardSharedTwoColLayout content (sidebar 5.625rem)
     settings  → SettingsPage tab column (left nav lg:w-[26.6875rem])
-    plan      → PlanPage body (xl:px-10)
+    plan      → CreatorSubscription body (xl:px-10)
     full      → Home / Profile (section owns its own px)
   -->
   <div

@@ -7,8 +7,8 @@ import TierCard from '@/components/ui/card/dashboard/TierCard.vue';
 import DashboardPrimaryButton from '@/components/ui/buttons/DashboardPrimaryButton.vue';
 import MediaUploadTypeTabs from '@/components/media/uploader/parts/MediaUploadTypeTabs.vue';
 import DashboardSharedTwoColLayout from '@/templates/dashboard/shared/DashboardSharedTwoColLayout.vue';
-import SubscriptionTierPopup from '@/dev/components/ui/popups/plan/SubscriptionTierPopup.vue';
-import PlanConfirmPopup from '@/dev/components/ui/popups/plan/PlanConfirmPopup.vue';
+import SubscriptionTierPopup from '@/dev/components/ui/popups/creatorSubscription/SubscriptionTierPopup.vue';
+import PlanConfirmPopup from '@/dev/components/ui/popups/creatorSubscription/PlanConfirmPopup.vue';
 import NotificationCard from '@/components/ui/card/dashboard/NotificationCard.vue';
 import { usePlanAssets } from '@/composables/usePlanAssets.js';
 import { useAssetUrl } from '@/composables/useAssetUrl.js';
@@ -17,7 +17,7 @@ import {
   MAX_PAID_TIERS,
   useSubscriptionTiersEngine,
 } from '@/dev/composables/useSubscriptionTiersEngine.js';
-import { mapPublishStateToTierCard } from '@/dev/utils/plan/mapPublishStateToTierCard.js';
+import { mapPublishStateToTierCard } from '@/dev/utils/creatorSubscription/mapPublishStateToTierCard.js';
 
 const { t } = useI18n();
 const isAddTierPopupOpen = ref(false);

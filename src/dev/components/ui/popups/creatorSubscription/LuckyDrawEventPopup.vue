@@ -532,7 +532,7 @@ import CheckboxSwitch from '@/components/forms/checkboxes/CheckboxSwitch.vue';
 import VueDatePicker from '@/components/forms/date-picker/VueDatePicker.vue';
 import BasePlanDropdown from '@/components/ui/dropdowns/BasePlanDropdown.vue';
 import BaseTooltip from '@/components/ui/tooltips/BaseTooltip.vue';
-import LuckyDrawAddPrizePopup from '@/dev/components/ui/popups/plan/LuckyDrawAddPrizePopup.vue';
+import LuckyDrawAddPrizePopup from '@/dev/components/ui/popups/creatorSubscription/LuckyDrawAddPrizePopup.vue';
 import SocialPostToXComposer from '@/dev/components/ui/social/SocialPostToXComposer.vue';
 import { usePlanAssets } from '@/composables/usePlanAssets.js';
 

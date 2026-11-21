@@ -8,7 +8,7 @@ import {
   replacePlans,
   getPlanStorePlans,
   seedPlanStore,
-} from '@/dev/utils/plan/planMockApi.js';
+} from '@/dev/utils/creatorSubscription/creatorSubscriptionMockApi.js';
 
 export const MAX_FREE_TIERS = 1;
 export const MAX_PAID_TIERS = 3;

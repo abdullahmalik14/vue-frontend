@@ -550,12 +550,21 @@
     ]
   },
   {
-    "slug": "/subscription/plan",
+    "slug": "/subscription/creator-subscription",
     "section": "dashboard-global",
-    "componentPath": "@/dev/templates/plan/PlanPage.vue",
+    "componentPath": "@/dev/templates/creatorSubscription/CreatorSubscription.vue",
     "requiresAuth": false,
     "supportedRoles": [
-      "all"
+      "creator"
+    ]
+  },
+  {
+    "slug": "/subscription/fan-subscription",
+    "section": "dashboard-global",
+    "componentPath": "@/dev/templates/fanSubscription/FanSubscription.vue",
+    "requiresAuth": false,
+    "supportedRoles": [
+      "fan"
     ]
   },
   {
