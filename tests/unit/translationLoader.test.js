@@ -295,14 +295,14 @@ describe('translationLoader in-flight promise (P-04)', () => {
 });
 
 describe('translationLoader cache clear (P-03)', () => {
-  it('clearTranslationCaches removes only translation_ prefixed cache keys', async () => {
+  it('clearTranslationCaches removes only translation_v2_ prefixed cache keys', async () => {
     const { removeCacheKeysByPrefix } = await import('../../src/utils/common/cacheHandler.js');
     const { clearTranslationCaches } = await import(LOADER_PATH);
 
     clearTranslationCaches();
 
     expect(removeCacheKeysByPrefix).toHaveBeenCalledTimes(1);
-    expect(removeCacheKeysByPrefix).toHaveBeenCalledWith('translation_');
+    expect(removeCacheKeysByPrefix).toHaveBeenCalledWith('translation_v2_');
   });
 });
 

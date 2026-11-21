@@ -21,7 +21,7 @@ import { getRouteConfiguration } from '../routing/routeConfigLoader.js';
 import { collectKnownSectionNames } from '../build/jsonConfigValidator.js';
 
 // Cache configuration for translations
-const TRANSLATION_CACHE_KEY_PREFIX = 'translation_';
+const TRANSLATION_CACHE_KEY_PREFIX = 'translation_v2_';
 const TRANSLATION_CACHE_TTL = 3600000; // 1 hour
 
 const SECTION_NAME_PATTERN = /^[a-z0-9-]+$/i;
@@ -766,7 +766,7 @@ export function clearTranslationCaches() {
   log('translationLoader.js', 'clearTranslationCaches', 'success', 'Translation caches cleared', {
     mapCount,
     removedCacheCount,
-    note: 'loadedTranslations Map cleared; cacheHandler translation_* keys removed only'
+    note: 'loadedTranslations Map cleared; cacheHandler translation_v2_* keys removed only'
   });
   log('translationLoader.js', 'clearTranslationCaches', 'return', 'Cache clear complete', {});
 }

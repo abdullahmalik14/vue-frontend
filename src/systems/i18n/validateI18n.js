@@ -122,6 +122,40 @@ export function flattenTranslationKeys(value, prefix = '') {
 }
 
 /**
+ * vue-i18n treats a bare "@" as a linked message and throws SyntaxError 10
+ * (INVALID_LINKED_FORMAT) during render. Literal @ must be written as {'@'}.
+ *
+ * @param {string} value
+ * @returns {boolean}
+ */
+export function hasUnescapedMessageAt(value) {
+  if (typeof value !== 'string' || !value.includes('@')) {
+    return false;
+  }
+
+  const withoutLiterals = value.replace(/\{'@'\}/g, '').replace(/@(\.|:)/g, '');
+  return withoutLiterals.includes('@');
+}
+
+/**
+ * @param {string} bundleLabel
+ * @param {string} locale
+ * @param {Map<string, string>} keys
+ * @param {{ errors: string[] }} report
+ */
+function reportUnescapedMessageAts(bundleLabel, locale, keys, report) {
+  for (const [key, value] of keys) {
+    if (!hasUnescapedMessageAt(value)) {
+      continue;
+    }
+
+    report.errors.push(
+      `${bundleLabel}/${locale}.json: unescaped "@" in ${key} — write literal @ as {'@'} so vue-i18n does not compile it as a linked message`,
+    );
+  }
+}
+
+/**
  * @param {string} value
  * @returns {string[]}
  */
@@ -252,6 +286,7 @@ function validateTranslationBundleFolder(bundleLabel, folderPath, options, repor
   }
 
   const englishKeys = flattenTranslationKeys(englishTree);
+  reportUnescapedMessageAts(bundleLabel, 'en', englishKeys, report);
 
   for (const locale of localeFiles) {
     if (!SUPPORTED_LOCALE_SET.has(locale)) {
@@ -274,6 +309,7 @@ function validateTranslationBundleFolder(bundleLabel, folderPath, options, repor
     }
 
     const localeKeys = flattenTranslationKeys(localeTree);
+    reportUnescapedMessageAts(bundleLabel, locale, localeKeys, report);
 
     for (const key of localeKeys.keys()) {
       if (!englishKeys.has(key)) {
